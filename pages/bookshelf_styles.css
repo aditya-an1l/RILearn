@@ -1,0 +1,101 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f2e4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bookshelf-container {
+    width: 90%;
+    height 100%;
+    max-height: 100%;
+    max-width: 100%;
+    margin: 20px auto;
+    background-color: #c8a480;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Search Bar */
+.search-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    width: 250px;
+    padding: 10px;
+    border: 2px solid #795548;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Bookshelf */
+.bookshelf {
+    background: url('wood-texture.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.shelf {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 5px solid #795548;
+}
+
+.book img {
+    width: 220px;
+    height: 360px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    border: 3px solid #5a3e1b;
+}
+
+.book img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .search-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input {
+        width: 80%;
+        margin-bottom: 5px;
+    }
+
+    .sort-options {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .shelf {
+        justify-content: center;
+    }
+
+    .book img {
+        width: 100px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .book img {
+        width: 80px;
+        height: 120px;
+    }
+
+
+}

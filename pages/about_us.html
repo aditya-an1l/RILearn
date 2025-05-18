@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>RILEARN </title>
+  <style>
+    /* General Reset and Box Sizing */
+    *, ::after, ::before {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    html, body {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      background-color:white;
+      scroll-behavior: smooth;
+      text-align: left;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Headings and Text */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+
+    /* Links */
+    a {
+      text-decoration: none;
+      transition: color 0.3s ease;
+      color: #fa65b1;
+    }
+
+    a:hover {
+      color: #726ae3;
+    }
+
+    /* Images */
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    /* Containers */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Grid System */
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -15px;
+    }
+    
+    .col-lg-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding: 15px;
+    }
+
+    /* Background Decorations */
+    .bg-decoration {
+      position: absolute;
+      z-index: 0;
+      opacity: 0.3; 
+    }
+
+    .bg-left {
+      left: 0;
+      top: 20%;
+    }
+
+    .bg-right {
+      right: 0;
+      top: 10%;
+    }
+
+    .bg-wave {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      z-index: 0;
+      opacity: 0.3; 
+    }
+
+    /* Banner */
+    .main-banner {
+      position: relative;
+      padding: 150px 0 100px;
+      overflow: hidden;
+      background-color: #fff;
+    }
+
+    .main-banner .left-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .main-banner .left-content h6 {
+      font-size: 22px;
+      color: #fa65b1;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .main-banner .left-content h2 {
+      font-size: 50px;
+      color: #2a2a2a;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .main-banner .right-image {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .main-banner .right-image:hover {
+      transform: scale(1.05);
+    }
+
+    .main-banner .right-image img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .main-banner .right-image img:hover {
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+    }
+
+    /* About Section */
+    #about {
+      padding: 100px 0; 
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-left-image img {
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+    
+    .about-left-image img:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+
+    .section-heading h6 {
+      font-size: 22px;
+      color: #fa65b1;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section-heading h4 {
+      font-size: 30px;
+      color: #2a2a2a;
+      margin-bottom: 20px;
+    }
+
+    .section-heading h4 em {
+      font-style: normal;
+      color: #fa65b1;
+    }
+
+    .line-dec {
+      width: 50px;
+      height: 3px;
+      background-color: #fa65b1;
+      margin-bottom: 20px;
+      transition: width 0.5s ease;
+    }
+
+    .section-heading:hover .line-dec {
+      width: 100px;
+    }
+
+    /* Section Spacing */
+    .section-spacer {
+      margin: 0; 
+      text-align: center;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      text-align: center;
+      padding: 60px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .img2 {
+      max-width: 200px;
+      margin: 20px auto;
+      transition: transform 0.5s ease;
+    }
+
+    .img2:hover {
+      transform: rotate(10deg);
+    }
+
+    .sub-heading {
+      font-size: 14px;
+      font-weight: bold;
+      color: #6c5ce7;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .contact-heading {
+      font-size: 32px;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 20px;
+    }
+
+    .contact-heading span {
+      color: #6c5ce7;
+    }
+
+    /* Contact Container */
+    .contact-container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-container:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Map Section */
+    .map-container {
+      flex: 1;
+      min-width: 300px;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 350px;
+      border: none;
+      display: block;
+    }
+
+    /* Contact Details & Form */
+    .contact-details {
+      flex: 1;
+      min-width: 350px;
+      padding: 30px;
+      position: relative;
+    }
+
+    .contact-details img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 100px;
+      opacity: 0.5;
+      transition: opacity 0.3s ease, transform 0.5s ease;
+    }
+
+    .contact-details:hover img {
+      opacity: 0.7;
+      transform: rotate(10deg);
+    }
+
+    
+    .info-cards {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    
+    .contact-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  margin: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #ff758c, #6c5ce7); 
+  color: white; 
+}
+
+
+.contact-card:hover .icon-circle {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-card:hover i {
+  color: white;
+}
+
+.contact-card:hover p {
+  color: white;
+}
+
+    
+    .icon-circle {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto 10px;
+    }
+    
+    .phone-circle {
+      background-color: #e6f2fd;
+    }
+    
+    .email-circle {
+      background-color: #f6e6fd;
+    }
+    
+    .location-circle {
+      background-color: #fde6ec;
+    }
+    
+    .contact-card i {
+      font-size: 24px;
+    }
+    
+    .phone-icon {
+      color: #4299e1;
+    }
+    
+    .email-icon {
+      color: #9f7aea;
+    }
+    
+    .location-icon {
+      color: #ed64a6;
+    }
+    
+    .contact-card p {
+      font-size: 16px;
+      font-weight: 500;
+      color: #2d3748;
+      margin: 5px 0 0;
+    }
+
+    /* Contact Form */
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #fa65b1;
+      box-shadow: 0 0 10px rgba(250, 101, 177, 0.2);
+      outline: none;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .contact-form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff758c;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .contact-form button:hover {
+      background: linear-gradient(45deg, #ff758c, #6c5ce7);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+    }
+
+    
+    .nav-dots {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: rgba(250, 101, 177, 0.3);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot:hover, .dot.active {
+      background-color: #fa65b1;
+      transform: scale(1.3);
+    }
+
+    /* Button Styles */
+    .btn {
+      background: linear-gradient(45deg, #ff758c, #6c5ce7);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+    }
+
+    /* Feature Card */
+    .feature-cards {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .feature-card {
+      flex: 1;
+      min-width: 120px;
+      background: #f8f8f8;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover {
+      background: #6c5ce7;
+      color: white;
+      transform: translateY(-5px);
+    }
+
+    .feature-card i {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #fa65b1;
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover i {
+      color: white;
+    }
+
+    .feature-card p {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 0;
+      color: inherit;
+    }
+
+    /* Fade in animation for elements */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      .col-lg-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      
+      .main-banner .left-content h2 {
+        font-size: 36px;
+      }
+      
+      .contact-container {
+        flex-direction: column;
+      }
+      
+      .map-container {
+        min-height: 250px;
+      }
+
+      .nav-dots {
+        display: none;
+      }
+
+      .feature-cards {
+        flex-direction: column;
+      }
+      
+      .info-cards {
+        flex-direction: column;
+      }
+      
+      .contact-card {
+        margin-bottom: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation Dots -->
+  <div class="nav-dots">
+    <div class="dot active" data-target="top"></div>
+    <div class="dot" data-target="about"></div>
+    <div class="dot" data-target="features"></div>
+    <div class="dot" data-target="contact"></div>
+  </div>
+
+  <div class="main-banner" id="top">
+    <!-- Background decorations -->
+    <img src="../media/about_us_media/images/slider-left-dec.jpg" class="bg-decoration bg-left" alt="">
+    <img src="../media/about_us_media/images/slider-right-dec.jpg" class="bg-decoration bg-right" alt="">
+    <!-- Wave pattern background -->
+    <img src="../media/about_us_media/images/wave-pattern.png" class="bg-wave" alt="">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left-content fade-in">
+            <h6>RILEARN</h6>
+            <h2>We Boost Your Mood</h2>
+            <p>RILEARN is brought to you to boost your mood by providing interactive E-books. Feel free to use this for a commercial purpose.</p>
+            
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image fade-in">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/coffee-phone_2x" alt="E-book reader with coffee">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section spacer -->
+  <div class="section-spacer">
+    <img src="../media/about_us_media/images/arrow2.png" alt="Arrow down">
+  </div>
+  
+  <div id="about" class="about section">
+    <!-- Background decorations -->
+    <img src="../media/about_us_media/images/slider-left-dec.jpg" class="bg-decoration bg-left" alt="">
+    <img src="../media/about_us_media/images/slider-right-dec.jpg" class="bg-decoration bg-right" alt="">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="about-left-image fade-in">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/ipad-library_2x" alt="E-book library">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="about-right-content fade-in">
+            <div class="section-heading">
+              <h6>About Us</h6>
+              <h4>Who is <em>RILEARN</em></h4>
+              <div class="line-dec"></div>
+            </div>
+            <p>RILEARN is a platform dedicated to providing high-quality interactive e-books that enhance your reading experience. Our mission is to make reading more engaging, interactive, and mood-boosting for all of our users.</p>
+            <p>We believe in the power of literature to transform moods and enrich lives, and our carefully curated collection of e-books is designed to do just that.</p>
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <div class="section-spacer">
+     <img src="../media/about_us_media/images/arrow1.png" alt="Arrow up">
+  </div>
+                      
+  <div class="main-banner" id="features">
+    <!-- Background decorations -->
+    <img src="../media/about_us_media/images/slider-left-dec.jpg" class="bg-decoration bg-left" alt="">
+    <img src="../media/about_us_media/images/slider-right-dec.jpg" class="bg-decoration bg-right" alt="">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="left-content fade-in">
+            <h6>RILEARN</h6>
+            <h2>We Boost Your Mood</h2>
+            <p>Explore our collection of interactive E-books designed to boost your mood and enhance your reading experience. With RILEARN, reading becomes a joy that brightens your day.</p>
+            
+            <!-- Feature cards -->
+            <div class="feature-cards">
+              <div class="feature-card">
+                <i class="fas fa-book"></i>
+                <p>Wide Selection</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Multi-device</p>
+              </div>
+              <div class="feature-card">
+                <i class="fas fa-smile"></i>
+                <p>Mood Boost</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="right-image fade-in">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/kindle-ice-tea_2x" alt="E-reader with ice tea">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>                     
+                          
+  <section class="contact-section" id="contact">
+    <!-- Background decorations -->
+    <img src="../media/about_us_media/images/slider-left-dec.jpg" class="bg-decoration bg-left" alt="">
+    
+    <h4 class="sub-heading fade-in">CONTACT US</h4>
+    <h2 class="contact-heading fade-in">Get In Touch With Us <span>Now</span></h2>
+    <img src="../media/about_us_media/images/contact-dec.png" alt="decoration" class="img2 fade-in">
+    
+    <div class="contact-container fade-in">
+      <!-- Left Side - Google Map -->
+      <div class="map-container">
+          <br>
+          <br>
+          <h2><strong>Our Office</strong></h2>
+          <br>
+              <iframe width="100%" height="200px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amaravati,%20Andhra%20Pradesh,%20Karnataka,%20india+(RiLearn%20Office)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/collections/personal-trackers/">Personal GPS</a></iframe>
+          <br>
+          <p><strong>Postal Address </strong>: RILearn Office, Amaravati, Andhra Pradesh - 522020</p>
+      </div>
+
+      <!-- Right Side - Contact Info & Form -->
+      <div class="contact-details">
+        <img src="../media/about_us_media/images/contact-top-right.png" alt="">
+        
+        <div class="info-cards">
+          <div class="contact-card">
+            <div class="icon-circle phone-circle">
+              <i class="fas fa-phone phone-icon"></i>
+            </div>
+            <p>+91 99587 35408</p>
+          </div>
+          <div class="contact-card">
+            <div class="icon-circle email-circle">
+              <i class="fas fa-bullhorn email-icon"></i>
+            </div>
+           <p><a href="mailto:team.rilearn@gmail.com">team.rilearn@gmail.com</a>
+</p>
+          </div>
+          <div class="contact-card">
+            <div class="icon-circle location-circle">
+              <i class="fas fa-map-marker-alt location-icon"></i>
+            </div>
+            <p>Amaravati, Karnataka, Andhra Pradesh, India</p>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <input type="text" placeholder="Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject" required>
+          <textarea placeholder="Message" required></textarea>
+          <button type="submit"><i class="fas fa-paper-plane"></i> Send Message Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  
+  <script>
+    // Simple script to handle fade-in animations and navigation
+    document.addEventListener('DOMContentLoaded', function() {
+      // Handle fade-in elements
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      function checkFade() {
+        fadeElements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          
+          if (rect.top <= windowHeight * 0.85) {
+            element.classList.add('visible');
+          }
+        });
+      }
+      
+      // Initial check
+      checkFade();
+      
+      // Check on scroll
+      window.addEventListener('scroll', checkFade);
+      
+      // Navigation dots
+      const dots = document.querySelectorAll('.dot');
+      
+      dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const targetElement = document.getElementById(targetId);
+          
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+      
+      // Update active dot on scroll
+      window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+        
+        const sections = ['top', 'about', 'features', 'contact'];
+        sections.forEach((sectionId, index) => {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
+              dots.forEach(dot => dot.classList.remove('active'));
+              dots[index].classList.add('active');
+            }
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

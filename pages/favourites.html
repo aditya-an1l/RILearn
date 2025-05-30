@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Famous Indian Authors</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      padding: 20px;
+      background-color: #F6F9E6;
+    }
+
+    .page-title {
+      text-align: center;
+      margin: 20px 0 40px;
+      color: #2c3e50;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+    }
+
+    .page-title:after {
+      content: "";
+      display: block;
+      width: 100px;
+      height: 3px;
+      background-color: #3498db;
+      margin: 15px auto;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px 0;
+    }
+
+    .flex-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .image-section {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .image-section img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .image-section img:hover {
+      transform: scale(1.02);
+    }
+
+    .content-section {
+      flex: 1.5;
+      min-width: 300px;
+    }
+
+    .author-name {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 8px;
+      display: inline-block;
+    }
+
+    .author-bio {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      line-height: 1.8;
+      text-align: justify;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #3498db, transparent);
+      margin: 40px 0;
+      border: none;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .flex-container {
+        flex-direction: column;
+      }
+
+      .image-section,
+      .content-section {
+        width: 100%;
+      }
+
+      .page-title {
+        font-size: 2rem;
+      }
+
+      .author-name {
+        font-size: 1.5rem;
+      }
+    }
+
+    button {
+      background-color: #3498db;
+      border-radius: 25px;
+      border: none;
+      padding: 25px;
+      color: whitesmoke;
+      font-size: medium;
+    }
+  </style>
+</head>
+
+<body>
+  <h1 class="page-title">KNOW ABOUT SOME FAMOUS AUTHORS</h1>
+
+  <div class="container">
+    <div class="flex-container">
+      <!-- Left Side: Image -->
+      <div class="image-section">
+        <img src="../media/fav_media/Sudha-Murty.jpg" alt="Sudha Murthy">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="content-section">
+        <h2 class="author-name">Sudha Murthy</h2>
+        <p class="author-bio">
+          Sudha Murthy is one of India's most beloved authors, known for her simple yet powerful storytelling. As the
+          chairperson of the
+          Infosys Foundation, she has played a significant role in philanthropy, particularly in the fields of
+          education, healthcare, and
+          rural development. Her writing reflects her real-life experiences and the values she believes in, such as
+          compassion, honesty, and humility.
+          Her popular books like "Wise and Otherwise," "How I Taught My Grandmother to Read," and "Grandma's Bag of
+          Stories" resonate with readers of all ages,
+          often delivering important life lessons through engaging narratives.
+        </p>
+        <a href="button-s.html" target="_blank">
+          <button>Browse Books</button>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="container">
+    <div class="flex-container">
+      <!-- Left Side: Image -->
+      <div class="image-section">
+        <img src="../media/fav_media/ruskin-bond.avif" alt="Ruskin Bond">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="content-section">
+        <h2 class="author-name">Ruskin Bond</h2>
+        <p class="author-bio">
+          Ruskin Bond, an Anglo-Indian writer who has lived in the hills of Mussoorie for most of his life,
+          is known for his charming tales about nature, childhood, and small-town India. With a career spanning
+          over seven decades, Bond has written numerous novels, short stories, and poems. His works such as
+          "The Blue Umbrella," "Rusty the Boy from the Hills," and "The Room on the Roof" have become classics in Indian
+          literature.
+          His nostalgic and lyrical style makes his stories relatable, especially to young readers and those who enjoy
+          the beauty of everyday life.
+        </p>
+
+        <a href="button-b.html" target="_blank">
+          <button>Browse Books</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="container">
+    <div class="flex-container">
+      <!-- Left Side: Image -->
+      <div class="image-section">
+        <img src="../media/fav_media/RKNarayan.jpg" alt="R.K. Narayan">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="content-section">
+        <h2 class="author-name">R.K. Narayan</h2>
+        <p class="author-bio">
+          R.K. Narayan was one of the earliest Indian writers in English to gain international fame. He is best known
+          for creating
+          the fictional town of Malgudi, where many of his stories take place. His books, including "Malgudi Days,"
+          "Swami and Friends,"
+          and "The Guide," portray the simplicity and complexity of Indian life with gentle humor and philosophical
+          insight.
+          Narayan's ability to reflect the hopes, struggles, and humanity of ordinary people made him a pioneer of
+          Indian English literature
+          and earned him worldwide respect.
+        </p>
+
+        <a href="button-r.html" target="_blank">
+          <button>Browse Books</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="container">
+    <div class="flex-container">
+      <!-- Left Side: Image -->
+      <div class="image-section">
+        <img src="../media/fav_media/Chetan-Bhagat.jpg" alt="Chetan Bhagat">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="content-section">
+        <h2 class="author-name">Chetan Bhagat</h2>
+        <p class="author-bio">
+          Chetan Bhagat is a contemporary author who revolutionized reading among Indian youth. A former investment
+          banker,
+          Bhagat writes modern, fast-paced novels that often reflect the challenges faced by young Indians in areas like
+          education,
+          career, and love. His books, such as "Five Point Someone," "2 States," and "The Girl in Room 105," are written
+          in a casual,
+          accessible style and have been adapted into successful Bollywood films. While his literary merit is debated,
+          there's no
+          denying his influence in making reading a popular habit among the younger generation.
+        </p>
+
+        <a href="button-c.html" target="_blank">
+          <button>Browse Books</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <div class="container">
+    <div class="flex-container">
+      <!-- Left Side: Image -->
+      <div class="image-section">
+        <img src="../media/fav_media/05arundhati-roy.webp" alt="Arundhati Roy">
+      </div>
+
+      <!-- Right Side: Content -->
+      <div class="content-section">
+        <h2 class="author-name">Arundhati Roy</h2>
+        <p class="author-bio">
+          Arundhati Roy is an acclaimed author and activist who won the Booker Prize for her debut novel "The God of
+          Small Things,"
+          a richly layered story that explores caste, love, and loss in a Kerala family. Her writing is deeply poetic,
+          political,
+          and complex, often tackling themes of inequality, social injustice, and resistance. Her second novel, "The
+          Ministry of
+          Utmost Happiness," continues this tradition by focusing on marginalized communities in India. Beyond
+          literature, Roy is
+          also known for her fearless activism and essays on human rights and environmental issues.
+        </p>
+
+        <a href="button-d.html" target="_blank">
+          <button>Browse Books</button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <footer style="text-align: center; margin-top: 50px; color: #777;">
+    <p>&copy; 2025 Famous Indian Authors | A Literary Journey Through India</p>
+  </footer>
+</body>
+
+</html>

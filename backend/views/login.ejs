@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rilearn - Login / Signup</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #eef2f7;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem 3rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgb(0 0 0 / 0.1);
+            width: 350px;
+            box-sizing: border-box;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 1.2rem;
+            color: #333;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1.5rem;
+        }
+
+        .tab-button {
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .tab-button.active {
+            border-color: #4a90e2;
+            color: #4a90e2;
+        }
+
+        form {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        form.active {
+            display: flex;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 0.6rem 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #4a90e2;
+        }
+
+        button {
+            background: #4a90e2;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            padding: 0.7rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background: #357ABD;
+        }
+
+        .message {
+            text-align: center;
+            margin-top: 1rem;
+            color: crimson;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tab-buttons">
+            <div class="tab-button active" id="loginTab">Login</div>
+            <div class="tab-button" id="signupTab">Signup</div>
+        </div>
+
+        <form id="loginForm" class="active">
+            <input type="text" id="loginUsername" placeholder="Username" required autocomplete="username" />
+            <input type="password" id="loginPassword" placeholder="Password" required autocomplete="current-password" />
+            <button type="submit">Login</button>
+        </form>
+
+        <form id="signupForm">
+            <input type="text" id="signupUsername" placeholder="Username" required autocomplete="username" />
+            <input type="password" id="signupPassword" placeholder="Password" required autocomplete="new-password" />
+            <button type="submit">Sign Up</button>
+        </form>
+
+        <div class="message" id="message"></div>
+    </div>
+
+<script>
+    (function(){
+        const loginTab = document.getElementById('loginTab');
+        const signupTab = document.getElementById('signupTab');
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+        const messageDiv = document.getElementById('message');
+
+        function showMessage(text, color='crimson') {
+            messageDiv.textContent = text;
+            messageDiv.style.color = color;
+        }
+        function clearMessage() {
+            messageDiv.textContent = '';
+        }
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('active');
+            signupTab.classList.remove('active');
+            loginForm.classList.add('active');
+            signupForm.classList.remove('active');
+            clearMessage();
+        });
+
+        signupTab.addEventListener('click', () => {
+            signupTab.classList.add('active');
+            loginTab.classList.remove('active');
+            signupForm.classList.add('active');
+            loginForm.classList.remove('active');
+            clearMessage();
+        });
+
+<!-- TODO: change the behaviour -->
+        loginForm.onsubmit = async (e) => {
+            e.preventDefault();
+            clearMessage();
+            const username = document.getElementById('loginUsername').value.trim();
+            const password = document.getElementById('loginPassword').value.trim();
+
+            if(!username || !password) {
+                showMessage('Please fill both fields');
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+                if (!res.ok) {
+                    const data = await res.json();
+                    throw new Error(data.message || 'Login failed');
+                }
+                const data = await res.json();
+                localStorage.setItem('token', data.token);
+                showMessage('Login successful! Redirecting...', 'green');
+                setTimeout(() => {
+                    window.location.href = '/dashboard';
+                }, 4200);
+            } catch(err) {
+                showMessage(err.message || 'Error logging in');
+            }
+        };
+
+        signupForm.onsubmit = async (e) => {
+            e.preventDefault();
+            clearMessage();
+            const username = document.getElementById('signupUsername').value.trim();
+            const password = document.getElementById('signupPassword').value.trim();
+
+            if(!username || !password) {
+                showMessage('Please fill both fields');
+                return;
+            }
+
+            try {
+                const res = await fetch('/api/auth/signup', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+                if (!res.ok) {
+                    const data = await res.json();
+                    throw new Error(data.message || 'Signup failed');
+                }
+                showMessage('Signup successful! You can now log in.', 'green');
+                // Switch to login tab automatically
+                loginTab.click();
+            } catch(err) {
+                showMessage(err.message || 'Error signing up');
+            }
+        };
+    })();
+</script>
+</body>
+</html>

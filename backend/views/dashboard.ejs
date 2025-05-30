@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rilearn - Dashboard</title>
+    <style>
+        /* ... (styles from previous dashboard snippet) ... */
+        body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fafaff; margin: 0; padding: 1rem 2rem; color: #222;}
+        h1 {text-align: center; margin-bottom: 1rem;}
+        .filter-bar {max-width: 600px; margin: 0 auto 1.5rem auto; display: flex; justify-content: center; gap: 1.5rem;}
+        select {font-size: 1rem; padding: 0.3rem 0.6rem;}
+        .book-list {max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 1rem;}
+        .book-card {background: white; border-radius: 8px; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1); padding: 1rem; display: flex; flex-direction: column; align-items: center; gap: 0.8rem;}
+        .book-cover {width: 120px; border-radius: 6px;}
+        .book-title {font-weight: 600; font-size: 1.1rem; text-align: center; margin: 0; color: #333;}
+        .status-select {margin: 0.3rem 0; font-size: 0.9rem;}
+        .stars {display: flex; gap: 5px; cursor: pointer;}
+        .star {font-size: 1.4rem; color: #d3d3d3; user-select: none; transition: color 0.2s;}
+        .star.selected, .star.hover {color: #ffca28;}
+    </style>
+</head>
+<body>
+    <h1>My Saved Books</h1>
+    <div class="filter-bar">
+        <label for="filterStatus">Filter by status:</label>
+        <select id="filterStatus">
+            <option value="ALL" <%= filter === 'ALL' ? 'selected' : '' %>>All</option>
+            <option value="FAVOURITE" <%= filter === 'FAVOURITE' ? 'selected' : '' %>>Favourite</option>
+            <option value="READ LATER" <%= filter === 'READ LATER' ? 'selected' : '' %>>Read Later</option>
+            <option value="ALREADY READ" <%= filter === 'ALREADY READ' ? 'selected' : '' %>>Already Read</option>
+        </select>
+        <label for="filterRating">Sort By Rating:</label>
+        <select id="filterRating">
+            <option value="NONE" <%= sortRating === 'NONE' ? 'selected' : '' %>>None</option>
+            <option value="ASC" <%= sortRating === 'ASC' ? 'selected' : '' %>>Ascending</option>
+            <option value="DESC" <%= sortRating === 'DESC' ? 'selected' : '' %>>Descending</option>
+        </select>
+    </div>
+    <div class="book-list" id="bookList">
+        <% savedBooks.forEach(item => { %>
+            <div class="book-card" data-id="<%= item.book._id %>" data-status="<%= item.status %>" data-rating="<%= item.rating || 0 %>">
+                <img src="<%= item.book.coverImage %>" alt="<%= item.book.title %>" class="book-cover" />
+                <h3 class="book-title"><%= item.book.title %></h3>
+                <select class="status-select">
+                    <option value="FAVOURITE" <%= item.status === 'FAVOURITE' ? 'selected' : '' %>>Favourite</option>
+                    <option value="READ LATER" <%= item.status === 'READ LATER' ? 'selected' : '' %>>Read Later</option>
+                    <option value="ALREADY READ" <%= item.status === 'ALREADY READ' ? 'selected' : '' %>>Already Read</option>
+                </select>
+                <div class="stars" title="Rate this book">
+                    <% for(let i=1;i<=5;i++) { %>
+                        <span class="star <%= item.rating >= i ? 'selected' : '' %>" data-star="<%= i %>">&#9733;</span>
+                    <% } %>
+                </div>
+            </div>
+        <% }) %>
+        <% if(savedBooks.length === 0) { %>
+            <p>No saved books found.</p>
+        <% } %>
+    </div>
+
+    <script>
+        (function(){
+            const token = '<%= token %>';
+
+            const filterStatusSelect = document.getElementById('filterStatus');
+            const filterRatingSelect = document.getElementById('filterRating');
+            const bookList = document.getElementById('bookList');
+
+            function applyFilters() {
+                const filterStatus = filterStatusSelect.value;
+                const filterRating = filterRatingSelect.value;
+
+                let cards = Array.from(bookList.children);
+                cards.forEach(card => {
+                    const status = card.getAttribute('data-status');
+                    const rating = parseInt(card.getAttribute('data-rating'), 10);
+
+                    let showByStatus = filterStatus === 'ALL' || status === filterStatus;
+
+                    card.style.display = showByStatus ? '' : 'none';
+                });
+
+                if (filterRating !== 'NONE') {
+                    cards = cards.filter(c => c.style.display !== 'none');
+                    cards.sort((a, b) => {
+                        const ratA = parseInt(a.getAttribute('data-rating'), 10);
+                        const ratB = parseInt(b.getAttribute('data-rating'), 10);
+                        return filterRating === 'ASC' ? ratA - ratB : ratB - ratA;
+                    });
+                    cards.forEach(card => bookList.appendChild(card));
+                }
+            }
+
+            filterStatusSelect.addEventListener('change', applyFilters);
+            filterRatingSelect.addEventListener('change', applyFilters);
+
+            applyFilters();
+
+            bookList.addEventListener('change', async e => {
+                if (!e.target.classList.contains('status-select')) return;
+
+                const card = e.target.closest('.book-card');
+                const bookId = card.getAttribute('data-id');
+                const newStatus = e.target.value;
+
+                try {
+                    const res = await fetch('/api/dashboard/books/updateStatus', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + token
+                        },
+                        body: JSON.stringify({ bookId, status: newStatus })
+                    });
+                    if (!res.ok) throw new Error('Failed to update status');
+                    card.setAttribute('data-status', newStatus);
+                    applyFilters();
+                } catch(err) {
+                    alert('Error updating status: ' + err.message);
+                }
+            });
+
+            bookList.addEventListener('click', async e => {
+                if (!e.target.classList.contains('star')) return;
+
+                const star = e.target;
+                const card = star.closest('.book-card');
+                const bookId = card.getAttribute('data-id');
+                const ratingValue = Number(star.getAttribute('data-star'));
+
+                try {
+                    const res = await fetch('/api/dashboard/books/rate', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + token
+                        },
+                        body: JSON.stringify({ bookId, rating: ratingValue })
+                    });
+                    if (!res.ok) throw new Error('Failed to rate book');
+
+                    const stars = card.querySelectorAll('.star');
+                    stars.forEach(s => {
+                        s.classList.toggle('selected', Number(s.getAttribute('data-star')) <= ratingValue);
+                    });
+                    card.setAttribute('data-rating', ratingValue);
+
+                    applyFilters();
+                } catch(err) {
+                    alert('Error rating book: ' + err.message);
+                }
+            });
+
+        })();
+    </script>
+</body>
+</html>

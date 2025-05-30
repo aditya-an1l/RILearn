@@ -1,1 +1,56 @@
 .env
+
+# Node modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compiled files
+dist/
+build/
+
+# Coverage reports
+coverage/
+
+# Misc
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Optional npm cache directory
+.npm/
+
+# Parcel or Webpack cache
+.cache/
+
+# React (client) specific
+client/node_modules/
+client/build/
+
+# EJS views (if compiled separately)
+views/*.ejs~
+
+# Optional: ignore uploads or temporary files
+uploads/
+tmp/

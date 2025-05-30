@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rilearn - Home</title>
+    <style>
+        /* ... (style as provided in previous message) ... */
+        body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f4f8; margin: 0; padding: 0 2rem;}
+        h1 {text-align: center; color: #333; margin: 1.5rem 0;}
+        .book-grid {display: grid; grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); gap: 1rem; padding-bottom: 2rem;}
+        .book-card {position: relative; background: white; border-radius: 8px; box-shadow: 0 2px 7px rgb(0 0 0 / 0.1); transition: box-shadow 0.3s ease-in-out;}
+        .book-card:hover {box-shadow: 0 5px 15px rgb(0 0 0 / 0.2);}
+        .book-cover {width: 100%; border-top-left-radius: 8px; border-top-right-radius: 8px; display: block;}
+        .save-icon {position: absolute; top: 8px; right: 8px; background-color: rgba(255, 255, 255, 0.9); border-radius: 50%; padding: 5px; cursor: pointer; user-select: none; font-size: 18px; color: #666;}
+        .save-icon.saved {color: #ff6347;}
+        .book-title {padding: 0.5rem; font-weight: 600; font-size: 1rem; color: #333; text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Public Book Collection</h1>
+    <div class="book-grid" id="bookGrid">
+        <% books.forEach(book => { %>
+            <div class="book-card" data-id="<%= book._id %>">
+                <img src="<%= book.coverImage %>" alt="<%= book.title %>" class="book-cover" />
+                <div class="save-icon <%= savedBookIds.includes(String(book._id)) ? 'saved' : '' %>" title="Save Book">&#9733;</div>
+                <div class="book-title"><%= book.title %></div>
+            </div>
+        <% }); %>
+    </div>
+    <script>
+        (function(){
+            const bookGrid = document.getElementById('bookGrid');
+            bookGrid.addEventListener('click', async function(event) {
+                if (!event.target.classList.contains('save-icon')) return;
+                const icon = event.target;
+                const bookCard = icon.closest('.book-card');
+                const bookId = bookCard.getAttribute('data-id');
+
+                const token = localStorage.getItem('token');
+                if (!token) {
+                    alert('Please login to save books.');
+                    return;
+                }
+
+                try {
+                    const response = await fetch('/api/dashboard/books/save', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer ' + token
+                        },
+                        body: JSON.stringify({
+                            bookId: bookId,
+                            status: 'READ LATER'
+                        })
+                    });
+
+                    if (response.ok) {
+                        icon.classList.add('saved');
+                    } else {
+                        const data = await response.json();
+                        alert('Error saving the book: ' + (data.message || 'Unknown error'));
+                    }
+                } catch(err) {
+                    alert('Network error: ' + err.message);
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

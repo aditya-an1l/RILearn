@@ -27,6 +27,17 @@ app.use('/api/books', bookRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/', pagesRoutes);
 
+// for the pages
+app.use('/page', express.static(path.join(__dirname, '..', 'pages')));
+app.use('/pages', express.static(path.join(__dirname, '..', 'pages')));
+// for the media pages
+app.use('/media', express.static(path.join(__dirname, '..', 'media')));
+app.use('/media/fav_media', express.static(path.join(__dirname, '..', 'media', "fav_media")));
+app.use('/mob2_files', express.static(path.join(__dirname, '..', 'mob2_files')));
+app.get(['/', '/home'], (req, res) => {
+  res.sendFile(path.join(__dirname, '..', 'index.html'));
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);

@@ -1,0 +1,503 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>copyright</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="topControls">
+        <button id="fontStylesToggle">Font Styles</button>
+        <div id="fontStylesDropdown">
+            <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+            
+             <button data-font="Georgia Custom">Georgia </button>
+            <button data-font="Elegant Serif">Elegant Serif</button>
+            <button data-font="Classic Lora">Classic Lora</button>
+            <button data-font="Merriweather Serif">Merriweather Serif</button>
+            <button data-font="Source Serif Pro">Source Serif Pro</button>
+            <button data-font="Crimson Text">Crimson Text</button>
+            <button data-font="PT Serif">PT Serif</button>
+            <button data-font="Libre Baskerville">Libre Baskerville</button>
+            
+            <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif Fonts</h3>
+            <button data-font="Modern Sans">Modern Sans</button>
+            <button data-font="Friendly Round">Friendly Round</button>
+            <button data-font="Clean Design">Clean Design</button>
+            <button data-font="Modern Montserrat">Modern Montserrat</button>
+            <button data-font="Lato Sans">Lato Sans</button>
+            <button data-font="Source Sans Pro">Source Sans Pro</button>
+            
+            <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special Fonts</h3>
+            <button data-font="Technical Mono">Technical Mono</button>
+            <button data-font="Handwritten Casual">Handwritten Casual</button>
+        </div>
+        <button id="speakToggle">Speak</button>
+    </div>
+
+    <div id="textContainer">
+        <h1 align="center"><p></p></h1>
+        <p>PENGUIN BOOKS<br>
+        An imprint of Penguin Random House LLC</p>
+    <h1> <p>375 Hudson Street</p></h1>
+    <p>New York, New York 10014<br>
+        penguin.com</p>
+    <p>Copyright © 2016 by Héctor García and Francesc Miralles Translation copyright © 2017 by Penguin Random House LLC
+        Penguin supports copyright. Copyright fuels creativity, encourages diverse voices, promotes free speech, and
+        creates a vibrant culture.
+        Thank you for buying an authorized edition of this book and for complying with copyright laws by not
+        reproducing, scanning, or
+        distributing any part of it in any form without permission. You are supporting writers and allowing Penguin to
+        continue to publish books
+        for every reader.</p>
+    <p>Originally published in Spanish as Ikigai: Los secretos de Japón para una vida larga y feliz by Ediciones Urano,
+        Barcelona</p>
+    <p>Illustration here: Abbie/Shutterstock All other illustrations copyright © 2016 by Marisa Martínez Graphics
+        copyright © 2016 by Flora
+        Buki</p>
+    <p>LIBRARY OF CONGRESS CATALOGING-IN-PUBLICATION DATA Names: García, Héctor, 1981– author. | Miralles, Francesc,
+        1968– author.
+        <br>Title: Ikigai : the Japanese secret to a long and happy life / Héctor García and Francesc Miralles ;
+        translated by Heather Cleary.
+        <br>Other titles: Ikigai. English
+        <br>Description: New York : Penguin Books, [2017] | Originally published in Spanish as “Ikigai: Los secretos de
+        Japón para una vida larga y
+        feliz” by Ediciones Urano in 2016." | Includes bibliographical references. | Description based on print version
+        record and CIP data
+        provided by publisher; resource not viewed.
+        <br>Identifiers: LCCN 2017005811 (print) | LCCN 2017022599 (ebook) | ISBN 9781524704551 (ebook) | ISBN
+        9780143130727
+        (hardcover) Subjects: LCSH: Longevity—Japan. | Longevity. | Happiness. | Quality of life Classification: LCC
+        RA776.75 (ebook) | LCC
+        RA776.75 .G3713 2017 (print) | DDC 613—dc23
+        LC record available at https://lccn.loc.gov/2017005811
+    </p>
+    <p>Neither the publisher nor the author is engaged in rendering professional advice or services to the individual
+        reader. The ideas,
+        procedures, and suggestions contained in this book are not intended as a substitute for consulting with your
+        physician. All matters
+        regarding your health require medical supervision. Neither the author nor the publisher shall be liable or
+        responsible for any loss or
+        damage allegedly arising from any information or suggestion in this book.</p>
+    <p>While the author has made every effort to provide accurate telephone numbers, Internet addresses, and other
+        contact information at the
+        time of publication, neither the publisher nor the author assumes any responsibility for errors or for changes
+        that occur after publication.
+        Further, the publisher does not have any control over and does not assume any responsibility for author or
+        third-party Web sites or their
+        content.</p>
+    <p>Cover illustration by Olga Grlic<br>
+        Cover art direction by Roseanne Serra</p>
+
+    </div>
+
+    <div id="liveSettings">
+        <h3>Adjust Speech Settings</h3>
+        <label>Speed:
+            <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+            <span id="rateValue">1</span>
+        </label>
+        <label>Pitch:
+            <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+            <span id="pitchValue">1</span>
+        </label>
+    </div>
+
+    <div id="speechControls">
+        <button id="pauseButton">Pause</button>
+        <button id="resumeButton">Resume</button>
+        <button id="stopButton">Stop</button>
+        <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+        <div class="modal-content">
+            <h2>Select Voice Settings</h2>
+            <label>Speed:
+                <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+                <span id="initialRateValue">1</span>
+            </label>
+            <label>Pitch:
+                <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+                <span id="initialPitchValue">1</span>
+            </label>
+            <p>You can adjust these settings while the speech is playing too.</p>
+            <div style="text-align: center; margin-top: 20px;">
+                <button id="confirmSettings">Start Speaking</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Speech elements
+            const synth = window.speechSynthesis;
+            const speakButton = document.getElementById('speakToggle');
+            const pauseButton = document.getElementById('pauseButton');
+            const resumeButton = document.getElementById('resumeButton');
+            const stopButton = document.getElementById('stopButton');
+            const restartButton = document.getElementById('restartButton');
+            const confirmButton = document.getElementById('confirmSettings');
+            
+            // Settings elements
+            const initialRateInput = document.getElementById('initialRate');
+            const initialPitchInput = document.getElementById('initialPitch');
+            const initialRateValue = document.getElementById('initialRateValue');
+            const initialPitchValue = document.getElementById('initialPitchValue');
+            
+            const rateInput = document.getElementById('rate');
+            const pitchInput = document.getElementById('pitch');
+            const rateValue = document.getElementById('rateValue');
+            const pitchValue = document.getElementById('pitchValue');
+            
+            // Display elements
+            const statusMessage = document.getElementById('statusMessage');
+            const speechControls = document.getElementById('speechControls');
+            const settingsModal = document.getElementById('settingsModal');
+            const liveSettings = document.getElementById('liveSettings');
+            const textContainer = document.getElementById('textContainer');
+
+            // Font Mapping
+            const fontMap = {
+                'Serif Classic': 'Georgia, "Times New Roman", Times, serif',
+                'Modern Sans': 'Roboto, Arial, Helvetica, sans-serif',
+                'Elegant Serif': '"Playfair Display", Baskerville, "Baskerville Old Face", serif',
+                'Friendly Round': '"Nunito", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif',
+                'Technical Mono': '"Courier New", Courier, "Lucida Console", monospace',
+                'Handwritten Casual': '"Comic Neue", "Comic Sans MS", cursive',
+                'Clean Design': '"Open Sans", Arial, Helvetica, sans-serif',
+                'Classic Lora': 'Lora, Georgia, serif',
+                'Merriweather Serif': 'Merriweather, Georgia, serif',
+                'Source Serif Pro': '"Source Serif Pro", Georgia, serif',
+                'Crimson Text': '"Crimson Text", Georgia, serif',
+                'PT Serif': '"PT Serif", Georgia, serif',
+                'Libre Baskerville': '"Libre Baskerville", Georgia, serif',
+                'Modern Montserrat': 'Montserrat, Arial, sans-serif',
+                'Lato Sans': 'Lato, Arial, sans-serif',
+                'Source Sans Pro': '"Source Sans Pro", Arial, sans-serif',
+                'Georgia Custom': 'Georgia, serif',
+            };
+
+            // Speech state variables
+            let paragraphs = [];
+            let currentIndex = 0;
+            let isPaused = false;
+            let isStopped = false;
+            let currentUtterance = null;
+            let speechQueue = [];
+
+            // Font Styles Elements
+            const topControls = document.getElementById('topControls');
+            const fontStylesToggle = document.getElementById('fontStylesToggle');
+            const fontStylesDropdown = document.getElementById('fontStylesDropdown');
+            const fontButtons = fontStylesDropdown.querySelectorAll('button');
+
+            
+            function processTextContent() {
+                // Get all paragraph  in the text container
+                const elements = textContainer.querySelectorAll('p, pre');
+                paragraphs = Array.from(elements);
+                
+                
+                currentIndex = 0;
+                updateButtonStates();
+            }
+
+            function updateButtonStates() {
+    
+    pauseButton.disabled = !synth.speaking || isPaused;
+    resumeButton.disabled = !(isPaused || isStopped || (currentIndex >= paragraphs.length)); 
+    stopButton.disabled = !synth.speaking && !isPaused;
+}
+
+
+           
+            function highlightCurrentParagraph(index) {
+                
+                paragraphs.forEach(p => p.classList.remove('highlight'));
+                
+                
+                if (index >= 0 && index < paragraphs.length) {
+                    paragraphs[index].classList.add('highlight');
+                    
+                   
+                    paragraphs[index].scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+
+            // Font Toggle and Selection
+            fontStylesToggle.addEventListener('click', (event) => {
+                event.stopPropagation();
+                fontStylesDropdown.style.display = fontStylesDropdown.style.display === 'block' ? 'none' : 'block';
+            });
+
+            document.addEventListener('click', (event) => {
+                if (!topControls.contains(event.target)) {
+                    fontStylesDropdown.style.display = 'none';
+                }
+            });
+
+            fontStylesDropdown.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const fontButton = event.target.closest('button');
+                if (fontButton) {
+                    const selectedFont = fontButton.getAttribute('data-font');
+                    const fontFamily = fontMap[selectedFont];
+                    
+                    document.body.style.fontFamily = fontFamily;
+                    
+                    const preElements = document.getElementsByTagName('pre');
+                    for (let pre of preElements) {
+                        
+                        if (selectedFont !== 'Technical Mono') {
+                            pre.style.fontFamily = 'monospace';
+                        } else {
+                            pre.style.fontFamily = fontFamily;
+                        }
+                    }
+                    
+                    fontButtons.forEach(btn => {
+                        btn.style.backgroundColor = btn.getAttribute('data-font') === selectedFont ? '#e0e0e0' : 'transparent';
+                    });
+                    
+                    fontStylesDropdown.style.display = 'none';
+                }
+            });
+
+           
+            initialRateInput.addEventListener('input', () => initialRateValue.textContent = initialRateInput.value);
+            initialPitchInput.addEventListener('input', () => initialPitchValue.textContent = initialPitchInput.value);
+            
+            
+            rateInput.addEventListener('input', () => {
+                rateValue.textContent = rateInput.value;
+                if (synth.speaking && !isPaused) {
+                    
+                    currentUtterance.rate = parseFloat(rateInput.value);
+                }
+            });
+            
+            pitchInput.addEventListener('input', () => {
+                pitchValue.textContent = pitchInput.value;
+                if (synth.speaking && !isPaused) {
+                    
+                    currentUtterance.pitch = parseFloat(pitchInput.value);
+                }
+            });
+
+            // Speak button click handler
+            speakButton.addEventListener('click', () => {
+                if (synth.speaking) {
+                    synth.cancel();
+                }
+              
+                // Reset state for new speech session
+                isStopped = false;
+                isPaused = false;
+                currentIndex = 0;
+                speechQueue = [];
+                
+                // Process text content into paragraphs
+                processTextContent();
+                
+                
+                settingsModal.style.display = 'flex';
+            });
+
+            
+            confirmButton.addEventListener('click', () => {
+                
+                settingsModal.style.display = 'none';
+                
+                
+                speechControls.style.display = 'flex';
+                liveSettings.style.display = 'block';
+                
+                // Copy initial settings to live settings
+                rateInput.value = initialRateInput.value;
+                pitchInput.value = initialPitchInput.value;
+                rateValue.textContent = rateInput.value;
+                pitchValue.textContent = pitchInput.value;
+              
+                
+                startSpeaking();
+            });
+
+            function startSpeaking() {
+                
+                if (synth.speaking) {
+                    synth.cancel();
+                }
+                
+                
+                isStopped = false;
+                isPaused = false;
+                currentIndex = 0;
+                speechQueue = [];
+                
+                
+                speakNextParagraph();
+            }
+
+            function speakNextParagraph() {
+                if (currentIndex >= paragraphs.length || isStopped) {
+                    if (!isStopped && currentIndex >= paragraphs.length) {
+                        statusMessage.textContent = 'Speech finished.';
+                        
+                        paragraphs.forEach(p => p.classList.remove('highlight'));
+                    }
+                    updateButtonStates();
+                    return;
+                }
+
+                if (isPaused) return;
+                
+                
+                const currentText = paragraphs[currentIndex].innerText.trim();
+                
+                if (currentText) {
+                    // Highlight current paragraph
+                    highlightCurrentParagraph(currentIndex);
+                    
+                    
+                    currentUtterance = new SpeechSynthesisUtterance(currentText);
+                    currentUtterance.rate = parseFloat(rateInput.value);
+                    currentUtterance.pitch = parseFloat(pitchInput.value);
+                    
+                    // Set up event handlers
+                    currentUtterance.onend = () => {
+                        
+                        currentIndex++;
+                        if (!isPaused && !isStopped) {
+                           
+                            setTimeout(() => speakNextParagraph(), 300);
+                        }
+                        updateButtonStates();
+                    };
+                    
+                    currentUtterance.onerror = (event) => {
+                        console.error('Speech synthesis error:', event);
+                        statusMessage.textContent = 'Speech error occurred.';
+                        updateButtonStates();
+                    };
+                    
+                    // Speak
+                    statusMessage.textContent = 'Speaking...';
+                    synth.speak(currentUtterance);
+                    updateButtonStates();
+                } else {
+                    
+                    currentIndex++;
+                    speakNextParagraph();
+                }
+            }
+
+            // Pause button handler
+            pauseButton.addEventListener('click', () => {
+                if (synth.speaking && !isPaused) {
+                    synth.pause();
+                    isPaused = true;
+                    statusMessage.textContent = 'Speech paused.';
+                    updateButtonStates();
+                }
+            });
+
+            // Resume button handler 
+            resumeButton.addEventListener('click', () => {
+    
+    synth.cancel();
+    
+    if (isPaused) {
+        
+        isPaused = false;
+        statusMessage.textContent = 'Speech resumed.';
+        speakNextParagraph();
+    } else if (isStopped) {
+        
+        isStopped = false;
+        statusMessage.textContent = 'Speech resumed from beginning.';
+        speakNextParagraph();
+    } else if (currentIndex >= paragraphs.length) {
+        
+        currentIndex = 0;
+        statusMessage.textContent = 'Starting from beginning.';
+        speakNextParagraph();
+    }
+    
+    updateButtonStates();
+});
+
+            // Stop button handler
+            stopButton.addEventListener('click', () => {
+    synth.cancel();
+    isStopped = true;
+    isPaused = false;
+    // Reset currentIndex to 0 when stopping
+    currentIndex = 0;
+    statusMessage.textContent = 'Speech stopped. Will restart from beginning when resumed.';
+    
+   
+    paragraphs.forEach(p => p.classList.remove('highlight'));
+    
+    updateButtonStates();
+});
+            
+            // Restart button handler
+            restartButton.addEventListener('click', () => {
+                synth.cancel();
+                isStopped = false;
+                isPaused = false;
+                currentIndex = 0;
+                
+                // Start from beginning
+                speakNextParagraph();
+                statusMessage.textContent = 'Restarted from beginning.';
+                
+                updateButtonStates();
+            });
+
+            // Browser compatibility check
+            if (!('speechSynthesis' in window)) {
+                alert('Web Speech API is not supported in this browser.');
+                speakButton.disabled = true;
+                confirmButton.disabled = true;
+                pauseButton.disabled = true;
+                resumeButton.disabled = true;
+                stopButton.disabled = true;
+                restartButton.disabled = true;
+                statusMessage.textContent = 'Speech synthesis not supported in this browser.';
+            }
+            
+            // Fix for voice not loading issue in some browsers
+            window.speechSynthesis.onvoiceschanged = () => {
+                // This ensures voices are loaded before allowing speech
+                if (window.speechSynthesis.getVoices().length > 0) {
+                    speakButton.disabled = false;
+                }
+            };
+            
+            
+            updateButtonStates();
+            
+            
+            document.addEventListener('visibilitychange', () => {
+                if (document.visibilityState === 'visible' && isPaused) {
+                    
+                    if (synth.paused) {
+                        try {
+                            synth.resume();
+                        } catch (e) {
+                            console.error('Error resuming speech:', e);
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

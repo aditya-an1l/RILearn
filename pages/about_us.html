@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>RILEARN </title>
   <style>
     /* General Reset and Box Sizing */
-    *, ::after, ::before {
+    *,
+    ::after,
+    ::before {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       border: 0;
     }
 
-    html, body {
+    html,
+    body {
       font-family: 'Poppins', sans-serif;
       font-weight: 400;
-      background-color:white;
+      background-color: white;
       scroll-behavior: smooth;
       text-align: left;
       line-height: 1.6;
@@ -28,7 +33,12 @@
     }
 
     /* Headings and Text */
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       font-weight: 700;
       margin-bottom: 10px;
     }
@@ -73,7 +83,7 @@
       flex-wrap: wrap;
       margin: 0 -15px;
     }
-    
+
     .col-lg-6 {
       flex: 0 0 50%;
       max-width: 50%;
@@ -84,7 +94,7 @@
     .bg-decoration {
       position: absolute;
       z-index: 0;
-      opacity: 0.3; 
+      opacity: 0.3;
     }
 
     .bg-left {
@@ -103,7 +113,7 @@
       top: 0;
       height: 100%;
       z-index: 0;
-      opacity: 0.3; 
+      opacity: 0.3;
     }
 
     /* Banner */
@@ -148,30 +158,30 @@
     .main-banner .right-image img {
       max-width: 100%;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease;
     }
 
     .main-banner .right-image img:hover {
-      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
     }
 
     /* About Section */
     #about {
-      padding: 100px 0; 
+      padding: 100px 0;
       position: relative;
       overflow: hidden;
     }
 
     .about-left-image img {
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       transition: transform 0.5s ease, box-shadow 0.5s ease;
     }
-    
+
     .about-left-image img:hover {
       transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     }
 
     .section-heading h6 {
@@ -206,7 +216,7 @@
 
     /* Section Spacing */
     .section-spacer {
-      margin: 0; 
+      margin: 0;
       text-align: center;
     }
 
@@ -308,46 +318,46 @@
       transform: rotate(10deg);
     }
 
-    
+
     .info-cards {
       display: flex;
       justify-content: space-between;
       margin-bottom: 20px;
     }
-    
+
     .contact-card {
-  flex: 1;
-  background: #fff;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  margin: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
-}
+      flex: 1;
+      background: #fff;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      margin: 5px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
 
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(45deg, #ff758c, #6c5ce7); 
-  color: white; 
-}
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(45deg, #ff758c, #6c5ce7);
+      color: white;
+    }
 
 
-.contact-card:hover .icon-circle {
-  background-color: rgba(255, 255, 255, 0.2);
-}
+    .contact-card:hover .icon-circle {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
 
-.contact-card:hover i {
-  color: white;
-}
+    .contact-card:hover i {
+      color: white;
+    }
 
-.contact-card:hover p {
-  color: white;
-}
+    .contact-card:hover p {
+      color: white;
+    }
 
-    
+
     .icon-circle {
       width: 60px;
       height: 60px;
@@ -357,35 +367,35 @@
       align-items: center;
       margin: 0 auto 10px;
     }
-    
+
     .phone-circle {
       background-color: #e6f2fd;
     }
-    
+
     .email-circle {
       background-color: #f6e6fd;
     }
-    
+
     .location-circle {
       background-color: #fde6ec;
     }
-    
+
     .contact-card i {
       font-size: 24px;
     }
-    
+
     .phone-icon {
       color: #4299e1;
     }
-    
+
     .email-icon {
       color: #9f7aea;
     }
-    
+
     .location-icon {
       color: #ed64a6;
     }
-    
+
     .contact-card p {
       font-size: 16px;
       font-weight: 500;
@@ -440,7 +450,7 @@
       box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
     }
 
-    
+
     .nav-dots {
       position: fixed;
       right: 20px;
@@ -461,7 +471,8 @@
       transition: all 0.3s ease;
     }
 
-    .dot:hover, .dot.active {
+    .dot:hover,
+    .dot.active {
       background-color: #fa65b1;
       transform: scale(1.3);
     }
@@ -545,15 +556,15 @@
         flex: 0 0 100%;
         max-width: 100%;
       }
-      
+
       .main-banner .left-content h2 {
         font-size: 36px;
       }
-      
+
       .contact-container {
         flex-direction: column;
       }
-      
+
       .map-container {
         min-height: 250px;
       }
@@ -565,11 +576,11 @@
       .feature-cards {
         flex-direction: column;
       }
-      
+
       .info-cards {
         flex-direction: column;
       }
-      
+
       .contact-card {
         margin-bottom: 15px;
       }
@@ -592,20 +603,22 @@
     <img src="../media/about_us_media/images/slider-right-dec.jpg" class="bg-decoration bg-right" alt="">
     <!-- Wave pattern background -->
     <img src="../media/about_us_media/images/wave-pattern.png" class="bg-wave" alt="">
-    
+
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="left-content fade-in">
             <h6>RILEARN</h6>
-            <h2>We Boost Your Mood</h2>
-            <p>RILEARN is brought to you to boost your mood by providing interactive E-books. Feel free to use this for a commercial purpose.</p>
-            
+            <h2>About US</h2>
+            <p>RILEARN is brought to you to boost your mood by providing interactive E-books. Feel free to use this for
+              a commercial purpose.</p>
+
           </div>
         </div>
         <div class="col-lg-6">
           <div class="right-image fade-in">
-            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/coffee-phone_2x" alt="E-book reader with coffee">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/coffee-phone_2x"
+              alt="E-book reader with coffee">
           </div>
         </div>
       </div>
@@ -616,54 +629,59 @@
   <div class="section-spacer">
     <img src="../media/about_us_media/images/arrow2.png" alt="Arrow down">
   </div>
-  
+
   <div id="about" class="about section">
     <!-- Background decorations -->
     <img src="../media/about_us_media/images/slider-left-dec.jpg" class="bg-decoration bg-left" alt="">
     <img src="../media/about_us_media/images/slider-right-dec.jpg" class="bg-decoration bg-right" alt="">
-    
+
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="about-left-image fade-in">
-            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/ipad-library_2x" alt="E-book library">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/ipad-library_2x"
+              alt="E-book library">
           </div>
         </div>
         <div class="col-lg-6">
           <div class="about-right-content fade-in">
             <div class="section-heading">
               <h6>About Us</h6>
-              <h4>Who is <em>RILEARN</em></h4>
+              <h4>What is <em>RILEARN</em></h4>
               <div class="line-dec"></div>
             </div>
-            <p>RILEARN is a platform dedicated to providing high-quality interactive e-books that enhance your reading experience. Our mission is to make reading more engaging, interactive, and mood-boosting for all of our users.</p>
-            <p>We believe in the power of literature to transform moods and enrich lives, and our carefully curated collection of e-books is designed to do just that.</p>
-            
-            
+            <p>RILEARN is a platform dedicated to providing high-quality interactive e-books that enhance your reading
+              experience. Our mission is to make reading more engaging, interactive, and mood-boosting for all of our
+              users.</p>
+            <p>We believe in the power of literature to transform moods and enrich lives, and our carefully curated
+              collection of e-books is designed to do just that.</p>
+
+
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  
+
   <div class="section-spacer">
-     <img src="../media/about_us_media/images/arrow1.png" alt="Arrow up">
+    <img src="../media/about_us_media/images/arrow1.png" alt="Arrow up">
   </div>
-                      
+
   <div class="main-banner" id="features">
     <!-- Background decorations -->
     <img src="../media/about_us_media/images/slider-left-dec.jpg" class="bg-decoration bg-left" alt="">
     <img src="../media/about_us_media/images/slider-right-dec.jpg" class="bg-decoration bg-right" alt="">
-    
+
     <div class="container">
       <div class="row">
         <div class="col-lg-6">
           <div class="left-content fade-in">
             <h6>RILEARN</h6>
-            <h2>We Boost Your Mood</h2>
-            <p>Explore our collection of interactive E-books designed to boost your mood and enhance your reading experience. With RILEARN, reading becomes a joy that brightens your day.</p>
-            
+            <h2>We Boost Your Learning using Interactive Mediums</h2>
+            <p>Explore our collection of interactive E-books designed to boost your mood and enhance your reading
+              experience. With RILEARN, reading becomes a joy that brightens your day.</p>
+
             <!-- Feature cards -->
             <div class="feature-cards">
               <div class="feature-card">
@@ -683,37 +701,40 @@
         </div>
         <div class="col-lg-6">
           <div class="right-image fade-in">
-            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/kindle-ice-tea_2x" alt="E-reader with ice tea">
+            <img src="https://res.cloudinary.com/bookbub/image/upload/f_auto,q_auto/welcome/kindle-ice-tea_2x"
+              alt="E-reader with ice tea">
           </div>
         </div>
       </div>
     </div>
-  </div>                     
-                          
+  </div>
+
   <section class="contact-section" id="contact">
     <!-- Background decorations -->
     <img src="../media/about_us_media/images/slider-left-dec.jpg" class="bg-decoration bg-left" alt="">
-    
+
     <h4 class="sub-heading fade-in">CONTACT US</h4>
     <h2 class="contact-heading fade-in">Get In Touch With Us <span>Now</span></h2>
     <img src="../media/about_us_media/images/contact-dec.png" alt="decoration" class="img2 fade-in">
-    
+
     <div class="contact-container fade-in">
       <!-- Left Side - Google Map -->
       <div class="map-container">
-          <br>
-          <br>
-          <h2><strong>Our Office</strong></h2>
-          <br>
-              <iframe width="100%" height="200px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amaravati,%20Andhra%20Pradesh,%20Karnataka,%20india+(RiLearn%20Office)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/collections/personal-trackers/">Personal GPS</a></iframe>
-          <br>
-          <p><strong>Postal Address </strong>: RILearn Office, Amaravati, Andhra Pradesh - 522020</p>
+        <br>
+        <br>
+        <h2><strong>Our Office</strong></h2>
+        <br>
+        <iframe width="100%" height="200px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Amaravati,%20Andhra%20Pradesh,%20Karnataka,%20india+(RiLearn%20Office)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
+            href="https://www.gps.ie/collections/personal-trackers/">Personal GPS</a></iframe>
+        <br>
+        <p><strong>Postal Address </strong>: RILearn Office, Amaravati, Andhra Pradesh - 522020</p>
       </div>
 
       <!-- Right Side - Contact Info & Form -->
       <div class="contact-details">
         <img src="../media/about_us_media/images/contact-top-right.png" alt="">
-        
+
         <div class="info-cards">
           <div class="contact-card">
             <div class="icon-circle phone-circle">
@@ -725,8 +746,8 @@
             <div class="icon-circle email-circle">
               <i class="fas fa-bullhorn email-icon"></i>
             </div>
-           <p><a href="mailto:team.rilearn@gmail.com">team.rilearn@gmail.com</a>
-</p>
+            <p><a href="mailto:team.rilearn@gmail.com">team.rilearn@gmail.com</a>
+            </p>
           </div>
           <div class="contact-card">
             <div class="icon-circle location-circle">
@@ -747,38 +768,38 @@
     </div>
   </section>
 
-  
+
   <script>
     // Simple script to handle fade-in animations and navigation
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       // Handle fade-in elements
       const fadeElements = document.querySelectorAll('.fade-in');
-      
+
       function checkFade() {
         fadeElements.forEach(element => {
           const rect = element.getBoundingClientRect();
           const windowHeight = window.innerHeight;
-          
+
           if (rect.top <= windowHeight * 0.85) {
             element.classList.add('visible');
           }
         });
       }
-      
+
       // Initial check
       checkFade();
-      
+
       // Check on scroll
       window.addEventListener('scroll', checkFade);
-      
+
       // Navigation dots
       const dots = document.querySelectorAll('.dot');
-      
+
       dots.forEach(dot => {
-        dot.addEventListener('click', function() {
+        dot.addEventListener('click', function () {
           const targetId = this.getAttribute('data-target');
           const targetElement = document.getElementById(targetId);
-          
+
           if (targetElement) {
             window.scrollTo({
               top: targetElement.offsetTop,
@@ -787,18 +808,18 @@
           }
         });
       });
-      
+
       // Update active dot on scroll
-      window.addEventListener('scroll', function() {
+      window.addEventListener('scroll', function () {
         const scrollPosition = window.scrollY + window.innerHeight / 2;
-        
+
         const sections = ['top', 'about', 'features', 'contact'];
         sections.forEach((sectionId, index) => {
           const section = document.getElementById(sectionId);
           if (section) {
             const sectionTop = section.offsetTop;
             const sectionBottom = sectionTop + section.offsetHeight;
-            
+
             if (scrollPosition >= sectionTop && scrollPosition <= sectionBottom) {
               dots.forEach(dot => dot.classList.remove('active'));
               dots[index].classList.add('active');
@@ -809,4 +830,5 @@
     });
   </script>
 </body>
+
 </html>

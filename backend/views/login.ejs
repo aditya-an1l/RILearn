@@ -156,14 +156,13 @@
             clearMessage();
         });
 
-<!-- TODO: change the behaviour -->
         loginForm.onsubmit = async (e) => {
             e.preventDefault();
             clearMessage();
             const username = document.getElementById('loginUsername').value.trim();
             const password = document.getElementById('loginPassword').value.trim();
 
-            if(!username || !password) {
+            if (!username || !password) {
                 showMessage('Please fill both fields');
                 return;
             }
@@ -174,17 +173,17 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ username, password })
                 });
+                const data = await res.json(); // ← read once
                 if (!res.ok) {
-                    const data = await res.json();
                     throw new Error(data.message || 'Login failed');
                 }
-                const data = await res.json();
+
                 localStorage.setItem('token', data.token);
                 showMessage('Login successful! Redirecting...', 'green');
                 setTimeout(() => {
                     window.location.href = '/dashboard';
                 }, 4200);
-            } catch(err) {
+            } catch (err) {
                 showMessage(err.message || 'Error logging in');
             }
         };

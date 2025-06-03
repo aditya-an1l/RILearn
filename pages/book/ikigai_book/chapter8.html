@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter8</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css" />
+  <link rel="stylesheet" href="annotation_highlight.css" />
+
+
+</head>
+
+<body>
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>GENTLE MOVEMENTS, LONGER LIFE</p>
+    </h1>
+    <h1 align="center">
+      <p>Exercises from the East that
+        promote health and longevity</p>
+    </h1>
+
+    <p style="font-size: 17px">STUDIES FROM THEBlue Zones suggest that the people who live longest are not the ones who
+      do the most exercise
+      but rather the ones who move the most.</p>
+    <p>When we visited Ogimi, the Village of Longevity, we discovered that even
+      people over eighty and ninety years old are still highly active. They don't stay at
+      home looking out the window or reading the newspaper. Ogimi's residents walk a
+      lot, do karaoke with their neighbors, get up early in the morning, and, as soon as
+      they've had breakfast—or even before—head outside to weed their gardens. They
+      don't go to the gym or exercise intensely, but they almost never stop moving in
+      the course of their daily routines.
+    </p>
+    <p class="highlight_section"><b>As Easy as Getting out of Your Chair</b><br>
+      "Metabolism slows down 90 percent after 30 minutes of sitting. The
+      enzymes that move the bad fat from your arteries to your muscles, where
+      it can get burned off, slow down. And after two hours, good cholesterol
+      drops 20 percent. Just getting up for five minutes is going to get things
+      going again. These things are so simple they're almost stupid," says Gavin
+      Bradley
+
+      in a 2015 interview with Brigid Schulte for the Washington Post.
+
+      Bradley is one of the preeminent experts on the subject, and the director
+      of an international organization dedicated to building awareness of how
+      detrimental sitting all the time can be to our health.
+    </p>
+    <p>If we live in a city, we might find it hard to move in natural and healthy ways
+      every day, but we can turn to exercises that have proven for centuries to be good
+      for the body.</p>
+    <p>The Eastern disciplines for bringing body, mind, and soul into balance have
+      become quite popular in the West, but in their countries of origin they have been
+      used for ages to promote health.
+    </p>
+    <p>Yoga—originally from India, though very popular in Japan—and China's
+      qigong and tai chi, among other disciplines, seek to create harmony between a
+      person's body and mind so they can face the world with strength, joy, and
+      serenity.
+    </p>
+    <p>They are touted as elixirs of youth, and science has endorsed the claim.
+    </p>
+    <p>These gentle exercises offer extraordinary health benefits, and are particularly
+      appropriate for older individuals who have a harder time staying fit.</p>
+    <p>Tai chi has been shown, among other things, to slow the development of
+      osteoporosis and Parkinson's disease, to increase circulation, and to improve
+      muscle tone and flexibility. Its emotional benefits are just as important: It is a
+      great shield against stress and depression.</p>
+    <p>You don't need to go to the gym for an hour every day or run marathons. As
+      Japanese centenarians show us, all you need is to add movement to your day.
+      Practicing any of these Eastern disciplines on a regular basis is a great way to do
+      so. An added benefit is that they all have well-defined steps, and as we saw in
+      chapter IV, disciplines with clear rules are good for flow. If you don't like any of
+      these disciplines, feel free to choose a practice that you love and that makes you
+      move.</p>
+    <p>In the following pages we'll take a look at some of the practices that promote
+      health and longevity—but first, a little appetizer: a singularly Japanese exercise
+      for starting your day.
+    </p>
+    <h3>
+      <p>Radio taiso</p>
+    </h3>
+    <p>This morning warm-up has been around since before World War II. The "radio"
+      part of its name is from when the instructions for each exercise were transmitted
+      over the radio, but today people usually do these movements while tuned to a
+      television channel or Internet video demonstrating the steps.</p>
+    <p>One of the main purposes of doing radio taiso is to promote a spirit of unity
+      among participants. The exercises are always done in groups, usually in schools
+      before the start of classes, and in businesses before the workday begins.</p>
+    <p>Statistics show that 30 percent of Japanese practice radio taiso for a few
+      minutes every morning, but radio taiso is one thing that almost everyone we
+      interviewed in Ogimi had in common. Even the residents of the nursing home we
+      visited dedicated at least five minutes every day to it, though some did the
+      exercises from their wheelchairs. We joined them on their daily practice and we
+      felt refreshed for the rest of the day.</p>
+    <p>When these exercises are done in a group, it is usually on a sports field or in a
+      large reception hall, and typically involves some kind of loudspeaker.
+      The exercises take five or ten minutes, depending on whether you do all or
+      only some of them. They focus on dynamic stretching and increasing joint
+      mobility. One of the most iconic radio taiso exercises consists of simply raising
+      mobility. One of the most iconic radio taiso exercises consists of simply raising
+      your arms above your head and then bringing them down in a circular motion. It
+      is a tool to wake up the body, an easy mobility workout that is low in intensity
+      and that focuses on exercising as many joints as possible.
+    </p>
+    <p>It might seem basic, but in our modern lives, we can spend days without
+      raising our arms above our ears. Think about it: our arms are down when using
+      computers, when using smartphones, when reading books. One of the few times
+      we raise our hands over our heads is when reaching for something in a cupboard
+      or closet, while our ancestors were raising their hands over their heads all the
+      time when gathering things from trees. Radio taiso helps us to practice all the
+      basic movements of the body.
+    </p>
+
+    <img src="Screenshot 2025-02-09 113034.png" alt="image">
+    <img src="Screenshot 2025-02-09 113117.png" alt="image">
+    <img src="Screenshot 2025-02-09 113156.png" alt="image">
+    <h3>
+      <p>Yoga</p>
+    </h3>
+    <p>Popular in Japan as well as in the West, yoga can be done by almost anyone.
+      Some of its poses have even been adapted for pregnant women and practitioners
+      with physical disabilities.
+    </p>
+    <p>Yoga comes from India, where it was developed millennia ago to unite our
+      mental and physical elements. The word yoga itself comes from the Sanskrit term
+      for "yoke," which refers to the crosspiece that binds draft animals to one another
+      and to the cart they're pulling. Yoga strives to unite body and mind in the same
+      way, guiding us toward a healthy lifestyle in harmony with the world around us.
+      <br> The main objectives of yoga are:
+    </p>
+    <ul type="square">
+      <li>
+        <p>To bring us closer to our (human) nature</p>
+      </li>
+      <li>
+        <p>Mental and physical purification</p>
+      </li>
+      <li>
+        <p>To bring us closer to the divine</p>
+      </li>
+
+    </ul>
+    <h4>
+      <p>Styles of yoga</p>
+    </h4>
+    <p>Though all are oriented toward similar goals, there are many different types of
+      yoga that vary according to the traditions and texts from which they were
+      developed. The differences among them lie, as the masters say, in the path taken
+      to the summit of our best self.
+    </p>
+    <ul type="square">
+      <li>
+        <p>Jnana yoga: the yoga of wisdom; the search for discipline and mental
+          growth</p>
+      </li>
+      <li>
+        <p>Karma yoga: focuses on action, on tasks and duties that benefit oneself and
+          one's community</p>
+      </li>
+      <li>
+        <p>Bhakti yoga: the yoga of devotion and surrender to the divine</p>
+      </li>
+      <li>
+        <p>Mantra yoga: focuses on the recitation of mantras to reach a state of
+          relaxation</p>
+      </li>
+      <li>
+        <p>Kundalini yoga: combines diverse steps to reach the desired mental state</p>
+      </li>
+      <li>
+        <p>Raja yoga: also known as the royal path; encompasses a range of steps
+          geared toward achieving communion with oneself and others</p>
+      </li>
+      <li>
+        <p>Hatha yoga: the most widespread form in the West and Japan; characterized
+          by asanas or poses combined in a quest for balance</p>
+      </li>
+
+    </ul>
+    <h3>
+      <p>How to do a Sun Salutation</p>
+    </h3>
+    <p>The Sun Salutation is one of the most iconic exercises in hatha yoga. To do it, you
+      simply have to follow these twelve basic movements:</p>
+    <ol type="1">
+      <li>
+        <p>With your feet together, stand up straight but keep your muscles relaxed.
+          Exhale.</p>
+      </li>
+      <li>
+        <p>Place the palms of your hands together in front of your chest; from this
+          position, inhale as you raise your arms above your head and bend backward
+          slightly.</p>
+      </li>
+      <li>
+        <p>Exhale as you bend forward until you touch the ground with the palms of
+          your hands, without bending your knees</p>
+      </li>
+      <li>
+        <p>Stretch one leg back to touch the floor with the tips of your toes. Inhale.</p>
+      </li>
+      <li>
+        <p>Bring the other leg back, keeping your legs and arms straight, as you hold
+          your breath.</p>
+      </li>
+      <li>
+        <p>As you exhale, bend your arms and bring your chest to the ground and then
+          forward, resting your knees on the ground.</p>
+      </li>
+      <li>
+        <p>Straighten your arms and bend your spine back, keeping the lower half of
+          your body on the ground. Inhale</p>
+      </li>
+      <li>
+        <p>With your hands and feet on the ground, lift your hips until your arms and
+          legs are straight and your body forms an upside-down V. Exhale throughout
+          the movement.</p>
+      </li>
+      <li>
+        <p>Bring forward the same leg you'd stretched back earlier and bend it so that
+          your knee and foot are aligned under your head and between your hands.
+          Inhale.</p>
+      </li>
+      <li>
+        <p>Exhale as you bring your back foot forward and straighten your legs, keeping
+          your hands on the ground as in posture 3</p>
+      </li>
+      <li>
+        <p>Bring your arms above your head with your palms together and bend
+          backward slightly, as you did in posture 2, while you inhale.</p>
+      </li>
+      <li>
+        <p>Lower your arms to their initial position in mountain pose while you exhale.</p>
+      </li>
+
+    </ol>
+    <p>You've just greeted the sun; now you're ready to have a fantastic day.</p>
+
+    <img src="Screenshot 2025-02-09 113247.png" alt="image">
+    <h3>
+      <p>Tai chi</p>
+    </h3>
+    <p>Also known as t'ai chi ch'uan (or taijiquan), tai chi is a Chinese martial art that
+      can be traced back hundreds of years to Buddhism and Confucianism; it is very
+      popular in Japan, too.
+    </p>
+    <p>According to Chinese tradition, it was created by the Taoist master and martial
+      arts practitioner Zhang Sanfeng, though it was Yang Luchan who in the
+      nineteenth century brought the form to the rest of the world.</p>
+    <p>Tai chi was originally a neijia, or internal martial art, meaning its goal was
+      personal growth. Focused on self-defense, it teaches those who practice it to
+      defeat their adversaries by using the least amount of force possible and by relying
+      on agility</p>
+    <p>Tai chi, which was also seen as a means of healing body and mind, would go
+      on to be used more frequently to foster health and inner peace. To encourage its
+      citizens to be more active, the Chinese government promoted it as an exercise,
+      and it lost its original connection to martial arts, becoming instead a source of
+      health and well-being accessible to all.
+    </p>
+    <h4>
+      <p>Styles of tai chi</p>
+    </h4>
+    <p>There are different schools and styles of tai chi. The following are the best
+      known:</p>
+    <ul type="square">
+      <li>
+        <p>Chen-style: alternates between slow movements and explosive ones</p>
+      </li>
+      <li>
+        <p>Yang-style: the most widespread of the forms; characterized by slow, fluid
+          movements</p>
+      </li>
+      <li>
+        <p>Wu-style: utilizes small, slow, deliberate movements</p>
+      </li>
+      <li>
+        <p>Hao-style: centered on internal movements, with almost microscopic
+          external movements; one of the least practiced forms of tai chi, even in
+          China</p>
+      </li>
+    </ul>
+    <p>Despite their differences, these styles all have the same objectives:</p>
+    <ol type="1">
+      <li>
+        <p>To control movement through stillness</p>
+      </li>
+      <li>
+        <p>To overcome force through finesse</p>
+      </li>
+      <li>
+        <p>To move second and arrive first</p>
+      </li>
+      <li>
+        <p>To know yourself and your opponent</p>
+      </li>
+    </ol>
+    <h4>
+      <p>The ten basic principles of tai chi</p>
+    </h4>
+    <p>According to the master Yang Chengfu, the correct practice of tai chi follows ten
+      basic principles:</p>
+    <ol type="1">
+      <li>
+        <p>Elevate the crown of your head, and focus all your energy there.</p>
+      </li>
+      <li>
+        <p>Tighten your chest and expand your back to lighten your lower body.</p>
+      </li>
+      <li>
+        <p>Relax your waist and let it guide your body.</p>
+      </li>
+      <li>
+        <p>Learn to differentiate between heaviness and lightness, knowing how your
+          weight is distributed.</p>
+      </li>
+      <li>
+        <p>Relax the shoulders to allow free movement of the arms and promote the
+          flow of energy.</p>
+      </li>
+      <li>
+        <p>Value the agility of the mind over the strength of the body.</p>
+      </li>
+      <li>
+        <p>Unify the upper and lower body so they act in concert.</p>
+      </li>
+      <li>
+        <p>Unify the internal and the external to synchronize mind, body, and breath.</p>
+      </li>
+      <li>
+        <p>Do not break the flow of your movement; maintain fluidity and harmony.</p>
+      </li>
+      <li>
+        <p>Look for stillness in movement. An active body leads to a calm mind.</p>
+      </li>
+    </ol>
+    <h4>
+      <p>Imitating clouds</p>
+    </h4>
+    <p>One of the best-known movements in tai chi consists of following the form of
+      clouds in an exercise called Wave Hands Like Clouds. Here are the steps:</p>
+    <ol type="1">
+      <li>
+        <p>Extend your arms in front of you with your palms down.</p>
+      </li>
+      <li>
+        <p>Turn your palms to face in, as though you were hugging a tree trunk.</p>
+      </li>
+      <li>
+        <p>Open your arms out to the side.</p>
+      </li>
+      <li>
+        <p>Bring the left arm up and center, and the right arm down and center</p>
+      </li>
+      <li>
+        <p>Trace the shape of a ball in front of your body.</p>
+      </li>
+      <li>
+        <p>Turn your left palm toward your face.</p>
+      </li>
+      <li>
+        <p>Shift your weight to your left foot and pivot from your hip toward that side,
+          while your eyes follow the movement of your hand.</p>
+      </li>
+      <li>
+        <p>Bring your left hand to your waist and your right hand in front of your face</p>
+      </li>
+      <li>
+        <p>Shift your weight to your right foot.</p>
+      </li>
+      <li>
+        <p>Pivot toward your right, looking at your raised right hand the entire time.</p>
+      </li>
+      <li>
+        <p>Repeat this movement fluidly, shifting your weight from one foot to the
+          other as you reposition your hands.</p>
+      </li>
+      <li>
+        <p>Stretch your arms out in front of you again and bring them down slowly,
+          returning to your initial position.</p>
+      </li>
+
+    </ol>
+
+    <img src="Screenshot 2025-02-09 113341.png" alt="image">
+    <h3>
+      <p>Qigong</p>
+    </h3>
+    <p>Also known as chi kung, its name combines qi (life force, or energy) and gong
+      (work), indicating that the form works with the individual's life force. Though
+      relatively modern, especially under its current name, the art of qigong is based on
+      the Tao yin, an ancient art meant to foster mental and physical well-being.
+    </p>
+    <p>The practice began to appear in reports on training and martial arts at the
+      beginning of the twentieth century, and by the 1930s was being used in hospitals.
+      The Chinese government later popularized it, as it had done with tai chi.</p>
+    <p>Qigong involves static and dynamic physical exercises that stimulate
+      respiration in a standing, seated, or reclined position. There are many different
+      styles of qigong, but all of them seek to strengthen and regenerate qi. Though its
+      movements are typically gentle, the practice is intense.</p>
+    <h4>
+      <p>Benefits of qigong</p>
+    </h4>
+    <p>According to numerous international scientific studies, qigong—like tai chi and
+      yoga—offers significant health benefits. The following stand out among those
+      proven through scientific research, as observed by Dr. Kenneth M. Sancier of San
+      Francisco's Qigong Institute in his article "Medical Applications of Qigong"
+
+      :</p>
+    <ul type="square">
+      <li>
+        <p>Modification of brain waves</p>
+      </li>
+      <li>
+        <p>Improved balance of sex hormones</p>
+      </li>
+      <li>
+        <p>Lower mortality rate from heart attacks</p>
+      </li>
+      <li>
+        <p>Lower blood pressure in patients with hypertension</p>
+      </li>
+      <li>
+        <p>Greater bone density</p>
+      </li>
+      <li>
+        <p>Better circulation</p>
+      </li>
+      <li>
+        <p>Deceleration of symptoms associated with senility</p>
+      </li>
+      <li>
+        <p>Greater balance and efficiency of bodily functions</p>
+      </li>
+      <li>
+        <p>Increased blood flow to the brain and greater mind-body connection</p>
+      </li>
+      <li>
+        <p>Improved cardiac function</p>
+      </li>
+      <li>
+        <p>Reduction in the secondary effects of cancer treatments</p>
+      </li>
+    </ul>
+    <p>Practicing these arts not only keeps us in shape, it also helps extend our lives.</p>
+    <h4>
+      <p>Methods for practicing qigong</p>
+    </h4>
+    <p>In order to practice qigong correctly, we should remember that our life energy
+      flows through our whole body. We should know how to regulate its many parts:</p>
+    <ol type="1">
+      <li>
+        <p>Tyau Shenn: (regulating the body) by adopting the correct posture—it is
+          important to be firmly rooted to the ground</p>
+      </li>
+      <li>
+        <p>Tyau Shyi: (regulating the breath) until it is calm, steady, and peaceful</p>
+      </li>
+      <li>
+        <p>Tyau Hsin: (regulating the mind); the most complicated part, as it implies
+          emptying the mind of thoughts</p>
+      </li>
+      <li>
+        <p>Tyau Chi: (regulating the life force) through the regulation of the three prior
+          elements, so that it flows naturally</p>
+      </li>
+      <li>
+        <p>Tyau Shen: (regulating the spirit); the spirit is both strength and root in battle,
+          as Yang Jwing-Ming explains in The Essence of Taiji Qigong.
+          4</p>
+      </li>
+    </ol>
+    <p>In this way, the whole organism will be prepared to work together toward a
+      single goal.</p>
+    <h4>
+      <p>The five elements of qigong</p>
+    </h4>
+    <p>One of qigong's best-known exercises is a series representing the five elements:
+      earth, water, wood, metal, and fire. This series of movements seeks to balance the
+      five currents of energy in order to improve brain and organ function.
+      There are several ways to do these movements. In this case, we're following
+      the model of Professor María Isabel García Monreal from the Qigong Institute in
+      Barcelona.
+    </p>
+    <h4>
+      <p>EARTH</p>
+    </h4>
+    <ol type="1">
+      <li>
+        <p>Stand with your legs apart and your feet directly below your shoulders.</p>
+      </li>
+      <li>
+        <p>Turn your feet outward slightly to strengthen the posture.</p>
+      </li>
+      <li>
+        <p>Keep your shoulders relaxed and down and your arms loose at your sides,
+          slightly away from your body (this is the Wu Qi, or rooted, posture)</p>
+      </li>
+      <li>
+        <p>As you inhale, raise your arms in front of you until your hands are level with
+          your shoulders, your palms facing down</p>
+      </li>
+      <li>
+        <p>Exhale as you bend your knees and bring your arms down until your hands
+          are level with your stomach, your palms facing in.</p>
+      </li>
+      <li>
+        <p>Hold this position for a few seconds, focusing on your breath.</p>
+      </li>
+
+    </ol>
+
+    <img src="Screenshot 2025-02-09 113429.png" alt="image">
+    <h4>
+      <p>WATER</p>
+    </h4>
+    <ol type="1">
+      <li>
+        <p>Starting from Earth posture, bend your knees into a squat, keeping your chest
+          upright and exhaling throughout.</p>
+      </li>
+      <li>
+        <p>Press your coccyx downward to stretch your lumbar spine</p>
+      </li>
+      <li>
+        <p>As you inhale, stand to return to Earth posture.</p>
+      </li>
+      <li>
+        <p>Repeat twice, for a total of three.</p>
+      </li>
+    </ol>
+
+    <img src="Screenshot 2025-02-09 113536.png" alt="image">
+    <h4>
+      <p>WOOD</p>
+    </h4>
+    <ol type="1">
+      <li>
+        <p>Starting from Earth posture, turn your palms upward and open your arms to
+          the side, forming a circle as you inhale, until your hands are level with your
+          clavicle. Turn your hands so that your palms and elbows point downward,
+          while keeping your shoulders relaxed.</p>
+      </li>
+      <li>
+        <p>Reverse the movement as you exhale, making a downward circle with your
+          arms until you reach your initial position.</p>
+      </li>
+      <li>
+        <p>Repeat twice, for a total of three.</p>
+      </li>
+    </ol>
+
+    <img src="Screenshot 2025-02-09 113628.png" alt="image">
+    <h4>
+      <p>METAL</p>
+    </h4>
+    <ol type="1">
+      <li>
+        <p>Starting from Earth posture, raise your arms until your hands are level with
+          your sternum.</p>
+      </li>
+      <li>
+        <p>Turn your palms toward each other, about four inches apart, with your
+          fingers relaxed and slightly separated, pointing upward.</p>
+      </li>
+      <li>
+        <p>As you inhale, move your hands away from each other until they are shoulder
+          width apart.</p>
+      </li>
+      <li>
+        <p>As you exhale, bring your hands toward each other until they are back in
+          position 2.</p>
+      </li>
+      <li>
+        <p>Repeat twice, for a total of three, observing the concentration of energy as
+          you bring your hands together in front of your lungs.</p>
+      </li>
+
+    </ol>
+
+    <img src="Screenshot 2025-02-09 113721.png" alt="image">
+    <h4>
+      <p>FIRE</p>
+    </h4>
+    <ol type="1">
+      <li>
+        <p>Starting from Earth posture, bring your hands level with your heart as you
+          inhale, with one hand slightly above the other and your palms facing each
+          other.</p>
+      </li>
+      <li>
+        <p>Rotate your hands to feel the energy of your heart</p>
+      </li>
+      <li>
+        <p>Turn from your waist gently to the left, keeping your torso relaxed and your
+          forearms parallel to the ground.</p>
+      </li>
+      <li>
+        <p>With your palms still facing each other, separate your hands, bringing one up
+          until it is level with your shoulder, and the other down in front of your
+          abdomen</p>
+      </li>
+      <li>
+        <p>Turn from your waist gently to the right, keeping your torso relaxed and your
+          forearms parallel to the ground.</p>
+      </li>
+      <li>
+        <p>As you exhale, let your hands come back together in front of your heart</p>
+      </li>
+      <li>
+        <p>With your palms still facing each other, separate your hands, bringing one up
+          until it is level with your shoulder, and the other down in front of your
+          abdomen</p>
+      </li>
+
+    </ol>
+
+    <img src="Screenshot 2025-02-09 113801.png" alt="image">
+    <h4>
+      <p>COMPLETING THE SERIES,</p>
+    </h4>
+    <ol type="1">
+      <li>
+        <p>Starting from Earth posture, inhale as you bring your hands level with your
+          shoulders, palms facing down.</p>
+      </li>
+      <li>
+        <p>As you exhale, lower your arms to rest at your sides, returning to the initial
+          Wu Qi posture.</p>
+      </li>
+
+    </ol>
+
+    <img src="Screenshot 2025-02-09 113841.png" alt="image">
+    <h3>
+      <p>Shiatsu</p>
+    </h3>
+    <p>Created in Japan in the early twentieth century, principally for the treatment of
+      arthritis, shiatsu also works on energy flow through the application of pressure
+      with the thumbs and the palms of the hands. In combination with stretching and
+      breathing exercises, it seeks to create equilibrium among the different elements
+      of the body</p>
+    <p style="background-color:rgb(254, 248, 248) ">It is not important that a Tao Yin* have a name, is imitating
+      something, or is
+      engraved in jade. What is important is the technique and the essence of
+      what is really practiced. Stretching and contracting, bending and lifting of
+      the head, stepping, lying down, resting or standing, walking or stepping
+      slowly, screaming or breathing—everything can be a Tao Yin.
+      —Ge Hong
+    </p>
+    <h3>
+      <p>Breathe better, live longer</p>
+    </h3>
+    <p>The book Xiuzhen shishu, known in the West as Ten Books on the Cultivation of
+      Perfection, dates back to the thirteenth century and is a compendium of materials
+      from diverse sources on developing the mind and body.</p>
+    <p>It quotes, among others, the celebrated Chinese doctor and essayist Sun
+      Simiao, who lived during the sixth century. Sun Simiao was a proponent of a
+      technique called the Six Healing Sounds, which involves the coordination of
+      movement, breathing, and pronouncing sounds with the purpose of bringing our
+      souls to a place of calm.</p>
+    <p>The six sounds are:</p>
+    <p>Xu, pronounced like "shh" with a deep sigh, which is associated with the liver
+      <br>He, pronounced like "her" with a yawn, which is associated with the heart
+      <br>Si, pronounced like "sir" with a slow exhale, which is associated with the lungs
+      <br>Chui, pronounced like "chwee" with a forceful exhale, which is associated
+      with the kidneys
+      <br> Hoo, pronounced like "who," which is associated with the spleen
+      <br>Xi, pronounced like "she," which connects the whole body
+    </p>
+    <p>The following poem by Sun Simiao offers clues about how to live well
+      according to the season. It reminds us of the importance of breathing, and
+      suggests that as we breathe, we visualize the organs associated with each of the
+      healing sounds.
+    </p>
+    <p>
+      In spring, breathe xu for clear eyes and so wood can aid your liver.<br>
+      In summer, reach for he, so that heart and fire can be at peace.
+      <br>In fall, breathe si to stabilize and gather metal, keeping the lungs moist.
+      <br>For the kidneys, next, breathe chui and see your inner waters calm.
+      <br>The Triple Heater needs your xi to expel all heat and troubles.
+      <br>In all four seasons, take deep breaths so your spleen can process food.
+      <br>And, of course, avoid exhaling noisily; don't let even your own ears hear you.
+      <br>The practice is most excellent and will help preserve your divine elixir.
+    </p>
+    <p>It might feel confusing to be presented with all the Eastern traditions we have
+      introduced in this chapter. The takeaway is that they all combine a physical
+      exercise with an awareness of our breath. These two components—movement
+      and breath—help us to bring our consciousness in line with our body, instead of
+      allowing our mind to be carried away by the sea of daily worries. Most of the
+      time, we are just not aware enough of our breathing.</p>
+
+  </div>
+
+  <div class="chapter-navigation">
+    <a href="chapter7.html" class="nav-button prev">← Previous: Chapter 7</a>
+    <a href="chapter9.html" class="nav-button next">Next: Chapter 9 →</a>
+  </div>
+
+  <div id="liveSettings">
+    <h3>Adjust Speech Settings</h3>
+    <label>Speed:
+      <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+      <span id="rateValue">1</span>
+    </label>
+    <label>Pitch:
+      <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+      <span id="pitchValue">1</span>
+    </label>
+  </div>
+
+  <div id="speechControls">
+    <button id="pauseButton">Pause</button>
+    <button id="resumeButton">Resume</button>
+    <button id="stopButton">Stop</button>
+    <button id="restartButton">Restart</button>
+  </div>
+
+  <div class="status" id="statusMessage"></div>
+
+  <div id="settingsModal">
+    <div class="modal-content">
+      <h2>Select Voice Settings</h2>
+      <label>Speed:
+        <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+        <span id="initialRateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="initialPitchValue">1</span>
+      </label>
+      <p>You can adjust these settings while the speech is playing too.</p>
+      <div style="text-align: center; margin-top: 20px;">
+        <button id="confirmSettings">Start Speaking</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+</body>
+
+</html>

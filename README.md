@@ -202,8 +202,29 @@ Our team is a powerhouse of talent, each member contributing uniquely to build a
 
 ## 🔗 Live Website
 
+![image](https://github.com/user-attachments/assets/050caa4b-cc89-4c20-bdfe-3b6bd37da66d)
+
+
 👉 Visit the live platform here: [https://rilearn.netlify.app](https://rilearn.netlify.app)
 
+
+## 📱 Mobile App (Progressive Web App)
+
+![image](https://github.com/user-attachments/assets/44260bbd-bcd2-4e97-94e7-729469c6b096)
+
+
+You can download the RILearn mobile experience directly from our Android release:
+
+**[📥 Install RILearn App for Android](https://github.com/aditya-an1l/RILearn/releases/download/android_release/app-apk-683e7490e114f-1748923536.apk)**
+
+### Why it’s amazing ✅
+
+-   **Seamless updates** – As a Progressive Web App, RILearn auto-updates whenever new features are added to the website—no manual updates required.
+    
+-   **Mobile-optimized design** – Fully responsive layouts and user-friendly interactions make reading a breeze on smartphones.
+    
+-   **App-like experience** – Runs in standalone mode—no browser UI clutter—truly feels like a native app
+    
 
 
 ## 📌 Repository

@@ -1,4 +1,4 @@
-# 📚 RILEARN – A Reading and Interactive Learning App
+# 📚 RILEARN – Reading and Interactive Learning App
 
 <div align="center">
 <img src="./pages/RILEARN.gif" alt="logo">

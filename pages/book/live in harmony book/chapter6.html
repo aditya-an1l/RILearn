@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter6</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Six</p>
+      <p>  The Pathway of Writing</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“We never know how high we are
+ Till we are asked to rise
+ And then if we are true to plan
+ Our statures touch the skies.” –Emily Dickinson
+</p>
+<p> “Life is too short not to care.
+ Life is too short not to share.
+ Life is too short not to be fair.
+ Just give a little smile.
+ It will enrich you
+ And not hurt you.” –Sri Chinmoy
+</p>
+<p> “Journal writing is a voyage to the interior.” –Christina Baldwin
+</p>
+<p> “Never be entirely idle; but either be reading, or writing, or praying or meditating
+ or endeavoring something for the public good.”  —Thomas a Kempis</p> 
+<p> “Learn as much by writing as by reading.”  —Lord Acton</p>
+<p> “Real writing takes more than just time; it wants your best moments and the best
+ of you.”  —Real Live Preacher
+</p>
+<p> “Without words, without writing and without books there would be no history,
+ there would be no concept of humanity.” –Herman Hesse
+</p>
+<p> “ I have never thought of writing for reputation and honor.  What I have in my
+ heart must come out; that is the reason why I compose.”  —Ludwig van
+ Beethoven
+</p>
+<p> “Television has raised writing to a new low.” –Samuel Goldwyn</p>
+<p> “ If you would not be forgotten as soon as you are rotten,
+ Either write things worth reading or do things worth the writing.” –Benjamin Franklin
+</p>
+<p class="side">Chapter Story:
+</p>
+<p> Emily Dickinson (1830-1886) was born and lived all of her life in
+ Amherst, Massachusetts. She rarely traveled away from home. She spent her time
+ focusing on writing poetry and contemplating the meaning of life. She believed
+ that the important things in life were not fancy clothes or other possessions, but
+ the magical things that happen every day: a hummingbird flying, the wind blow
+ing, the moon or the stars. Her life was proof that you don’t need outer posses
+sions to achieve great things. 
+</p>
+<p>Because she lived such a simple, quiet life, we don’t know very much
+ about Emily Dickinson. She did not have many friends and she did not go out
+ into her town much. But from her simple life emerged wonderful poetry. Many
+ people consider her one of the greatest American poets. How could she become a
+ great poet without traveling in the world and having many experiences or meeting
+ many people? It is because she was able to see the greatness and beauty of the
+ whole universe in the little things around her. On her walks through the woods
+ and meadows she was able to observe nature as a living miracle. Through poetry
+ she was able to capture that miracle in words. </p>
+<p>Emily Dickinson teaches us some important lessons which we can use in
+ our own lives. First is that the simple, natural things in life can make us very
+ happy, if we take the time to pay attention to them, and learn to value them.
+ Second, to be a truly successful person, you don’t need to have a lot of money or
+ to own many things. You just have to work hard and stay focused on your goal.
+ Third, you don’t need to look far in search of a career. Just begin by looking at
+ your own talents and at what you love to do most.  In these ways, Emily Dickin
+son is truly a heroine we can learn from.</p>
+<p>Chapter Overview:</p>
+<p>Writing or journaling can be a very powerful, positive, safe, and healthy
+ way for us to explore our own ‘inner world.’ Our inner world is our own private
+ world of thoughts, feelings, ideas, dreams, and visions. Our inner world is the
+ place where we are truly ourselves and where we can be alone with ourselves.  It
+ is the place from which we grow and learn and change.  If we are able to visit our
+ own inner world often, then we can keep our life in balance and our world per
+spective in harmony.  If we have a good connection to our own inner world then
+ it helps us to have positive relationships and friendships with others.  Writing or
+ journaling can be extremely effective tools for visiting our inner world and for
+ helping us to discover the lessons and insights that come from visiting that place.
+ Many, many people have found writing to be very useful in their lives. </p>
+<p>In addition, modern brain research shows that writing is very good for our
+brains.  When we are writing, our brains get very, very active – in contrast to
+ when we are watching TV, when our brains are not active at all.  When our brains
+ are active, this helps us to be more energetic and happier.  Not only that, but
+ when our brains are active our brains grow – and we can become smarter and
+ wiser!</p>
+<p class="side"> Chapter Lessons:</p>
+<p class="side"> Lesson #1– A mystery story</p>
+<p> Write a mystery story about what happened to the smiles in the world.  It
+ could be entitled: ‘The Day That Smiles Disappeared.’ Use your imagination to
+ think of and to develop your story.  You might want to start by answering a few
+ questions: Where did the smiles go?  Did somebody steal the smiles, and if they
+ did, how and when did they steal them?  Where are the smiles hidden?  How did
+ people look and feel without their smiles?  What was the world like without the
+ smiles?  How did people get their smiles back?  Was there a hero or a group of
+ heroes who helped?  If yes, who were they and what were their names?  How did
+ the people in the world feel when they got their smiles back? How did the people
+ celebrate?  After you write your stories, you can share them with your class and
+ display them on the bulletin board.  You may also want to make pictures or illus
+trations to go with your stories.</p>
+<p class="side"> Lesson #2 – Your own limerick</p>
+<p> Write a limerick that has a positive message about harmony in the world.
+ Alimerick is a five-line poem that has a specific rhythm pattern and a specific
+ rhyme pattern.  The rhythm pattern has three beats in lines 1, 2, and 3 and two
+ beats in lines 3 and 4.  The rhyme pattern of a limerick is that lines 1, 2 and 5
+ usually rhyme with each other, and lines 3 and 4 usually rhyme with each other.
+ Sometimes the last line of the limerick is very similar to the first line – just with
+ one or two words switched around. A limerick is usually cute and silly, but we
+ can also use limericks to send a positive message of harmony! Here is a sample
+ limerick:
+</p>
+<p>There once was a boy from O’Hare,
+ Who wanted the whole world to care —
+ Each for the other
+ Like sisters and brothers—
+ Giving, with no love to spare.</p>
+<p class="side">Lesson #3 – An essay on an important topic
+</p>
+<p> Write an essay about some issue or challenge in the world  that you are
+ concerned about and that you would like to change.  When we write an essay we
+ are trying to: a) make a convincing argument for a point of view; b) explain an
+ issue in depth with an aim toward greater understanding; or c) inspire others to
+ feel something or to take some action.  After you decide what issue or concern
+ you want to write about, think about which one of these types of essay you want
+ to focus on.  Your teacher will decide how long your essay should be and whether
+ it should be handwritten or typed.  </p>
+<p>In any case, it is recommended that you write a first draft, then have it cor
+rected by your teacher, and then write a final draft. Your final drafts can be made
+ into a book and copies of the book can be given out to all of the students.  You
+ can do a class fundraiser, if you need to raise money to pay for your books.  You
+ can also send your essays to the editorial section of your local newspaper to see if
+ they will publish them.
+</p>
+<p class="side">Lesson #4 – Create a puzzle using words
+</p>
+<p>Create an acrostic puzzle or another kind of puzzle using words that have
+ to do with harmony, peace, love, caring, friendship, partnership, sharing, together
+ness, hope, happiness, unity, tolerance, etc.  An acrostic puzzle is a word puzzle,
+ which has many letters in boxes filling the page.  You hide the words you want
+ people to find by surrounding the words with other letters that do not form any
+ words.  The ‘real’ words, the ones that you want people to find, can be arranged
+ left to right, right to left, up to down, down to up, diagonally down or diagonally
+ up.  The game is to have others find the words you have hidden.  </p>
+<p>It is important to keep a master answer list of all the words you have hid
+den, so you and your friends will know if they have found all the words.  You will
+ also need to photocopy your puzzle so others can do it. When they find one of
+ your hidden words they need to circle it to show where it is.  Let’s see whose
+ puzzle has the most words having to do with harmony!! And let’s see who can
+ completely solve the most puzzles in the class! You can make up other word puz
+zle games, but be sure to write out the instructions so it is clear how to play.  
+</p>
+<p class="side">Lesson #5 – An inspiring poem
+</p>
+<p>Write a poem about the thing or things that bring you the most harmony in
+ your life.  (Remember that a poem does not have to rhyme – unless you want it
+ to!!  A poem is just an expression of your feelings and ideas.)  Your poem can be
+ about your favorite pet, about your parents or grandparents, about a place you
+ love to go, about an activity you love to do, or anything else that brings you har
+mony.  Whatever you write about, try to express what it is about that thing that
+ brings you harmony.  It will also make your poem more interesting if you try to
+ describe your feelings of harmony.  
+</p>
+<p>To do this it is useful to use similes or metaphors.  A simile is a compari
+son between two things, using the words ‘like’ or  ‘as.’ For instance, an example
+ of a simile is, “My grandma has a heart of love as big as the ocean,” or, “Playing
+ with my puppy makes me feel warm as a sunny day.”  A metaphor is a compari
+son between two things without using the words ‘like’ or ‘as.’ A metaphor usual
+ly connects in a creative way two things that are not normally connected together.
+ Metaphors are a little trickier to make. Here is an example of a metaphor:  “My
+ crystal collection is a pocketful of joy.”  Another example is:  “Walking in nature
+ is food for my spirit.”</p>
+<p class="side">Lesson #6 – Writing just for yourself
+</p>
+<p> Just write about how you feel.  Write in your journal, just for yourself,
+ about your feelings, ideas, dreams, or visions, for 15-30 minutes every day for
+ two weeks.  This can be excellent practice for your writing as well as for your
+ personal reflection.  Then write about what you learned or discovered about your
+self after these two weeks of journal writing. Or, discuss what you learned with
+ your class, only if you want to</p>
+<p class="side">Discussion Questions:
+</p>
+<p>What do you think Christina Baldwin meant in quotation #3?</p>
+<p> b) Herman Hesse said that without writing and books there would be no concept
+ of humanity.  Discuss with your class what this might mean.  Can you imagine a
+ world without books or writing?  What would that kind of world look like?</p>
+<p>c)What do you think Samuel Goldwyn meant, when he said, “Television has
+ raised writing to a new low”?</p>
+<p> d) Poems and prayers are both expressions of deep and soulful feelings.  How are
+ poems and prayers similar? How are they different?  Review some examples of
+ prayers from different spiritual traditions and compare them with examples of
+ poems.  (There are several collections of prayers from around the world that you
+ can borrow from the library.) Have your class copy their favorite prayers in their
+best handwriting (or in calligraphy if they know how!) and put them on display
+ near your class poems along with a brief explanation of how poems and prayers
+ are similar and how they are different.</p>
+ <p class="side"> Supplemental Activities:</p>
+ <ul>
+    <li><p> Write about virtues.  In this book you have learned about virtues.  Write a
+ poem, a story, or just a passage in your journal about the virtue you like the best
+ or the virtue you think is the most important.  Which virtue will you choose?
+ Courage? Tolerance? Compassion? Honesty? Determination? Or some other
+ virtue.</p></li>
+ <li> <p>Find a poem you like. If you don’t know any poems, you can look for the
+ poems of Christina Rossetti, William Blake, William Wordsworth, Shel Silver
+stein, or Mary Oliver to start with.   Copy it in your best handwriting and then
+ decorate your page with colored pencils, crayons or markers.  Have your favorite
+ poem laminated, framed, or put into a plastic sheet folder to keep it preserved.
+ Put the poem in a special place where you can see it.</p></li>
+ <li> <p>Making lists of different kinds of things can be an excellent way to practice
+ your writing and also to help you become more aware of your own feelings,
+ ideas, and dreams:
+ Make a list of words that rhyme with each other.
+ Make a list of the different things you felt on your happiest day.  Use words that
+ describe your sensations – how things felt, how they sounded, how they looked,
+ how they smelled – even how they tasted.</p></li>
+ <li> <p>Make a list of your favorite books, or your favorite people, or your favorite
+ activities.</p></li>
+ </ul>
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter5.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter7.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

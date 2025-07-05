@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter16</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Wild Fruit</p>
+    </h1>
+    <p>It was a long walk to school. Down the hill, through the rhododendron trees, across a
+small stream, around a bare, brown hill, and then through the narrow little bazaar, past
+fruit stalls piled high with oranges, guavas, bananas, and apples.
+</p>
+<p>The boy’s gaze often lingered on those heaps of golden oranges – oranges grown in
+the plains, now challenging the pale winter sunshine in the hills. His nose twitched at
+the sharp smell of melons in summer; his fingers would sometimes touch for a moment
+the soft down on the skin of a peach. But these were forbidden fruit. The boy hadn’t the
+money for them.
+</p>
+<p>He took one meal at seven in the morning when he left home; another at seven in the
+evening when he returned from school. There were times – especially when he was at
+school, and his teacher droned on and on, lecturing on honesty, courage, duty, and selfsacrifice – when he felt very hungry; but on the way to school, or on the way home,
+there was nearly always the prospect of some wild fruit.
+</p>
+<p>The boy’s name was Vijay, and he belonged to a village near Mussoorie. His parents
+tilled a few narrow terraces on the hill slopes. They grew potatoes, onions, barley,
+maize; barely enough to feed themselves. When greens were scarce, they boiled the
+tops of the stinging-nettle and made them into a dish resembling spinach.</p>
+<p>Vijay’s parents realised the importance of sending him to school, and it didn’t cost
+them much, except for the books. But it was all of four miles to the town, and a long
+walk makes a boy hungry.</p>
+<p>But there was nearly always the wild fruit. The purple berries of the thorny bilberry
+bushes, ripening in May and June. Wild strawberries, growing in shady places like
+spots of blood on the deep green monsoon grass. Small, sour cherries, and tough
+medlars. Vijay’s strong teeth and probing tongue extracted whatever tang or sweetness
+lay hidden in them. And in March there were the rhododendron flowers.
+</p>
+<p>His mother made them into jam. But Vijay liked them as they were. He placed the
+petals on his tongue and chewed them till the sweet juice trickled down his throat. But
+in November, there was no wild fruit. Only acorns on the oak trees, and they were
+bitter, fit only for the monkeys.</p>
+<p>He walked confidently through the bazaar, strong in the legs. He looked a healthy
+boy, until you came up close and saw the patches on his skin and the dullness in his
+eyes.
+</p>
+<p>He passed the fruit stalls, wondering who ate all that fruit, and what happened to the
+fruit that went bad; he passed the sweet shop, where hot, newly-fried jelabies lay
+protected like twisted orange jewels in a glass case, and where a fat, oily man raised a
+knife and plunged it deep into a thick slab of rich amber-coloured halwa.
+</p>
+<p>The saliva built up in Vijay’s mouth; there was a dull ache in his stomach. But his
+eyes gave away nothing of the sharp pangs he felt.
+</p>
+<p>And now, a confectioner’s shop. Glass jars filled with chocolates, peppermints,
+toffees – sweets he didn’t know the names of, English sweets – wrapped in bits of
+coloured paper.</p>
+<p>A boy had just bought a bag of sweets. He had one in his mouth. He was a welldressed boy; coins jingled in his pocket. The sweet moved from one cheek to the other.
+He bit deep into it, and Vijay heard the crunch and looked up. The boy smiled at Vijay,
+but moved away.
+</p>
+<p>They met again, further along the road. Once again the boy smiled, even looked as
+though he was about to offer Vijay a sweet; but this time, Vijay shyly looked away. He
+did not want it to appear that he had noticed the sweets, or that he hungered for one.
+</p>
+<p>But he kept meeting the boy, who always managed to reappear at some corner,
+sucking a sweet, moving it about in his mouth, letting it show between his wet lips – a
+sticky green thing, temptingly, lusciously beautiful.</p>
+<p>The bag of sweets was nearly empty.
+</p>
+<p>Reluctantly, Vijay decided that he must overtake the boy, forget all about the sweets,
+and hurry home. Otherwise, he would be tempted to grab the bag and run!</p>
+<p>And then, he saw the boy leave the bag on a bench, look at him once, and smile –
+smile shyly and invitingly – before moving away.
+</p>
+<p>Was the bag empty? Vijay wondered with mounting excitement. It couldn’t be, or it
+would have blown away almost immediately. Obviously, there were still a few sweets
+in it. The boy had disappeared. He had gone for his tea, and Vijay could have the rest of
+the sweets.</p>
+<p>Vijay took the bag and jammed it into a pocket of his shirt. Then he hurried
+homewards. It was getting late, and he wanted to be home before dark.</p>
+<p>As soon as he was out of the town, he opened the bag and shook the sweets out.
+Their red wrappers glowed like rubies in the palm of his hand.
+</p>
+<p>Carefully, he undid a wrapper.
+</p>
+<p>There was no sweet inside, only a smooth, round stone.</p>
+<p>Vijay found stones in all the wrappers. In his mind’s eye, Vijay saw the smiling face
+of the boy in the bazaar: a boy who smiled sweetly but exchanged stones for sweets.</p>
+<p>Forcing back angry tears, Vijay flung the stones down the hillside. Then he
+shouldered his bag of books and began the long walk home.</p>
+<p>There were patches of snow on the ground. The grass was a dirty brown, the bushes
+were bare.</p>
+<p>There is no wild fruit in November.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter15.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter17.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

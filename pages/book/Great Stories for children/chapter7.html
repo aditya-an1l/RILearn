@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter7</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Snake Trouble</p>
+    </h1>
+    <p><b>1</b></p>
+    <p>After retiring from the Indian Railways and settling in Dehra, Grandfather often
+made his days (and ours) more exciting by keeping unusual pets. He paid a snakecharmer in the bazaar twenty rupees for a young python. Then, to the delight of a curious
+group of boys and girls, he slung the python over his shoulder and brought it home.</p>
+<p>I was with him at the time, and felt very proud walking beside Grandfather. He was
+popular in Dehra, especially among the poorer people, and everyone greeted him
+politely without seeming to notice the python. They were, in fact, quite used to seeing
+him in the company of strange creatures.
+</p>
+<p>The first to see us arrive was Tutu the monkey, who was swinging from a branch of
+the jackfruit tree. One look at the python, ancient enemy of his race, and he fled into the
+house squealing with fright. Then our parrot, Popeye, who had his perch on the veranda,
+set up the most awful shrieking and whistling. His whistle was like that of a steamengine. He had learnt to do this in earlier days, when we had lived near railway
+stations.
+</p>
+<p>The noise brought Grandmother to the veranda, where she nearly fainted at the sight
+of the python curled round Grandfather’s neck.
+</p>
+<p>Grandmother put up with most of his pets, but she drew the line at reptiles. Even a
+sweet-tempered lizard made her blood run cold. There was little chance that she would
+allow a python in the house.
+</p>
+<p>‘It will strangle you to death!’ she cried.
+</p>
+<p>‘Nonsense,’ said Grandfather. ‘He’s only a young fellow.’</p>
+<p>‘He’ll soon get used to us,’ I added, by way of support.</p>
+<p>‘He might, indeed,’ said Grandmother, ‘but I have no intention of getting used to him.
+And your Aunt Ruby is coming to stay with us tomorrow. She’ll leave the minute she
+knows there’s a snake in the house.’
+</p>
+<p>‘Well, perhaps we should show it to her first thing,’ said Grandfather, who found
+Aunt Ruby rather tiresome.</p>
+<p>‘Get rid of it right away,’ said Grandmother.</p>
+<p>‘I can’t let it loose in the garden. It might find its way into the chicken shed, and then
+where will we be?’</p>
+<p>‘Minus a few chickens,’ I said reasonably, but this only made Grandmother more
+determined to get rid of the python.</p>
+<p>‘Lock that awful thing in the bathroom,’ she said. ‘Go and find the man you bought it
+from, and get him to come here and collect it! He can keep the money you gave him.’</p>
+<p>Grandfather and I took the snake into the bathroom and placed it in an empty tub.
+Looking a bit crestfallen, he said, ‘Perhaps your grandmother is right. I’m not worried
+about Aunt Ruby, but we don’t want the python to get hold of Tutu or Popeye.’</p>
+<p>We hurried off to the bazaar in search of the snake-charmer but hadn’t gone far when
+we found several snake-charmers looking for us. They had heard that Grandfather was
+buying snakes, and they had brought with them snakes of various sizes and descriptions.</p>
+<p>‘No, no!’ protested Grandfather. ‘We don’t want more snakes. We want to return the
+one we bought.’</p>
+<p>But the man who had sold it to us had, apparently, returned to his village in the
+jungle, looking for another python for Grandfather; and the other snake-charmers were
+not interested in buying, only in selling. In order to shake them off, we had to return
+home by a roundabout route, climbing a wall and cutting through an orchard. We found
+Grandmother pacing up and down the veranda. One look at our faces and she knew we
+had failed to get rid of the snake.
+</p>
+<p>‘All right,’ said Grandmother. ‘Just take it away yourselves and see that it doesn’t
+come back.’</p>
+<p>‘We’ll get rid of it, Grandmother,’ I said confidently. ‘Don’t you worry.’
+</p>
+<p>Grandfather opened the bathroom door and stepped into the room. I was close
+behind him. We couldn’t see the python anywhere.</p>
+<p>‘He’s gone,’ announced Grandfather.
+</p>
+<p>‘We left the window open,’ I said.</p>
+<p>‘Deliberately, no doubt,’ said Grandmother. ‘But it couldn’t have gone far. You’ll
+have to search the grounds.’
+</p>
+<p>A careful search was made of the house, the roof, the kitchen, the garden and the
+chicken shed, but there was no sign of the python.</p>
+<p>‘He must have gone over the garden wall,’ Grandfather said cheerfully. ‘He’ll be
+well away by now!’</p>
+<p>The python did not reappear, and when Aunt Ruby arrived with enough luggage to
+show that she had come for a long visit, there was only the parrot to greet her with a
+series of long, ear-splitting whistles.</p>
+<p><b>2</b></p>
+<p>For a couple of days Grandfather and I were a little worried that the python might make
+a sudden reappearance, but when he didn’t show up again we felt he had gone for good.
+Aunt Ruby had to put up with Tutu the monkey making faces at her, something I did only
+when she wasn’t looking; and she complained that Popeye shrieked loudest when she
+was in the room; but she was used to them, and knew she would have to bear with them
+if she was going to stay with us.
+</p>
+<p>And then, one evening, we were startled by a scream from the garden.
+</p>
+<p>Seconds later Aunt Ruby came flying up the veranda steps, gasping, ‘In the guava
+tree! I was reaching for a guava when I saw it staring at me. The look in its eyes! As
+though it would eat me alive –’
+</p>
+<p>‘Calm down, dear,’ urged Grandmother, sprinkling rose water over my aunt. ‘Tell
+us, what did you see?’</p>
+<p>‘A snake!’ sobbed Aunt Ruby. ‘A great boa constrictor in the guava tree. Its eyes
+were terrible, and it looked at me in such a queer way.’
+</p>
+<p>‘Trying to tempt you with a guava, no doubt,’ said Grandfather, turning away to hide
+his smile. He gave me a look full of meaning, and I hurried out into the garden. But
+when I got to the guava tree, the python (if it had been the python) had gone.
+</p>
+<p>‘Aunt Ruby must have frightened it off,’ I told Grandfather.</p>
+<p>‘I’m not surprised,’ he said. ‘But it will be back, Ranji. I think it has taken a fancy to
+your aunt.’</p>
+<p>Sure enough, the python began to make brief but frequent appearances, usually up in
+the most unexpected places.</p>
+<p>One morning I found him curled up on a dressing-table, gazing at his own reflection
+in the mirror. I went for Grandfather, but by the time we returned the python had moved
+on.
+</p>
+<p>He was seen again in the garden, and one day I spotted him climbing the iron ladder
+to the roof. I set off after him, and was soon up the ladder, which I had climbed up many
+times. I arrived on the flat roof just in time to see the snake disappearing down a
+drainpipe. The end of his tail was visible for a few moments and then that too
+disappeared.</p>
+<p>‘I think he lives in the drainpipe,’ I told Grandfather.</p>
+<p>‘Where does it get its food?’ asked Grandmother</p>
+<p>‘Probably lives on those field rats that used to be such a nuisance. Remember, they
+lived in the drainpipes, too.’</p>
+<p>‘Hmm…’ Grandmother looked thoughtful. ‘A snake has its uses. Well, as long as it
+keeps to the roof and prefers rats to chickens…’
+</p>
+<p>But the python did not confine itself to the roof. Piercing shrieks from Aunt Ruby had
+us all rushing to her room. There was the python on her dressing-table, apparently
+admiring himself in the mirror.</p>
+<p>‘All the attention he’s been getting has probably made him conceited,’ said
+Grandfather, picking up the python to the accompaniment of further shrieks from Aunt
+Ruby. ‘Would you like to hold him for a minute, Ruby? He seems to have taken a fancy
+to you.’</p>
+<p>Aunt Ruby ran from the room and onto the veranda, where she was greeted with
+whistles of derision from Popeye the parrot. Poor Aunt Ruby! She cut short her stay by
+a week and returned to Lucknow, where she was a schoolteacher. She said she felt safer
+in her school than she did in our house.
+</p>
+<p><b>3</b></p>
+<p>Having seen Grandfather handle the python with such ease and confidence, I decided I
+would do likewise. So the next time I saw the snake climbing the ladder to the roof, I
+climbed up alongside him. He stopped, and I stopped too. I put out my hand, and he slid
+over my arm and up to my shoulder. As I did not want him coiling round my neck, I
+gripped him with both hands and carried him down to the garden. He didn’t seem to
+mind.
+</p>
+<p>The snake felt rather cold and slippery and at first he gave me goose pimples. But I
+soon got used to him, and he must have liked the way I handled him, because when I set
+him down he wanted to climb up my leg. As I had other things to do, I dropped him in a
+large empty basket that had been left out in the garden. He stared out at me with
+unblinking, expressionless eyes. There was no way of knowing what he was thinking, if
+indeed he thought at all.
+</p>
+<p>I went off for a bicycle ride, and when I returned, I found Grandmother picking
+guavas and dropping them into the basket. The python must have gone elsewhere.</p>
+<p>When the basket was full, Grandmother said, ‘Will you take these over to Major
+Malik?’ It’s his birthday and I want to give him a nice surprise.’</p>
+<p>I fixed the basket on the carrier of my cycle and pedalled off to Major Malik’s house
+at the end of the road. The major met me on the steps of his house.
+</p>
+<p>‘And what has your kind granny sent me today, Ranji?’ he asked</p>
+<p>‘A surprise for your birthday, sir,’ I said, and put the basket down in front of him.</p>
+<p>The python, who had been buried beneath all the guavas, chose this moment to wake
+up and stand straight up to a height of several feet. Guavas tumbled all over the place.
+The major uttered an oath and dashed indoors.</p>
+<p>I pushed the python back into the basket, picked it up, mounted the bicycle, and rode
+out of the gate in record time. And it was as well that I did so, because Major Malik
+came charging out of the house armed with a double-barrelled shotgun, which he was
+waving all over the place.
+</p>
+<p>‘Did you deliver the guavas?’ asked Grandmother when I got back.</p>
+<p>‘I delivered them,’ I said truthfully.</p>
+<p>‘And was he pleased?’
+</p>
+<p>‘He’s going to write and thank you,’ I said.
+And he did.</p>
+<p>‘Thank you for the lovely surprise,’ he wrote, ‘Obviously you could not have
+known that my doctor had advised me against any undue excitement. My bloodpressure has been rather high. The sight of your grandson does not improve it. All
+the same,it’s the thought that matters and I take it all in good humour…’</p>
+<p>‘What a strange letter,’ said Grandmother. ‘He must be ill, poor man. Are guavas
+bad for blood pressure?’
+</p>
+<p>‘Not by themselves, they aren’t,’ said Grandfather, who had an inkling of what had
+happened. ‘But together with other things they can be a bit upsetting.’
+</p>
+<p><b>4</b></p>
+<p>Just when all of us, including Grandmother, were getting used to having the python
+about the house and grounds, it was decided that we would be going to Lucknow for a
+few months</p>
+<p>Lucknow was a large city, about three hundred miles from Dehra. Aunt Ruby lived
+and worked there. We would be staying with her, and so of course we couldn’t take any
+pythons, monkeys or other unusual pets with us</p>
+<p>'What about Popeye?’ I asked.</p>
+<p>‘Popeye isn’t a pet,’ said Grandmother. ‘He’s one of us. He comes too.’</p>
+<p>And so the Dehra railway platform was thrown into confusion by the shrieks and
+whistles of our parrot, who could imitate both the guard’s whistle and the whistle of a
+train. People dashed into their compartments, thinking the train was about to leave, only
+to realise that the guard hadn’t blown his whistle after all. When they got down, Popeye
+would let out another shrill whistle, which sent everyone rushing for the train again.
+This happened several times until the guard actually blew his whistle. Then nobody
+bothered to get on, and several passengers were left behind.</p>
+<p>‘Can’t you gag that parrot?’ asked Grandfather, as the train moved out of the station
+and picked up speed.
+</p>
+<p>‘I’ll do nothing of the sort,’ said Grandmother. ‘I’ve bought a ticket for him, and he’s
+entitled to enjoy the journey as much as anyone.’</p>
+<p>Whenever we stopped at a station, Popeye objected to fruit-sellers and other people
+poking their heads in through the windows. Before the journey was over, he had nipped
+two fingers and a nose, and tweaked a ticket-inspector’s ear.</p>
+<p>It was to be a night journey, and presently Grandmother covered herself with a
+blanket and stretched out on the berth. ‘It’s been a tiring day. I think I’ll go to sleep,’ she
+said.
+</p>
+<p>‘Aren’t we going to eat anything?’ I asked.</p>
+<p>‘I’m not hungry – I had something before we left the house. You two help yourselves
+from the picnic hamper.’
+</p>
+<p>Grandmother dozed off, and even Popeye started nodding, lulled to sleep by the
+clackety-clack of the wheels and the steady puffing of the steam-engine.</p>
+<p>‘Well, I’m hungry,’ I said. ‘What did Granny make for us?’
+</p>
+<p>‘Stuffed samosas, omelettes, and tandoori chicken. It’s all in the hamper under the
+berth.</p>
+<p>I tugged at the cane box and dragged it into the middle of the compartment. The
+straps were loosely tied. No sooner had I undone them than the lid flew open, and I let
+out a gasp of surprise.
+</p>
+<p>In the hamper was a python, curled up contentedly. There was no sign of our dinner.</p>
+<p>‘It’s a python,’ I said. ‘And it’s finished all our dinner.’</p>
+<p>‘Nonsense,’ said Grandfather, joining me near the hamper. ‘Pythons won’t eat
+omelette and samosas. They like their food alive! Why, this isn’t our hamper. The one
+with our food in it must have been left behind! Wasn’t it Major Malik who helped us
+with our luggage? I think he’s got his own back on us by changing the hamper!’</p>
+<p>Grandfather snapped the hamper shut and pushed it back beneath the berth.</p>
+<p>‘Don’t let Grandmother see him,’ he said. ‘She might think we brought him along on
+purpose.’
+</p>
+<p>‘Well, I’m hungry,’ I complained.</p>
+<p>‘Wait till we get to the next station, then we can buy some pakoras. Meanwhile, try
+some of Popeye’s green chillies.’
+</p>
+<p>‘No thanks,’ I said. ‘You have them, Grandad.’</p>
+<p>And Grandfather, who could eat chillies plain, popped a couple into his mouth and
+munched away contentedly.
+</p>
+<p>A little after midnight there was a great clamour at the end of the corridor. Popeye
+made complaining squawks, and Grandfather and I got up to see what was wrong.</p>
+<p>Suddenly there were cries of ‘Snake, snake!’
+</p>
+<p>I looked under the berth. The hamper was open.
+‘The python’s out,’ I said, and Grandfather dashed out of the compartment in his
+pyjamas. I was close behind.</p>
+<p>About a dozen passengers were bunched together outside the washroom</p>
+<p>‘Anything wrong?’ asked Grandfather casually</p>
+<p>‘We can’t get into the toilet,’ said someone. ‘There’s a huge snake inside.’</p>
+<p>‘Let me take a look,’ said Grandfather. ‘I know all about snakes.’
+</p>
+<p>The passengers made way, and Grandfather and I entered the washroom together, but
+there was no sign of the python.
+</p>
+<p>‘He must have got out through the ventilator,’ said Grandfather. ‘By now he’ll be in
+another compartment!’ Emerging from the washroom, he told the assembled passengers
+‘It’s gone! Nothing to worry about. Just a harmless young python.’
+</p>
+<p>When we got back to our compartment, Grandmother was sitting up on her berth.
+</p>
+<p>‘I knew you’d do something foolish behind my back,’ she scolded. ‘You told me
+you’d left that creature behind, and all the time it was with us on the train.’
+</p>
+<p>Grandfather tried to explain that we had nothing to do with it, that this python had
+been smuggled onto the train by Major Malik, but Grandmother was unconvinced.</p>
+<p>‘Anyway, it’s gone,’ said Grandfather. ‘It must have fallen out of the washroom
+window. We’re over a hundred miles from Dehra, so you’ll never see it again.’
+</p>
+<p>Even as he spoke, the train slowed down and lurched to a grinding halt.</p>
+<p>‘No station here,’ said Grandfather, putting his head out of the window.</p>
+<p>Someone came rushing along the embankment, waving his arms and shouting</p>
+<p>‘I do believe it’s the stoker,’ said Grandfather. ‘I’d better go and see what’s wrong.’</p>
+<p>‘I’m coming too,’ I said, and together we hurried along the length of the stationary
+train until we reached the engine.
+</p>
+<p>‘What’s up?’ called Grandfather. ‘Anything I can do to help? I know all about
+engines.’</p>
+<p>But the engine-driver was speechless. And who could blame him? The python had
+curled itself about his legs, and the driver was too petrified to move.
+</p>
+<p>‘Just leave it to us,’ said Grandfather, and, dragging the python off the driver, he
+dumped the snake in my arms. The engine-driver sank down on the floor, pale and
+trembling</p>
+<p>‘I think I’d better driver the engine,’ said Grandfather. ‘We don’t want to be late
+getting into Lucknow. Your aunt will be expecting us!’ And before the astonished driver
+could protest, Grandfather had released the brakes and set the engine in motion.</p>
+<p>‘We’ve left the stoker behind,’ I said.
+</p>
+<p>‘Never mind. You can shovel the coal.’</p>
+<p>Only too glad to help Grandfather drive an engine, I dropped the python in the
+driver’s lap and started shovelling coal. The engine picked up speed and we were soon
+rushing through the darkness, sparks flying skywards and the steam-whistle shrieking
+almost with pause.</p>
+<p>‘You’re going too fast!’ cried the driver.
+</p>
+<p>‘Making up for lost time,’ said Grandfather. ‘Why did the stoker run away?’
+</p>
+<p>‘He went for the guard. You’ve left them both behind!’
+</p>
+<p><b>5</b></p>
+<p>Early next morning the train steamed safely into Lucknow. Explanations were in order,
+but as the Lucknow station-master was an old friend of Grandfather, all was well. We
+had arrived twenty minutes early, and while Grandfather went off to have a cup of tea
+with the engine-driver and the station-master, I returned the python to the hamper and
+helped Grandmother with the luggage. Popeye stayed perched on Grandmother’s
+shoulder, eyeing the busy platform with deep distrust. He was the first to see Aunt Ruby
+striding down the platform, and let out a warning whistle.
+</p>
+<p>Aunt Ruby, a lover of good food, immediately spotted the picnic hamper, picked it
+up and said, ‘It’s quite heavy. You must have kept something for me! I’ll carry it out to
+the taxi.’
+</p>
+<p>‘We hardly ate anything,’ I said.
+</p>
+<p>‘It seems ages since I tasted something cooked by your granny.’ And after that there
+was no getting the hamper away from Aunt Ruby.
+</p>
+<p>Glancing at it, I thought I saw the lid bulging, but I had tied it down quite firmly this
+time and there was little likelihood of its suddenly bursting open.</p>
+<p>Grandfather joined us outside the station and we were soon settled inside the taxi.
+Aunt Ruby gave instructions to the driver and we shot off in a cloud of dust.
+</p>
+<p>‘I’m dying to see what’s in the hamper,’ said Aunt Ruby. ‘Can’t I take just a little
+peek?’</p>
+<p>‘Not now,’ said Grandfather. ‘First let’s enjoy the breakfast you’ve got waiting for
+us.’</p>
+<p>Popeye, perched proudly on Grandmother’s shoulder, kept one suspicious eye on the
+quivering hamper.</p>
+<p>When we got to Aunt Ruby’s house, we found breakfast laid out on the dining-table.
+</p>
+<p>‘It isn’t much,’ said Aunt Ruby. ‘But we’ll supplement it with what you’ve brought
+in the hamper.’
+</p>
+<p>Placing the hamper on the table, she lifted the lid and peered inside. And promptly
+fainted.
+</p>
+<p>Grandfather picked up the python, took it into the garden, and draped it over a
+branch of a pomegranate tree.
+</p>
+<p>When Aunt Ruby recovered, she insisted that she had seen a huge snake in the picnic
+hamper. We showed her the empty basket.
+</p>
+<p>‘You’re seeing things,’ said Grandfather. ‘You’ve been working too hard.’
+</p>
+<p>‘Teaching is a very tiring job,’ I said solemnly.
+</p>
+<p>Grandmother said nothing. But Popeye broke into loud squawks and whistles, and
+soon everyone, including a slightly hysterical Aunt Ruby, was doubled up with laughter.</p>
+<p>But the snake must have tired of the joke because we never saw it again!</p>
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter6.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter8.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter17</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>The Night the Roof Blew Off</p>
+    </h1>
+    <p>We are used to sudden storms, up here on the first range of the Himalayas. The old
+building in which we live has, for more than a hundred years, received the full
+force of the wind as it sweeps across the hills from the east.
+</p>
+<p>We’d lived in the building for more than ten years without a disaster. It had even
+taken the shock of a severe earthquake. As my granddaughter Dolly said, ‘It’s difficult
+to tell the new cracks from the old!’</p>
+<p>It’s a two-storey building, and I live on the upper floor with my family: my three
+grandchildren and their parents. The roof is made of corrugated tin sheets, the ceiling of
+wooden boards. That’s the traditional Mussoorie roof.</p>
+<p>Looking back at the experience, it was the sort of thing that should have happened in
+a James Thurber story, like the dam that burst or the ghost who got in. But I wasn’t
+thinking of Thurber at the time, although a few of his books were among the many I was
+trying to save from the icy rain pouring into my bedroom.</p>
+<p>Our roof had held fast in many a storm, but the wind that night was really fierce. It
+came rushing at us with a high-pitched, eerie wail. The old roof groaned and protested.
+It took a battering for several hours while the rain lashed against the windows and the
+lights kept coming and going.</p>
+<p>There was no question of sleeping, but we remained in bed for warmth and comfort.
+The fire had long since gone out, as the chimney had collapsed, bringing down a
+shower of sooty rainwater</p>
+<p>After about four hours of buffeting, the roof could take it no longer. My bedroom
+faces east, so my portion of the roof was the first to go.
+</p>
+<p>The wind got under it and kept pushing until, with a ripping, groaning sound, the
+metal sheets shifted and slid off the rafters, some of them dropping with claps like
+thunder on to the road below.</p>
+<p>So that’s it, I thought. Nothing worse can happen. As long as the ceiling stays on, I’m
+not getting out of bed. We’ll collect our roof in the morning.
+</p>
+<p>Icy water splashing down on my face made me change my mind in a hurry. Leaping
+from the bed, I found that much of the ceiling had gone, too. Water was pouring on my
+open typewriter as well as on the bedside radio and bed cover.</p>
+<p>Picking up my precious typewriter (my companion for forty years) I stumbled into
+the front sitting room (and library), only to find a similar situation there. Water was
+pouring through the slats of the wooden ceiling, raining down on the open bookshelves.</p>
+<p>By now I had been joined by the children, who had come to my rescue. Their section
+of the roof hadn’t gone as yet. Their parents were struggling to close a window against
+the driving rain.
+</p>
+<p>‘Save the books!’ shouted Dolly, the youngest, and that became our rallying cry for
+the next hour or two.</p>
+<p>Dolly and her brother Mukesh picked up armfuls of books and carried them into
+their room. But the floor was awash, so the books had to be piled on their beds. Dolly
+was helping me gather some of my papers when a large field rat jumped on to the desk
+in front of her. Dolly squealed and ran for the door.</p>
+<p>‘It’s all right,’ said Mukesh, whose love of animals extends even to field rats. ‘It’s
+only sheltering from the storm.’</p>
+<p>Big brother Rakesh whistled for our dog, Tony, but Tony wasn’t interested in rats
+just then. He had taken shelter in the kitchen, the only dry spot in the house.</p>
+<p>Two rooms were now practically roofless, and we could see the sky lit up by
+flashes of lightning.</p>
+<p>There were fireworks indoors, too, as water spluttered and crackled along a
+damaged wire. Then the lights went out altogether</p>
+<p>Rakesh, at his best in an emergency, had already lit two kerosene lamps. And by
+their light we continued to transfer books, papers, and clothes to the children’s room.
+</p>
+<p>We noticed that the water on the floor was beginning to subside a little.</p>
+<p>‘Where is it going?’ asked Dolly.</p>
+<p>‘Through the floor,’ said Mukesh. ‘Down to the flat below!’</p>
+<p>Cries of concern from our downstairs neighbours told us that they were having their
+share of the flood.</p>
+<p>Our feet were freezing because there hadn’t been time to put on proper footwear.
+And besides, shoes and slippers were awash by now. All chairs and tables were piled
+high with books. I hadn’t realised the extent of my library until that night!
+</p>
+<p>The available beds were pushed into the driest corner of the children’s room, and
+there, huddled in blankets and quilts, we spent the remaining hours of the night while
+the storm continued</p>
+<p>Towards morning the wind fell, and it began to snow. Through the door to the sitting
+room I could see snowflakes drifting through the gaps in the ceiling, settling on pictureframes. Ordinary things like a glue bottle and a small clock took on a certain beauty
+when covered with soft snow.
+</p>
+<p>Most of us dozed off.</p>
+<p>When dawn came, we found the windowpanes encrusted with snow and icicles. The
+rising sun struck through the gaps in the ceiling and turned everything golden. Snow
+crystals glistened on the empty bookshelves. But the books had been saved.</p>
+<p>Rakesh went out to find a carpenter and tinsmith, while the rest of us started putting
+things in the sun to dry. By evening we’d put much of the roof back on.
+</p>
+<p>It’s a much-improved roof now, and we look forward to the next storm with
+confidence!</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter16.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter18.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

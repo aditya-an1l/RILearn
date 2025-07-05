@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter2</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>The School Among the Pines</p>
+    </h1>
+    <p><b>1</b></p>
+    <p>A leopard, lithe and sinewy, drank at the mountain stream, and then lay down on the
+grass to bask in the lat36February sunshine. Its tail twitched occasionally and the
+animal appeared to be sleeping. At the sound of distant voices it raised its head to
+listen, then stood up and leapt lightly over the boulders in the stream, disappearing
+among the trees on the opposite bank.</p>
+<p>A minute or two later, three children came walking down the forest path. They were
+a girl and two boys, and they were singing in their local dialect an old song they had
+learnt from their grandparents.</p>
+<p>Five more miles to go!<br>
+We climb through rain and snow.<br>
+A river to cross…<br>
+A mountain to pass…<br>
+Now we’ve four more miles to go!</p>
+<p>Their school satchels looked new, their clothes had been washed and pressed. Their
+loud and cheerful singing startled a Spotted Forktail. The bird left its favourite rock in
+the stream and flew down the dark ravine.
+</p>
+<p>‘Well, we have only three more miles to go,’ said the bigger boy, Prakash, who had
+been this way hundreds of times. ‘But first we have to cross the stream.’
+</p>
+<p>He was a sturdy twelve-year-old with eyes like raspberries and a mop of bushy hair
+that refused to settle down on his head. The girl and her small brother were taking this
+path for the first time.</p>
+<p>‘I’m feeling tired, Bina,’ said the little boy.</p>
+<p>Bina smiled at him, and Prakash said, ‘Don’t worry, Sonu, you’ll get used to the
+walk. There’s plenty of time.’ He glanced at the old watch he’d been given by his
+grandfather. It needed constant winding. ‘We can rest here for five or six minutes.’</p>
+<p>They sat down on a smooth boulder and watched the clear water of the shallow
+stream tumbling downhill. Bina examined the old watch on Prakash’s wrist. The glass
+was badly scratched and she could barely make out the figures on the dial. ‘Are you
+sure it still gives the right time?’ she asked.
+</p>
+<p>‘Well, it loses five minutes every day, so I put it ten minutes forward at night. That
+means by morning it’s quite accurate! Even our teacher, Mr Mani, asks me for the time.
+If he doesn’t ask, I tell him! The clock in our classroom keeps stopping.’
+</p>
+<p>They removed their shoes and let the cold mountain water run over their feet. Bina
+was the same age as Prakash. She had pink cheeks, soft brown eyes, and hair that was
+just beginning to lose its natural curls. Hers was a gentle face, but a determined little
+chin showed that she could be a strong person. Sonu, her younger brother, was ten. He
+was a thin boy who had been sickly as a child but was now beginning to fill out.
+Although he did not look very athletic, he could run like the wind.</p>
+<p>Bina had been going to school in her own village of Koli, on the other side of the
+mountain. But it had been a Primary School, finishing at Class Five. Now, in order to
+study in the Sixth, she would have to walk several miles every day to Nauti, where
+there was a High School going up to the Eighth. It had been decided that Sonu would
+also shift to the new school, to give Bina company. Prakash, their neighbour in Koli,
+was already a pupil at the Nauti school. His mischievous nature, which sometimes got
+him into trouble, had resulted in his having to repeat a year.
+</p>
+<p>But this didn’t seem to bother him. ‘What’s the hurry?’ he had told his indignant
+parents. ‘You’re not sending me to a foreign land when I finish school. And our cows
+aren’t running away, are they?’</p>
+<p>‘You would prefer to look after the cows, wouldn’t you?’ asked Bina, as they got up
+to continue their walk.
+</p>
+<p>‘Oh, school’s all right. Wait till you see old Mr Mani. He always gets our names
+mixed up, as well as the subjects he’s supposed to be teaching. At out last lesson,
+instead of maths, he gave us a geography lesson!’</p>
+<p>‘More fun than maths,’ said Bina.
+</p>
+<p>‘Yes, but there’s a new teacher this year. She’s very young, they say, just out of
+college. I wonder what she’ll be like.’</p>
+<p>Bina walked faster and Sonu had some trouble keeping up with them. She was
+excited about the new school and the prospect of different surroundings. She had
+seldom been outside her own village, with its small school and single ration shop. The
+day’s routine never varied – helping her mother in the fields or with household tasks
+like fetching water from the spring or cutting grass and fodder for the cattle. Her father,
+who was a soldier, was away for nine months in the year and Sonu was still too small
+for the heavier tasks</p>
+<p>As they neared Nauti village, they were joined by other children coming from
+different directions. Even where there were no major roads, the mountains were full of
+little lanes and short cuts. Like a game of snakes and ladders, these narrow paths
+zigzagged around the hills and villages, cutting through fields and crossing narrow
+ravines until they came together to form a fairly busy road along which mules, cattle
+and goats joined the throng.
+</p>
+<p>Nauti was a fairly large village, and from here a broader but dustier road started for
+Tehri. There was a small bus, several trucks and (for part of the way) a road-roller.
+The road hadn’t been completed because the heavy diesel roller couldn’t take the steep
+climb to Nauti. It stood on the roadside half way up the road from Tehri.
+</p>
+<p>Prakash knew almost everyone in the area, and exchanged greetings and gossip with
+other children as well as with muleteers, bus-drivers, milkmen and labourers working
+on the road. He loved telling everyone the time, even if they weren’t interested.</p>
+<p>‘It’s nine o’clock,’ he would announce, glancing at his wrist. ‘Isn’t your bus leaving
+today?’</p>
+<p>‘Off with you!’ the bus-driver would respond, ‘I’ll leave when I’m ready.’</p>
+<p>As the children approached Nauti, the small flat school buildings came into view on
+the outskirts of the village, fringed with a line of long-leaved pines. A small crowd had
+assembled on the playing field. Something unusual seemed to have happened. Prakash
+ran forward to see what it was all about. Bina and Sonu stood aside, waiting in a patch
+of sunlight near the boundary wall.
+</p>
+<p>Prakash soon came running back to them. He was bubbling over with excitement.
+</p>
+<p>‘It’s Mr Mani!’ he gasped. ‘He’s disappeared! People are saying a leopard must
+have carried him off!’</p>
+<p><b>2</b></p>
+<p>Mr Mani wasn’t really old. He was about fifty-five and was expected to retire soon.
+But for the children, adults over forty seemed ancient! And Mr Mani had always been a
+bit absent-minded, even as a young man.</p>
+<p>He had gone out for his early morning walk, saying he’d be back by eight o’clock, in
+time to have his breakfast and be ready for class. He wasn’t married, but his sister and
+her husband stayed with him. When it was past nine o’clock his sister presumed he’d
+stopped at a neighbour’s house for breakfast (he loved tucking into other people’s
+breakfast) and that he had gone on to school from there. But when the school bell rang
+at ten o’clock, and everyone but Mr Mani was present, questions were asked and
+guesses were made.</p>
+<p>No one had seen him return from his walk and enquiries made in the village showed
+that he had not stopped at anyone’s house. For Mr Mani to disappear was puzzling; for
+him to disappear without his breakfast was extraordinary.
+</p>
+<p>Then a milkman returning from the next village said he had seen a leopard sitting on
+a rock on the outskirts of the pine forest. There had been talk of a cattle-killer in the
+valley, of leopards and other animals being displaced by the construction of a dam. But
+as yet no one had heard of a leopard attacking a man. Could Mr Mani have been its first
+victim? Someone found a strip of red cloth entangled in a blackberry bush and went
+running through the village showing it to everyone. Mr Mani had been known to wear
+red pyjamas. Surely, he had been seized and eaten! But where were his remains? And
+why had he been in his pyjamas?</p>
+<p>Meanwhile, Bina and Sonu and the rest of the children had followed their teachers
+into the school playground. Feeling a little lost, Bina looked around for Prakash. She
+found herself facing a dark slender young woman wearing spectacles, who must have
+been in her early twenties – just a little too old to be another student. She had a kind
+expressive face and she seemed a little concerned by all that had been happening.
+</p>
+<p>Bina noticed that she had lovely hands; it was obvious that the new teacher hadn’t
+milked cows or worked in the fields!
+</p>
+<p>‘You must be new here,’ said the teacher, smiling at Bina. ‘And is this your little
+brother?’</p>
+<p>‘Yes, we’ve come from Koli village. We were at school there.’</p>
+<p>‘It’s a long walk from Koli. You didn’t see any leopards, did you? Well, I’m new
+too. Are you in the Sixth class?’</p>
+<p>‘Sonu is in the Third. I’m in the Sixth.’</p>
+<p>‘Then I’m your new teacher. My name is Tania Ramola. Come along, let’s see if we
+can settle down in our classroom.’</p>
+<p>Mr Mani turned up at twelve o’clock, wondering what all the fuss was about. No, he
+snapped, he had not been attacked by a leopard; and yes, he had lost his pyjamas and
+would someone kindly return them to him?</p>
+<p>‘How did you lose your pyjamas, Sir?’ asked Prakash.</p>
+<p>‘They were blown off the washing line!’ snapped Mr Mani</p>
+<p>After much questioning, Mr Mani admitted that he had gone further than he had
+intended, and that he had lost his way coming back. He had been a bit upset because the
+new teacher, a slip of a girl, had been given charge of the Sixth, while he was still with
+the Fifth, along with that troublesome boy Prakash, who kept on reminding him of the
+time! The headmaster had explained that as Mr Mani was due to retire at the end of the
+year, the school did not wish to burden him with a senior class. But Mr Mani looked
+upon the whole thing as a plot to get rid of him. He glowered at Miss Ramola whenever
+he passed her. And when she smiled back at him, he looked the other way!
+</p>
+<p>Mr Mani had been getting even more absent-minded of late – putting on his shoes
+without his socks, wearing his homespun waistcoat inside out, mixing up people’s
+names, and of course, eating other people’s lunches and dinners. His sister had made a
+special mutton broth (pai) for the postmaster, who was down with ‘flu’ and had asked
+Mr Mani to take it over in a thermos. When the postmaster opened the thermos, he found
+only a few drops of broth at the bottom – Mr Mani had drunk the rest somewhere along
+the way.
+</p>
+<p>When sometimes Mr Mani spoke of his coming retirement, it was to describe his
+plans for the small field he owned just behind the house. Right now, it was full of
+potatoes, which did not require much looking after; but he had plans for growing
+dahlias, roses, French beans, and other fruits and flowers.
+</p>
+<p>The next time he visited Tehri, he promised himself, he would buy some dahlia
+bulbs and rose cuttings. The monsoon season would be a good time to put them down.
+And meanwhile, his potatoes were still flourishing.</p>
+<p><b>3</b></p>
+<p>Bina enjoyed her first day at the new school. She felt at ease with Miss Ramola, as did
+most of the boys and girls in her class. Tania Ramola had been to distant towns such as
+Delhi and Lucknow – places they had only read about – and it was said that she had a
+brother who was a pilot and flew planes all over the world. Perhaps he’d fly over
+Nauti some day!</p>
+<p>Most of the children had, of course, seen planes flying overhead, but none of them
+had seen a ship, and only a few had been in a train. Tehri mountain was far from the
+railway and hundreds of miles from the sea. But they all knew about the big dam that
+was being built at Tehri, just forty miles away.</p>
+<p>Bina, Sonu and Prakash had company for part of the way home, but gradually the
+other children went off in different directions. Once they had crossed the stream, they
+were on their own again.
+</p>
+<p>It was a steep climb all the way back to their village. Prakash had a supply of
+peanuts which he shared with Bina and Sonu, and at a small spring they quenched their
+thirst.
+</p>
+<p>When they were less than a mile from home, they met a postman who had finished
+his round of the villages in the area and was now returning to Nauti.</p>
+<p>‘Don’t waste time along the way,’ he told them. ‘Try to get home before dark.’
+</p>
+<p>‘What’s the hurry?’ asked Prakash, glancing at his watch. ‘It’s only five o’clock.’</p>
+<p>‘There’s a leopard around. I saw it this morning, not far from the stream. No one is
+sure how it got here. So don’t take any chances. Get home early.’</p>
+<p>‘So there really is a leopard,’ said Sonu.</p>
+<p>They took his advice and walked faster, and Sonu forgot to complain about his
+aching feet.
+</p>
+<p>They were home well before sunset.
+</p>
+<p>There was a smell of cooking in the air and they were hungry.</p>
+<p>‘Cabbage and roti,’ said Prakash gloomily. ‘But I could eat anything today.’ He
+stopped outside his small slate-roofed house, and Bina and Sonu waved him goodbye,
+then carried on across a couple of ploughed fields until they reached their small stone
+house.
+</p>
+<p>‘Stuffed tomatoes,’ said Sonu, sniffing just outside the front door.
+</p>
+<p>‘And lemon pickle,’ said Bina, who had helped cut, sun and salt the lemons a month
+previously.</p>
+<p>Their mother was lighting the kitchen stove. They greeted her with great hugs and
+demands for an immediate dinner. She was a good cook who could make even the
+simplest of dishes taste delicious. Her favourite saying was, ‘Home-made pai is better
+than chicken soup in Delhi,’ and Bina and Sonu had to agree.</p>
+<p>Electricity had yet to reach their village, and they took their meal by the light of a
+kerosene lamp. After the meal, Sonu settled down to do a little homework, while Bina
+stepped outside to look at the stars.
+</p>
+<p>Across the fields, someone was playing a flute. ‘It must be Prakash,’ thought Bina.
+‘He always breaks off on the high notes.’ But the flute music was simple and appealing,
+and she began singing softly to herself in the dark.</p>
+<p><b>4</b></p>
+<p>Mr Mani was having trouble with the porcupines. They had been getting into his garden
+at night and digging up and eating his potatoes. From his bedroom window – left open,
+now that the mild-April weather had arrived – he could listen to them enjoying the
+vegetables he had worked hard to grow. Scrunch, scrunch! Katar, katar, as their sharp
+teeth sliced through the largest and juiciest of potatoes. For Mr Mani it was as though
+they were biting through his own flesh. And the sound of them digging industriously as
+they rooted up those healthy, leafy plants, made him tremble with rage and indignation.
+The unfairness of it all!
+</p>
+<p>Yes, Mr Mani hated porcupines. He prayed for their destruction, their removal from
+the face of the earth. But, as his friends were quick to point out, ‘Bhagwan protected
+porcupines too,’ and in any case you could never see the creatures or catch them, they
+were completely nocturnal.</p>
+<p>Mr Mani got out of bed every night, torch in one hand, a stout stick in the other, but
+as soon as he stepped into the garden the crunching and digging stopped and he was
+greeted by the most infuriating of silences. He would grope around in the dark,
+swinging wildly with the stick, but not a single porcupine was to be seen or heard. As
+soon as he was back in bed – the sounds would start all over again. Scrunch, scrunch,
+katar, katar…
+</p>
+<p>Mr Mani came to his class tired and dishevelled, with rings beneath his eyes and a
+permanent frown on his face. It took some time for his pupils to discover the reason for
+his misery, but when they did, they felt sorry for their teacher and took to discussing
+ways and means of saving his potatoes from the porcupines.
+</p>
+<p>It was Prakash who came up with the idea of a moat or waterditch. ‘Porcupines
+don’t like water,’ he said knowledgeably.
+</p>
+<p>‘How do you know?’ asked one of his friends.</p>
+<p>‘Throw water on one and see how it runs! They don’t like getting their quills wet.’ </p>
+<p>There was no one who could disprove Prakash’s theory, and the class fell in with
+the idea of building a moat, especially as it meant getting most of the day off</p>
+<p>‘Anything to make Mr Mani happy,’ said the headmaster, and the rest of the school
+watched with envy as the pupils of Class Five, armed with spades and shovels
+collected from all parts of the village, took up their positions around Mr Mani’s potato
+field and began digging a ditch.</p>
+<p>By evening the moat was ready, but it was still dry and the porcupines got in again
+that night and had a great feast.
+</p>
+<p>‘At this rate,’ said Mr Mani gloomily ‘there won’t be any potatoes left to save.’
+</p>
+<p>But next day Prakash and the other boys and girls managed to divert the water from a
+stream that flowed past the village. They had the satisfaction of watching it flow gently
+into the ditch. Everyone went home in a good mood. By nightfall, the ditch had
+overflowed, the potato field was flooded, and Mr Mani found himself trapped inside
+his house. But Prakash and his friends had won the day. The porcupines stayed away
+that night!
+</p>
+<p>A month had passed, and wild violets, daisies and buttercups now sprinkled the hill
+slopes, and on her way to school Bina gathered enough to make a little posy. The bunch
+of flowers fitted easily into an old ink-well. Miss Ramola was delighted to find this
+little display in the middle of her desk.
+</p>
+<p>‘Who put these here?’ she asked in surprise.
+</p>
+<p>Bina kept quiet, and the rest of the class smiled secretively. After that, they took
+turns bringing flowers for the classroom</p>
+<p>On her long walks to school and home again, Bina became aware that April was the
+month of new leaves. The oak leaves were bright green above and silver beneath, and
+when they rippled in the breeze they were like clouds of silvery green. The path was
+strewn with old leaves, dry and crackly. Sonu loved kicking them around.
+</p>
+<p>Clouds of white butterflies floated across the stream. Sonu was chasing a butterfly
+when he stumbled over something dark and repulsive. He went sprawling on the grass.
+When he got to his feet, he looked down at the remains of a small animal.</p>
+<p>‘Bina! Prakash! Come quickly!’ he shouted.It was part of a sheep, killed some days earlier by a much larger animal.
+</p>
+<p>‘Only a leopard could have done this,’ said Prakash.
+</p>
+<p>‘Let’s get away, then,’ said Sonu. ‘It might still be around!’
+</p>
+<p>‘No, there’s nothing left to eat. The leopard will be hunting elsewhere by now.
+Perhaps it’s moved on to the next valley.’</p>
+<p>‘Still, I’m frightened,’ said Sonu. ‘There may be more leopards!’
+Bina took him by the hand. ‘Leopards don’t attack humans!’ she said.</p>
+<p>‘They will, if they get a taste for people!’ insisted Prakash.
+</p>
+<p>‘Well, this one hasn’t attacked any people as yet,’ said Bina, although she couldn’t
+be sure. Hadn’t there been rumours of a leopard attacking some workers near the dam?
+But she did not want Sonu to feel afraid, so she did not mention the story. All she said
+was, ‘It has probably come here because of all the activity near the dam.’
+</p>
+<p>All the same, they hurried home. And for a few days, whenever they reached the
+stream, they crossed over very quickly, unwilling to linger too long at that lovely spot.</p>
+<p><b>5</b></p>
+ <p>A few days later, a school party was on its way to Tehri to see the new dam that was
+being built.
+</p>
+<p>Miss Ramola had arranged to take her class, and Mr Mani, not wishing to be left out,
+insisted on taking his class as well. That meant there were about fifty boys and girls
+taking part in the outing. The little bus could only take thirty. A friendly truck-driver
+agreed to take some children if they were prepared to sit on sacks of potatoes. And
+Prakash persuaded the owner of the diesel-roller to turn it round and head it back to
+Tehri – with him and a couple of friends up on the driving seat.</p>
+<p>Prakash’s small group set off at sunrise, as they had to walk some distance in order
+to reach the stranded road-roller. The bus left at 9 a.m. with Miss Ramola and her
+class, and Mr Mani and some of his pupils. The truck was to follow later.</p>
+<p>It was Bina’s first visit to a large town and her first bus ride.
+</p>
+<p>The sharp curves along the winding, downhill road made several children feel sick.
+The bus-driver seemed to be in a tearing hurry. He took them along at rolling, rollicking
+speed, which made Bina feel quite giddy. She rested her head on her arms and refused
+to look out of the window. Hairpin bends and cliff edges, pine forests and snowcapped
+peaks, all swept past her, but she felt too ill to want to look at anything. It was just as
+well – those sudden drops, hundreds of feet to the valley below, were quite frightening.
+Bina began to wish that she hadn’t come – or that she had joined Prakash on the roadroller instead!
+</p>
+<p>Miss Ramola and Mr Mani didn’t seem to notice the lurching and groaning of the old
+bus. They had made this journey many times. They were busy arguing about the
+advantages and disadvantages of large dams – an argument that was to continue on and
+off for much of the day; sometimes in Hindi, sometimes in English, sometimes in the
+local dialect!
+</p>
+<p>Meanwhile, Prakash and his friends had reached the roller. The driver hadn’t turned
+up, but they managed to reverse it and get it going in the direction of Tehri. They were
+soon overtaken by both the bus and the truck but kept moving along at a steady chug.
+Prakash spotted Bina at the window of the bus and waved cheerfully. She responded
+feebly.</p>
+<p>Bina felt better when the road levelled out near Tehri. As they crossed an old bridge
+over the wide river, they were startled by a loud bang which made the bus shudder. A
+cloud of dust rose above the town.</p>
+<p>‘They’re blasting the mountain,’ said Miss Ramola</p>
+<p>‘End of a mountain,’ said Mr Mani mournfully.</p>
+<p>While they were drinking cups of tea at the bus stop, waiting for the potato truck and
+the road-roller, Miss Ramola and Mr Mani continued their argument about the dam.
+Miss Ramola maintained that it would bring electric power and water for irrigation to
+large areas of the country, including the surrounding area. Mr Mani declared that it was
+a menace, as it was situated in an earthquake zone. There would be a terrible disaster if
+the dam burst! Bina found it all very confusing. And what about the animals in the area,
+she wondered, what would happen to them?
+</p>
+<p>The argument was becoming quite heated when the potato truck arrived. There was
+no sign of the road-roller, so it was decided that Mr Mani should wait for Prakash and
+his friends while Miss Ramola’s group went ahead.
+</p>
+<p>Some eight or nine miles before Tehri the road-roller had broken down, and Prakash
+and his friends were forced to walk. They had not gone far, however, when a mule train
+came along – five or six mules that had been delivering sacks of grain in Nauti. A boy
+rode on the first mule, but the others had no loads.
+</p>
+<p>‘Can you give us a ride to Tehri?’ called Prakash.</p>
+<p>‘Make yourselves comfortable,’ said the boy</p>
+<p>There were no saddles, only gunny sacks strapped on to the mules with rope. They
+had a rough but jolly ride down to the Tehri bus stop. None of them had ever ridden
+mules; but they had saved at least an hour on the road.
+</p>
+<p>Looking around the bus stop for the rest of the party, they could find no one from
+their school. And Mr Mani, who should have been waiting for them, had vanished.</p>
+<p><b>6</b></p>
+<p>Tania Ramola and her group had taken the steep road to the hill above Tehri. Half-anhour’s climbing brought them to a little plateau which overlooked the town, the river
+and the dam-site.</p>
+<p>The earthworks for the dam were only just coming up, but a wide tunnel had been
+bored through the mountain to divert the river into another channel. Down below, the
+old town was still spread out across the valley and from a distance it looked quite
+charming and picturesque.</p>
+<p>‘Will the whole town be swallowed up by the waters of the dam?’ asked Bina</p>
+<p>‘Yes, all of it,’ said Miss Ramola. ‘The clock tower and the old palace. The long
+bazaar, and the temples, the schools and the jail, and hundreds of houses, for many
+miles up the valley. All those people will have to go – thousands of them! Of course,
+they’ll be resettled elsewhere.’</p>
+<p>‘But the town’s been here for hundreds of years,’ said Bina. ‘They were quite happy
+without the dam, weren’t they?’</p>
+<p>‘I suppose they were. But the dam isn’t just for them – it’s for the millions who live
+further downstream, across the plains.’
+</p>
+<p>‘And it doesn’t matter what happens to this place?’
+</p>
+<p>‘The local people will be given new homes, somewhere else.’ Miss Ramola found
+herself on the defensive and decided to change the subject. ‘Everyone must be hungry.
+It’s time we had our lunch.’
+</p>
+<p>Bina kept quiet. She didn’t think the local people would want to go away. And it
+was a good thing, she mused, that there was only a small stream and not a big river
+running past her village. To be uprooted like this – a town and hundreds of villages –
+and put down somewhere on the hot, dusty plains – seemed to her unbearable.
+</p>
+<p>‘Well, I’m glad I don’t live in Tehri,’ she said.
+</p>
+<p>She did not know it, but all the animals and most of the birds had already left the
+area. The leopard had been among them.</p>
+<p>They walked through the colourful, crowded bazaar, where fruit-sellers did business
+beside silversmiths, and pavement vendors sold everything from umbrellas to glass
+bangles. Sparrows attacked sacks of grain, monkeys made off with bananas, and stray
+cows and dogs rummaged in refuse bins, but nobody took any notice. Music blared from
+radios. Buses blew their horns. Sonu bought a whistle to add to the general din, but
+Miss Ramola told him to put it away. Bina had kept ten rupees aside, and now she used
+it to buy a cotton head-scarf for her mother.
+</p>
+<p>As they were about to enter a small restaurant for a meal, they were joined by
+Prakash and his companions; but of Mr Mani there was still no sign.
+</p>
+<p>‘He must have met one of his relatives,’ said Prakash. ‘He has relatives
+everywhere.’
+</p>
+<p>After a simple meal of rice and lentils, they walked the length of the bazaar without
+seeing Mr Mani. At last, when they were about to give up the search, they saw him
+emerge from a by-lane, a large sack slung over his shoulder.</p>
+<p>‘Sir, where have you been?’ asked Prakash. ‘We have been looking for you
+everywhere.’</p>
+<p>On Mr Mani’s face was a look of triumph.
+</p>
+<p>‘Help me with this bag,’ he said breathlessly.
+</p>
+<p>‘You’ve bought more potatoes, sir,’ said Prakash.
+</p>
+<p>‘Not potatoes, boy. Dahlia bulbs!’
+</p>
+<p><b>7</b></p>
+<p>It was dark by the time they were all back in Nauti. Mr Mani had refused to be
+separated from his sack of dahlia bulbs, and had been forced to sit in the back of the
+truck with Prakash and most of the boys.</p>
+<p>Bina did not feel so ill on the return journey. Going uphill was definitely better than
+going downhill! But by the time the bus reached Nauti it was too late for most of the
+children to walk back to the more distant villages. The boys were put up in different
+homes, while the girls were given beds in the school verandah.</p>
+<p>The night was warm and still. Large moths fluttered around the single bulb that lit
+the verandah. Counting moths, Sonu soon fell asleep. But Bina stayed awake for some
+time, listening to the sounds of the night. A nightjar went tonk-tonk in the bushes, and
+somewhere in the forest an owl hooted softly. The sharp call of a barking-deer
+travelled up the valley, from the direction of the stream. Jackals kept howling. It
+seemed that there were more of them than ever before.
+</p>
+<p>Bina was not the only one to hear the barking-deer. The leopard, stretched full length
+on a rocky ledge, heard it too. The leopard raised its head and then got up slowly. The
+deer was its natural prey. But there weren’t many left, and that was why the leopard,
+robbed of its forest by the dam, had taken to attacking dogs and cattle near the villages.
+</p>
+<p>As the cry of the barking-deer sounded nearer, the leopard left its look-out point and
+moved swiftly through the shadows towards the stream.</p>
+<p><b>8</b></p>
+<p>In early June the hills were dry and dusty, and forest fires broke out, destroying shrubs
+and trees, killing birds and small animals. The resin in the pines made these trees burn
+more fiercely, and the wind would take sparks from the trees and carry them into the dry
+grass and leaves, so that new fires would spring up before the old ones had died out.
+Fortunately, Bina’s village was not in the pine belt; the fires did not reach it. But Nauti
+was surrounded by a fire that raged for three days, and the children had to stay away
+from school.
+</p>
+<p>And then, towards the end of June, the monsoon rains arrived and there was an end
+to forest fires. The monsoon lasts three months and the lower Himalayas would be
+drenched in rain, mist and cloud for the next three months.</p>
+<p>The first rain arrived while Bina, Prakash and Sonu were returning home from
+school. Those first few drops on the dusty path made them cry out with excitement.
+Then the rain grew heavier and a wonderful aroma rose from the earth.</p>
+<p>‘The best smell in the world!’ exclaimed Bina.</p>
+<p>Everything suddenly came to life. The grass, the crops, the trees, the birds. Even the
+leaves of the trees glistened and looked new.
+</p>
+<p>That first wet weekend, Bina and Sonu helped their mother plant beans, maize and
+cucumbers. Sometimes, when the rain was very heavy, they had to run indoors.
+Otherwise they worked in the rain, the soft mud clinging to their bare legs.
+</p>
+<p>Prakash now owned a black dog with one ear up and one ear down. The dog ran
+around getting in everyone’s way, barking at cows, goats, hens and humans, without
+frightening any of them. Prakash said it was a very clever dog, but no one else seemed
+to think so. Prakash also said it would protect the village from the leopard, but others
+said the dog would be the first to be taken – he’d run straight into the jaws of Mr Spots!</p>
+<p>In Nauti, Tania Ramola was trying to find a dry spot in the quarters she’d been
+given. It was an old building and the roof was leaking in several places. Mugs and
+buckets were scattered about the floor in order to catch the drip.</p>
+<p>Mr Mani had dug up all his potatoes and presented them to the friends and
+neighbours who had given him lunches and dinners. He was having the time of his life,
+planting dahlia bulbs all over his garden.</p>
+<p>‘I’ll have a field of many-coloured dahlias!’ he announced. ‘Just wait till the end of
+August!’</p>
+<p>‘Watch out for those porcupines,’ warned his sister. ‘They eat dahlia bulbs too!’</p>
+<p>Mr Mani made an inspection tour of his moat, no longer in flood, and found
+everything in good order. Prakash had done his job well.
+Now, when the children crossed the stream, they found that the water-level had risen by
+about a foot. Small cascades had turned into waterfalls. Ferns had sprung up on the
+banks. Frogs chanted.
+</p>
+<p>Prakash and his dog dashed across the stream. Bina and Sonu followed more
+cautiously. The current was much stronger now and the water was almost up to their
+knees. Once they had crossed the stream, they hurried along the path, anxious not to be
+caught in a sudden downpour.
+</p>
+<p>By the time they reached school, each of them had two or three leeches clinging to
+their legs. They had to use salt to remove them. The leeches were the most troublesome
+part of the rainy season. Even the leopard did not like them. It could not lie in the long
+grass without getting leeches on its paws and face.
+</p>
+<p>One day, when Bina, Prakash and Sonu were about to cross the stream they heard a
+low rumble, which grew louder every second. Looking up at the opposite hill, they saw
+several trees shudder, tilt outwards and begin to fall. Earth and rocks bulged out from
+the mountain, then came crashing down into the ravine.</p>
+<p>‘Landslide!’ shouted Sonu.</p>
+<p>‘It’s carried away the path,’ said Bina. ‘Don’t go any further.’
+</p>
+<p>There was a tremendous roar as more rocks, trees and bushes fell away and crashed
+down the hillside.</p>
+<p>Prakash’s dog, who had gone ahead, came running back, tail between his legs.
+</p>
+<p>They remained rooted to the spot until the rocks had stopped falling and the dust had
+settled. Birds circled the area, calling wildly. A frightened barking-deer ran past them.</p>
+<p>‘We can’t go to school now,’ said Prakash. ‘There’s no way around.’
+</p>
+<p>They turned and trudged home through the gathering mist.
+</p>
+<p>In Koli, Prakash’s parents had heard the roar of the landslide. They were setting out
+in search of the children when they saw them emerge from the mist, waving cheerfully.
+9
+They had to miss school for another three days, and Bina was afraid they might not be
+able to take their final exams. Although Prakash was not really troubled at the thought of
+missing exams, he did not like feeling helpless just because their path had been swept
+away. So he explored the hillside until he found a goat-track going around the mountain.
+It joined up with another path near Nauti. This made their walk longer by a mile, but
+Bina did not mind. It was much cooler now that the rains were in full swing.
+</p>
+<p>The only trouble with the new route was that it passed close to the leopard’s lair.
+The animal had made this area its own since being forced to leave the dam area.
+</p>
+<p>One day Prakash’s dog ran ahead of them, barking furiously. Then he ran back,
+whimpering.</p>
+<p>‘He’s always running away from something,’ observed Sonu. But a minute later he
+understood the reason for the dog’s fear.
+</p>
+<p>They rounded a bend and Sonu saw the leopard standing in their way. They were
+struck dumb – too terrified to run. It was a strong, sinewy creature. A low growl rose
+from its throat. It seemed ready to spring.
+</p>
+<p>They stood perfectly still, afraid to move or say a word. And the leopard must have
+been equally surprised. It stared at them for a few seconds, then bounded across the
+path and into the oak forest.
+</p>
+<p>Sonu was shaking. Bina could hear her heart hammering. Prakash could only
+stammer: ‘Did you see the way he sprang? Wasn’t he beautiful?’
+</p>
+<p>He forgot to look at his watch for the rest of the day.</p>
+<p>A few days later Sonu stopped and pointed to a large outcrop of rock on the next
+hill.</p>
+<p>The leopard stood far above them, outlined against the sky. It looked strong,
+majestic. Standing beside it were two young cubs.
+</p>
+<p>‘Look at those little ones!’ exclaimed Sonu.</p>
+<p>‘So it’s a female, not a male,’ said Prakash.
+</p>
+<p>‘That’s why she was killing so often,’ said Bina. ‘She had to feed her cubs too.’</p>
+<p>They remained still for several minutes, gazing up at the leopard and her cubs. The
+leopard family took no notice of them.</p>
+<p>‘She knows we are here,’ said Prakash, ‘but she doesn’t care. She knows we won’t
+harm them.’</p>
+<p>‘We are cubs too!’ said Sonu.
+</p>
+<p>‘Yes,’ said Bina. ‘And there’s still plenty of space for all of us. Even when the dam
+is ready there will still be room for leopards and humans.’
+</p>
+<p><b>10</b></p>
+<p>The school exams were over. The rains were nearly over too. The landslide had been
+cleared, and Bina, Prakash and Sonu were once again crossing the stream.
+</p>
+<p>There was a chill in the air, for it was the end of September.
+</p>
+<p>Prakash had learnt to play the flute quite well, and he played on the way to school
+and then again on the way home. As a result he did not look at his watch so often.
+</p>
+<p>One morning they found a small crowd in front of Mr Mani’s house.
+</p>
+<p>‘What could have happened?’ wondered Bina. ‘I hope he hasn’t got lost again.’
+</p>
+<p>‘Maybe he’s sick,’ said Sonu.
+</p>
+<p>‘Maybe it’s the porcupines,’ said Prakash.But it was none of these things.
+</p>
+<p>Mr Mani’s first dahlia was in bloom, and half the village had turned out to look at it!
+It was a huge red double dahlia, so heavy that it had to be supported with sticks. No one
+had ever seen such a magnificent flower!
+</p>
+<p>Mr Mani was a happy man. And his mood only improved over the coming week, as
+more and more dahlias flowered – crimson, yellow, purple, mauve, white – button
+dahlias, pompom dahlias, spotted dahlias, striped dahlias… Mr Mani had them all! A
+dahlia even turned up on Tania Romola’s desk – he got on quite well with her now –
+and another brightened up the headmaster’s study.
+</p>
+<p>A week later, on their way home – it was almost the last day of the school term –
+Bina, Prakash and Sonu talked about what they might do when they grew up.
+</p>
+<p>‘I think I’ll become a teacher,’ said Bina. ‘I’ll teach children about animals and
+birds, and trees and flowers.’</p>
+<p>‘Better than maths!’ said Prakash.</p>
+<p>‘I’ll be a pilot,’ said Sonu. ‘I want to fly a plane like Miss Ramola’s brother.’</p>
+<p>‘And what about you, Prakash?’ asked Bina</p>
+<p>Prakash just smiled and said, ‘Maybe I’ll be a flute-player,’ and he put the flute to he
+lips and played a sweet melody.</p>
+<p>‘Well, the world needs flute-players too,’ said Bina, as they fell into step beside
+him.</p>
+<p>The leopard had been stalking a barking-deer. She paused when she heard the flute
+and the voices of the children. Her own young ones were growing quickly, but the girl
+and the two boys did not look much older.
+</p>
+<p>They had started singing their favourite song again.
+</p>
+<p>Five more miles to go!<br>
+We climb through rain and snow,<br>
+A river to cross…<br>
+A mountain to pass…<br>
+Now we’ve four more miles to go!</p>
+<p>The leopard waited until they had passed, before returning to the trail of the barkingdeer</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter1.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter3.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

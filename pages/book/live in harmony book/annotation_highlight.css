@@ -1,0 +1,88 @@
+/* —— Highlight & Note styling —— */
+.persistent-highlight {
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+.persistent-note {
+  padding: 0 2px;
+  border-radius: 2px;
+  background-color: #ffffcc;
+  /* light yellow by default */
+  position: relative;
+}
+
+.note-icon {
+  font-size: 14px;
+  margin-left: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* —— Popup container styling —— */
+.popup {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.definition-popup {
+  max-width: 240px;
+  font-size: 14px;
+  line-height: 1.3;
+}
+
+.color-swatch {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 0 4px 4px 0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.color-swatch[data-color="yellow"] {
+  background-color: yellow;
+}
+
+.color-swatch[data-color="blue"] {
+  background-color: lightblue;
+}
+
+.color-swatch[data-color="green"] {
+  background-color: lightgreen;
+}
+
+.color-swatch[data-color="pink"] {
+  background-color: pink;
+}
+
+.color-swatch[data-color="magenta"] {
+  background-color: magenta;
+}
+
+.color-swatch[data-color="red"] {
+  background-color: lightcoral;
+}
+
+.color-swatch[data-color="grey"] {
+  background-color: lightgrey;
+}
+
+/* —— Note‑modal styling —— */
+.note-modal textarea {
+  width: 250px;
+  height: 100px;
+  resize: vertical;
+  margin-bottom: 8px;
+}
+
+.note-modal button {
+  padding: 4px 8px;
+  cursor: pointer;
+}

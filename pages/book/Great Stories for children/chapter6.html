@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter6</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Monkey Trouble</p>
+    </h1>
+    <p>Grandfather bought Tutu from a street entertainer for the sum of ten rupees. The man
+had three monkeys. Tutu was the smallest, but the most mischievous. She was tied
+up most of the time. The little monkey looked so miserable with a collar and chain that
+Grandfather decided it would be much happier in our home. Grandfather had a
+weakness for keeping unusual pets. It was a habit that I, at the age of eight or nine, used
+to encourage.</p>
+<p>Grandmother at first objected to having a monkey in the house. ‘You have enough
+pets as it is,’ she said, referring to Grandfather’s goat, several white mice, and a small
+tortoise</p>
+<p>‘But I don’t have any,’ I said</p>
+<p>‘You’re wicked enough for two monkeys. One boy in the house is all I can take.’</p>
+<p>‘Ah, but Tutu isn’t a boy,’ said Grandfather triumphantly. ‘This is a little girl
+monkey!’</p>
+<p>Grandmother gave in. She had always wanted a little girl in the house. She believed
+girls were less troublesome than boys. Tutu was to prove her wrong.</p>
+<p>She was a pretty little monkey. Her bright eyes sparkled with mischief beneath deepset eyebrows. And her teeth, which were a pearly white, were often revealed in a grin
+that frightened the wits out of Aunt Ruby, whose nerves had already suffered from the
+presence of Grandfather’s pet python. But this was my grandparents’ house, and aunts
+and uncles had to put up with our pets.</p>
+<p>Tutu’s hands had a dried-up look, as though they had been pickled in the sun for
+many years. One of the first things I taught her was to shake hands, and this she insisted
+on doing with all who visited the house. Peppery Major Malik would have to stoop and
+shake hands with Tutu before he could enter the drawing room, otherwise Tutu would
+climb onto his shoulder and stay there, roughing up his hair and playing with his
+moustache</p>
+<p>Uncle Benji couldn’t stand any of our pets and took a particular dislike to Tutu, who
+was always making faces at him. But as Uncle Benji was never in a job for long, and
+depended on Grandfather’s good-natured generosity, he had to shake hands with Tutu,
+like everyone else.</p>
+<p>Tutu’s fingers were quick and wicked. And her tail, while adding to her good looks
+(Grandfather believed a tail would add to anyone’s good looks!), also served as a third
+hand. She could use it to hang from a branch, and it was capable of scooping up any
+delicacy that might be out of reach of her hands.
+</p>
+<p>On one of Aunt Ruby’s visits, loud shrieks from her bedroom brought us running to
+see what was wrong. It was only Tutu trying on Aunt Ruby’s petticoats! They were
+much too large, of course, and when Aunt Ruby entered the room, all she saw was a
+faceless white blob jumping up and down on the bed.
+</p>
+<p>We disentangled Tutu and soothed Aunt Ruby. I gave Tutu a bunch of sweet-peas to
+make her happy. Granny didn’t like anyone plucking her sweet-peas, so I took some
+from Major Malik’s garden while he was having his afternoon siesta.
+</p>
+<p>Then Uncle Benji complained that his hairbrush was missing. We found Tutu sunning
+herself on the back veranda, using the hairbrush to scratch her armpits.</p>
+<p>I took it from her and handed it back to Uncle Benji with an apology; but he flung the
+brush away with an oath.
+</p>
+<p>‘Such a fuss about nothing,’ I said. ‘Tutu doesn’t have fleas!’
+</p>
+<p>‘No, and she bathes more often than Benji,’ said Grandfather, who had borrowed
+Aunt Ruby’s shampoo to give Tutu a bath.
+</p>
+<p>All the same, Grandmother objected to Tutu being given the run of the house. Tutu
+had to spend her nights in the outhouse, in the company of the goat. They got on quite
+well, and it was not long before Tutu was seen sitting comfortably on the back of the
+goat, while the goat roamed the back garden in search of its favourite grass.</p>
+<p>The day Grandfather had to visit Meerut to collect his railway pension, he decided
+to take Tutu and me along to keep us both out of mischief, he said. To prevent Tutu from
+wandering about on the train, causing inconvenience to passengers, she was provided
+with a large black travelling bag. This, with some straw at the bottom, became her
+compartment. Grandfather and I paid for our seats, and we took Tutu along as hand
+baggage.
+</p>
+<p>There was enough space for Tutu to look out of the bag occasionally, and to be fed
+with bananas and biscuits, but she could not get her hands through the opening and the
+canvas was too strong for her to bite her way through.
+</p>
+<p>Tutu’s efforts to get out only had the effect of making the bag roll about on the floor
+or occasionally jump into the air – an exhibition that attracted a curious crowd of
+onlookers at the Dehra and Meerut railway stations.
+</p>
+<p>Anyway, Tutu remained in the bag as far as Meerut, but while Grandfather was
+producing our tickets at the turnstile, she suddenly poked her head out of the bag and
+gave the ticket collector a wide grin.
+</p>
+<p>The poor man was taken aback. But, with great presence of mind and much to
+Grandfather’s annoyance, he said, ‘Sir, you have a dog with you. You’ll have to buy a
+ticket for it.’</p>
+<p>‘It’s not a dog!’ said Grandfather indignantly. ‘This is a baby monkey of the species
+macacus-mischievous, closely related to the human species homus-horriblis! And
+there is no charge for babies!’
+</p>
+<p>‘It’s as big as a cat,’ said the ticket collector, ‘Cats and dogs have to be paid for.’</p>
+<p>‘But, I tell you, it’s only a baby!’ protested Grandfather.</p>
+<p>‘Have you a birth certificate to prove that?’ demanded the ticket collector.
+</p>
+<p>‘Next, you’ll be asking to see her mother,’ snapped Grandfather.
+</p>
+<p>In vain did he take Tutu out of the bag. In vain did he try to prove that a young
+monkey did not qualify as a dog or a cat or even as a quadruped. Tutu was classified as
+a dog by the ticket collector, and five rupees were handed over as her fare.</p>
+<p>Then Grandfather, just to get his own back, took from his pocket the small tortoise
+that he sometimes carried about, and said: ‘And what must I pay for this, since you
+charge for all creatures great and small?’</p>
+<p>The ticket collector looked closely at the tortoise, prodded it with his forefinger,
+gave Grandfather a triumphant look, and said, ‘No charge, sir. It is not a dog!’
+</p>
+<p>Winters in North India can be very cold. A great treat for Tutu on winter evenings was
+the large bowl of hot water given to her by Grandfather for a bath. Tutu would
+cunningly test the temperature with her hand, then gradually step into the bath, first one
+foot, then the other (as she had seen me doing) until she was in the water upto her neck.</p>
+<p>Once comfortable, she would take the soap in her hands or feet and rub herself all
+over. When the water became cold, she would get out and run as quickly as she could to
+the kitchen fire in order to dry herself. If anyone laughed at her during this performance,
+Tutu’s feelings would be hurt and she would refuse to go on with the bath.
+</p>
+<p>One day Tutu almost succeeded in boiling herself alive. Grandmother had left a
+large kettle on the fire for tea. And Tutu, all by herself and with nothing better to do,
+decided to remove the lid. Finding the water just warm enough for a bath, she got in,
+with her head sticking out from the open kettle.</p>
+<p>This was fine for a while, until the water began to get heated. Tutu raised herself a
+little. But finding it cold outside, she sat down again. She continued hopping up and
+down for some time, until Grandmother returned and hauled her, half-boiled, out of the
+kettle.
+</p>
+<p>‘What’s for tea today?’ asked Uncle Benji gleefully. ‘Boiled eggs and a half-boiled
+monkey?’
+</p>
+<p>But Tutu was none the worse for the adventure and continued to bathe more regularly
+than Uncle Benji.
+</p>
+<p>Aunt Ruby was a frequent taker of baths. This met with Tutu’s approval – so much
+so that, one day, when Aunt Ruby had finished shampooing her hair, she looked up
+through a lather of bubbles and soap-suds to see Tutu sitting opposite her in the bath,
+following her example.</p>
+<p>One day Aunt Ruby took us all by surprise. She announced that she had become
+engaged. We had always thought Aunt Ruby would never marry – she had often said so
+herself – but it appeared that the right man had now come along in the person of Rocky
+Fernandes, a schoolteacher from Goa.</p>
+<p>Rocky was a tall, firm-jawed, good-natured man, a couple of years younger than
+Aunt Ruby. He had a fine baritone voice and sang in the manner of the great Nelson
+Eddy. As Grandmother liked baritone singers, Rocky was soon in her good books</p>
+<p>‘But what on earth does he see in her?’ Uncle Benji wanted to know.
+</p>
+<p>‘More than any girl has seen in you!’ snapped Grandmother. ‘Ruby’s a fine girl. And
+they’re both teachers. Maybe they can start a school of their own.’
+</p>
+<p>Rocky visited the house quite often and brought me chocolates and cashew nuts, of
+which he seemed to have an unlimited supply. He also taught me several marching
+songs. Naturally, I approved of Rocky. Aunt Ruby won my grudging admiration for
+having made such a wise choice.</p>
+<p>One day I overheard them talking of going to the bazaar to buy an engagement ring. I
+decided I would go along, too. But as Aunt Ruby had made it clear that she did not want
+me around, I decided that I had better follow at a discreet distance. Tutu, becoming
+aware that a mission of some importance was under way, decided to follow me. But as
+I had not invited her along, she too decided to keep out of sight.
+</p>
+<p>Once in the crowded bazaar, I was able to get quite close to Aunt Ruby and Rocky
+without being spotted. I waited until they had settled down in a large jewellery shop
+before sauntering past and spotting them, as though by accident. Aunt Ruby wasn’t too
+pleased at seeing me, but Rocky waved and called out, ‘Come and join us! Help your
+aunt choose a beautiful ring!’</p>
+<p>The whole thing seemed to be a waste of good money, but I did not say so – Aunt
+Ruby was giving me one of her more unloving looks.
+</p>
+<p>‘Look, these are pretty!’ I said, pointing to some cheap, bright agates set in white
+metal. But Aunt Ruby wasn’t looking. She was immersed in a case of diamonds.
+</p>
+<p>‘Why not a ruby for Aunt Ruby?’ I suggested, trying to please her.
+</p>
+<p>‘That’s her lucky stone,’ said Rocky. ‘Diamonds are the thing for engagements.’ And
+he started singing a song about a diamond being a girl’s best friend.
+</p>
+<p>While the jeweller and Aunt Ruby were sifting through the diamond rings, and
+Rocky was trying out another tune, Tutu had slipped into the shop without being noticed
+by anyone but me. A little squeal of delight was the first sign she gave of her presence.
+Everyone looked up to see her trying on a pretty necklace</p>
+<p>‘And what are those stones?’ I asked.</p>
+<p>‘They look like pearls,’ said Rocky</p>
+<p>‘They are pearls,’ said the shopkeeper, making a grab for them.</p>
+<p>‘It’s that dreadful monkey!’ cried Aunt Ruby. ‘I knew that boy would bring him
+here!’</p>
+<p>The necklace was already adorning Tutu’s neck. I thought she looked rather nice in
+pearls, but she gave us no time to admire the effect. Springing out of our reach, Tutu
+dodged around Rocky, slipped between my legs, and made for the crowded road. I ran
+after her, shouting to her to stop, but she wasn’t listening.</p>
+<p>There were no branches to assist Tutu in her progress, but she used the heads and
+shoulders of people as springboards and so made rapid headway through the bazaar.</p>
+<p>The jeweller left his shop and ran after us. So did Rocky. So did several bystanders,
+who had seen the incident. And others, who had no idea what it was all about, joined in
+the chase. As Grandfather used to say, ‘In a crowd, everyone plays follow-the-leader,
+even when they don’t know who’s leading.’ Not everyone knew that the leader was
+Tutu. Only the front runners could see her.
+</p>
+<p>She tried to make her escape speedier by leaping onto the back of a passing
+scooterist. The scooter swerved into a fruit stall and came to a standstill under a heap
+of bananas, while the scooterist found himself in the arms of an indignant fruitseller.
+Tutu peeled a banana and ate part of it, before deciding to move on</p>
+<p>From an awning she made an emergency landing on a washerman’s donkey. The
+donkey promptly panicked and rushed down the road, while bundles of washing fell by
+the wayside. The washerman joined in the chase. Children on their way to school
+decided that there was something better to do than attend classes. With shouts of glee,
+they soon overtook their panting elders.</p>
+<p>Tutu finally left the bazaar and took a road leading in the direction of our house. But
+knowing that she would be caught and locked up once she got home, she decided to end
+the chase by ridding herself of the necklace. Deftly removing it from her neck, she flung
+it in the small canal that ran down the road.
+</p>
+<p>The jeweller, with a cry of anguish, plunged into the canal. So did Rocky. So did I.
+So did several other people, both adults and children. It was to be a treasure hunt!</p>
+<p>Some twenty minutes later, Rocky shouted, ‘I’ve found it!’ Covered in mud, waterlilies, ferns and tadpoles, we emerged from the canal, and Rocky presented the
+necklace to the relieved shopkeeper.
+</p>
+<p>Everyone trudged back to the bazaar to find Aunt Ruby waiting in the shop, still
+trying to make up her mind about a suitable engagement ring.
+</p>
+<p>Finally the ring was bought, the engagement was announced, and a date was set for
+the wedding.</p>
+<p>‘I don’t want that monkey anywhere near us on our wedding day,’ declared Aunt
+Ruby.
+</p>
+<p>‘We’ll lock her up in the outhouse,’ promised Grandfather. ‘And we’ll let her out
+only after you’ve left for your honeymoon.’
+</p>
+<p>A few days before the wedding I found Tutu in the kitchen, helping Grandmother
+prepare the wedding cake. Tutu often helped with the cooking and, when Grandmother
+wasn’t looking, added herbs, spices, and other interesting items to the pots – so that
+occasionally we found a chilli in the custard or an onion in the jelly or a strawberry
+floating in the chicken soup.
+</p>
+<p>Sometimes these additions improved a dish, sometimes they did not. Uncle Benji
+lost a tooth when he bit firmly into a sandwich which contained walnut shells.</p>
+<p>I’m not sure exactly what went into that wedding cake when Grandmother wasn’t
+looking – she insisted that Tutu was always very well-behaved in the kitchen – but I did
+spot Tutu stirring in some red chilli sauce, bitter gourd seeds, and a generous helping of
+egg-shells!
+</p>
+<p>It’s true that some of the guests were not seen for several days after the wedding, but
+no one said anything against the cake. Most people thought it had an interesting flavour.
+</p>
+<p>The great day dawned, and the wedding guests made their way to the little church
+that stood on the outskirts of Dehra – a town with a church, two mosques, and several
+temples.</p>
+<p>I had offered to dress Tutu up as a bridesmaid and bring her along, but no one except
+Grandfather thought it was a good idea. So I was an obedient boy and locked Tutu in the
+outhouse. I did, however, leave the skylight open a little. Grandmother had always said
+that fresh air was good for growing children, and I thought Tutu should have her share
+of it.
+</p>
+<p>The wedding ceremony went without a hitch. Aunt Ruby looked a picture, and Rocky
+looked like a film star.</p>
+<p>Grandfather played the organ, and did so with such gusto that the small choir could
+hardly be heard. Grandmother cried a little. I sat quietly in a corner, with the little
+tortoise on my lap.
+</p>
+<p>When the service was over, we trooped out into the sunshine and made our way
+back to the house for the reception.
+</p>
+<p>The feast had been laid out on tables in the garden. As the gardener had been left in
+charge, everything was in order. Tutu was on her best behaviour. She had, it appeared,
+used the skylight to avail of more fresh air outside, and now sat beside the three-tier
+wedding cake, guarding it against crows, squirrels and the goat. She greeted the guests
+with squeals of delight.
+</p>
+<p>It was too much for Aunt Ruby. She flew at Tutu in a rage. And Tutu, sensing that she
+was not welcome, leapt away, taking with her the top tier of the wedding cake.
+</p>
+<p>Led by Major Malik, we followed her into the orchard, only to find that she had
+climbed to the top of the jackfruit tree. From there she proceeded to pelt us with bits of
+wedding cake. She had also managed to get hold of a bag of confetti, and when she ran
+out of cake she showered us with confetti.
+</p>
+<p>‘That’s more like it!’ said the good-humoured Rocky. ‘Now let’s return to the party,
+folks!’</p>
+<p>Uncle Benji remained with Major Malik, determined to chase Tutu away. He kept
+throwing stones into the tree, until he received a large piece of cake bang on his nose.
+Muttering threats, he returned to the party, leaving the major to do battle.
+</p>
+<p>When the festivities were finally over, Uncle Benji took the old car out of the garage
+and drove up the veranda steps. He was going to drive Aunt Ruby and Rocky to the
+nearby hill resort of Mussoorie, where they would have their honeymoon.
+</p>
+<p>Watched by family and friends, Aunt Ruby climbed into the back seat. She waved
+regally to everyone. She leant out of the window and offered me her cheek and I had to
+kiss her farewell. Everyone wished them luck.
+</p>
+<p>As Rocky burst into song, Uncle Benji opened the throttle and stepped on the
+accelerator. The car shot forward in a cloud of dust.</p>
+<p>Rocky and Aunt Ruby continued to wave to us. And so did Tutu, from her perch on
+the rear bumper! She was clutching a bag in her hands and showering confetti on all
+who stood in the driveway.
+</p>
+<p>‘They don’t know Tutu’s with them!’ I exclaimed. ‘She’ll go all the way to
+Mussoorie! Will Aunt Ruby let her stay with them?’</p>
+<p>‘Tutu might ruin the honeymoon,’ said Grandfather. ‘But don’t worry – our Benji
+will bring her back!’</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter5.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter7.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

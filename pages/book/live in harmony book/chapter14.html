@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter14</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+   <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Fourteen</p>
+      <p>Conflict Means a Chance to Grow: Learning the Art of
+ Non-Violent Conflict Resolution</p>
+    </h1>
+    <p class="side">Chapter Inspiration: </p>
+<p>“Nonviolence is the answer to the crucial political and moral questions of our
+ time; the need for mankind to overcome oppression and violence without resort
+ing to oppression and violence.  Mankind must evolve for all human conflict a
+ method which rejects revenge, aggression, and retaliation. The foundation of such
+ a method is love.” –Martin Luther King Jr., December 11, 1964
+</p>
+<p> “To help others go in the right direction, we must go in that direction first.” –Sri Chinmo
+</p>
+<p> “Once we become aware of what we carry unconsciously, we can change. Change
+ involves two things: awareness and action. As we become more aware of what is
+ really behind our problems, we can begin changing what we do and how we do
+ it.”  –Riane Eisler, The Power of Partnership
+</p>
+<p> “Many of the world's problems and conflicts arise because we have lost sight of
+ the basic humanity that binds us all together as a human family.”–The Dalai Lama</p>
+<p> “The future vision is always far more powerful and ingenious than any individual
+ could have possibly imagined” – Margaret Wheatley, Leadership and the New
+ Science</p>
+<p> “Evolution is the result of self-transcendence at all levels.”  –Erich Jantsch
+</p>
+<p> “We must be the change we want to see in the world” –Mahatma Gandhi
+</p>
+<p> “Beginning with ourselves, we must cause positive change to radiate out into the
+ world.  We need a change of heart, a change of perception, a change of attitude,
+ which we can then pass on to others though education, enlightenment and love.” –Unknown
+</p>
+<p class="side">Chapter Story:</p>
+<p> Mohandas Karamchand Gandhi was born in 1869 in India. He was educat
+ed in India and in London.  He worked extremely hard at school and he eventual
+ly got a degree in law.  In 1893 he moved to South Africa where he became a suc
+cessful lawyer.  Even though Gandhi did not have to go to college any more, he
+ continued reading. He studied philosophers, especially John Ruskin, Leo Tolstoy,
+ Ralph Waldo Emerson, and Henry David Thoreau, and he read the ancient Hindu
+ spiritual book called the Bhagavad-Gita. 
+</p>
+<p>Reading these books changed Gandhi’s life. He decided to dedicate his life
+ to improving the world in whatever way he could.  He made a vow that he would
+ not have any possessions – that he would not own anything; that he would live in
+ a very, very simple way. Gandhi knew that this kind of lifestyle was very differ
+ent, but it was important to him to not have to worry about paying for a house and
+ other things. He believed he had an important mission on earth.
+</p>
+<p> During this time of change in Gandhi’s life he developed his own philoso
+phy.  This philosophy had two parts.  The two parts were called ahimsa and saty
+graha. Ahimsa is the belief in the sacredness of all living creatures. According to
+ ahimsa you should avoid harming or doing violence to any living thing. Satyagra
+ha means ‘holding to the truth’- standing up for truth and justice through non
+cooperation or non-violent resistance. According to satyagraha if you see some
+thing happening that you believe is unjust and wrong, then you have a responsi
+bility to not participate in the injustice and to try to stop, change, or improve the
+ situation. 
+</p>
+<p>Soon Gandhi became a leader of the Indian community in South Africa.
+ There were many Indians living in South Africa, but they were a minority people
+ and they faced many unfair laws.  Laws or attitudes that are unfair towards one
+ kind of group are called discrimination. Gandhi decided to try to end discrimina
+tion against South Africa’s Indian minority.  He organized his first satyagraha
+ action: a campaign of civil disobedience, expressed in nonviolent resistance to
+ what he regarded as unjust laws.  These efforts and activities were so successful
+ that he secured an agreement in 1914 from the South African government that it
+ would put a stop to anti-Indian discrimination.</p>
+<p> By the time Gandhi returned to his native India in 1915, he was already
+ well known as an organizer and a leader with a special new philosophy. Gandhi’s
+ greatest dream was that India would one day become free and independent from
+ Britain, because at that time India was a colony of Great Britain.  Soon, Gandhi
+ began his first satyagraha actions to protest the bad conditions for farmers and
+ factory workers in India under the British rule. The British government was not
+ used to people disagreeing with them and they did not like it that Gandhi was
+ organizing people in these ways. This was the beginning of a long conflict
+between Gandhi and the British government.</p>
+<p> In 1919, a terrible thing happened in India. It was called the Amritsar mas
+sacre.  Hundreds of Indian protesters were killed and thousands wounded when
+ British troops opened fire on the protesters.  It was a horrible example of what
+ can happen if people don’t learn how to resolve conflict peacefully! The massacre
+ was very upsetting to the Indian people, who wanted more than ever to become
+ free from Britain and to have their own independent country. </p>
+<p>Gandhi organized several satyagraha campaigns, such as marches, rallies,
+ and refusal to do certain things the British government wanted.  Gandhi told his
+ followers that it was very important that all the protests remain peaceful.  Howev
+er, sometimes the Indian protesters did not follow his requests and they started to
+ use violent means, such as throwing stones or destroying property. Whenever this
+ happened, Gandhi asked them to stop protesting immediately until they could
+ organize the protests more peacefully.</p>
+<p>Gandhi’s vision for India was for a free, united country, in which the tradi
+tional cottage industries, such as the spinning and production of hand-woven cloth
+ called khaddar, would be brought back and made a part of the people’s lives
+ again. Gandhi believed this was an important way to help the Indian people feel
+ proud of their own history and culture. Gandhi also believed in abolishing the tra
+ditional Indian idea and practice of ‘untouchability’.  The practice of untouchabil
+ity meant that certain groups of people were considered low and bad, and were
+ not given good jobs or a good position in society.  Gandhi felt that this was very
+ bad and that untouchable people should have the same rights as everyone else.
+ Although not everyone agreed with Gandhi, many, many people saw him as their
+ hero.  Because Gandhi’s ideas were so inspiring, and because of his great
+ courage, the Indian people started calling him by the title Mahatma – which
+ means ‘great soul’.</p>
+<p>Gandhi became the organizer and leader of the Indian National Congress 
+a political organization whose mission was to make India free. In 1930 Gandhi
+ organized a protest against the British Government’s salt tax – something that
+ Gandhi thought was very unfair.  It was Gandhi’s largest protest yet.  He led a
+ protest march 200 miles (320 kilometers) to the sea.  At the sea, the marchers
+ planned to find a way to take salt out of the sea to show the government that they
+ could make their own salt.  The British government was very upset by this protest
+ and they put Gandhi in prison.  In 1931 the government released him from prison
+ to allow him to attend the London Round Table Conference on India.  This was a
+ very important meeting set up to decide the future of India. Gandhi was the only
+ member of the Indian National Congress who was allowed to participate in the
+ conference.</p>
+<p> In 1942, Gandhi made a proposal to the British Government.  He offered to
+ cooperate with them and help them fight World War II, to defeat Adolph Hitler
+and the Nazis.  In return, Gandhi asked that the British Government give India her
+ immediate independence, but the British did not accept his proposal.  Therefore
+ Gandhi called for satyagraha across all of India and he organized a huge protest
+ called the Quit India Movement.  Because of this, the British government put
+ Gandhi in jail, where he remained until 1944.</p>
+<p>After World War II ended, the British government began to change its atti
+tude towards India and to consider the idea of granting India its independence.
+ Gandhi worked tirelessly to create a plan for independence.  His main partners
+ were the British Viceroy, Lord Mountbatten, and the leader of the Muslim
+ League, Muhammad Ali (not the boxer!). They were finally able to begin to
+ resolve their conflicts peacefully. By cooperating together, they were able to make
+ a plan for India’s future that everyone could agree with. </p>
+<p>Gandhi’s dream finally came true in 1948:  India became free! This was a
+ time of great celebration and happiness.  Yet people in India had great difficulty
+ in learning how to live together. Even though the country was becoming free, the
+ Hindus and the Muslims began to fight, and use violence to solve their disagree
+ments about religion and other things.  Gandhi tried to stop them by using a
+ protest called a fast – he would stop eating for days, and even for weeks until the
+ fighting stopped.  He also went to visit the places where the worst fighting was
+ taking place, to try to teach the people that resolving conflicts peacefully is the
+ only way to find permanent solutions.  Sadly, during one of these visits, Gandhi
+ was shot and killed by a fanatic who wrongly thought that Gandhi was favoring
+ the Muslims over the Hindus.</p>
+<p> Because of Gandhi’s courage and his determination to solve the conflict
+ with the British government using non-violent means, he was able to help India
+ gain her independence without a major war.  Although some brave people died in
+ the struggle for India’s independence, there was no major bloodshed, as there has
+ been in other wars for national independence.  Gandhi inspired millions of Indi
+ans to follow him and practice ahimsa and satyagraha.  Gandhi worked right to
+ the end of his life to teach non-violent conflict resolution. In the years after Gand
+hi died, his ideas of conflict resolution and his methods of non-violent civil dis
+obedience were adopted by civil rights leaders in the United States and by many
+ other leaders around the world.
+</p>
+<p class="side"> Chapter Overview: </p>
+<p>Our world is a beautiful place to be.  We have so many kinds of people all
+ around the world.  We have hundreds of different cultures spread over our seven
+ continents.  Each culture is different – with its own language, customs and
+ beliefs.  We have so many things to share with each other.  And we all have the
+ same home, our planet earth. Yet we human beings are still learning how to get
+along with each other.  Quite often we quarrel about all sorts of things.  We are all
+ still learning how to solve conflicts peacefully.
+</p>
+<p> In order to begin to learn how to solve conflicts we must begin by under
+standing that conflicts are not bad. Conflicts are opportunities for us to change, to
+ grow and to learn.  Conflict means there is a new challenge for us to overcome.
+ Some conflicts can be prevented in the first place.  When conflicts do occur, we
+ need to learn how to recognize them, to understand them and to resolve them in
+ ways that don’t use violence.  When violence is used, people can get hurt or
+ killed.  Property can get destroyed.  When violence turns into wars, societies can
+ become ruined through poverty, famine, disease and the breakdown of  such basic
+ aspects of our life as government itself. </p>
+<p>Right now there are over 35 wars going on around the world.  Violence
+ and wars occur because people don’t know how to solve conflicts peacefully.  If
+ people do not have their needs met and they don’t know any way to express their
+ needs, then they often will use violence to express their anger and their frustra
+tion.  But Mahatma Gandhi taught us a different way of expressing our needs 
+by deciding not to use violence, by speaking his people’s needs with words, by
+ creating a vision for a peaceful solution, and by organizing non-violent protests, if
+ necessary, to accomplish his goals.  Mahatma Gandhi’s life shows us that conflict
+ resolution can work – even with a major conflict like the one between India and
+ the British government.
+</p>
+<p>If we can learn the skills of conflict resolution now, we can become the
+ leaders of the future who can teach others about conflict resolution.  If one person
+ teaches the next, and that person teaches another person, then one day everyone in
+ the world will know how to solve conflicts without using violence.  One day there
+ won't be any more wars.  One day all the people of the world will have their
+ needs met.  First, though, we have to learn the skills of conflict resolution our
+selves. And once we understand them, we must begin to practice them in our
+ classroom, on the playground, at home, and in our neighborhood.
+</p>
+<p class="side"> Chapter Lessons:</p>
+<p class="side">Lesson #1 - Celebrating birthdays
+</p>
+<p> In order for us to practice conflict resolution in our classroom, we first
+ have to create a climate of trust and caring.  We need to feel sure that all of us are
+ working together for the goal of a peaceful classroom. One of the best ways to do
+ this is to celebrate the birthday of each and every person in the class. There are
+ many ways to celebrate birthdays.  Here is one way that can be lots of fun for
+ everyone:
+</p>
+<p>a) First we will make a list of everyone’s birthday. Then we will use the list to make a calendar showing all the weeks of the year. Each week of the school year we will celebrate a different person’s birthday. If there are not enough weeks in the year, then we may have to celebrate two birthdays in one week, but that will just mean twice the fun. If there are people who have summer birthdays we will help them to choose a week during the school year so we can celebrate their birthdays too. We can post our birthday calendar somewhere in the classroom so everyone sees whose birthday is coming up.</p>
+
+<p>b) We will need to make a chart or poster that has labels on it. We can call it our birthday chart. The labels should say things like: ‘favorite food’, ‘favorite book’, ‘favorite color’, ‘favorite movie’, ‘favorite free time activity at school’, ‘favorite hobby at home’, ‘favorite recess activity’, ‘favorite subject’, ‘favorite snack’, ‘favorite sport’, ‘favorite animal’, ‘favorite game’, ‘favorite person’, etc. We can think up a few more categories if we have room. These labels will be spread around the chart or poster to leave room underneath them. We can add artwork to our poster to make it more inspiring.</p>
+
+<p>c) When it is time to celebrate someone’s birthday, we will all gather together in front of our birthday chart. We will ask the person questions about their favorite things using the labels as our guides. Then we will write the birthday person’s answers on a 3x5 card, or on sticky notes, to pin or paste on the birthday chart beneath the appropriate label. When we are complete, our whole poster will be filled with all of the birthday person’s favorite things.</p>
+
+<p>d) Next we will ask everyone in the group to share one thing they really appreciate about the birthday person. We can share about that person’s talents, such as in art, music, writing, math, science, geography or sports etc; that person’s special skills, such as neat writer, good organizer, good mapmaker etc.; and that person’s unique qualities, such as cheerfulness, helpfulness, honesty, etc. Each positive thing that someone shares, the teacher or a designated person will write down in good handwriting on a special piece of lined paper. At the end we will have a full page or more of positive comments about the birthday person. We will post this list on or next to our birthday chart and leave it there for a week. Then the person will be able to take it home and keep it there in a special place so they can remember their birthday celebration, and they can look back at all the positive things people had to say about them.</p>
+
+<p>e) If we wish and if we have the time, we can create a special paper for these activities. We could call it our birthday page. On one side of the paper we can have a photocopy of our labels, where we can write down the special things about the birthday person. On the other side we can have the list of all the positive things that people shared. The birthday page could have special artwork on it, which we design to make it so beautiful that we will be happy to keep it. To make it more permanent, we can laminate the birthday pages or cover them in contact paper after we complete our celebration.</p>
+
+<p class="side"> Lesson #2 - The ‘human car wash
+</p>
+<p> Another great activity for building our community spirit and preparing for
+ conflict resolution is the ‘human car wash’.  For this activity we will line up in
+ two rows facing each other.  We will raise our hands to the sides of our head, with
+ the hands facing outward, so that they will be like the sprayers of a car wash.
+ Instead of water, our sprayers will give out warm, fuzzy, good feelings.  One per
+son will go through the wash. Our hands will go down and around the person
+ without touching the person. As our hands come down and around the person, we
+ will say something nice to the person such as, “You are always kind,” “You are
+ helpful,” “You are peaceful,”  “You are nice,” “You are a good student,” etc.  You
+ can make a list on the blackboard of more things you might want to say when
+ people are going through the human car wash.  When someone is finished going
+ through, they join the line of ‘sprayers’.   We will give everyone a chance to go
+ through the car wash. When we are finished we will spend a little time talking
+ about how we felt when we were going through the wash and also how it felt to
+ be saying positive things about others going through the wash. Note: It is impor
+tant that we don’t touch the people as we ‘wash’ them. In the future, after we
+ have done it a few times, we might try gently touching the person going through
+ on the shoulder or on the arm or on the head. We just have to make sure that this
+ does not become a distraction from our main job, which is saying the positive
+ things!</p>
+<p class="side"> Lesson #3 - Solving conflicts peacefully: A ten-step process
+</p>
+<p> We are going to learn a ten-step process for solving conflicts.  It will take
+ us time to learn all the steps, so we have to be patient. It will also take time to
+ practice all of the steps until we become good at conflict resolution, so we
+ shouldn’t expect to do things perfectly right away.</p>
+<p>When a conflict occurs, whether it is at school, at home, or in our neigh
+borhood, it is important to recognize it so we know what is happening. Once we
+ see that it is a conflict we can begin our ten-step process
+</p>
+<p>a) STOP! Separate yourselves, calm down and find your clear mind. In ‘stop mode’ we need to immediately stop what we are doing so we can get out of the conflict before somebody gets hurt physically or emotionally. When we go into ‘stop mode’, we should create some space between ourselves and the person or persons we are in conflict with. We should not try to talk to the person or persons until everyone is ready and until the teacher asks us to meet. During the ‘stop mode’ time we should try to calm down and come to our clear mind where we can think clearly about what happened. We should try to be aware of what we are feeling and why we are feeling the way we are.</p>
+
+<p>b) READY? Are you ready to talk and listen to your partner? Before we can try to resolve the conflict, we all have to be mentally and emotionally prepared. That means that the people on both sides of the conflict have had a chance to calm their emotions and to think more clearly. We also have to be ready to treat the other person as a partner – according to the guidelines of our process. If one person is ready and the other is not, then we need to wait until both people are ready. If someone says they are not ready, then we will ask them how much time they need to get ready. It is acceptable to wait an hour, a few hours, or even a day to allow someone to get ready. But it is not acceptable or helpful to allow someone to wait longer than a day to be ready to do a conflict resolution – except if you decide to wait over a weekend. When everyone involved in the conflict is ready, then you can actually begin to resolve the conflict.</p>
+
+<p>c) EXPRESS YOUR FEELINGS. Using I-messages, tell your partner why you feel the way you do. ‘I-messages’ are sentences that begin with the word ‘I’. For example: “I felt angry when you sat in the chair that I was sitting in.” Or: “I felt hurt when you told me I couldn’t be your friend anymore.” I-messages take a little practice at first, because when we are in a conflict we have the habit of starting sentences that begin with “You,” such as “You are stupid,” or, “You are mean,”, or "You took my pencil,” etc. When speaking your I-messages, it is important that you try to name the feeling you are feeling. For example, use the names of feelings like ‘angry’, ‘sad’, ‘hurt’, ‘frustrated’. Then it is very important to say what it is that made you feel the way you do. Be specific. Tell what you saw or heard that made you start feeling bad and that began getting you into the conflict. When we are speaking our I-messages, each person will have a certain amount of time to speak. Usually a good amount of time is one to two minutes. Then it will be the other person’s turn to talk for the same amount of time. We will use a watch or a timer to make sure we are being fair to each side. When our conflict resolution partner is speaking, it is very important that we practice active listening. Listening to the other person’s feelings is just as important as speaking your feelings. When you are listening, try to feel what the other person is feeling. For this you will have to use your imagination. You can also try to understand what the other person’s needs are. In order to understand them better and to try to feel what they are feeling, you might try something different after you have both shared your feelings. You can repeat back to your partner what you heard them say. For example, “I hear that you were angry when I sat in your chair.” This can be very helpful, but it takes a lot of practice, and it is not necessary to do this in order to have a successful conflict resolution.</p>
+
+<p>d) IDENTIFY THE PROBLEM. Agree on what the main problem is. Once each partner has had a chance to share his/her feelings using I-messages for one or two rounds of sharing, then it is time to try to identify the problem. What is the main problem? It is not acceptable to identify the problem by saying, for example, “The problem is you, because you are so mean.” The problem is not the other person and the problem is not you. The problem is a certain situation that happened and caused you both to get into a conflict. What was/is the situation? We will try to describe it without talking about our feelings. For example: “Well it seems that there are two of us who wanted to use the same chair. It looks like we have a mathematical problem!” Or: "What happened was that one person was not allowed to play in the game and that caused them to feel bad and get angry and yell at the other person, causing hurt feelings.” When we are trying to identify the problem, we should try to look at the big picture and see what the cause of the conflict was in the first place.</p>
+
+<p>e) BRAINSTORM SOLUTIONS. Together think of at least five possible solutions. Once we have identified the problem, we can begin to talk about solutions that will fix the problem and help to solve the problem. When we are trying to come up with solutions it is important to be aware of what your own needs are. In other words, if you don’t like it when a person calls you a certain name, or if you don’t feel comfortable when people in the class are telling secrets, then it is important to include ideas for fixing these things in your solutions. The solutions the two sides think of and agree on should be solutions that both partners feel good about. These are called ‘win-win’ solutions because everybody feels good about them and everybody wins. Try to come up with five possible solutions. Then write down your five possible solutions onto a piece of paper.</p>
+
+<p>f) CHOOSE A SOLUTION. Decide together on a solution that everyone feels good about. Now that you have brainstormed five possible solutions, it is time to choose one that you want to commit to and practice. Talk about each one of your five possibilities a little more, and then decide which one is best. If you can’t agree at first, try to see which solution is one you can both feel okay about. In other words, one partner might really like one solution, while another partner might really like another solution. Yet maybe there is a third solution that might not be the favorite one for anyone, but it will be acceptable to both partners. This kind of agreement is called a compromise. Write down your solution on a piece of paper, in your journal, or in a place where you can look at it and review it when you need to.</p>
+
+<p>g) ACKNOWLEDGE YOUR PARTNER. Say to your partner, "Thank you for solving this problem with me.” It is time to thank the other person for being your conflict resolution partner. Without the other person’s participation you would not have been able to solve the conflict. You would still be in the conflict and feeling bad. And there is every possibility that the conflict could have gotten worse if you didn’t do a conflict resolution. So, say, “Thank you,” to your conflict resolution partner!</p>
+
+<p>h) PRACTICE THE SOLUTION. Review the problem situation, and practice the solution you agreed upon. It is important to take the time to practice your solution. Go back to the place or situation that led to the conflict in the first place and practice the solution you agreed upon. For example, if you were in a conflict because you both wanted to use the same hula hoop, and your solution was that you would each choose a different hula hoop to play with, then you will practice choosing and using a different hula hoop – just as you agreed. Continue practicing your solution every day or as often as the situation or similar situations come up!</p>
+
+<p>i) WORK TOGETHER ON A PROJECT. Choose and work on a project together during the week. After you and your partner have agreed upon a solution and you have begun practicing it, it is a good idea to create or imagine a project to do with your partner that has nothing to do with the conflict you just solved. You could play a game together, make an art project together, or make a funny skit to perform for your class. Working on a project together will help rebuild your trust in each other and will help you to see that the other person has good qualities, can be fun to be with, and is an important part of the class.</p>
+
+<p> 10) MEETAND REVIEW.  After your project week, meet together again and talk
+ about how the whole conflict resolution process worked for you.</p>
+ <p> After about a week, or after you have done a project together, it is a good
+ idea to meet with your partner and review how the conflict resolution process has
+ worked for each of you.  It is usually good to do this with a teacher present the
+ first time. Is everybody still feeling good? Is there anything that someone is not
+ feeling good about? Are both partners keeping the agreement and practicing the
+ solution? Do you need to review your solution to make sure everyone understands
+ it in the same way and is following it properly?  During this review meeting, it is
+ also nice to talk about how the conflict resolution process and doing the project
+ together has helped your friendship with your partner. If you wish you can plan a
+ new project to do together.</p>
+ <p class="side">Lesson #4 - Special friends visit the classroom</p>
+ <p> Bringing special friends to the classroom can help remind us of our school
+ goals and guidelines.  Special friends can be puppets that we buy or make. Or
+ special friends can be a teacher who dresses as a different character who comes to
+ visit the classroom from time to time.  Our special friend should have names like
+ Koali the Koala or Timothy the Turtle.  Usually special friends become more real
+ when we know their personalities a little bit.  Maybe Koali is shy and hides until
+ the children gently say, “Welcome Koali!” to make him feel better.  Or maybe
+ Timothy the Turtle likes it very quiet and does not want to come out of his shell
+ until the classroom is silent and peaceful.  </p>
+ <p>Special friends can be our conscience regarding how we are treating each
+ other in the classroom, in the hallways, or on the playground. When a special
+ friend comes, he or she can share about what he/she has observed recently in and
+ around the school. The students can ask the special friend questions about our
+ classroom and about how we can become a more peaceful community. Special
+ friends can be a great help to us in reminding us how important non-violent con
+flict resolution is and they can also remind us of the different steps of conflict res
+olution in case we might have forgotten.</p>
+ <p class="side">Lesson #5 - Conflicts in the world around us</p>
+ <p>There are hundreds of conflicts that happen every day. Some of them we
+ see with our own eyes and others we read about or hear about in the news.  Some
+ conflicts are between individual people, such as the conflicts we have in our
+ classroom. Other conflicts occur between groups of people such as between log
+gers and environmentalists in the Northwest, or between those who like snowmo
+biles and those who think snowmobiles disturb the natural environment and
+ should not be allowed in our national parks.  Even whole countries get into con
+flicts and if it becomes serious they might get into a war.   </p>
+ <p>Choose a conflict you have read about or heard about in the news.  Try to
+ understand what each side in the conflict really wants or needs.  Write down a
+ short list or a summary of each side’s position. Then try to imagine some solu
+tions that might be acceptable to each side in the conflict.  The solution will have
+ to give to each side something that they want. That’s what makes conflicts a chal
+lenge and why it takes imagination and creativity to invent possible solutions for
+ them!  Write down your possible solution or solutions. If you wish you can draw
+ a picture or a diagram to illustrate your solution(s).  If you have permission from
+ your parents and your teacher, you can write a letter to the actual people involved
+ in the conflict and tell them you have studied their conflict and tell them about the
+ solutions you have come up with. Maybe this will help them to find a way out of
+ their conflict.  You can also send them a copy of our ten-step conflict resolution
+ process so they can learn more about conflict resolution.</p>
+<p class="side"> Discussion Questions:</p>
+<p> a) The two main parts of Gandhi’s philosophy are ahimsa and satyagraha.
+ Review the meaning of these two terms. Share an example of each of them to
+ illustrate their meanings. Then brainstorm examples of people practicing each of
+ them from history or from current events.</p>
+<p> b) “There are innumerable definitions of God, because His manifestations are
+ innumerable.  They overwhelm with wonder and awe, for a moment stun me. But
+ I worship God’s Truth only.” –Mahatma Gandhi 
+<p> b) “There are innumerable definitions of God, because His manifestations are
+ innumerable.  They overwhelm with wonder and awe, for a moment stun me. But
+ I worship God’s Truth only.” –Mahatma Gandhi </p>
+<p>Discuss examples of how Gandhi followed the truth that he felt in his
+ heart, no matter what. </p> 
+<p>c) “The age of misunderstanding and mutual warfare among religions is gone. If
+ India has a mission of its own to the world, it is to establish the unity and the
+ truth of all religions.” –Mahatma Gandhi</p>
+ <p>Discuss the special role Gandhi saw for India in the world.</p>
+ <p> d) “Some world figures have called Mahatma Gandhi the Saint Paul, Saint
+ Thomas, and Saint Francis of Assisi of the modern era.  I call him the Pacific
+ Ocean of Heart’s Love and Soul’s Compassion.  Mahatma Gandhi is not the
+ exclusive treasure of India but a peerless pride of mankind; and he will remain so
+ down the sweep of centuries.” –Sri Chinmoy </p>
+ <p>Discuss this quotation about Mahatma Gandhi. What does Sri Chinmoy
+ mean when he says that Mahatma Gandhi is “not the exclusive treasure of India,
+ but the peerless pride of mankind”?</p>
+ <p> e) The prerequisite to conflict resolution is a commitment to non-violence.”–Andrew Kutt </p>
+ <p>Why is the commitment to nonviolence essential before conflict resolution
+ can successfully and consistently happen?  What might happen if one or both
+ partners don’t fully believe in or aren’t completely committed to nonviolence?</p>
+ <p class="side"> Supplemental Activities:</p>
+ <ul>
+  <li>
+    <p>Using art materials, make ten colorful posters illustrating the ten steps of conflict resolution. Then put up the ten posters on the wall of your classroom or on the hallway bulletin board.</p>
+  </li>
+  <li>
+    <p>Using drama to practice conflict resolution skills can be one of the best ways to learn them. Invent imaginary conflicts based upon things you observe in the classroom or on the playground. Perform role-plays or mini skits to dramatize the conflicts. Show how the conflict might end without conflict resolution and then show how the steps of conflict resolution might be used to resolve the conflict.</p>
+  </li>
+  <li>
+    <p>Class/ School Mediators: Once students have practiced conflict resolution for some time they can become class or school mediators. Sometimes these are called ‘peer mediators’. Mediators are students who have shown they are very good at solving conflicts and are willing to help others. These students usually have to pass some kind of conflict resolution evaluation or they might have to apply for the position of mediator. It is best to practice being a mediator with younger students first, before you become a mediator with students your own age.</p>
+  </li>
+</ul>
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter13.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter15.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

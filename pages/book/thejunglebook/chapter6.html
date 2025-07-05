@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter6</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Mowgli’s Song</p>
+    </h1>
+<p >
+THAT HE SANG AT THE COUNCIL ROCK WHEN HE DANCED ON SHERE KHAN’S HIDE
+</p>
+<p >
+The Song of Mowgli—I, Mowgli, am singing. Let the jungle listen to the things I
+have done.<br>
+Shere Khan said he would kill—would kill! At the gates in the twilight he would
+kill Mowgli, the Frog!<br>
+He ate and he drank. Drink deep, Shere Khan, for when wilt thou drink again?
+Sleep and dream of the kill.<br>
+I am alone on the grazing-grounds. Gray Brother, come to me! Come to me, Lone
+Wolf, for there is big game afoot!<br>
+Bring up the great bull buffaloes, the blue-skinned herd bulls with the angry
+eyes. Drive them to and fro as I order.<br>
+Sleepest thou still, Shere Khan? Wake, oh, wake! Here come I, and the bulls are
+behind.<br>
+Rama, the King of the Buffaloes, stamped with his foot. Waters of the
+Waingunga, whither went Shere Khan?<br>
+He is not Ikki to dig holes, nor Mao, the Peacock, that he should fly. He is
+not Mang the Bat, to hang in the branches. Little bamboos that creak together,
+tell me where he ran?<br>
+<i>Ow!</i> He is there. <i>Ahoo!</i> He is there. Under the feet of Rama lies
+the Lame One! Up, Shere Khan!<br>
+Up and kill! Here is meat; break the necks of the bulls!<br>
+<i>Hsh!</i> He is asleep. We will not wake him, for his strength is very great.
+The kites have come down to see it. The black ants have come up to know it.
+There is a great assembly in his honor.<br>
+<i>Alala!</i> I have no cloth to wrap me. The kites will see that I am naked. I
+am ashamed to meet all these people.<br>
+Lend me thy coat, Shere Khan. Lend me thy gay striped coat that I may go to the
+Council Rock.<br>
+By the Bull that bought me I made a promise—a little promise. Only thy coat is
+lacking before I keep my word.<br>
+With the knife, with the knife that men use, with the knife of the hunter, I
+will stoop down for my gift.<br>
+Waters of the Waingunga, Shere Khan gives me his coat for the love that he
+bears me. Pull, Gray Brother! Pull, Akela! Heavy is the hide of Shere
+Khan.<br>
+The Man Pack are angry. They throw stones and talk child’s talk. My mouth is
+bleeding. Let me run away.<br>
+Through the night, through the hot night, run swiftly with me, my brothers. We
+will leave the lights of the village and go to the low moon.<br>
+Waters of the Waingunga, the Man-Pack have cast me out. I did them no harm, but
+they were afraid of me. Why?<br>
+Wolf Pack, ye have cast me out too. The jungle is shut to me and the village
+gates are shut. Why?<br>
+As Mang flies between the beasts and birds, so fly I between the village and
+the jungle. Why?<br>
+I dance on the hide of Shere Khan, but my heart is very heavy. My mouth is cut
+and wounded with the stones from the village, but my heart is very light,
+because I have come back to the jungle. Why?<br>
+These two things fight together in me as the snakes fight in the spring. The
+water comes out of my eyes; yet I laugh while it falls. Why?<br>
+I am two Mowglis, but the hide of Shere Khan is under my feet.<br>
+All the jungle knows that I have killed Shere Khan. Look—look well, O
+Wolves!<br>
+<i>Ahae!</i> My heart is heavy with the things that I do not understand.
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155532.png">
+</div>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter5.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter7.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

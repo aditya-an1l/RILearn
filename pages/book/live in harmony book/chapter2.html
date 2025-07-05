@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter2</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Two</p>
+      <p> Imagination</p>
+    </h1>
+    <p class="side"> Chapter Inspiration:</p>
+<p>“Imagination is more important than knowledge. Knowledge is limited. Imagina
+tion encircles the world.” –Albert Einstein
+</p>
+<p>“Formulate and stamp indelibly on your mind a mental picture of yourself as suc
+ceeding. Hold this picture tenaciously.  Never permit it to fade. Your mind will
+ seek to develop the picture... do not build up obstacles in your imagination.”–Norman Vincent Peale
+</p>
+<p> “There is only one admirable form of the imagination: the imagination that is so
+ intense that it creates a new reality, that it makes things happen.” – Sean O’Faolain
+</p>
+<p> “Imagination is the beginning of creation, you imagine what you desire, you will
+ what you imagine and at last you create what you will.” – George Bernard Shaw</p>
+<p> “An idea is salvation by imagination.” –Frank Lloyd Wright</p>
+<p> “You cannot depend on your eyes when your imagination is out of focus.” – Mark Twai
+</p>
+<p> “Imagine the beauty of an earth without tears.
+ Imagine a world with happy smiling faces.” –Sri Chinmoy
+</p>
+<p> “I am certain of nothing but the holiness of the heart’s affections and the truth of
+ imagination.  What the imagination seizes as beauty must be truth – whether it
+ existed before or not.” –John Keats
+</p>
+<p> “Imagination rules the world.”  —Napoleon I</p>
+<p> “Imagination grows by exercise.”  —Somerset Maugham
+</p>
+<p class="side">Chapter Story:
+</p>
+<p> Once there was a young boy who grew up on a farm.  The boy used to lie
+ in his bed at night and be very still.  In the peaceful silence he would see himself
+ shooting a basketball and he would picture it swishing through the net over and
+ over again. He imagined himself in different places on the basketball court and
+ how he would shoot the ball from each place.  Each time, he imagined the ball
+ going smoothly and perfectly through the hoop.  He used his imagination to visu
+alize or ‘see’ how his hands were holding the ball, how he was preparing the ball,
+ and then how he would let go of the ball.   He even imagined how his arm and
+ fingers would stay outstretched after the ball was released.  
+</p>
+<p>Then he would imagine himself in different situations during a basketball
+ game.  In each situation he would use his imagination to see how he would shoot
+ the ball in that situation.  One of his favorite situations to imagine was that it was
+ at the very end of the game and there was only time for one last shot.  The boy
+ visualized himself shooting the final shot and of course, in his imagination, the
+ shot was a perfect swish through the basket to win the game! Thousands of times
+ the boy would imagine playing basketball in this way.</p>
+<p>This boy’s name was Larry Bird and he became one of the greatest basket
+ball players in the history of this sport.  Of course the skill he was most famous
+ for was shooting the ball.  Larry Bird was one of the best basketball shooters ever. </p>
+<p class="side">Chapter Overview:</p>
+<p>Imagination can be a very powerful and helpful force.  People use the
+ word ‘imagination’ quite often, but how do we define imagination?  One way to
+ think of it is that it is to see something that doesn’t exist yet, but that will exist or
+ can exist.  For example, you can imagine what it might be like on your summer
+ vacation when you go to the beach.  In your mind you can ‘see’ the water, smell
+ the salt, and feel the sand under your feet.  This way of experiencing things in
+ your mind we can call visualizing.  We can also call it seeing with your ‘mind’s
+ eye.’ Or we can simply call this using our imagination.  In the chapter story,
+ Larry Bird used his imagination very well to see himself shooting a basketball
+ and being successful as a basketball player.  We can use our imagination for many
+ kinds of things.  Imagination can help us accomplish whatever goals we have.
+ Imagination can help us to reach for our dreams.  Imagination can also help us
+ solve problems.</p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson #1 — The invisible heart </p>
+<p>Imagine that you have a special place inside you, in the middle of your
+ chest.  It is a place that is very peaceful and full of love.  We can call it our heart,
+ but it is not the physical heart that is beating and pumping blood through our bod
+ies. Let’s call it our ‘invisible heart,’ because when we love someone, we say that
+ the feeling comes from our heart, even though we cannot see that heart.  Your
+ invisible heart is a magical place where you can go.  It is a place where you can
+ feel that you are connected with the whole world – people, animals, plants, even
+ mountains.  Close your eyes for a minute or two and see if you can feel your
+ invisible heart.</p>
+<p class="side"> Lesson #2 – The flower inside your invisible heart</p>
+<p>Now imagine you have a beautiful flower inside your invisible heart.  At
+ first, the flower is just a bud, but then, petal by petal, it starts to unfold.  It begins
+ to spread out and you can see its color.  You can even start to smell its fragrance.
+ That flower is full of goodness and sweetness. Imagine that it grows in your
+ invisible heart and that it is always there if you want to see it and feel it.  This
+ special flower is like the best part of you.  It can remind you of what a special
+ person you are.</p>
+<p class="side"> Lesson #3 – Expanding and becoming light 
+</p>
+<p>Close your eyes and imagine you are looking up at the sky. Maybe it is a
+ blue sky with white clouds, or maybe it is a night sky full of stars.  Imagine any
+ kind of sky you wish and that you are looking up at it.  Maybe you are standing
+ on a mountaintop or lying on your back in a meadow or at the beach.  See how
+ big the sky is.  It goes on forever and ever.  We can’t know how big the sky is
+ because nobody has seen the end of space.  Now as you breathe in imagine you
+ are expanding and becoming light and floating upward.  You keep growing and
+ expanding, becoming lighter and lighter, until you are as light as the air. Finally
+ imagine you are as big and wide as the sky itself. How does it feel to be as large
+ and as light as the sky?  Stay as big as the sky for as long as you like, and then let
+ yourself shrink slowly back down to your regular size.  Now you are back where
+ you were looking up at the sky.  Let yourself rest for a few moments and then
+ open your eyes.</p>
+<p class="side">Lesson #4  — Your own special place 
+</p>
+<p>Imagine you are going on a journey to a most special place.  Maybe it is in
+ a forest, a jungle, the seaside, in a meadow, inside a cave, under the earth, beneath
+ the sea, or even on another planet. Imagine you are walking through this special
+ place.  What do you see?  Are there any special smells or sounds?  How does it
+ feel in your special place?  Now imagine you find a special object.  Maybe it is a
+ stone, a shell, a crystal, a special stick or anything else you want.   What is spe
+cial about this object?  Does it have a special shape or color?  You can pick it up
+ if you want to or just leave it where it is.  </p>
+<p>Now imagine you meet a special friend.  It could be an animal, a tree, a
+ fairy, an elf, a wizard, a warrior, or any other creature.  What does your friend
+ look like?  Does your friend have anything to say to you or to show to you?  Stay
+ with your friend as long as you want, and when you are ready open up your eyes.  
+</p>
+<p class="side">Lesson #5 – Joy
+</p>
+<p> Imagine yourself doing your favorite thing.  Is it ballet or soccer, karate or
+ skiing?  See yourself doing your favorite activity.  How do you feel when you are
+ doing your favorite thing?  Now imagine doing your very best performance.  Try
+ to visualize exactly the moves or actions you have to do in order to do your best.
+ Pay attention in your mind to the little details of how the different parts of your
+ body are moving. Imagine that your body and your mind are working in harmony.
+ Imagine that everything is flowing smoothly and easily; that everything is hap
+pening almost by itself, with very little effort.  Imagine you are full of happiness
+ because everything is happening as it should.</p>
+<p class="side"> Lesson #6 – The future
+</p>
+<p> Imagine yourself in the future. What would you like to do? What will you
+ become?  Imagine yourself as an adult being happy and successful.  Imagine that
+ as an adult you are becoming absolutely the best person you can be.  What is spe
+cial about the person you want to be?  Try to visualize what your best self looks
+ like on the outside.  How does your best self feel on the inside?
+</p>
+<p class="side"> Discussion Questions:
+</p>
+<p> a) What do you think Albert Einstein meant when he said, “Imagination is more
+ important than knowledge”?</p>
+<p> b) Can you think of some of the things that would not exist if someone did not
+imagine them first?  There are quite a few.  You can make a list of them!
+</p>
+<p> c) What are the three most important things you would like to accomplish when
+ you become an adult, things that would make you feel happy and successful?</p>
+<p> d) What are the three best qualities about you?  Make a list of them.  Then draw a
+ picture or write a poem about one of them.
+</p>
+<p class="side"> Supplemental Activities:</p>
+<ul>
+    <li> <p>  You can try practicing lesson #5 right before practice, performance or game.
+ Then practice it again one other time during the day, maybe before you go to
+ sleep.  Keep a journal in which you write at least three times a week for a month.
+ Write about your imagination practice and how it might change your experience
+ of your performance of your favorite activity.</p></li>
+<li>  <p> For any of the lessons #1-6 you can draw a picture or write about what you saw
+ during the imagination activities. You can share these with the rest of your class
+ and display them on the wall or on the bulletin board.</p></li>
+<li> <p> Your invisible heart is where you keep many happy feelings.  Sometimes
+ though you might feel sad. This happens to everyone.  What do you sometimes
+ feel sad about?  Share with the class if you want to.  When you are sad you can
+ use your imagination to make yourself feel better.  You can imagine your favorite
+ things, imagine something that makes you happy, or imagine just being inside
+ your invisible heart.  You can practice any of the lessons in this chapter to help
+ yourself to feel happy and peaceful again.</p></li>
+
+</ul>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter1.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter3.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

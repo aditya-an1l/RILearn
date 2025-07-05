@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter15</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Fifteen</p>
+      <p>  Some for You and Some for Me: Learning to Become
+ Partners in Sharing the World’s Resources</p>
+    </h1>
+    <p class="side">Chapter Inspiration: </p>
+<p>“If you knew what I know about the power of giving, you would not let a single
+ meal pass without sharing it in some way.” –Buddha
+</p>
+<p> “Conservation is humanity caring for the future.”  –Nancy Newhall
+</p>
+<p> “We must learn not to disassociate the airy flower from the earthly root, for the
+ flower that is cut off from its root fades, and its seeds are barren, whereas the
+ root, secure in Mother Earth, can produce flower after flower and bring their fruit
+ to maturity.”   –The Kabbalah
+</p>
+<p>“Today's world requires us to accept the oneness of humanity.” –The Dalai Lama</p>
+<p> “Now I see the secret of the making of the best persons.  It is to grow in the open
+ air and to eat and sleep with the earth.” –Walt Whitman, Song of the Open Road</p>
+<p> "I see a world where the most highly valued work will have the consciousness of
+ caring." –Riane Eisler
+</p>
+<p> “Thank God men cannot as yet fly and lay waste to the sky as well as the earth!”–Henry David Thore
+</p>
+<p> “When you offer something to anybody, do it with both hands wide open.” –Sri Chinmo
+</p>
+<p> “There is not a flower or bird in sight, only a small screen on which lines are
+ moving, while the child sits almost motionless, pushing at the keyboard with one
+ finger.  As a learning environment, it may be mentally rich, but it is perceptually
+ extremely impoverished.  No smells or tastes, no wind or bird song, (unless the
+ computer is programmed to produce electronic tweets), no connection with the
+ soil, water, sunlight, warmth, the actual learning environment is almost autistic in
+ quality, impoverished sensually, emotionally, and socially.”   –John Davy</p>
+<p>“Look at the lilies of the field. They do not worry about how they will adorn
+ themselves.  Yet Solomon in all his glory is not arrayed like one of these.”  –Jesus
+ Christ
+</p>
+<p class="side">Chapter Story:
+</p>
+<p> Riane Eisler was born in Vienna, Austria in the middle of the 20th century.
+ At that time, Austria, and much of the rest of Europe, was controlled by the
+ Nazis.  The Nazis were a political party from Germany led by Adolph Hitler.
+ They believed that they were superior to other human beings and that they were
+ destined to take over the whole world and install Hitler as the dictator of the
+ world. The Nazis, for reasons nobody really knows, looked down on Jewish peo
+ple even more than they looked down on other people.  In Austria, as in other
+ countries, the Nazis captured the Jewish people and sent them to enormous pris
+ons called concentration camps.  At the camps, they deliberately killed many
+ Jews, while other Jews died in the camps from malnutrition and cruel treatment.
+</p>
+<p> So this is the world that Riane Eisler grew up in.  And because her family
+ was Jewish they faced many terrifying and horrible things.  When Riane was very
+ young, she watched her father get beaten up by the German police, who were
+ called the Gestapo. The Gestapo were extremely mean, and after beating up
+ Riane’s father they took him away. Riane had seen the Gestapo take other people
+ away and they did not come back, so she didn’t know if she would ever see her
+ father again.  Then Riane’s mother courageously went to talk to the Gestapo. She
+ told them it was not right that they took her husband and she demanded that her
+ husband be set free.  Miraculously, Riane’s father was set free and allowed to
+ come home. Riane was amazed at her mother’s courage.  As soon as Riane’s
+ father was safely home, they began to plan how to escape from Austria, as it was
+ much too dangerous for Jewish people to remain there with the Nazis in power.</p>
+<p>During this time, in her child’s mind, Riane tried to make sense of the
+ Nazis and what they were doing. She began to ask questions like, ‘Why are peo
+ple cruel?’ ‘Why do they hurt and kill one another?’ ‘If this is really, as we are
+ often told, just human nature, why isn't everyone like that?’ ‘Why are some peo
+ple caring and peaceful?’ ‘What pushes us in one direction or the other?’ ‘What
+ can we do to affect all this?’ These questions stayed with Riane throughout her
+ whole life.</p>
+<p> All of this happened to Riane before she was six years old. At the age of
+ six, Riane and her family managed to get out of Austria before the Nazis caught
+ them again. Then they took a ship to Cuba.  They had to start a completely new
+ life in a foreign land, but they were very lucky, because millions of other Jewish
+ people never made it out of Austria and other countries such as Poland, Hungary
+ and Czechoslovakia, that were overrun by the Nazis. At the age of 14, Riane
+came to North America</p>
+<p> Riane began her university studies at the University of California, where
+ she eventually received a degree in sociology and law.  She worked for a time as
+ a social scientist at the Rand Corporation, got married, and had two children.
+ During these years, she never forgot the questions that she had asked herself dur
+ing her childhood.  In order try to answer those questions, she did an enormous
+ amount of reading in a wide range of subjects, from sociology, anthropology, his
+tory, psychology, and systems science to archeology, mythology, literature, evolu
+tionary studies, women’s studies, and the arts. She gained a vast amount of
+ knowledge in these different fields, and yet she didn’t find the answers she was
+ looking for.</p>
+<p> Gradually though, like pieces of a jigsaw puzzle coming together, Riane
+ began to see patterns – connections between different bits of information from all
+ these different areas and from the whole span of human history. Finally, she had a
+ great realization: Human beings have a choice between two main ways of organ
+izing their beliefs, their government, and their relationships. She called one of
+ these two ways the ‘partnership’ model and the other way the ‘dominator’ model.
+ Riane began to feel she was answering the questions that she first had as a child
+ growing up in Nazi Austria.</p>
+<p>The partnership model was the way of peace and harmony, in which
+ human beings cooperated together to build a society that would benefit everyone.
+ The citizens followed laws because they wanted to and because they felt good
+ about the society they were living in. Problems were generally solved in a peace
+ful way. In the partnership model, women and men were equally important in the
+ society.  Men and women treated each other with respect, and men and women
+ generally had equal rights.</p>
+<p>The dominator model was the way of power, where some people controlled
+ other people in the society in such a way that not everyone was equal. People fol
+lowed the laws because they were afraid of what might happen to them if they
+ didn’t.  Problems were often solved with the use of violence.  In the dominator
+ model, men and women did not have equally important roles in the society, men
+ often did not respect women, and women did not have equal rights with men.</p>
+<p> Riane discovered that she could look at all of human history according to
+ these two models or human behavior. With this in mind, she began to find more
+ and more clues in the different subjects she had studied and she went on to make
+ many other important discoveries.  She began to write down and organize all
+ these ideas. The first books she published were Dissolution, in 1977, and The
+ Equal Rights Handbook, in 1978.  Then in 1987 she published a book called The
+ Chalice and the Blade, which became an international best seller – it was translat
+ed into more than 22 languages.  Riane went on to write several other books and
+ over 200 articles.   Her ideas of the partnership model and the dominator model
+became known around the world.  </p>
+<p>Many people found Riane’s ideas to be very helpful in understanding
+ humanity’s evolution on earth. Previously, many people believed that human
+ beings were just aggressive by nature and that they had no choice but to use vio
+lence sometimes. According to this way of thinking, war is inevitable which
+ means it is just going to happen from time to time, because that’s the way human
+ beings are by nature.  Riane believed this way of understanding human beings
+ was false, and she tried to prove in her research and her writing that human
+ beings could be very peaceful if they had the right opportunities.  In her work she
+ has shown many examples of human beings developing partnership societies
+ throughout history, right up to today.  She has proven that it is possible to build a
+ peaceful society if you have the right tools.</p>
+<p> In 1995, Riane published a study that showed a strong link between the
+ status of women and the general quality of a nation’s life.  In this important work,
+ Riane studied statistics and information from 89 countries.  Today, Riane contin
+ues to study, to write and to give lectures around the world.  In recent years she
+ has turned her attention to the importance of education, because she has come to
+ believe that the tools of making a peaceful world must be taught when people are
+ still young. Her book, Tomorrow’s Children, is about how children can be taught
+ partnership skills.  
+</p>
+<p>Riane’s most recent book is called The Power of Partnership. Her goal in
+ this book is to help us to recognize the partnership and dominator tendencies in
+ our own relationships and friendships.  The book is intended to help us human
+ beings understand ourselves, to help us forgive ourselves and each other when we
+ make mistakes, and to help us be patient as we try to build a partnership world.
+ Riane’s dream is a world in which all people are sharing all of the world’s
+ resources and cooperating to build a future in which each citizen of the world has
+ an equal stake.  She continues to work towards this goal every day.</p>
+<p class="side">Chapter Overview:
+</p>
+<p>Our planet earth is a very fragile place.  Every living thing on the planet is
+ important because it plays a role in the web of life.  If one kind of plant dies, it
+ means that some particular kind of animal will be without its source of food.  The
+ different kinds, or types, of plants or animals – for example, daisies or roses; or
+ raccoons, elephants, or dogs – are called species.  If a particular animal species
+ goes out of existence, then that will in turn affect the healthy existence of other
+ animals. If this happens over and over, and plant and animal species continue to
+ die out, as they are doing today, this causes a big problem.  Entire ecosystems 
+the other plants and animals that depend in some way on the dying-out species 
+are disturbed, and eventually the whole balance of life is upset.  Right now there
+ are more than 1,000 endangered animal species worldwide!</p>
+<p>As the population of human beings on earth continues to grow, so does our need
+ for cattle grazing land and land for growing crops.  In order to feed the growing
+ number of people we use more acres of land for crops, we use more water to irri
+gate the land, and we use more chemical fertilizers and chemical pesticides.  As
+ farmland spreads, forests have to be cut down. Meanwhile we are taking more
+ and more fish out of our oceans, to use them for food.  In some parts of the ocean
+ it is difficult to find some of the species of fish that used to swim there in great
+ schools.
+</p>
+<p> As we humans populate the planet, we are building more and more homes
+ and other buildings.  We need more and more wood and that means we need to
+ cut down more trees.  Hundreds of thousands of factories are spread across the
+ globe to build our cars, clothes, appliances, furniture, toys and many other things.
+ Manny of these factories pollute the environment with chemicals because there
+ are very weak environmental laws in many countries. Meanwhile, with so many
+ automobiles and factories producing toxic gases like carbon monoxide and other
+ gases, the ozone layer of the earth’s atmosphere, which protects life on earth from
+ harmful rays of the sun, is getting destroyed.
+</p>
+<p>The need that human beings on the planet have for energy increases every
+ day.  We all get energy from the food we eat in order to keep our bodies alive.
+ But we also need energy to power our cars, airplanes, boats, our televisions, com
+puters, refrigerators, lights, and so many other things.  These all require energy
+ and it takes fuel to produce that energy.  Much of the fuel we use – such as wood,
+ oil, natural gas, or coal – is not renewable. That means that once we use it we
+ cannot make more. Many of these kinds of fuels also create lots of pollution. </p>
+<p>Even with all of this expansion and growth of farmland, building construc
+tion, and energy production, many people on planet earth do not share in the ben
+efits of these things.  Hundreds of millions of people on the planet live without
+ running water or toilets. They have no electricity.  They cannot afford a car, a tel
+evision, a computer, or even a telephone –things that most of us in the United
+ States take very for granted.  The wealthier nations of the world, such as the Unit
+ed States, use way more than our share of the world’s natural resources and ener
+gy, and get most of the benefits in return.  Many nations allow their resources to
+ be mined or taken, but the people of those nations do not get the same benefits as
+ we in the U.S. do.
+</p>
+<p> With so many challenges facing us, what can we do?  How can we save
+ the endangered species, protect our environment, conserve energy, and learn to
+ share the world’s natural resources in a way that is fairer than the way things are
+ doing now?
+</p>
+<p>The first thing we can do is to educate ourselves about some of these prob
+lems.  We need to learn as much as possible about these global challenges, so we
+ understand the sources of the problems. Then we can take action to do something
+ positive about some issue or challenge that we are interested in. In this chapter we
+ will learn more about these global issues that Riane Eissler cares so much about,
+ and we will explore some different ways we can begin to take action to help. 
+</p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson 1 - Making rainbow necklaces and bracelets
+</p>
+<p> For this activity you will need some waxed twine or string, some plastic
+ colored beads with holes and some nimble fingers. You will need a variety of
+ bead colors. See the bead colors and their meanings below. Note that the bead
+ colors are different from the colors for the Web of Life Game in Chapter 11.  This
+ is a different game, and it has somewhat different meanings for the colors. If you
+ choose to, however, you can use the colors described in Chapter 11 for your bead
+ necklaces and bracelets.</p>
+<p>a) First, measure a piece of waxed string to see how much you will need to make
+ a necklace or a bracelet.  Once you have measured, then add a few inches, and
+ then cut your string from the spools. Note: If you are making a necklace, your
+ string needs to be big enough to fit over your head – unless you are going to
+ make a tighter-fitting necklace.  For a snugger-fitting necklace you will need to
+ leave enough string on both ends to tie together when you are finished.
+</p>
+<p>b) Next tie one end of your string tightly onto a single bead – so the string cannot
+ slip off.  It is best if you leave an inch or two of extra string on one side of the
+ knot in case you need it. On the other side of the knot will be several more inches
+ of string where you will do your stringing.  For a necklace you will need six to
+ ten inches of string.  For bracelets you will only need three to five inches of
+ string.</p>
+ <p>c) Hold your string so that the knotted bead is on the bottom. Begin stringing
+ your beads.  First you will put a colored bead, then a white bead, then another
+ colored bead, and so on.  Alternate the colors, so you have each of the colors rep
+resented. In other words, put one of each color on the string before you put two
+ beads of any color.  Remember to put a white bead in between every colored
+ bead.  The white beads are for the invisible bond of life that connects all living
+ things, and they also symbolize the caring love of human beings for other living
+ things.  The white beads are for the mystery of life and for our love for all living
+things. The white beads remind us we share the whole earth with all living things</p>
+<p> d) Once you have completed one ‘round’ of colors, keep adding beads until your
+ string is full of beads.  It takes a little practice to know when to stop stringing and
+ what length of string you will need. When you are done stringing you will need to
+ tie the second end of your string to the same bead where you tied your first end.
+ Make sure you tie a tight knot. Now you have completed your loop and your beads
+ won’t fall off! Once you are sure your necklace is complete, you can trim off any
+ extra string with scissors.  Congratulations, you have finished your bracelet or
+ necklace!</p>
+ <p>e) If you are trying to make a snug fitting necklace instead of one that just slips
+ over your head, you do not tie the last end of the string to the knotted bead.  You
+ will gently tie the two ends of your string together at the back of your neck. If you
+ tie a gentle but secure knot you will be able to undo the waxed string when you
+ want to take your snug rainbow necklace off.</p>
+ <p> f) Whenever you wear your rainbow necklace or bracelet you can spend a few
+ minutes touching each bead.  As you touch the bead you can say the color and
+ what that color stands for. We will use the chart below to learn the meanings of the
+ colors. If we do this activity once a day, it can be a reminder of our indivisible
+ connection with all living things.</p>
+ <p> g) Once you have made a bracelet or a necklace the original way described above,
+ you can try to become more creative the next time around. For instance you can
+ put two of every color along the whole string, or you can try variations.  Also,
+ once you have become good at making rainbow bracelets and necklaces, you can
+ help younger students to make one.  Remember to tell them the meanings of the
+ colors. That’s the most important thing for them to learn!</p>
+ <p> Bead Colors:</p>
+ <p>Yellow is for the sun and the life-giving energy it brings to us.</p>
+ <p>Dark blue is for the sea, for the lakes and rivers, and for all the waters of the earth.</p>
+ <p>Light blue is for the sky, for the air that we breathe and for the atmosphere, which
+ keeps our air from floating out into space, and also protects us from the rays of the
+ sun that would harm us.</p>
+ <p>Red is for all of the two-legged and four-legged animals and for human beings.
+Green is for the plants on the earth, in the oceans, rivers, and lakes.  It is also for
+ the oxygen they breathe out, which is the oxygen that we need to breathe in, in
+ order to live.</p>
+ <p>Lavender is for the insects that fly, that pollinate all of the flowering plants so
+ they can reproduce and make fruits and vegetables for us to eat. It is also for the
+ insects that crawl on and in the earth and fertilize the earth with nitrogen and
+ other nutrients.</p>
+ <p> Burgundy is for the birds that spread seeds across the earth.</p>
+ <p>Purple is for the fish that swim in all of the waters. </p>
+ <p>White is for the interdependence of all living things on the planet. We are all con
+nected. White is also for the compassion and love of human beings, because
+ humans have special responsibility to care for the animals, plants and each other.
+ There should be a white bead in between every other bead to show the intercon
+nectedness between all living things. </p>
+ <p>Orange is for the birds that bring us colorful beauty and inspiration.  They help to
+ spread seeds across the earth so that plants can spread from place to place.   They
+ help us keep a diversity of plant life on earth.</p>
+ <p class="side"> Lesson #2 - Vivaldi nature exercise</p>
+ <p>In this activity we will listen to the Four Seasons, a famous piece of music
+ by Antonio Vivaldi. This piece of music has four movements – four different
+ parts.  Each movement is about a different season. The whole piece of music goes
+ from spring to summer to fall to winter. As we are listening we will draw with
+ colored pencils, markers, or crayons.  We can draw images or designs or just col
+ors. Whatever we are feeling from the music we can draw.   When the music is
+ finished, we will have some extra time to finish our drawings.  Then we will
+ invite students to share their drawings if they wish.  The Four Seasons reminds us
+ of the beauty of nature. Nature is always there for us. The cycle of seasons never
+ changes. It always goes in the same sequence – magically changing the summer’s
+ green leaves to the wonderful colored leaves of fall.  Once the leaves fall, winter
+ arrives bringing cold, frost, snow and new joys. Then in the spring it is like
+ everything is reborn again.  Discuss how you felt when you listened to this musi
+cal piece by Vivaldi.  Did any special images or visions come to you? What did
+ you see in your mind’s eye?  Do you think Antonio Vivaldi is a good musical
+ composer? Why?</p>
+ <p class="side">Lesson 3 - The silent nature adventure</p>
+ <p>For this lesson we will go on a special adventure in the forest or on our
+ playground.  We will go on a walk and as we walk we will pay special attention
+ to what we are experiencing though our senses.  For a period of time we will not
+ talk at all.  The goal of our nature adventure is to experience nature without
+ words.  After our silent nature adventure we will have a chance to draw and write
+ about our experiences.  We will also share with each other about what we learned.</p>
+ <p>a) With our ears we will pay attention to any insects or birds we might hear. If we are near a river or stream, we may hear running water. If we are lucky we may hear some animals such as the chirping of squirrels or chipmunks. We may also hear some sounds that are made by humans and not nature.</p>
+
+<p>b) With our eyes we can observe things as big as the sky and as small as bugs eating a stump. We might observe a bird building its nest, caring for its young, or speeding through the trees. We might observe a butterfly or a honeybee going from flower to flower gathering nectar and pollinating the plants. We might observe many other things.</p>
+
+<p>c) With our sense of smell we can smell the fragrance of the flowers, or of the earth after a rain, or of the skunk cabbage in a swamp. If we pay close attention we can also tell the difference between the smell of the deep forest compared with the smell near a stream or river, or compared with a meadow.</p>
+
+<p>d) With our sense of touch we can feel a stone. We can feel the cool, soft water of a stream or the warm water of a pond. We can touch the grass. We can hug a tree and feel the bark around it. We can see how soft a dandelion can be and we can carefully feel how sharp is the thorn of a thistle or a rose. We can also feel the air on our faces or on our hands if we hold them outstretched to our sides as we walk.</p>
+
+<p>e) With our sense of taste we might be able to taste some mint growing in a garden. Why not taste a blade of grass, or, better yet, a strand of hay growing in the field? If you gently munch down on the hay you can taste the sweet green juice inside. If there is a honeysuckle bush nearby, we can taste the sweet nectar that is inside by pulling very gently on the white stamen and licking the tiny bubble at the end before it falls off. Garden vegetables are always a wonder to taste if we have the chance. With wild plants in the forest, we should never taste anything without direct adult supervision and permission.</p>
+
+ <p class="side">Lesson #4 - Endangered species</p>
+ <p> Animals and plants become endangered across our planet due to the expan
+sion of human population, the growth of cities and urban areas, the destruction of
+ natural habitats like the rainforest or the everglades, and because of pollution.
+ Here are some important facts about endangered species:</p>
+<ul>
+  <li>
+    <p>Scientists have cataloged more than one and one-half million of the species that exist on earth today. Scientists estimate that 20 times that many species exist that have not been catalogued yet.</p>
+  </li>
+  <li>
+    <p>Up to 100 species become extinct every day. According to scientists, the total number of species lost each year may climb to 40,000 by the year 2100. This is a rate far faster than at any time on earth in the last 65 million years.</p>
+  </li>
+  <li>
+    <p>Around the world, more than 3500 protected areas exist in the form of parks, wildlife refuges and other reserves. These areas cover a total of about 2 million square miles (5 million square km, or 3% of our total land area).</p>
+  </li>
+  <li>
+    <p>Today, more than 200 animal species in the United States are classified as endangered. More than 1,000 animal species are endangered worldwide.</p>
+  </li>
+</ul>
+
+ <p>For this lesson we will make a list of all of the endangered species that we
+ know of around the world. Then each student will make a picture and a fact card
+ about one endangered species. As a class we will make a map showing in which
+ countries the endangered species live.  We can make one map on a bulletin board
+ or on the wall.  Each of us will add pictures and fact cards onto the map, on or
+ near the country where that species lives.</p>
+ <p class="side"> Lesson #5 - Recycling and conservation</p>
+ <p>When we recycle items, we save valuable resources, cut down on energy
+ use, and reduce pollution – which means a better planet for everyone.  When we
+ conserve energy, it means that more energy might be made available to less fortu
+nate people in the developing world. It also means that governments and busi
+nesses can save money to put into research to create renewable forms of energy. </p>
+ <p>There are many kinds of products we can recycle and many ways we can
+ conserve energy.  One half of the class will make a list of all the different kinds of
+ products that can be recycled.  The other half of the class will make a list of all
+ the ways energy can be conserved.  The groups will elect a spokesperson or per
+sons who will report back to the class and display their list.  Then as a class we
+ will make a plan to do something to help with recycling and conservation at
+ home, in the neighborhood, or at school.</p>
+<p class="side"> Lesson #6 - Creating energy </p>
+<p>We need energy to live. We get energy from food. But we also need energy
+ to power all of our machines.  Right now, for many of the world’s machines, we
+ are still using non-renewable kinds of fuel – such as petroleum, natural gas, and
+ coal.  These fuels are often called ‘fossil fuels’. Once these things are used we
+ cannot make more.  Also, petroleum and coal are very polluting kinds of fuel.
+ There are other ways of generating energy which are renewable and which do not
+ pollute – such as solar energy, geo-thermal energy, wind power, and waterpower.
+ Do some research on one of these ways of making energy.  Then write down what
+ is good about this kind of fuel or energy production and what some of its prob
+lems or challenges are.  You can do this in a chart form if you wish:  Make a line
+ down the middle of your page. In one column write the good things about the fuel
+ or type of energy production. In the other column write what the problems or
+ challenges are.  You can include a picture to illustrate this kind of fuel or energy
+ production.  Once you are finished, we will invite people to share their informa
+tion and their drawings with the class. </p>
+<p class="side">Lessons # 7 and #8 - Organizations </p>
+<p>Now let’s find out more about some of the organizations that try to
+ improve the world situation by focusing on some of the challenges we mentioned
+ in this chapter, such as the environment, endangered species, energy conservation,
+ and recycling.  You will make a list of organizations that work on these global
+ challenges.  Then you will choose one of the organizations on your list and find
+ out more about it.  Do some research on the organization you are interested in.
+ Write down some basic information about the organization.  Each student will
+ give an oral report, if time allows.  We can also gather all of our mini-reports and
+ make them into a book that we can copy, so that everyone has a complete collec
+tion of information on these important organizations.  If time allows we will write
+ to the organization that we researched and ask them to send us information about
+ the work they do. </p>
+<p>We will:</p>
+<p>a) Write down the full name of the organization</p>
+
+<p>b) When it was founded</p>
+
+<p>c) The name of the person or group of people who founded the organization</p>
+
+<p>d) Write down the mission of the organization</p>
+
+<p>e) The main focus of the organization</p>
+
+<p>f) Write down any other interesting or important information we find.</p>
+
+<p>g) The reasons why this organization is good for the world</p>
+
+<p>h) On a separate piece of paper, write a letter to the organization. Tell them what you think of their work. Then request that they send you some information on their work. Address an envelope to the organization, put a stamp on it and put it in the mail.</p>
+
+<p>i) When materials from the organizations come in, we will gather all of the information in one place and sort it according to the various global issues we have studied. In this way we will have these things as a reference whenever we need to go back to them for important information.</p>
+
+<p> Here is a list of websites for organizations that try to help each of the several
+ world problems we have studied:</p>
+<p>Recycling:</p>
+<p>www.earthshare.org</p>
+<p>www.kab.org</p>
+<p>www.epa.pov/recyclecity</p>
+<p>www.recyclingtoday.com</p>
+<p>www.nrc-recycle.org</p>
+<p>www.grrn.org</p>
+
+<p>Energy Conservation:</p>
+<p>www.eere.energy.gov/consumerinfo/energy</p>
+<p>www.iiec.org</p>
+<p>www.energyconservationinfo.org</p>
+<p>www.science.gov.browse</p>
+<p>www.ecoiq.com/energy</p>
+<p>www.conservationcenter.org</p>
+<p>www.homeenergy.org</p>
+
+<p>Alternative Energy:</p>
+<p>www.solarbuzz.com</p>
+<p>www.solarenergy.org</p>
+<p>www.sustainablenergy.org</p>
+<p>www.eia.doe.gov/kids</p>
+<p>www.firstgov.gov/Citizen/Facts/Facts_Environment</p>
+<p>www.earth911.org</p>
+<p>www.ecokidsonline.com</p>
+
+<p>Endangered Species:</p>
+<p>www.worldwildlife.org</p>
+<p>www.WildAid.org</p>
+<p>www.endangeredspecie.com</p>
+<p>www.kidsplanet.org</p>
+<p>www.worldkids.net</p>
+<p>www.schoolworld.asn.au/species</p>
+
+<p>Environment:</p>
+<p>www.environment.gov</p>
+<p>www.earthjustice.org</p>
+<p>www.kde.org</p>
+<p>www.webdirectory.com</p>
+<p>www.epa.gov</p>
+<p>www.cotf.edu/ete/</p>
+<p>www.envirolink.org</p>
+<p>www.sierraclub.org</p>
+<p>www.greenpeace.org</p>
+
+<p> Note: There are many other organizations that work on the problems of popula
+tion, world hunger, health, medicine, water, and similar  issues.  We can add to
+ the list and see how many organizations we can find.  Remember that a govern
+mental agency, like the Environmental Protection Agency, is different from an
+ independent or non-governmental  organization.  You might want to have a differ
+ent list for these.</p>
+<p class="side">Discussion Questions:</p>
+<p> a) Walt Whitman said, “Now I see the secret of the making of the best persons.  It
+ is to grow in the open air and to eat and sleep with the earth.” He believed it was
+ very important for people to spend some time in nature in order to gain a deeper
+ appreciation for life.  What is your favorite thing about nature?  What kinds of
+ lessons have you learned from being in nature?</p>
+<p> b) Henry David Thoreau lived in the 1800’s, before human beings built machines
+ that could fly.  What do you think he meant when he said, “Thank God men can
+not as yet fly and lay waste to the sky as well as the earth!”  Do you think Henry
+ David Thoreau’s worry about how people would treat the air and the atmosphere
+ might have turned out to be true?</p>
+<p>c) Choose one of the quotations above that interests you.  Read the quotation to
+ yourself.  Look up any words that you don’t know. Write the quotation in your
+ journal.  Then write about the meaning of the quotation or write your thoughts
+ about it.</p>
+<p class="side">Supplemental Activities:</p>
+<p> If you are interested in numbers and statistics, there are several websites where
+ you can get more interesting and important numerical information about world
+ challenges.  Choose one of them to investigate and report back to the class on
+ what you discover. You should write down the important numbers and the facts
+ that go with the numbers, which you want to remember</p>
+<p>Look in the appendix under ‘Environmental Facts’ to see all of the information
+ about the environment.  Find one to three facts that interest you and then share
+ them with the class.
+</p>
+
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter14.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter16.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

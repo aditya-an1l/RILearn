@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter13</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Pret in the House</p>
+    </h1>
+    <p>It was Grandmother who decided that we must move to another house. And it was all
+because of a pret, a mischievous ghost, who had been making life intolerable for
+everyone.</p>
+<p>In India, prets usually live in peepul trees, and that’s where our Pret first had his
+abode – in the branches of an old peepul which had grown through the compound wall
+and had spread into the garden, on our side, and over the road, on the other side.</p>
+<p>For many years, the Pret had lived there quite happily, without bothering anyone in
+the house. I suppose the traffic on the road had kept him fully occupied. Sometimes,
+when a tonga was passing, he would frighten the pony and, as a result, the little ponycart would go reeling off the road. Occasionally he would get into the engine of a car or
+bus, which would soon afterwards have a breakdown. And he liked to knock the solatopis off the heads of sahibs, who would curse and wonder how a breeze had sprung up
+so suddenly, only to die down again just as quickly. Although the Pret could make
+himself felt, and sometimes heard, he was invisible to the human eye.
+</p>
+<p>At night, people avoided walking beneath the peepul tree. It was said that if you
+yawned beneath the tree, the Pret would jump down your throat and ruin your digestion.
+Grandmother’s tailor, Jaspal, who never had anything ready on time, blamed the Pret
+for all his troubles. Once, when yawning, Jaspal had forgotten to snap his fingers in
+front of his mouth – always mandatory when yawning beneath peepul trees – and the
+Pret had got in without any difficulty. Since then, Jaspal had always been suffering from
+tummy upsets.
+</p>
+<p>But it had left our family alone until, one day, the peepul tree had been cut down.
+</p>
+<p>It was nobody’s fault except, of course, that Grandfather had given the Public Works
+Department permission to cut the tree which had been standing on our land. They
+wanted to widen the road, and the tree and a bit of wall were in the way; so both had to
+go. In any case, not even a ghost can prevail against the PWD. But hardly a day had
+passed when we discovered that the Pret, deprived of his tree, had decided to take up
+residence in the bungalow. And since a good Pret must be bad in order to justify his
+existence, he was soon up to all sorts of mischief in the house.
+</p>
+<p>He began by hiding Grandmother’s spectacles whenever she took them off.</p>
+<p>‘I’m sure I put them down on the dressing-table,’ she grumbled.</p>
+<p>A little later they were found balanced precariously on the snout of a wild boar,
+whose stuffed and mounted head adorned the veranda wall. Being the only boy in the
+house, I was at first blamed for this prank; but a day or two later, when the spectacles
+disappeared again only to be discovered dangling from the wires of the parrot’s cage, it
+was agreed that some other agency was at work.
+</p>
+<p>Grandfather was the next to be troubled. He went into the garden one morning to find
+all his prized sweet-peas snipped off and lying on the ground.</p>
+<p>Uncle Ken was the next to suffer. He was a heavy sleeper, and once he’d gone to
+bed, he hated being woken up. So when he came to the breakfast table looking blearyeyed and miserable, we asked him if he wasn’t feeling all right.</p>
+<p>‘I couldn’t sleep a wink last night,’ he complained. ‘Every time I was about to fall
+asleep, the bedclothes would be pulled off the bed. I had to get up at least a dozen times
+to pick them off the floor.’ He stared balefully at me. ‘Where were you sleeping last
+night, young man?’
+</p>
+<p>I had an alibi. ‘In Grandfather’s room,’ I said.
+</p>
+<p>‘That’s right,’ said Grandfather. ‘And I’m a light sleeper. I’d have woken up if he’d
+been sleep-walking.’</p>
+<p>‘It’s that ghost from the peepul tree,’ said Grandmother.
+</p>
+<p>‘It has moved into the house. First my spectacles, then the sweet-peas, and now
+Ken’s bedclothes! What will it be up to next? I wonder!’
+</p>
+<p>We did not have to wonder for long. There followed a series of disasters. Vases fell
+off tables, pictures came down the walls. Parrot feathers turned up in the teapot while
+the parrot himself let out indignant squawks in the middle of the night. Uncle Ken found
+a crow’s nest in his bed, and on tossing it out of the window was attacked by two
+crows.</p>
+<p>When Aunt Minnie came to stay, things got worse. The Pret seemed to take an
+immediate dislike to Aunt Minnie. She was a nervous, easily excitable person, just the
+right sort of prey for a spiteful ghost. Somehow her toothpaste got switched with a tube
+of Grandfather’s shaving-cream, and when she appeared in the sitting-room, foaming at
+the mouth, we ran for our lives. Uncle Ken was shouting that she’d got rabies.
+</p>
+<p>Two days later Aunt Minnie complained that she had been hit on the nose by a
+grapefruit, which had of its own accord taken a leap from the pantry shelf and hurtled
+across the room straight at her. A bruised and swollen nose testified to the attack. Aunt
+Minnie swore that life had been more peaceful in Upper Burma</p>
+<p>‘We’ll have to leave this house,’ declared Grandmother.</p>
+<p>‘If we stay here much longer, both Ken and Minnie will have nervous breakdowns.’</p>
+<p>‘I thought Aunt Minnie broke down long ago,’ I said.</p>
+<p>‘None of your cheek!’ snapped Aunt Minnie.</p>
+<p>‘Anyway, I agree about changing the house,’ I said breezily. ‘I can’t even do my
+homework. The ink-bottle is always empty.’
+</p>
+<p>‘There was ink in the soup last night.’ That came from Grandfather.
+</p>
+<p>And so, a few days and several disasters later, we began moving to a new house.
+</p>
+<p>Two bullock-carts laden with furniture and heavy luggage were sent ahead. The roof
+of the old car was piled high with bags and kitchen utensils. Everyone squeezed into the
+car, and Grandfather took the driver’s seat.
+</p>
+<p>We were barely out of the gate when we heard a peculiar sound, as if someone was
+chuckling and talking to himself on the roof of the car.</p>
+<p>‘Is the parrot out there on the luggage-rack?’ the query came from Grandfather.</p>
+<p>‘No, he’s in the cage on one of the bullock-carts,’ said Grandmother.</p>
+<p>Grandfather stopped the car, got out, and took a look at the roof.
+</p>
+<p>‘Nothing up there,’ he said, getting in again and starting the engine. ‘I’m sure I heard
+the parrot talking.’
+</p>
+<p>Grandfather had driven some way up the road when the chuckling started again,
+followed by a squeaky little voice.
+</p>
+<p>We all heard it. It was the Pret talking to itself</p>
+<p>‘Let’s go, let’s go!’ it squeaked gleefully. ‘A new house. I can’t wait to see it. What
+fun we’re going to have!’</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter12.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter14.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

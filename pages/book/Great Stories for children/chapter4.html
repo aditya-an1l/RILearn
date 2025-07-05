@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter1</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Romi and the Wildfire</p>
+    </h1>
+    <p><b>1</b></p>
+    <p>As Romi was about to mount his bicycle, he saw smoke rising from behind the
+distant line of trees.
+</p>
+<p>‘It looks like a forest fire,’ said Prem, his friend and classmate.
+</p>
+<p>‘It’s well to the east,’ said Romi. ‘Nowhere near the road.’</p>
+<p>‘There’s a strong wind,’ said Prem, looking at the dry leaves swirling across the
+road.</p>
+<p>It was the middle of May, and it hadn’t rained in the Terai for several weeks. The
+grass was brown, the leaves of the trees covered with dust. Even though it was getting
+on to six o’clock in the evening, the boys’ shirts were damp with sweat.
+</p>
+<p>‘It will be getting dark soon,’ said Prem. ‘You’d better spend the night at my house.’</p>
+<p>‘No, I said I’d be home tonight. My father isn’t keeping well. The doctor has given
+me some tablets for him.’
+</p>
+<p>‘You’d better hurry, then. That fire seems to be spreading.’</p>
+<p>‘Oh, it’s far off. It will take me only forty minutes to ride through the forest. ‘Bye,
+Prem – see you tomorrow!’
+</p>
+<p>Romi mounted his bicycle and pedalled off down the main road of the village,
+scattering stray hens, stray dogs and stray villagers.
+</p>
+<p>‘Hey, look where you’re going!’ shouted an angry villager, leaping out of the way of
+the oncoming bicycle. ‘Do you think you own the road?’
+</p>
+<p>‘Of course I own it,’ called Romi cheerfully, and cycled on.
+</p>
+<p>His own village lay about seven miles distant, on the other side of the forest; but
+there was only a primary school in his village, and Romi was now in High School. His
+father, who was a fairly wealthy sugarcane farmer, had only recently bought him the
+bicycle. Romi didn’t care too much for school and felt there weren’t enough holidays;
+but he enjoyed the long rides, and he got on well with his classmates.
+</p>
+<p>He might have stayed the night with Prem had it not been for the tablets which the
+Vaid – the village doctor – had given him for his father.</p>
+<p>Romi’s father was having back trouble, and the medicine had been specially
+prepared from local herbs.
+</p>
+<p>Having been given such a fine bicycle, Romi felt that the least he could do in return
+was to get those tablets to his father as early as possible.</p>
+<p>He put his head down and rode swiftly out of the village. Ahead of him, the smoke
+rose from the burning forest and the sky glowed red.</p>
+<p><b>2</b></p>
+<p>He had soon left the village far behind. There was a slight climb, and Romi had to push
+harder on the pedals to get over the rise. Once over the top, the road went winding
+down to the edge of the sub-tropical forest.</p>
+<p>This was the part Romi enjoyed most. He relaxed, stopped pedalling, and allowed
+the bicycle to glide gently down the slope. Soon the wind was rushing past him,
+blowing his hair about his face and making his shirt billow out behind. He burst into
+song.
+</p>
+<p>A dog from the village ran beside him, barking furiously. Romi shouted to the dog,
+encouraging him in the race.
+</p>
+<p>Then the road straightened out, and Romi began pedalling again.</p>
+<p>The dog, seeing the forest ahead, turned back to the village. It was afraid of the
+forest.
+</p>
+<p>The smoke was thicker now, and Romi caught the smell of burning timber. But ahead
+of him the road was clear. He rode on.</p>
+<p>It was a rough, dusty road, cut straight through the forest. Tall trees grew on either
+side, cutting off the last of the daylight. But the spreading glow of the fire on the right lit
+up the road, and giant tree-shadows danced before the boy on the bicycle.
+</p>
+<p>Usually the road was deserted. This evening it was alive with wild creatures fleeing
+from the forest fire.</p>
+<p>The first animal that Romi saw was a hare, leaping across the road in front of him. It
+was followed by several more hares. Then a band of monkeys streamed across,
+chattering excitedly.</p>
+<p>They’ll be safe on the other side, thought Romi. The fire won’t cross the road.
+</p>
+<p>But it was coming closer. And realising this, Romi pedalled harder. In half-an-hour
+he should be out of the forest.
+</p>
+<p>Suddenly, from the side of the road, several pheasants rose in the air, and with a
+whoosh, flew low across the path, just in front of the oncoming bicycle. Taken by
+surprise, Romi fell off. When he picked himself up and began brushing his clothes, he
+saw that his knee was bleeding. It wasn’t a deep cut, but he allowed it to bleed a little,
+took out his handkerchief and bandaged his knee. Then he mounted the bicycle again.
+</p>
+<p>He rode a bit slower now, because birds and animals kept coming out of the bushes.</p>
+<p>Not only pheasants but smaller birds, too, were streaming across the road – parrots,
+jungle crows, owls, magpies – and the air was filled with their cries.
+</p>
+<p>‘Everyone’s on the move,’ thought Romi. It must be a really big fire.
+He could see the flames now, reaching out from behind the trees on his right, and he
+could hear the crackling as the dry leaves caught fire. The air was hot on his face.
+Leaves, still alight or turning to cinders, floated past.</p>
+<p>A herd of deer crossed the road, and Romi had to stop until they had passed. Then he
+mounted again and rode on; but now, for the first time, he was feeling afraid.</p>
+<p><b>3</b></p>
+<p>From ahead came a faint clanging sound. It wasn’t an animal sound, Romi was sure of
+that. A fire-engine? There were no fire-engines within fifty miles.
+</p>
+<p>The clanging came nearer, and Romi discovered that the noise came from a small
+boy who was running along the forest path, two milk-cans clattering at his side
+</p>
+<p>‘Teju!’ called Romi, recognising the boy from a neighbouring village. ‘What are you
+doing out here?’
+</p>
+<p>‘Trying to get home, of course,’ said Teju, panting along beside the bicycle.
+</p>
+<p>‘Jump on,’ said Romi, stopping for him.
+</p>
+<p>Teju was only eight or nine – a couple of years younger than Romi. He had come to
+deliver milk to some road-workers, but the workers had left at the first signs of the fire,
+and Teju was hurrying home with his cans still full of milk.
+</p>
+<p>He got up on the cross-bar of the bicycle, and Romi moved on again. He was quite
+used to carrying friends on the crossbar.
+</p>
+<p>‘Keep beating your milk-cans,’ said Romi. ‘Like that, the animals will know we are
+coming. My bell doesn’t make enough noise. I’m going to get a horn for my cycle!’
+</p>
+<p>‘I never knew there were so many animals in the jungle,’ said Teju. ‘I saw a python
+in the middle of the road. It stretched right across!’
+</p>
+<p>‘What did you do?’
+</p>
+<p>‘Just kept running and jumped right over it!’
+</p>
+<p>Teju continued to chatter but Romi’s thoughts were on the fire, which was much
+closer now. Flames shot up from the dry grass and ran up the trunks of trees and along
+the branches. Smoke billowed out above the forest.</p>
+<p>Romi’s eyes were smarting and his hair and eyebrows felt scorched. He was feeling
+tired but he couldn’t stop now, he had to get beyond the range of the fire. Another ten or
+fifteen minutes of steady riding would get them to the small wooden bridge that spanned
+the little river separating the forest from the sugarcane fields.
+</p>
+<p>Once across the river, they would be safe. The fire could not touch them on the other
+side, because the forest ended at the river’s edge. But could they get to the river in
+time?</p>
+<p><b>4
+</b></p>
+<p>Clang, clang, clang, went Teju’s milk-cans. But the sound of the fire grew louder too.
+</p>
+<p>A tall silk-cotton tree, its branches leaning across the road, had caught fire. They
+were almost beneath it when there was a crash and a burning branch fell to the ground a
+few yards in front of them.</p>
+<p>The boys had to get off the bicycle and leave the road, forcing their way through a
+tangle of thorny bushes on the left, dragging and pushing at the bicycle and only
+returning to the road some distance ahead of the burning tree.
+</p>
+<p>‘We won’t get out in time,’ said Teju, back on the cross-bar but feeling disheartened.</p>
+<p>‘Yes, we will,’ said Romi, pedalling with all his might. ‘The fire hasn’t crossed the
+road as yet.’</p>
+<p>Even as he spoke, he saw a small flame leap up from the grass on the left. It
+wouldn’t be long before more sparks and burning leaves were blown across the road to
+kindle the grass on the other side.</p>
+<p>‘Oh, look!’ exclaimed Romi, bringing the bicycle to a sudden stop.
+</p>
+<p>‘What’s wrong now?’ asked Teju, rubbing his sore eyes. And then, through the
+smoke, he saw what was stopping them.
+</p>
+<p>An elephant was standing in the middle of the road.
+</p>
+<p>Teju slipped off the cross-bar, his cans rolling on the ground, bursting open and
+spilling their contents.
+</p>
+<p>The elephant was about forty feet away. It moved about restlessly, its big ears
+flapping as it turned its head from side to side, wondering which way to go.
+</p>
+<p>From far to the left, where the forest was still untouched, a herd of elephants moved
+towards the river. The leader of the herd raised his trunk and trumpeted a call. Hearing
+it, the elephant in the road raised its own trunk and trumpeted a reply. Then it shambled
+off into the forest, in the direction of the herd, leaving the way clear.
+</p>
+<p>‘Come, Teju, jump on!’ urged Romi. ‘We can’t stay here much longer!’
+</p>
+<p><b>5</b></p>
+<p>Teju forgot about his milk-cans and pulled himself up on the cross-bar. Romi ran
+forward with the bicycle, to gain speed, and mounted swiftly. He kept as far as possible
+to the left of the road, trying to ignore the flames, the crackling, the smoke and the
+scorching heat.
+</p>
+<p>It seemed that all the animals who could get away had done so. The exodus across
+the road had stopped.
+</p>
+<p>‘We won’t stop again,’ said Romi, gritting his teeth. ‘Not even for an elephant!’
+</p>
+<p>‘We’re nearly there!’ said Teju. He was perking up again</p>
+<p>A jackal, overcome by the heat and smoke, lay in the middle of the path, either dead
+or unconscious. Romi did not stop. He swerved round the animal. Then he put all his
+strength into one final effort.
+</p>
+<p>He covered the last hundred yards at top speed, and then they were out of the forest,
+free-wheeling down the sloping road to the river.</p>
+<p>‘Look!’ shouted Teju. ‘The bridge is on fire!’</p>
+<p>Burning embers had floated down on to the small wooden bridge, and the dry,
+ancient timber had quickly caught fire. It was now burning fiercely</p>
+<p>Romi did not hesitate. He left the road, riding the bicycle over sand and pebbles.
+Then with a rush they went down the river-bank and into the water</p>
+<p>The next thing they knew they were splashing around, trying to find each other in the
+darkness.</p>
+<p>‘Help!’ cried Teju. ‘I’m drowning!’</p>
+<p><b>6</b></p>
+<p>‘Don’t be silly,’ said Romi. ‘The water isn’t deep – it’s only up to the knees. Come here
+and grab hold of me.’</p>
+<p>Teju splashed across and grabbed Romi by the belt.</p>
+<p>‘The water’s so cold,’ he said, his teeth chattering.</p>
+<p>‘Do you want to go back and warm yourself?’ asked Romi. ‘Some people are never
+satisfied. Come on, help me get the bicycle up. It’s down here, just where we are
+standing.’
+</p>
+<p>Together they managed to heave the bicycle out of the water and stand it upright.
+</p>
+<p>‘Now sit on it,’ said Romi. ‘I’ll push you across.’</p>
+<p>‘We’ll be swept away,’ said Teju.
+</p>
+<p>‘No, we won’t. There’s not much water in the river at this time of the year. But the
+current is quite strong in the middle, so sit still. All right?’
+</p>
+<p>‘All right,’ said Teju nervously.
+</p>
+<p>Romi began guiding the bicycle across the river, one hand on the seat and one hand
+on the handlebar. The river was shallow and sluggish in midsummer; even so, it was
+quite swift in the middle. But having got safely out of the burning forest, Romi was in
+no mood to let a little river defeat him.
+</p>
+<p>He kicked off his shoes, knowing they would be lost; and then gripping the smooth
+stones of the river-bed with his toes, he concentrated on keeping his balance and getting
+the bicycle and Teju through the middle of the stream. The water here came up to his
+waist, and the current would have been too strong for Teju. But when they reached the
+shallows, Teju got down and helped Romi push the bicycle.</p>
+<p>They reached the opposite bank, and sank down on the grass</p>
+<p>‘We can rest now,’ said Romi. ‘But not all night – I’ve got some medicine to give to
+my father.’ He felt in his pockets and found that the tablets in their envelope, had turned
+into a soggy mess. ‘Oh well, he had to take them with water anyway,’ he said.</p>
+<p>They watched the fire as it continued to spread through the forest. It had crossed the
+road down which they had come. The sky was a bright red, and the river reflected the
+colour of the sky.
+</p>
+<p>Several elephants had found their way down to the river. They were cooling off by
+spraying water on each other with their trunks. Further downstream there were deer and
+other animals.
+</p>
+<p>Romi and Teju looked at each other in the glow from the fire. They hadn’t known
+each other very well before. But now they felt they had been friends for years.
+</p>
+<p>‘What are you thinking about?’ asked Teju.
+</p>
+<p>‘I’m thinking,’ said Romi, ‘that even if the fire is out in a day or two, it will be a
+long time before the bridge is repaired. So it will be a nice long holiday from school!’</p>
+<p>‘But you can walk across the river,’ said Teju. ‘You just did it.’</p>
+<p>‘Impossible,’ said Romi. ‘It’s much too swift.’</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter3.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter5.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

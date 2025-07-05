@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Two</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Two</p>
+    </h1>
+    <p>BINYA seldom closed the blue umbrella. Even when she had it in the
+house, she left it lying open in a corner of the room. Sometimes Bijju
+snapped it shut, complaining that it got in the way. She would open it
+again a little later. It wasn’t beautiful when it was closed.
+</p>
+<p>Whenever Binya went out—whether it was to graze the cows, or fetch
+water from the spring, or carry milk to the little tea shop on the Tehri road
+—she took the umbrella with her. That patch of skyblue silk could always
+be seen on the hillside.
+</p>
+<p>Old Ram Bharosa (Ram the Trustworthy) kept the tea shop on the Tehri
+road. It was a dusty, unmetalled road. Once a day, the Tehri bus stopped
+near his shop and passengers got down to sip hot tea or drink a glass of
+curds. He kept a few bottles of Coca-cola too; but as there was no ice, the
+bottles got hot in the sun and so were seldom opened. He also kept sweets
+and toffees, and when Binya or Bijju had a few coins to spare they would
+spend them at the shop. It was only a mile from the village.
+</p>
+<p>
+  Ram Bharosa was astonished to see Binya’s blue umbrella.
+</p>
+<p>“What have you there, Binya?” he asked.
+</p>
+<p>Binya gave the umbrella a twirl and smiled at Ram Bharosa. She was
+always ready with her smile, and would willingly have lent it to anyone
+who was feeling unhappy.
+</p>
+<p>“That’s a lady’s umbrella,” said Ram Bharosa. “That’s only for MemSahibs. Where did you get it?”
+</p>
+<p>“Someone gave it to me—for my necklace.”</p>
+<p>“You exchanged it for your lucky claw!”
+</p>
+<p>Binya nodded.</p>
+<p>“But what do you need it for? The sun isn’t hot enough—and it isn’t
+meant for the rain. It’s just a pretty thing for rich ladies to play with!”
+</p>
+<p>Binya nodded and smiled again. Ram Bharosa was quite right; it was
+just a beautiful plaything. And that was exactly why she had fallen in love
+with it.</p>
+<p>“I have an idea,” said the shopkeeper. “It’s no use to you, that umbrella.
+Why not sell it to me? I’ll give you five rupees for it.”
+</p>
+<p>“It’s worth fifteen,” said Binya.
+</p>
+<p>“Well, then, I’ll give you ten.”
+</p>
+<p>Binya laughed and shook her head.</p>
+<p>“Twelve rupees?” said Ram Bharosa, but without much hope.
+</p>
+<p>Binya placed a five-paise coin on the counter. “I came for a toffee,” she
+said.
+</p>
+<p>Ram Bharosa pulled at his drooping whiskers, gave Binya a wry look,
+and placed a toffee in the palm of her hand. He watched Binya as she
+walked away along the dusty road. The blue umbrella held him fascinated,
+and he stared after it until it was out of sight.
+</p>
+<p>The villagers used this road to go to the market-town. Some used the
+bus; a few rode on mules; most people walked. Today, everyone on the road
+turned their heads to stare at the girl with the bright blue umbrella.
+</p>
+<p>Binya sat down in the shade of a pine tree. The umbrella, still open, lay
+beside her. She cradled her head in her arms, and presently she dozed off. It
+was that kind of day, sleepily warm and summery.
+</p>
+<p>And while she slept, a wind sprang up.</p>
+<p>It came quietly, swishing gently through the trees, humming softly.
+Then it was joined by other random gusts, bustling over the tops of the
+mountains. The trees shook their heads and came to life. The wind fanned
+Binya’s cheeky. The umbrella stirred on the grass.</p>
+<p>The wind grew stronger, picking up dead leaves and sending them
+spinning and swirling through the air. It got into the umbrella and began to
+drag it over the grass. Suddenly it lifted the umbrella and carried it about six
+feet from the sleeping girl. The sound woke Binya.
+</p>
+<p>She was on her feet immediately, and then she was leaping down the
+steep slope. But just as she was within reach of the umbrella, the wind
+picked it up again and carried it further downhill.</p>
+<p>Binya set off in pursuit. The wind was in a wicked, playful mood. It
+would leave the umbrella alone for a few moments; but, as soon as Binya
+came near, it would pick up the umbrella again and send it bouncing,
+floating, dancing away from her.
+</p>
+<p>The hill grew steeper. Binya knew that after twenty yards it would fall
+away in a precipice. She ran faster. And the wind ran with her, ahead of her,
+and the blue umbrella stayed up with the wind.</p>
+<p>
+  A fresh gust picked it up and carried it to the very edge of the cliff.
+There it balanced for a few seconds, before toppling over, out of sight.
+</p>
+<p>
+  Binya ran to the edge of the cliff. Going down on her hands and knees,
+she peered down the cliff-face. About a hundred feet below, a small stream
+rushed between great boulders. Hardly anything grew on the cliff-face—just
+a few stunted bushes, and, halfway down, a wild cherry tree growing
+crookedly out of the rocks and hanging across the chasm. The umbrella had
+stuck in the cherry tree.
+
+</p>
+<p>Binya didn’t hesitate. She may have been timid with strangers, but she
+was at home on a hillside. She stuck her bare leg over the edge of the cliff
+and began climbing down. she kept her face to the hillside, feeling her way
+with her feet, only changing her handhold when she knew her feet were
+secure. Sometimes she held on to the thorny bilberry bushes, but she did not
+trust the other plants, which came away very easily.
+</p>
+<p>Loose stones rattled down the cliff. Once on their way, the stones did
+not stop until they reached the bottom of the hill; and they took other stones
+with them, so that there was soon a cascade of stones, and Binya had to be
+very careful not to start a landslide.</p>
+<p>As agile as a mountain-goat, she did not take more than five minutes to
+reach the crooked cherry tree. But the most difficult task remained. She had
+to crawl along the trunk of the tree, which stood out at right angles from the
+cliff. Only by doing this could she reach the trapped umbrella.
+</p>
+<p>Binya felt no fear when climbing trees. She was proud of the fact that
+she could climb them as well as Bijju. Gripping the rough cherry bark with
+her toes, and using her knees as leverage, she crawled along the trunk of the
+projecting tree until she was almost within reach of the umbrella. She
+noticed with dismay that the blue cloth was torn in a couple of places.</p>
+<p>She looked down; and it was only then that she felt afraid. She was right
+over the chasm, balanced precariously about eighty feet above the boulderstrewn stream. Looking down, she felt quite dizzy. Her hands shook, and
+the tree shook too. If she slipped now, there was only one direction in which
+she could fall—down, down, into the depths of that dark and shadowy
+ravine</p>
+<p>There was only one thing to do; concentrate on the patch of blue just a
+couple of feet away from her.</p>
+<p>She did not look down or up, but straight ahead; and willing herself
+forward, she managed to reach the umbrella.</p>
+<p>She could not crawl back with it in her hands. So, after dislodging it
+from the forked branch in which it had stuck, she let it fall, still open, into
+the ravine below. Cushioned by the wind, the umbrella floated serenely
+downwards, landing in a thicket of nettles.
+</p>
+<p>Binya crawled back along the trunk of the cherry tree.
+</p>
+<p>Twenty minutes later she emerged from the nettle clump, her precious
+umbrella held aloft. She had nettle stings all over her legs, but she was
+hardly aware of the smarting. She was as immune to nettles as Bijju was to
+bees.</p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="One.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="Three.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

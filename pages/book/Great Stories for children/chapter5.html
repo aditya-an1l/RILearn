@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter5</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Tiger My Friend</p>
+    </h1>
+    <p><b>1</b></p>
+    <p>On the left bank of the river Ganges, where it flows out from the Himalayan
+foothills, is a long stretch of heavy forest. There are villages on the fringe of the
+forest, inhabited by farmers and herdsmen. Big-game hunters came to the area for many
+years, and as a result the animals had been getting fewer. The trees, too, had been
+disappearing slowly; and as the animals lost their food and shelter, they moved further
+into the foothills.
+</p>
+<p>There was a time when this forest had provided a home for some thirty to forty
+tigers, but men in search of skins and trophies had shot them all, and now there
+remained only one old tiger in the jungle. The hunters had tried to get him, too, but he
+was a wise and crafty tiger, who knew the ways of man, and so far he had survived all
+attempts on his life.</p>
+<p>Although the tiger had passed the prime of his life, he had lost none of his majesty.
+His muscles rippled beneath the golden yellow of his coat, and he walked through the
+long grass with the confidence of one who knew that he was still a king, although his
+subjects were fewer. His great head pushed through the foliage, and it was only his tail,
+swinging high, that sometimes showed above the sea of grass.
+</p>
+<p>He was heading for water, the water of a large marsh, where he sometimes went to
+drink or cool off. The marsh was usually deserted except when the buffaloes from a
+nearby village were brought there to bathe or wallow in the muddy water.
+</p>
+<p>The tiger waited in the shelter of a rock, his ears pricked for any unfamiliar sound.
+He knew that it was here that hunters sometimes waited for him with guns.</p>
+<p>He walked into the water, amongst the water-lilies, and drank slowly. He was
+seldom in a hurry when he ate or drank.</p>
+<p>He raised his head and listened, one paw suspended in the air.</p>
+<p>A strange sound had come to him on the breeze, and he was wary of strange sounds.
+So he moved swiftly into the shelter of the tall grass that bordered the marsh, and
+climbed a hillock until he reached his favourite rock. This rock was big enough to hide
+him and to give him shade.
+</p>
+<p>The sound he had heard was only a flute, sounding thin and reedy in the forest. It
+belonged to Nandu, a slim brown boy who rode a buffalo. Nandu played vigorously on
+the flute. Chottu, a slightly smaller boy, riding another buffalo, brought up the rear of the
+herd.</p>
+<p>There were eight buffaloes in the herd, which belonged to the families of Nandu and
+Chottu, who were cousins. Their fathers sold buffalo-milk and butter in villages further
+down the river</p>
+<p>The tiger had often seen them at the marsh, and he was not bothered by their
+presence. He knew the village folk would leave him alone as long as he did not attack
+their buffaloes. And as long as there were deer in the jungle, he would not be interested
+in other prey</p>
+<p>He decided to move on and find a cool shady place in the heart of the jungle, where
+he could rest during the hot afternoon and be free of the flies and mosquitoes that
+swarmed around the marsh. At night he would hunt.
+</p>
+<p>With a lazy grunt that was half a roar, ‘A-oonh!’ – he got off his haunches and
+sauntered off into the jungle.</p>
+<p>The gentlest of tigers’ roars can be heard a mile away, and the boys, who were
+barely fifty yards distant, looked up immediately.
+</p>
+<p>‘There he goes!’ said Nandu, taking the flute from his lips and pointing with it
+towards the hillock. ‘Did you see him?’
+</p>
+<p>‘I saw his tail, just before he disappeared. He’s a big tiger!’</p>
+<p>‘Don’t’ call him tiger. Call him Uncle.’
+</p>
+<p>‘Why?’ asked Chottu.</p>
+<p>‘Because it’s unlucky to call a tiger a tiger. My father told me so. But if you meet a
+tiger, and call him Uncle, he will leave you alone.’
+</p>
+<p>‘I see,’ said Chottu. ‘You have to make him a relative. I’ll try and remember that.’</p>
+<p>The buffaloes were now well into the march, and some of them were lying down in
+the mud. Buffaloes love soft wet mud and will wallow in it for hours. Nandu and Chottu
+were not so fond of the mud, so they went swimming in deeper water. Later, they rested
+in the shade of an old silk-cotton tree.</p>
+<p>It was evening, and the twilight fading fast, when the buffalo herd finally made its
+way homeward, to be greeted outside the village by the barking of dogs, the gurgle of
+hookah-pipes, and the homely smell of cow-dung smoke.</p>
+<p><b>2</b></p>
+<p>The following evening, when Nandu and Chottu came home with the buffalo herd, they
+found a crowd of curious villagers surrounding a jeep in which sat three strangers with
+guns. They were hunters, and they were accompanied by servants and a large store of
+provisions.</p>
+<p>They had heard that there was a tiger in the area, and they wanted to shoot it</p>
+<p>These men had money to spend; and, as most of the villagers were poor, they were
+prepared to go into the forest to make a machaan or tree-platform for the hunters. The
+platform, big enough to take the three men, was put up in the branches of a tall
+mahogany tree.
+</p>
+<p>Nandu was told by his father to tie a goat at the foot of the tree. While these
+preparations were being made, Chottu slipped off and circled the area, with a plan of
+his own in mind. He had no wish to see the tiger killed and he had decided to give it
+some sort of warning. So he tied up bits and pieces of old clothing on small trees and
+bushes. He knew the wily old king of the jungle would keep well away from the area if
+he saw the bits of clothing – for where there were men’s clothes, there would be men.
+</p>
+<p>The vigil kept by the hunters lasted all through the night, but the tiger did not come
+near the tree. Perhaps he’d got Chottu’s warning; or perhaps he wasn’t hungry.
+</p>
+<p>It was a cold night, and it wasn’t long before the hunters opened their flasks of rum.
+Soon they were whispering among themselves; then they were chattering so loudly that
+no wild animal would have come anywhere near them. By morning they were fast
+asleep</p>
+<p>They looked grumpy and shamefaced as they trudged back to the village.</p>
+<p>‘Wrong time of the year for tiger,’ said the first hunter.</p>
+<p>‘Nothing left in these parts,’ said the second.
+</p>
+<p>‘I think I’ve caught a cold,’ said the third. And they drove away in disgust.</p>
+<p>It was not until the beginning of the summer that something happened to alter the hunting
+habits of the tiger and bring him into conflict with the villagers.</p>
+<p>There had been no rain for almost two months, and the tall jungle grass had become
+a sea of billowy dry yellow. Some city-dwellers, camping near the forest, had been
+careless while cooking and had started a forest fire. Slowly it spread into the interior,
+from where the acrid fumes smoked the tiger out towards the edge of the jungle. As
+night came on, the flames grew more vivid, the smell stronger. The tiger turned and
+made for the marsh, where he knew he would be safe provided he swam across to the
+little island in the centre.</p>
+<p>Next morning he was on the island, which was untouched by the fire. But his
+surroundings had changed. The slopes of the hills were black with burnt grass, and most
+of the tall bamboo had disappeared. The deer and the wild pig, finding that their natural
+cover had gone, moved further east.
+</p>
+<p>When the fire had died down and the smoke had cleared, the tiger prowled through
+the forest again but found no game. He drank at the marsh and settled down in a shady
+spot to sleep the day away</p>
+<p>The tiger spent four days looking for game. By that time he was so hungry that he
+even resorted to rooting among the dead leaves and burnt-out stumps of trees, searching
+for worms and beetles. This was a sad comedown for the king of the jungle. But even
+now he hesitated to leave the area in search of new hunting grounds, for he had a deep
+fear and suspicion of the unknown forests further east – forests that were fast being
+swept away by human habitation. He could have gone north, into the high mountains, but
+they did not provide him with the long grass he needed for cover.
+</p>
+<p>At break of day he came to the marsh. The water was now shallow and muddy, and a
+green scum had spread over the top. He drank, and then lay down across his favourite
+rock, hoping for a deer; but none came. He was about to get up and lope away when he
+heard an animal approach.</p>
+<p>The tiger at once slipped off his rock and flattened himself on the ground, his tawny
+stripes merging with the dry grass.</p>
+<p>A buffalo emerged from the jungle and came to the water. The buffalo was alone. He
+was a big male, and his long curved horns lay right back across his shoulders. He
+moved leisurely towards the water, completely unaware of the tiger’s presence.</p>
+<p>The tiger hesitated before making his charge.</p>
+<p>It was a long time – many years – since he had killed a buffalo, and he knew
+instinctively that the villagers would be angry. But the pangs of hunger overcame his
+caution. There was no morning breeze, everything was still, and the smell of the tiger
+did not reach the buffalo. A monkey chattered on a nearby tree, but his warning went
+unheeded.
+</p>
+<p>Crawling stealthily on his stomach, the tiger skirted the edge of the marsh and
+approached the buffalo from behind. The buffalo was standing in shallow water,
+drinking, when the tiger charged from the side and sank his teeth into his victim’s thigh.
+</p>
+<p>The buffalo staggered, but turned to fight. He snorted and lowered his horns at the
+tiger. But the big cat was too fast for the brave buffalo. He bit into the other leg and the
+buffalo crashed to the ground. Then the tiger moved in for the kill.
+</p>
+<p>After resting, he began to eat. Although he had been starving for days, he could not
+finish the huge carcass. And so he quenched his thirst at the marsh and dragged the
+remains of the buffalo into the bushes, to conceal it from jackals and vultures; then he
+went off to find a place to sleep.
+</p>
+<p>He would return to the kill when he was hungry.
+</p>
+<p><b>3</b></p>
+<p>The herdsmen were naturally very upset when they discovered that a buffalo was
+missing. And next day, when Nandu and Chottu came running home to say that they had
+found the half-eaten carcass near the marsh, the men of the village grew angry. They
+knew that once the tiger realised how easy it was to kill their animals, he would make a
+habit of doing so.</p>
+<p>Kundan Singh, Nandu’s father, who owned the buffalo, said he would go after the
+tiger himself.</p>
+<p>‘It’s too late now,’ said his wife. ‘You should never have let the buffalo roam on its
+own.’</p>
+<p>‘He had been on his own before. This is the first time the tiger has attacked one of
+our animals.’</p>
+<p>‘He must have been hungry,’ said Chottu.
+</p>
+<p>‘Well, we are hungry too,’ said Kundan Singh. ‘Our best buffalo – the only male in
+the herd. It will cost me at least two thousand rupees to buy another.’
+</p>
+<p>‘The tiger will kill again,’ said Chottu’s father. ‘Many years ago there was a tiger
+who did the same thing. He became a cattle-killer.’</p>
+<p>‘Should we send for the hunters?’</p>
+<p>‘No, they are clumsy fools. The tiger will return to the carcass for another meal. You
+have a gun?’</p>
+<p>Kundan Singh smiled proudly and, going to a cupboard, brought out a doublebarrelled gun. It looked ancient!
+</p>
+<p>‘My father bought it from an Englishman,’ he said.</p>
+<p>‘How long ago was that?’</p>
+<p>‘About the time I was born.’</p>
+<p>‘And have you ever used it?’ asked Chottu’s father, looking at the old gun with
+distrust.</p>
+<p>‘A few years ago I let it off at some bandits. Don’t you remember? When I fired,
+they did not stop running until they had crossed the river.’
+</p>
+<p>‘Yes, but did you hit anyone?’</p>
+<p>‘I would have, if someone’s goat hadn’t got in the way.’</p>
+<p>‘We had roast meat that night,’ said Nandu.
+</p>
+<p>Accompanied by Chottu’s father and several others, Kundan set out for the marsh,
+where, without shifting the buffalo’s carcass – for they knew the tiger would not come
+near them if he suspected a trap – they made another tree-platform in the branches of a
+tall tree some thirty feet from the kill.</p>
+<p>Late that evening, Kundan Singh and Chottu’s father settled down for the night on
+their rough platform.
+</p>
+<p>Several hours passed and nothing but a jackal was seen by the watchers. And then,
+just as the moon came up over the distant hills, the two men were startled by a low ‘Aoonh’, followed by a suppressed, rumbling growl.
+</p>
+<p>Kundan tightened his grip on the old gun. There was complete silence for a minute
+or two, then the sound of stealthy footfalls on the dead leaves beneath the tree.
+</p>
+<p>A moment later the tiger walked out into the moonlight and stood over his kill.
+</p>
+<p>At first Kundan could do nothing. He was completely taken aback by the size of the
+tiger. Chottu’s father had to nudge him, and then Kundan quickly put the gun to his
+shoulder, aimed at the tiger’s head, and pressed the trigger.
+</p>
+<p>The gun went off with a flash and two loud bangs, as Kundan fired both barrels.
+There was a tremendous roar. The tiger rushed at the tree and tried to leap into the
+branches. Fortunately, the platform had been built at a good height, and the tiger was
+unable to reach it.</p>
+<p>He roared again and then bounded off into the forest</p>
+<p>‘What a tiger!’ exclaimed Kundan, half in fear and half in admiration.</p>
+<p>‘You missed him completely,’ said Chottu’s father.</p>
+<p>‘I did not,’ said Kundan. ‘You heard him roar! Would he have been so angry if he
+had not been hit?’
+</p>
+<p>‘Well, if you have only wounded him, he will turn into a man-eater – and where will
+that leave us?’
+</p>
+<p>‘He won’t be back,’ said Kundan. ‘He will leave this area.’
+</p>
+<p>During the next few days the tiger lay low. He did not go near the marsh except when
+it was very dark and he was very thirsty. The herdsmen and villagers decided that the
+tiger had gone away. Nandu and Chottu – usually accompanied by other village youths,
+and always carrying their small hand-axes – began bringing the buffaloes to the marsh
+again during the day; they were careful not to let any of them stray far from the herd.
+</p>
+<p>But one day, while the boys were taking the herd home, one of the buffaloes lagged
+behind. Nandu did not realise that an animal was missing until he heard an agonised
+bellow behind him. He glanced over his shoulder just in time to see the tiger dragging
+the buffalo into a clump of bamboo. The herd sensed the danger, and the buffaloes
+snorted with fear as they hurried along the forest path. To urge them forward and to
+warn his friends, Nandu cupped his hands to his mouth and gave a yodelling call.
+</p>
+<p>The buffaloes bellowed, the boys shouted, and the birds flew shrieking from the
+trees. Together they stampeded out of the forest. The villagers heard the thunder of
+hoofs, and saw the herd coming home amidst clouds of dust.
+</p>
+<p>‘The tiger!’ called Nandu. ‘He is back! He has taken another buffalo!’</p>
+<p>‘He is afraid of us no longer,’ thought Chottu. And now everyone will hate him and
+do their best to kill him.</p>
+<p>‘Did you see where he went?’ asked Kundan Singh, hurrying up to them.
+</p>
+<p>‘I remember the place,’ said Nandu.</p>
+<p>‘Then there is no time to lose,’ said Kundan. ‘I will take my gun and a few men, and
+wait near the bridge. The rest of you must beat the jungle from this side and drive the
+tiger towards me. He will not escape this time, unless he swims across the river!’
+</p>
+<p><b>4</b></p>
+<p>Kundan took his men and headed for the suspension bridge over the river, while the
+others, guided by Nandu and Chottu, went to the spot where the tiger had seized the
+buffalo.</p>
+<p>The tiger was still eating when he heard the men coming. He had not expected to be
+disturbed so soon. With an angry ‘Whoof!’ he bounded into the jungle, and watched the
+men – there were some twenty of them – through a screen of leaves and tall grass.
+</p>
+<p>The men carried hand drums slung from their shoulders, and some carried sticks and
+spears. After a hurried consultation, they strung out in a line and entered the jungle
+beating their drums.
+</p>
+<p>The tiger did not like the noise. He went deeper into the jungle. But the men came
+after him, banging away on their drums and shouting at the top of their voices. They
+advanced singly or in pairs, but nowhere were they more than fifteen yards apart.
+</p>
+<p>The tiger could easily have broken through this slowly advancing semi-circle of men
+– one swift blow from his paw would have felled the strongest of them – but his main
+object was to get away from the noise. He hated and feared the noise made by humans.
+</p>
+<p>He was not a man-eater and he would not attack a man unless he was very angry or
+very frightened; and as yet he was neither. He had eaten well, and he would have liked
+to rest – but there would be no rest for him until the men ceased their tremendous clatter
+and din.</p>
+<p>Nandu and Chottu kept close to their elders, knowing it wouldn’t be safe to go back
+on their own. Chottu felt sorry for the tiger.
+</p>
+<p>‘Do they have to kill the tiger?’ he asked. ‘If they drive him across the river he
+won’t come back, will he?’</p>
+<p>‘Who knows?’ said Nandu. ‘He has found it’s easy to kill our buffaloes, and when
+he’s hungry he’ll come again. We have to live too.’
+</p>
+<p>Chottu was silent. He could see no way out for the tiger.
+</p>
+<p>For an hour the villagers beat the jungle, shouting, drumming, and trampling the
+undergrowth.</p>
+<p>The tiger had no rest. Whenever he was able to put some distance between himself
+and the men, he would sink down in some shady spot to rest; but, within a few minutes,
+the trampling and drumming would come nearer, and with an angry snarl he would get
+up again and pad northwards, along the narrowing strip of jungle, towards the bridge
+across the river.</p>
+<p>It was about noon when the tiger finally came into the open. The boys had a clear
+view of him as he moved slowly along, now in the open with the sun glinting on his
+glossy side, now in the shade or passing through the shorter grass. He was still out of
+range of Kundan Singh’s gun, but there was no way in which he could retreat.</p>
+<p>He disappeared among some bushes but soon reappeared to retrace his steps. The
+beaters had done their work well. The tiger was now only about a-hundred-and-fifty
+yards from the place where Kundan Singh waited.</p>
+<p>The beat had closed in, the men were now bunched together. They were making a
+great noise, but nothing moved.</p>
+<p>Chottu, watching from a distance, wondered: Has he slipped through the beaters?
+And in his heart he hoped so.
+</p>
+<p>Tins clashed, drums beat, and some of the men poked into the reeds along the river
+bank with their spears or bamboo sticks. Perhaps one of these thrusts found its mark,
+because at last the tiger was roused, and with an angry, desperate snarl he charged out
+of the reeds, splashing his way through an inlet of mud and water.
+</p>
+<p>Kundan Singh fired and missed.
+</p>
+<p>The tiger rushed forward, making straight for the only way across the river – the
+suspension bridge that crossed it, providing a route into the hills beyond.</p>
+<p>The suspension bridge swayed and trembled as the big tiger lurched across it.
+Kundan fired again, and this time the bullet grazed the tiger’s shoulder.
+</p>
+<p>The tiger bounded forward, lost his footing on the unfamiliar, slippery planks of the
+swaying bridge, and went over the side, falling headlong into the swirling water of the
+river.</p>
+<p>He rose to the surface once, but the current took him under and away, and before
+long he was lost to view.</p>
+<p><b>5</b></p>
+<p>At first the villagers were glad – they felt their buffaloes were safe. Then they began to
+feel that something had gone out of their lives, out of the life of the forest. The forest
+had been shrinking year by year, as more people had moved into the area; but as long as
+the tiger had been there and they had heard him roar at night, they had known there was
+still some distance between them and the ever-spreading towns and cities. Now that the
+tiger had gone, it was as though a protector had gone.
+</p>
+<p>The boys lay flat on their stomachs on their little mud island, and watched the
+monsoon clouds gathering overhead.
+</p>
+<p>‘The king of the jungle is dead,’ said Nandu. ‘There are no more tigers.’</p>
+<p>‘There have to be tigers,’ said Chottu. ‘Can there be an India without tigers?’</p>
+<p>The river had carried the tiger many miles away from his old home, from the forest he
+had always known, and brought him ashore on the opposite bank of the river, on a strip
+of warm yellow sand. Here he lay in the sun, quite still, breathing slowly</p>
+<p>Vultures gathered and waited at a distance, some of them perching on the branches of
+nearby trees. But the tiger was more drowned than hurt, and as the river water oozed
+out of his mouth, and the warm sun made new life throb through his body, he stirred and
+stretched, and his glazed eyes came into focus. Raising his head, he saw trees and tall
+grass.
+</p>
+<p>Slowly he heaved himself off the ground and moved at a crouch to where the tall
+grass waved in the afternoon breeze. Would he be hunted again, and shot at? There was
+no smell of man. The tiger moved forward with greater confidence.
+</p>
+<p>There was, however, another smell in the air, a smell that reached back to the time
+when he was young and fresh and full of vigour; a smell that he had almost forgotten but
+could never really forget – the smell of a tigress.</p>
+<p>He lifted his head, and new life surged through his limbs. He gave a deep roar, ‘A-
+oonh!’ and moved purposefully through the tall grass. And the roar came back to him,
+calling him, urging him forward; a roar that meant there would be more tigers in the
+land!
+</p>
+<p>That night, half asleep on his cot, Chottu heard the tigers roaring to each other across
+the river, and he recognised the roar of his own tiger. And from the vigour of its roar he
+knew that it was alive and safe; and he was glad.
+</p>
+<p>‘Let there be tigers forever,’ he whispered into the darkness before he fell asleep.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter4.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter6.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

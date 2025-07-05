@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter12</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Goodbye, Miss Mackenzie</p>
+    </h1>
+    <p>he Oaks, Holly Mount, The Parsonage, The Pines, Dumbarnie, Mackinnon’s Hall,
+and Windermere. These are names of some of the old houses that still stand on the
+outskirts of one of the larger Indian hill-stations. They were built over a hundred years
+ago by British settlers who sought relief from the searing heat of the plains. A few fell
+into decay and are now inhabited by wild cats, owls, goats, and the occasional muledriver. Others survive.</p>
+<p>Among these old mansions stands a neat, white-washed cottage, Mulberry Lodge.
+And in it lived an elderly British spinster named Miss Mackenzie. She was sprightly
+and wore old-fashioned but well-preserved dresses. Once a week, she walked up to
+town and bought butter, jam, soap and sometimes a bottle of eau-de-cologne.</p>
+<p>Miss Mackenzie had lived there since her teens, before World War I. Her parents,
+brother, and sister were all dead. She had no relatives in India, and lived on a small
+pension and gift parcels sent by a childhood friend. She had few visitors – the local
+padre, the postman, the milkman. Like other lonely old people, she kept a pet, a large
+black cat with bright, yellow eyes.</p>
+<p>In a small garden, she grew dahlias, chrysanthemums, gladioli and a few rare
+orchids. She knew a great deal about wild flowers, trees, birds, and insects. She never
+seriously studied them, but had an intimacy with all that grew and flourished around
+her.
+</p>
+<p>It was September, and the rains were nearly over. Miss Mackenzie’s African
+marigolds were blooming. She hoped the coming winter wouldn’t be too severe
+because she found it increasingly difficult to bear the cold. One day, as she was
+puttering about in her garden, she saw a schoolboy plucking wild flowers on the slope
+above the cottage. ‘What are you up to, young man?’ she called.
+</p>
+<p>Alarmed, the boy tried to dash up the hillside, but slipped on pine needles and slid
+down the slope into Miss Mackenzie’s nasturtium bed. Finding no escape, he gave a
+bright smile and said, ‘Good morning, Miss.’</p>
+<p>‘Good morning,’ said Miss Mackenzie severely. ‘Would you mind moving out of my
+flower bed?’</p>
+<p>The boy stepped gingerly over the nasturtiums, and looked at Miss Mackenzie with
+appealing eyes.</p>
+<p>‘You ought to be in school,’ she said. ‘What are you doing here?’
+</p>
+<p>‘Picking flowers, Miss.’ He held up a bunch of ferns and wild flowers.
+</p>
+<p>‘Oh,’ Miss Mackenzie was disarmed. It had been a long time since she had seen a
+boy taking an interest in flowers.
+</p>
+<p>‘Do you like flowers?’ she asked.
+</p>
+<p>‘Yes, Miss. I’m going to be a botan…a botanitist.’
+</p>
+<p>‘You mean a botanist?’
+</p>
+<p>‘Yes, Miss.’</p>
+<p>‘That’s unusual. Do you know the names of these flowers?’
+</p>
+<p>‘This is a buttercup,’ he said, showing her a small golden flower. ‘But I don’t know
+what this is,’ he said, holding out a pale, pink flower with a heart-shaped leaf.
+</p>
+<p>‘It’s a wild begonia,’ said Miss Mackenzie. ‘And that purple stuff is salvia. Do you
+have any books on flowers?’
+</p>
+<p>‘No, Miss.’</p>
+<p>‘Come in and I’ll show you one.’
+</p>
+<p>She led the boy into a small front room crowded with furniture, books, vases, and
+jam jars. He sat awkwardly on the edge of the chair. The cat jumped immediately on to
+his knees and settled down, purring softly.
+</p>
+<p>‘What’s your name?’ asked Miss Mackenzie, as she rummaged through her books.</p>
+<p>‘Anil, Miss.’</p>
+<p>‘And where do you live?’
+</p>
+<p>‘When school closes, I go to Delhi. My father has a business there.’
+</p>
+<p>‘Oh, and what’s that?’
+</p>
+<p>‘Bulbs, Miss.’
+</p>
+<p>‘Flower bulbs?’</p>
+<p>‘No, electric bulbs.’</p>
+<p>‘Ah, here we are!’ she said taking a heavy tome from the shelf. ‘Flora Himaliensis,
+published in 1892, and probably the only copy in India. This is a valuable book, Anil.
+No other naturalist has recorded as many wild Himalayan flowers. But there are still
+many plants unknown to the botanists who spend all their time at microscopes instead
+of in the mountains. Perhaps you’ll do something about that one day.’</p>
+<p>‘Yes, Miss.’
+</p>
+<p>She lit the stove and put the kettle on for tea. And then the old English lady and the
+small Indian boy sat side by side, absorbed in the book. Miss Mackenzie pointed out
+many flowers that grew around the hill-station, while the boy made notes of their names
+and seasons.</p>
+<p>‘May I come again?’ asked Anil, when finally he rose to go.
+</p>
+<p>‘If you like,’ said Miss Mackenzie. ‘But not during school hours. You mustn’t miss
+your classes.’
+</p>
+<p>After that, Anil visited Miss Mackenzie about once a week, and nearly always
+brought a wild flower for her to identify. She looked forward to the boy’s visits.
+Sometimes when more than a week passed and he didn’t come, she would grumble at
+the cat.</p>
+<p>By the middle of October, with only a fortnight left before school closed, snow fell
+on the distant mountains. One peak stood high above the others, a white pinnacle againt
+an azure sky. When the sun set, the peak turned from orange to pink to red.</p>
+<p>‘How high is that mountain?’ asked Anil.
+</p>
+<p>‘It must be over 15,000 feet,’ said Miss Mackenzie. ‘I always wanted to go there,
+but there is no proper road. On the lower slopes, there’ll be flowers that you don’t get
+here: blue gentian, purple columbine.’
+</p>
+<p>The day before school closed, Anil came to say goodbye. As he was about to leave,
+Miss Mackenzie thrust the Flora Himaliensis into his hands. ‘It’s a gift,’ she said.
+</p>
+<p>‘But I’ll be back next year, and I’ll be able to look at it then,’ he protested. ‘Besides,
+it’s so valuable!’
+</p>
+<p>‘But I’ll be back next year, and I’ll be able to look at it then,’ he protested. ‘Besides,
+it’s so valuable!’
+</p>
+<p>‘But, Miss…’
+</p>
+<p>‘Don’t argue.’
+</p>
+<p>The boy tucked the book under his arm, stood at attention, and said, ‘Goodbye, Miss
+Mackenzie.’ It was the first time he had spoken her name.</p>
+<p>Strong winds soon brought rain and sleet, killing the flowers in the garden. The cat
+stayed indoors, curled up at the foot of the bed. Miss Mackenzie wrapped herself in old
+shawls and mufflers, but still felt cold. Her fingers grew so stiff that it took almost an
+hour to open a can of baked beans. Then it snowed, and for several days the milkman
+did not come.
+</p>
+<p>Tired, she spent most of her time in bed. It was the warmest place. She kept a hotwater bottle against her back, and the cat kept her feet warm. She dreamed of spring
+and summer. In three months, the primroses would be out, and Anil would return.</p>
+<p>One night the hot-water bottle burst, soaking the bed. The sun didn’t shine for
+several days, and the blankets remained damp. Miss Mackenzie caught a chill and had
+to keep to her cold, uncomfortable bed.
+</p>
+<p>A strong wind sprang up one night and blew the bedroom window open. Miss
+Mackenzie was too weak to get up and close it. The wind swept the rain and sleet into
+the room. The cat snuggled close to its mistress’s body. Towards morning, the body lost
+its warmth, and the cat left the bed and started scratching about on the floor.
+</p>
+<p>A strong wind sprang up one night and blew the bedroom window open. Miss
+Mackenzie was too weak to get up and close it. The wind swept the rain and sleet into
+the room. The cat snuggled close to its mistress’s body. Towards morning, the body lost
+its warmth, and the cat left the bed and started scratching about on the floor.
+</p>
+<p>The milkman called out a greeting to Miss Mackenzie. There was no answer.
+Knowing she was always up before sunrise, he poked his head in the open window and
+called again</p>
+<p>Miss Mackenzie did not answer. She had gone to the mountain, where the blue
+gentian and purple columbine grow.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter11.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter13.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

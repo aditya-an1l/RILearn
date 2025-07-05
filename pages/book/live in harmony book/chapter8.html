@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter8</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+   <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Eight</p>
+      <p> Building Harmony through Affirmations</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“The happiness of your life depends upon the quality of your thoughts.” –Marcus
+ Aurelius Antoninus
+</p>
+<p> “The language of the heart is the only language that everybody can understand.”–Sri Chinmoy
+</p>
+<p> “I am the greatest.” –Muhammad Ali 
+</p>
+<p class="side">Chapter Story:</p>
+<p> Muhammad Ali grew up in a very poor section of Louisville, Kentucky.  In
+ those days his name was Cassius Clay.  His family did not have very much
+ money.  One of his only possessions was his bicycle. He loved his bicycle and he
+ loved to ride all over the neighborhood. One day somebody took his bicycle from
+ the front of his house.  He was very sad but he was determined to get his bicycle
+ back.  Cassius went looking for his bicycle at the local Boys’ Club.  There he did
+ not find his bicycle, but he saw some young boys who were practicing boxing.
+ He could not take his eyes off them.  He watched how they moved their arms and
+ their feet.  He watched their eyes and how they breathed.  It was as if Cassius
+ were in a trance.   He forgot all about his bicycle.  He felt a powerful feeling well
+ up in his heart.  Suddenly he said to himself,  “I want to be a boxer.  I can
+ become a great boxer.  I will be the greatest boxer of all time!” He asked the box
+ing coach if he could take lessons. </p>
+<p>In 1960, Cassius Clay won the Olympic gold medal in boxing. Then he
+ went on to also become the professional champion of the world. When he con
+verted to the Muslim religion, Cassius changed his name to Muhammad Ali, to
+ show that he was making a new commitment in his life. From the age of twelve,
+ and continuing throughout his boxing career, he repeated his affirmation, “I am
+ the greatest,” thousands and thousands of times.  This helped him tremendously
+ to believe in his goal.  Lo and behold, he achieved his goal.  He became the
+ greatest!
+</p>
+<p class="side">Chapter Overview: 
+</p>
+<p>Affirmations are like messages we give to ourselves.  When Mohammad
+ Ali said, “I am the greatest,” it might sound as if he were bragging.  What he was
+ actually doing was giving himself a positive message.  The message was that
+ even though he was very, very poor, even though he was not good at school, even
+ if nobody else believed in him, he still could be a champion if he believed in him
+self.   
+</p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson #1 – Your first affirmation  
+</p>
+<p>Here is your first affirmation to practice:
+</p>
+<p> There are so many good things in me—
+</p>
+<p> I just close my eyes to clearly see.</p>
+<p> I am a good person, even if I sometimes make mistakes.  What are some of
+ the good things about you?  Put them into a picture or a poem or even just a list.</p>
+<p class="side"> Lesson #2  — Speaking the truth</p>
+<p> I try to speak the truth and do what’s right.</p>
+<p> I soar with integrity, like an eagle in flight.</p>
+<p> Do you stand up for yourself?  It takes a lot of courage to say how you feel
+ or to say, ‘no,’ if you feel something is wrong.  Using some role-plays to create
+ different situations, practice telling someone how you feel or practice telling
+ someone ‘no.’</p>
+<p class="side"> Lesson #3 — Achievement</p>
+<p> There are no limits to what I can achieve,</p>
+<p> If I work hard and just believe.</p>
+<p> I can do anything I want to in my life, if I believe in myself and if I work
+ hard.  What is something you would like to achieve?  Close your eyes and imag-
+ine yourself doing it.  Now repeat the affirmation while you are holding this
+ image of you!!!
+
+</p>
+<p class="side"> Lesson #4 – Good and bad feelings  </p>
+<p>Feelings come and visit me,</p>
+ <p>Happy, or sad, or maybe angry. </p>
+<p>There are many things that I can feel,</p>
+ <p>And all of them are really real.</p>
+ <p>I let bad feelings go away —</p>
+ <p>Feelings that are good can always stay.</p>
+<p>Our feelings are part of who we are, yet our feelings change from day to
+ day or even from minute to minute.  Try to be aware of what you feel right now.
+ Can you say what feeling you are experiencing right now?  Are you happy, sad,
+ angry or frustrated?   This is called owning your feelings or being with your feel
+ings.  Being present to your feelings in this way is very healthy and empowering.
+ Share your feelings with the class or with a partner – only if you want to.</p>
+<p class="side"> Lesson #5 – A magical day
+</p>
+<p>Today can be a magical day, 
+</p>
+<p>Cheerful and positive I will stay.</p>
+<p> Our thoughts are very powerful.   To a great degree, we can shape the kind
+ of experience we are going to have by being conscious of our thoughts.  If we can
+ say a positive affirmation at the start of each day, it can help us to get started on a
+ positive note.  Create some mini skits to show the power of positive and negative
+ thoughts.
+</p>
+<p class="side"> Lesson #6  — Accepting people who are different
+</p>
+<p> I do not see people as black or white,
+</p>
+<p> I see in every heart a special light.</p>
+<p> This affirmation can be very helpful in shaping an accepting attitude
+ towards others.  Inside of everyone is the same kind of invisible heart.  It is
+ important to remind ourselves of this every day.  Try making a group picture with
+ this affirmation written at the top.  This will be a good way to cooperate and to
+ share your feelings about the meaning of the affirmation.
+</p>
+<p class="side">Discussion Questions:</p>
+<p> a) When he was a child he was called Cassius Clay. Later in his life, when he
+ converted to the Muslim religion, Cassius changed his name to Muhammad Ali.
+ Do you know anyone who is a Muslim?  A Muslim is someone who believes in
+ the teachings of the prophet Muhammad, which are written in a book called the
+ Koran. When and where did the prophet Muhammad live?  
+</p>
+<p>b) Did you ever lose something and then, when you went looking for it, you
+ found or discovered something else?</p>
+ <p> c) Did you like practicing affirmations?  Do you think it would be good or helpful
+ to practice them more often? </p>
+ <p>d) What was your favorite affirmation? Can you say why?</p>
+ <p class="side"> Supplemental Activities:</p>
+ <ul>
+    <li><p>Borrow a copy of the Koran from a Muslim friend.  Show it to the class – the
+ beautiful cover and binding, the pages, and the special writing, which is usually
+ Arabic.  If it also has an English translation, choose a part of the Koran to read to
+ the class.</p></li>
+ <li><p>Gather some books and videos about Muhammad Ali.  These can be shared by
+ the class.  There are many lessons to be learned from the life of this amazing
+ man.</p></li>
+ <li><p>Create an affirmation that is special to you. Write it down in beautiful handwrit
+ing on a special piece of paper.  Then decorate the paper with crayons, markers,
+ colored pencils or other art materials.</p></li>
+ <li> <p>There are many books that are collections of useful affirmations.  You can bor
+row one of them from the library if you want to learn more about affirmations.</p></li>
+ </ul>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter7.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter9.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

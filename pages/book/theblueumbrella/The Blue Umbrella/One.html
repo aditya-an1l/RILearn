@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter1</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>one</p>
+    </h1>
+    <p>NEELU! Neelu!” cried Binya.<br>She scrambled barefoot over the rocks, ran over the short summer
+grass, up and over the brow of the hill, all the time calling “Neelu,
+Neelu!”</p>
+<p>Neelu—Blue—was the name of the blue-grey cow. The other cow,
+which was white, was called Gori, meaning Fair One. They were fond of
+wandering off on their own, down to the stream or into the pine forest, and
+sometimes they came back by themselves and sometimes they stayed away
+—almost deliberately, it seemed to Binya.
+</p>
+<p>If the cows didn’t come home at the right time, Binya would be sent to
+fetch them. sometimes her brother Bijju went with her, but these days he
+was busy preparing for his exams and didn’t have time to help with the
+cows.
+</p>
+<p>Binya liked being on her own, and sometimes she allowed the cows to
+lead her into some distant valley, and then they would all be late coming
+home. The cows preferred having Binya with them, because she let them
+wander. Bijju pulled them by their tails if they went too far.
+</p>
+<p>Binya belonged to the mountains, to this part of the Himalayas known
+as Garhwal. Dark forests and lonely hilltops held no terrors for her. It was
+only when she was in the market-town, jostled by the crowds in the bazaar,
+that she felt rather nervous and lost. The town, five miles from the village,
+was also a pleasure resort for tourists from all over India.</p>
+<p>Binya was probably ten. She may have been nine or even eleven, she
+couldn’t be sure because no one in the village kept birthdays; but her
+mother told her she’d been born during a winter when the snow had come
+up to the windows, and that was just over ten years ago, wasn’t it? Two
+years later her father had died; but his passing had made no difference to
+their way of life. They had three tiny terraced fields on the side of the
+mountain, and they grew potatoes, onions, ginger, beans, mustard and
+maize: not enough to sell in the town, but enough to live on.</p>
+<p>Like most mountain girls, Binya was quite sturdy, fair of skin, with pink
+cheeks and dark eyes and her black hair tied in a pigtail. She wore pretty
+glass bangles on her wrists, and a necklace of glass beads. From the
+necklace hung a leopard’s claw. It was a lucky charm, and Binya always
+wore it. Bijju had one, too, only his was attached to a string.
+</p>
+<p>Binya’s full name was Binyadevi, and Bijju’s real name was vijay, but
+everyone called them Binya and Bijju. Binya was two years younger than
+her brother.
+</p>
+<p>She had stopped calling for Neelu; she had heard the cow-bells tinkling,
+and knew the cows hadn’t gone far. Singing to herself, she walked over
+fallen pine-needles into the forest glade on the spur of the hill. She heard
+voices, laughter, the clatter of plates and cups; and stepping through the
+trees, she came upon a party of picnickers.
+</p>
+<p>They were holiday-makers from the plains. The women were dressed in
+bright saris, the men wore light summer shirts, and the children had pretty
+new clothes. Binya, standing in the shadows between the trees, went
+unnoticed; and for some time she watched the picnickers, admiring their
+clothes, listening to their unfamiliar accents, and gazing rather hungrily at
+the sight of all their food. And then her gaze came to rest on a bright blue
+umbrella, a frilly thing for women, which lay open on the grass beside its
+owner</p>
+<p>Now Binya had seen umbrellas before, and her mother had a big black
+umbrella which nobody used any more because the field-rats had eaten
+holes in it, but this was the first time Binya had seen such a small, dainty,
+colourful umbrella; and she fell in love with it. The umbrella was like a
+flower, a great blue flower that had sprung up on the dry brown hillside.
+</p>
+<p>She moved forward a few paces so that she could see the umbrella
+better. As she came out of the shadows into the sunlight, the picnickers saw
+her.
+</p>
+<p>“Hello, look who’s here!” exclaimed the older of the two women. “A
+little village girl!”
+</p>
+<p>“Isn’t she pretty?” remarked the other. “But how torn and dirty her
+clothes are!” it did not seem to bother them that Binya could hear and
+understand everything they said about her.</p>
+<p>“They’re very poor in the hills,” said one of the men.</p>
+<p>“Then let’s give her something to eat.” And the older woman beckoned
+to Binya to come closer.</p>
+<p>Hesitantly, nervously, Binya approached the group. Normally she would
+have turned and fled; but the attraction was the pretty blue umbrella. It had
+cast a spell over her, drawing her forward almost against her will.</p>
+<p>“What’s that on her neck?” asked the younger woman.</p>
+<p>“A necklace of sorts.”</p>
+<p>“It’s a pendant—see, there’s a claw hanging from it!”</p>
+<p>“It’s a tiger’s claw,” said the man beside her. (He had never seen a
+tiger’s claw.) “A lucky charm. These people wear them to keep away evil
+spirits.” He looked to Binya for confirmation, but Binya said nothing.</p>
+<p>“Oh, I want one too!” said the woman, who was obviously his wife.</p>
+<p>“You can’t get them in shops.”
+</p>
+<p>“Buy hers, then. Give her two or three rupees, she’s sure to need the
+money.”</p>
+<p>The man, looking slightly embarrassed but anxious to please his young
+wife, produced a two-rupee note and offered it to Binya, indicating that he
+wanted the pendant in exchange. Binya put her hand to the necklace, half
+afraid that the excited woman would snatch it away from her. Solemnly she
+shook her head. The man then showed her a five-rupee note, but again
+Binya shook her head.
+</p>
+<p>“How silly she is!” exclaimed the young woman</p>
+<p>“It may not be hers to sell,” said the man. “But i’ll try again. How much
+do you want—what can we give you?” And he waved his hand towards the
+picnic things scattered about on the grass.
+</p>
+<p>Without any hesitation Binya pointed to the umbrella.
+</p>
+<p>“My umbrella!” exclaimed the young woman. “She wants my umbrella.
+What cheek!”</p>
+<p>“Well, you want her pendant, don’t you?”
+</p>
+<p>“That’s different.”
+</p>
+<p>“Is it?”
+</p>
+<p>The man and his wife were beginning to quarrel with each other.</p>
+<p>“I’ll ask her to go away,” said the older woman. “We’re making such
+fools of ourselves.”
+</p>
+<p>“But I want the pendant!” cried the other petulantly. And then, on an
+impulse, she picked up the umbrella and held it out to Binya. “Here, take
+the umbrella!”</p>
+<p>Binya removed her necklace and held it out to the young woman, who
+immediately placed it round her own neck. Then Binya took the umbrella
+and held it up. It did not look so small in her hands; in fact, it was just the
+right size.
+</p>
+<p>She had forgotten about the picnickers, who were busy examining the
+pendant. She turned the blue umbrella this way and that; looked through the
+bright blue silk at the pulsating sun; and then, still keeping it open, turned
+and disappeared into the forest glade.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="One.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="Three.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

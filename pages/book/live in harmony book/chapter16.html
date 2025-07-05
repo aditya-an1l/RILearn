@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter16</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Sixteen</p>
+      <p>  Good Morning, Meet Your World:
+ Getting to Know the World We Live In  </p>
+    </h1>
+    <p class="side">Chapter Inspiration: </p>
+    <p>“In a world where there is so much to be done, I felt strongly impressed that there must be something for me to do.” –Dorothea Dix</p>
+
+<p>“The world is my country, all mankind are my brethren, and to do good is my religion.” –Thomas Paine</p>
+
+<p>“Change your thoughts and you change your world.” –Norman Vincent Peale</p>
+
+<p>“You are not here merely to make a living. You are here to enable the world to live more amply, with greater vision, and with a finer spirit of hope and achievement. You are here to enrich the world. You impoverish yourself if you forget this errand.” –Woodrow Wilson</p>
+
+<p>“How wonderful it is that nobody need wait a single moment before starting to improve the world.” –Anne Frank, Diary of a Young Girl</p>
+
+<p>“Although the world is full of suffering, it is full also of the overcoming of it.” –Helen Keller</p>
+
+<p>“Let it be our solemn promise to Mother Earth that from now on we shall take very good care of her.” –Sri Chinmoy</p>
+
+<p>“The most powerful factors in the world are clear ideas in the minds of energetic men of good will.” –J. Arthur Thompson</p>
+
+<p>“Don’t worry about the world coming to an end today. It’s already tomorrow in Australia.” –Charles M. Schulz</p>
+
+<p class="side">Chapter Story:
+</p>
+<p>Dag Hammarskjold was  born in 1905 in Sweden.  Dag’s parents were a
+ very important influence in his life.  His father taught him that living a life of
+ service to his country and to humanity was the best kind of life to live.  Dag’s
+ mother taught him that all people are children of God and therefore they are all
+ equal.  From his father and mother Dag gained the strong belief that the whole
+ world was one family.
+</p>
+<p>Dag was an outstanding student at Uppsala University, where he earned his
+ first degree, in the humanities, in 1925.  Dag went on to get a second degree, in
+ economics, in 1928,  a law degree in 1930, and a doctoral degree in 1934.  Dag
+ also spoke and read three other languages besides his own – English, German,
+ and French.  He was an excellent musician and he especially loved Beethoven.
+ Dag also very much enjoyed art.  His favorite artists were the Impressionists, like
+ Claude Monet. He loved to study and discuss philosophy and theology.  In addi
+tion to all this, Dag was an excellent athlete – a good gymnast and skier and an
+ even better mountain climber.  Dag was what is called a renaissance person,
+ because he was interested in and proficient in so many different kinds of things.
+</p>
+<p> Dag’s main interest was in political economics.  Dag worked very hard and
+ did very well in all of his jobs as he advanced from one position to a more impor
+tant position in his career.  He became the Undersecretary of the Ministry of
+ Finance and then the head of the Bank of Sweden – the most important financial
+ job in his country.  In these positions he had many accomplishments.  He created
+ a concept called a ‘planned economy’ which was designed to keep the economy
+ of his country steady and growing.  He developed the idea of the ‘welfare state’,
+ which meant that the government had a responsibility to help those who did not
+ have a job.  After World War II, Dag had a major part in deciding how to rebuild
+ the parts of Europe that were badly damaged by the war and also how to help the
+ people who were suffering with no homes or jobs.</p>
+<p> Even though Dag held these high offices for the Swedish government, he
+ did not get that involved in politics.  He did not like to waste time arguing about
+ politics when there were so many important things to do in the world. In foreign
+ affairs Dag worked continually for economic cooperation between nations, so
+ they could learn to share their wealth and to work together.  He was very involved
+ in the Council of Europe and the Organization of European Economic Coopera
+tion. However he did not believe that his country should join the North Atlantic
+ Treaty Organization, because he felt its focus was too much on military solutions
+ and not on peaceful solutions.</p>
+<p> Dag became the Swedish delegate to the United Nations in 1940 and again
+ from 1951-1953. In 1953, in the vote for Secretary-General of the United Nations,
+ the highest position at the UN, Dag received 57 votes out of 60. He was re-elected
+for a second five-year term in 1957.  Dag decided that to solve some of the world’s
+ problems he would need a good organizational structure for his 4, 000 workers.
+ He created a set of regulations defining the responsibilities of all the delegates and
+ workers at the United Nations. The most important thing for Dag was that they
+ understood that at the United Nations they were working for the whole world - not
+ just their own individual country. 
+</p>
+<p>In 1954-1955, Dag had his first major achievement at the United Nations.
+ He achieved a major diplomatic victory when he personally negotiated the release
+ of American soldiers who had been captured by the Chinese in the Korean War.
+ In his work as Secretary-General Dag worked hard to solve problems on three
+ different continents. In order to prevent conflicts and wars from happening, he
+ created an approach which he called ‘preventive diplomacy’, which means to
+ build bonds of cooperation and communication between people so that they don’t
+ have a fight in the first place.  
+</p>
+<p>Dag used his ideas and his skills to solve quite a few world problems. In
+ Palestine he tried to help the Palestinians and the Israelis work out how they were
+ going to share the land they both wanted to live on.  He also helped to solve con
+flicts in Lebanon, Jordan, Cambodia, Thailand, and Laos. In 1956, an Egyptian
+ leader named Nasser ordered his soldiers to block the Suez Canal and not let any
+ other countries use it.  Israel, France, and Britain wanted to use force to solve the
+ problem, but  Dag was able to stop them from using violence. He and others at
+ the United Nations convinced these countries to try to work things out without
+ violence and they did.  
+</p>
+<p>During these conflicts, Dag created three new ways to help countries stay
+ peaceful and stay on the right track, the track of cooperation.  These three ways
+ were: United Nations Observation Groups – sent to keep an eye on certain situa
+tions; United Nations Offices –created in different countries so the United Nations
+ could communicate with and help people in those countries more quickly; and
+ United Nations Peacekeeper Troops, also called the UN Emergency Force 
+which were asked to go to areas of conflict to make sure nobody used violence to
+ solve conflicts.  Because of all these new ideas and efforts by Dag, the position of
+ the Secretary-General became even more important, because the Secretary-Gener
+al came to be seen as the Executive of Peace Operations in the whole world.</p>
+<p> In 1960, there were major problems in the newly independent country of
+ Congo.  The new government there was  facing a mutiny of its own troops, who
+ were not happy with their pay and the way the new country was developing.
+ Meanwhile, the province of Katanga wanted to separate from the rest of the
+ Congo, and form its own country.  On top of all this, Belgium sent its military
+ troops to use force if necessary to solve the problems there.  The President of the
+ Congo asked the United Nations for help. The United Nations sent a peace-keep
+ing force, with Dag Hammarskjold  in charge of operations. However the situa
+tion became worse.  There were many different groups who were arguing. It was
+ very difficult to resolve so many conflicts at one time. 
+</p>
+<p>Dag did not give up.  He traveled to the Congo to work in person with the
+ Congolese government.  While he was in the Congo, Dag learned that fighting
+ had broken out between the Katanga troops and the United Nations peacekeepers.
+ Dag was determined to stop the fighting and to find a solution to the conflict,
+ especially since the United Nations Peacekeepers did not have heavy weapons
+ and were not supposed to fight a war.  Dag decided to go to speak personally to
+ President Tshombe of Katanga.  This meant he had to take a very dangerous trip,
+ that required tremendous courage. Dag had to fly in a plane to Katanga to have
+ this meeting.  Sadly, sometime during the night of September 17-18, 1961, Dag
+ and fifteen others aboard died when their plane crashed near the border between
+ Dkatnage and North Rhodesia.
+</p>
+<p>After Dag’s death, the publication in 1963 of his journal, entitled  Mark
+ings, revealed the inner depth of the man.  He saw the book as “a sort of White
+ Book concerning my negotiations with myself  and with God”. The entries are
+ spiritual truths given artistic form.  As his journal and his life show us, Dag Ham
+marskjöld was a very spiritual human being, a great leader, and someone who
+ served the world with love and amazing commitment – all things that his parents
+ would have been very proud of. 
+</p>
+<p class="side">Chapter Overview:</p>
+<p>The world we live in is a vast and wondrous place.  There are so many dif
+ferent kinds of people on the planet.  People live in just about any place you can
+ imagine – high up in snow-covered mountains like in Nepal, inside great canyons
+ like the Grand Canyon, in the middle of the desert like the Outback of Australia,
+ on boats floating on lakes and rivers in Southeast Asia, on frozen tundra in north
+ern Canada, in enormous cities like Shanghai, and in many other strange and fas
+cinating places.  Human beings have proven that they can live and thrive in
+ almost any kind of environment.  They have learned how to adapt to all kinds of
+ different circumstances.  They have had to use creativity to solve problems, inge
+nuity to build new kinds of tools, appliances, and homes, and determination to
+ stay in their new places in spite of great challenges.</p>
+<p> In order to become global citizens of planet earth, an important first step is
+ to learn as much as we can about the earth and the people that live upon it.  All
+ people on the planet – no matter how they dress or talk – are our brothers and sis
+ters.  No matter how different we are, we all share the same planet.  As we get to
+ know more about so many special places on the planet, we can also learn about
+ the unique people who live in those places.  Each culture we learn about can
+teach us something new.  Each culture has wisdom that has been passed down
+ from generation to generation through the ancestors to the present day.  Each cul
+ture brings us a special language, music, food, dress, and customs that can make
+ our lives more enjoyable and lively.</p>
+<p> Meanwhile, the expanding population of planet earth is creating big chal
+lenges for all of us.   The current population of earth is over six billion, four hun
+dred million people.   It is increasing by two people every second.  By the year
+ 2020, the population will be 7.5 billion people. How will we feed so many peo
+ple, when hundreds of millions of people go hungry already?  How will we pro
+vide everyone with clean water and a good home to live in?   And how can we
+ preserve the unique differences of all the world cultures as people move from the
+ countryside to the city and from one part of the world to the other?  These are the
+ questions we have to answer as responsible global citizens, who are trying to cre
+ate a world which is a happy and harmonious place for all.</p>
+<p> There are so many ways we can help to answer these questions.  The first
+ way is very easy.  Just celebrate our differences!  Every day we have an opportu
+nity to hear a language different from our own, to smell or taste a new kind of
+ delicious food, to see clothing or touch fabric made in a traditional or artistic way,
+ or to see someone practicing a custom that is new to us.  Let us enjoy them all.
+ When you have an opportunity to meet a person from a faraway land, ask them to
+ tell you about where they come from.</p>
+<p>Once we start to appreciate and enjoy people and things from other places,
+ it is a natural thing for us to want to help the whole world share their cultural her
+itage in a peaceful and fruitful way.  When we see just how beautiful the world is,
+ with so many kinds of faces, we automatically want to help those whose faces
+ may not be that happy because they don’t have proper food, clean water, medi
+cine, or safe shelter. In this chapter we will learn how to appreciate our world and
+ all the people in it.  We will also learn what we can do to help make our world
+ fairer – a place where everyone has the things they need to be happy and safe,
+ and where everyone can celebrate their own culture in harmony.</p>
+<p> Chapter Lessons:</p>
+<p class="side"> Lesson #1 – Our planet </p>
+<p>Look for a minute or two at a picture of the globe taken by the space shut
+tle.  Pay attention to the colors of the globe and the feelings you get when you see
+ it.  Now look at a geographical globe in your classroom that shows the countries
+ on it. The globe shown in the picture taken by the space shuttle is a model of the
+ real globe.  What is the difference between the geographical globe and the real
+ globe?  What colors do you see on the picture of the real globe?  What colors do
+you see on the globe in your classroom?  What is the difference?  Which colors
+ do you think are the ‘real’ colors of planet earth? </p>
+<p>What else do you notice about the globe in your classroom?  Do you see
+ that there are lines between the countries on this globe?  What do the lines repre
+sent?  Who created the lines?  The lines are the borders between countries.  They
+ are created by human beings to mark the boundaries between the territories of
+ countries.  Yet, there are no lines on the actual globe.  In its natural state there are
+ no borders or boundaries on planet earth.  In her natural state, Mother Earth is one
+ place – the home of all people.  She is not naturally divided into countries or ter
+ritories -   human beings have done this. 
+</p>
+<p>Now let’s have a discussion about whether borders and boundaries are nec
+essary.  Let’s also discuss some of the disadvantages of having boundaries and
+ also some of the challenges we would have if we didn’t have any boundaries.
+ Let’s think about these things in terms of the relationships between people.  Then
+ draw a picture or write about your ideas and feelings about the two kinds of
+ globes – the one with boundaries and the natural one without boundaries  If you
+ prefer, you can imagine a world where boundaries were not really necessary;
+ where all people were getting along peacefully and sharing with each other.  Then
+ you can draw a picture or write about the world you imagined.</p>
+<p class="side"> Lesson #2 - The continent game
+</p>
+<p>a) We will break up into six groups, with each group representing one of the six continents. (We will not include Antarctica in this game because it would be too difficult to answer the game questions for Antarctica.) So, we will break up into a North America Group, a South America Group, an Africa Group, a Europe Group, an Asia Group, and an Australia Group. Each group will have a more or less equal number of members and each group will have its own location in different parts of the room. Members of each group will take turns being the leader of the group.</p>
+
+<p>b) When questions are asked, each group will have about thirty seconds to discuss possible answers and to choose one answer. Whoever is the leader of the group will say the answer when the group is ready.</p>
+
+<p>c) The game is a cooperative activity. We will assign five points for every correct answer, but we will be adding up the points from all of the teams to see how many points we can earn before the end of the game. We will record the point total, so that the next time we play the game we can try to transcend our previous point total for the whole class. If a group cannot answer a question within one minute, or if they give an incorrect answer, the other groups will have one minute to help them or to offer an alternate answer. Only one correct answer is needed. If a group helps another group in need, then the helping group gets the five points. This will reinforce the idea that everyone wins when we cooperate! The scores will need to be kept by a designated scorekeeper.</p>
+
+<p>d) The teacher will ask the questions. When the question is asked, each group will have the chance to give one answer. The answers need to be written down by the teacher or a designated scribe. Here are the questions:</p>
+
+<ul>
+  <li><p>Name a country that is found on your continent.</p></li>
+  <li><p>Name a mountain range or desert that is found on your continent.</p></li>
+  <li><p>Name a body of water, such as a lake, ocean, or bay that is found on your continent.</p></li>
+  <li><p>Name a river that is found on your continent.</p></li>
+  <li><p>Name an animal that is native to your continent.</p></li>
+  <li><p>Name an indigenous people or a civilization that lives or lived on your continent.</p></li>
+  <li><p>Name a city that is found on your continent.</p></li>
+  <li><p>Name a famous archeological site, natural park, or environmental treasure that is found on your continent.</p></li>
+  <li><p>Name a famous person who lives or lived on your continent.</p></li>
+  <li><p>Name an important natural resource, mineral, or gem that comes from your country.</p></li>
+</ul>
+
+<p>e) Each round of questions means that each of the above questions is asked one time for each of the six groups. Depending on how much time we have, the game can be played in one round, two rounds, or three rounds. For each additional round, the same questions will be asked, but the answers must be different. No answers may be repeated from the previous round.</p>
+
+<p>f) Once you have played the game several times, you can try to invent more questions. We will have to try to create questions that are not too difficult, and we might have to allow time for preparation before the game, when the new questions can be studied and possible answers can be researched. In addition, if we are brave, we can try to add the continent of Antarctica to the game. To do this we will definitely need to research possible answers to our questions and write the answers down so we can study and practice them.</p>
+
+<p class="side">Lesson #3 -  A precious cup of water</p>
+<p> For this lesson we will give each person a small cup of pure water to put
+ on his or her desk. Take a look at the water in your cup.  This water we use every
+ day for drinking, for washing ourselves and our clothes, for cleaning our cars, and
+ for thousands of other things.  We turn on our faucets every day and the water
+ comes out. We never think about where our water comes from.  We never worry
+ that our water is not clean.
+</p>
+<p>
+     But for hundreds of millions of people around the world, this little cup of
+ pure water is something they have never seen or had.  Many people have no water
+ near to them at all!  They have to walk long distances to get to a well, a river or a
+ lake, and then carry the water back to their homes. Many other people in the
+ world have to drink and use water that is filled with bacteria or chemicals,
+ because the water is polluted and they have no way to clean it.  When people
+ drink water that has bacteria they can get very sick.  One of the most common ill
+nesses from unclean water is diarrhea or dysentery, which hundreds of thousands
+ of people die from every year.  Drinking water with toxic chemicals causes other
+ diseases such as cancer.
+</p>
+<p> We can help the world water situation by learning more about it, so we will
+ really understand why it is important to find solutions to the world problem.  We
+ can also help by telling other people who may not know how bad the situation is.
+ Then, together, we can work on solutions. In the meantime, we can try to con
+serve water in our own homes and communities.  If we save water in our own
+ homes and communities, there will be more fresh water available that we could
+ use in other ways or somehow give to those who need it.  Also, when we save
+ water we save the energy and money it takes to store, transport, and purify the
+ water.  The energy and money we save could also be used in other ways.  Most
+ importantly, every day when we take a drink or wash with our pure water we can
+ be grateful for the precious resource that we have and we can be mindful that so
+ many others in our world suffer without it.</p>
+<p> Note: A great book to read along with this activity is Tip and Tap by Nane Anaan,
+ the wife of the current Secretary-General of the UN.
+</p>
+<p class="side">Lesson #4 - Geography week
+</p>
+<p> For this lesson we will bring in as many maps and globes from home as we
+ can find.  It does not matter if the maps and globes are old or new. If we have
+ older ones it will make our project more interesting, and if we can find very old
+ ones it will be especially fascinating. It will be helpful if everyone labels their
+ maps and globes with their names written on a small piece of tape and put some
+where on the back of the map or on the base of the globe.
+</p>
+<p>a) On Day One, we will gather all of the maps and globes that have been brought in. We will sort them according to their age in three categories: Maps and globes that are less than ten years old; maps and globes that are between ten and twenty years old; and maps and globes that are older than twenty-five years old. If anybody brings in very old maps we can create a fourth category for maps that are older than one hundred years old.</p>
+
+<p>b) Once the maps and globes are sorted by their age, we can begin to sort them according to type of map or globe. Some of them are geographic or cultural maps. They show the different countries of the world. Other maps are geological or topographical. These show different geological formations on the earth. Other kinds of maps might show the forests and deserts of the world, the types of animals that live in the world, or other information.</p>
+
+<p>c) We will decide where and how we are going to display all of our maps and globes. We can display them according to the different types of maps. Then we can label the maps according to their types and their age.</p>
+
+<p>d) There are quite a number of activities we can do with our maps and globes. Here are a few of them:</p>
+
+<ul>
+  <li><p>Find the latitude and longitude lines on the maps and globes. Find the equator on the same maps.</p></li>
+  <li><p>If you want a special challenge, decide on a point on the map or globe and identify its latitude and longitude. Tell it to the others so they can try to find it on one of the globes or maps.</p></li>
+  <li><p>Find the mountains and bodies of water on the geological or topographical maps and compare how they are shown on the different maps.</p></li>
+  <li><p>Find some countries on the geographic or cultural maps and compare how they are shown on the different maps. Also compare the differences between the countries that are shown on maps of various ages. On newer maps countries that once existed may not be there any more or they may have different names.</p></li>
+</ul>
+
+<p>e) We can then invite other students in the school or our parents to come and view our display. We can arrange tour guides who can show them around and explain the different maps.</p>
+
+<p class="side"> Lesson #5 - Population math </p>
+<p>In this lesson we will do some math activities to find out the projected
+ growth in the world’s population every ten years.  Begin with the current popula
+tion.  The population as of the writing of this book (2005) is indicated below.
+ Then subtract the current population from the projected population in the year
+ 2010. The difference that you end up with is the increase in population in those
+ ten years.  Repeat the process for each block of ten years. Then make a chart of
+ the results of your math work.  For each ten-year marker, show the amount that
+ the population will have increased.  At the bottom you can also add a line to show
+ the total increase in the population over all.  You can get this number by adding
+ up all of the increases for the other years. Good luck!
+</p>
+<p>The current human population of planet earth population is 6,457,541,344 people.</p>
+<p>The population in 2010 will be: 6,825,750,456</p>
+<p>The population in 2020 will be: 7,563,094,182</p>
+<p>The population in 2030 will be: 8,206,457,382</p>
+<p>The population in 2040 will be: 8,759,140,657</p>
+<p>The population in 2050 will be: 9,224,375,956</p>
+
+<p class="side"> Lesson #6 - World hunger statistics</p>
+<p> About two billion children from ages 0 to 19 years old are in the world.
+ Two billion means two thousand millions.  We will use the chart below to create
+ fractions that show the different challenges facing many of the children on the
+ world.  For example, two billion will be the denominator (the bottom number) in
+ all of the fractions we create because it is the total amount of children in the
+ world.  The numerator (the top number) in each fraction will be different accord
+ing to which information from the chart you are using.  
+</p>
+<p>Once you have created the fraction by writing the numerator and the
+ denominator, we will learn and practice how to simplify the fraction so it will be
+ easier to understand and to discuss.  We can simplify the fraction by first crossing
+out the same number of zeroes from the numerator as we cross out in the denomi
+nator.  The number of zeroes we cross out has to be the same on the top and the
+ bottom. Once we have eliminated all the possible zeroes, we can see if our frac
+tion can be divided by the same number (for example, two, or five) on both the
+ top and the bottom.  If it can be divided, we can simplify our fraction this way.</p>
+ <ul>
+  <li><p>640 million children do not have adequate shelter</p></li>
+  <li><p>500 million children have no access to sanitation</p></li>
+  <li><p>400 million children do not have access to safe water</p></li>
+  <li><p>300 million children lack access to information</p></li>
+  <li><p>270 million children have no access to health care services</p></li>
+  <li><p>140 million children have never been to school</p></li>
+  <li><p>90 million children are starving or severely food-deprived</p></li>
+</ul>
+<p class="side"> Lesson #7- Figuring out how fast the world’s population is increasing</p>
+<p> According to the United States Census Bureau, as of August 1, 2005 the
+ world’s population is 6,457,541,344 people.  According to the World Census
+ Bureau, four people are born in the world every second and two people die 
+every second. That means that the world’s population is increasing by about two 
+people every second. At this rate calculate the increase in the number of people
+ on planet earth:</p>
+ <p>a) Every day</p>
+<p>b) Every week</p>
+<p>c) Every month</p>
+<p>d) Every year</p>
+<p>e) Every ten years</p>
+
+<p class="side"> Lesson #8 - Organizations</p>
+<p>Now let’s find out more about some organizations that try to improve the
+ world situation by focusing on some of the challenges we mentioned in this chap
+ter, such as population, world hunger, health, medicine, water, and similar  issues.
+ Choose one of the organizations below and find out more about it.  Then write
+ down some basic information about the organization.  Each student will give an
+ oral report as time allows.  We can also gather all of our mini-reports and make
+ them into a book that we can copy, so everyone has our collection of information
+ on these important organizations.  If time allows, we will write to the organization
+that we researched and ask them to send us information about the work they do.  
+Here is a list of organizations/websites</p>
+<p>Organizations:</p>
+<p>World Food Programme</p>
+<p>Unicef</p>
+<p>Bread for the World</p>
+<p>Doctors Without Borders</p>
+<p>Oxfam International</p>
+
+<p>World Hunger Websites:</p>
+<p>www.careusa.org</p>
+<p>www.fighthunger.org</p>
+<p>www.worldvision.org</p>
+<p>FeedTheChildren.org</p>
+<p>www.fighthunger.org</p>
+<p>unicefusa.org</p>
+<p>Results.org</p>
+<p>www.thehungersite.com</p>
+<p>www.worldhunger.org</p>
+<p>www.bread.org</p>
+
+<p>World Population Websites:</p>
+<p>www.npg.org/facts</p>
+<p>www.populationworld.com</p>
+<p>www.enviroalternatives.com</p>
+<p>www.netscrap.com</p>
+<p>www.populationaction.org</p>
+<p>www.didyouknow.cd/billions</p>
+<p>www.populationaction.org</p>
+<p>www.popconnect.org</p>
+
+<p>Water Websites:</p>
+<p>www.unesco.org/water</p>
+<p>www.world.water-forum3.com</p>
+<p>www.worldwaterday</p>
+<p>www.worldwater.org</p>
+<p>www.worldwatercouncil.org</p>
+<p>www.wef.org</p>
+
+<p> Note: There are many other organizations that work to help with the issues dis
+cussed in this chapter. You can add to the list and see how many organizations
+ you can find and learn about. </p>
+<p class="side">Discussion Questions:</p>
+<p>a) Dag Hammarskjöld’s parents had a strong and positive influence on him.  In
+ Markings, he wrote: “From generations of soldiers and government officials on
+ my father’s side I inherited a belief that no life was more satisfactory than one of
+ selfless service to your country – or humanity.  This service required a sacrifice of
+ personal interests, but likewise, the courage to stand up unflinchingly for your
+ convictions. From scholars and clergymen on my mother’s side, I inherited a
+ belief that, in the very radical sense of the Gospels, all men are equal as children
+ of God, and should be met and treated by us as our masters in God.”</p>
+<p> b) Read the chapter quotation by Dorothea Dix. Give examples of what you think
+ Dorothea might have meant by “so much to be done” in the world.  Dorothea also
+ said she felt strongly that there must be something significant for her to do in the
+ world. Is there something for the world that you feel you would like to do?</p>
+<p>c)  Read the quotation by Thomas Paine above.  How could the world be Thomas
+ Paine’s country?</p>
+<p> d) Norman Vincent Peale said, “Change your thoughts and you change your
+ world.” Discuss what he might have meant by this and see if you can connect the
+ meaning of this statement with any other things you have learned in the lessons in
+ this book.</p>
+<p class="side">Supplemental Activities:</p>
+<ul>
+  <li><p>For one week keep a journal like the one Dag Hammarskjöld kept – call it: Conversations with Myself.</p></li>
+  <li><p>Make a world map showing some of the countries in which Dag helped to solve problems and crises. Label the countries, and don’t forget also to show the Suez Canal!</p></li>
+  <li><p>“Dag Hammarskjöld was a great man, a good heart, a soulful life, a possessor of perfect vision light. His life proved that the mind’s brilliance and the heart’s oneness can and do go together.” –Sri Chinmoy</p></li>
+</ul>
+
+<p> Use this quotation about Dag Hammarskjöld as a launching pad for a dis
+cussion about of his unique life and accomplishments.  Write your reflections or
+ draw a picture about the part of his life that sticks in your mind as meaningful.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter15.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter17.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

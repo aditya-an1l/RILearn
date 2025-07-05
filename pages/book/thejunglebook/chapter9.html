@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter9</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>“Rikki-Tikki-Tavi”</p>
+    </h1>
+<p >
+At the hole where he went in<br>
+Red-Eye called to Wrinkle-Skin.<br>
+Hear what little Red-Eye saith:<br>
+“Nag, come up and dance with death!”<br>
+<br>
+Eye to eye and head to head,<br>
+    (<i>Keep the measure, Nag.</i>)<br>
+This shall end when one is dead;<br>
+    (<i>At thy pleasure, Nag.</i>)<br>
+Turn for turn and twist for twist—<br>
+    (<i>Run and hide thee, Nag.</i>)<br>
+Hah! The hooded Death has missed!<br>
+    (<i>Woe betide thee, Nag!</i>)
+</p>
+<p>
+This is the story of the great war that Rikki-tikki-tavi fought single-handed,
+through the bath-rooms of the big bungalow in Segowlee cantonment. Darzee, the
+Tailorbird, helped him, and Chuchundra, the muskrat, who never comes out into
+the middle of the floor, but always creeps round by the wall, gave him advice,
+but Rikki-tikki did the real fighting.
+</p>
+<p>
+He was a mongoose, rather like a little cat in his fur and his tail, but quite
+like a weasel in his head and his habits. His eyes and the end of his restless
+nose were pink. He could scratch himself anywhere he pleased with any leg,
+front or back, that he chose to use. He could fluff up his tail till it looked
+like a bottle brush, and his war cry as he scuttled through the long grass was:
+“Rikk-tikk-tikki-tikki-tchk!”
+</p>
+<p>
+One day, a high summer flood washed him out of the burrow where he lived with
+his father and mother, and carried him, kicking and clucking, down a roadside
+ditch. He found a little wisp of grass floating there, and clung to it till he
+lost his senses. When he revived, he was lying in the hot sun on the middle of
+a garden path, very draggled indeed, and a small boy was saying, “Here’s a dead
+mongoose. Let’s have a funeral.”
+</p>
+<p>
+“No,” said his mother, “let’s take him in and dry him. Perhaps he isn’t really
+dead.”
+</p>
+<p>
+They took him into the house, and a big man picked him up between his finger
+and thumb and said he was not dead but half choked. So they wrapped him in
+cotton wool, and warmed him over a little fire, and he opened his eyes and
+sneezed.
+</p>
+<p>
+“Now,” said the big man (he was an Englishman who had just moved into the
+bungalow), “don’t frighten him, and we’ll see what he’ll do.”
+</p>
+<p>
+It is the hardest thing in the world to frighten a mongoose, because he is
+eaten up from nose to tail with curiosity. The motto of all the mongoose family
+is “Run and find out,” and Rikki-tikki was a true mongoose. He looked at the
+cotton wool, decided that it was not good to eat, ran all round the table, sat
+up and put his fur in order, scratched himself, and jumped on the small boy’s
+shoulder.
+</p>
+<div >
+<img alt=" image" src="Screenshot 2025-07-05 155612.png" >
+<p ><b>Rikki-tikki looked down between the boy’s collar and neck</b></p>
+</div>
+<p>
+“Don’t be frightened, Teddy,” said his father. “That’s his way of making
+friends.”
+</p>
+<p>
+“Ouch! He’s tickling under my chin,” said Teddy.
+</p>
+<p>
+Rikki-tikki looked down between the boy’s collar and neck, snuffed at his ear,
+and climbed down to the floor, where he sat rubbing his nose.
+</p>
+<p>
+“Good gracious,” said Teddy’s mother, “and that’s a wild creature! I suppose
+he’s so tame because we’ve been kind to him.”
+</p>
+<p>
+“All mongooses are like that,” said her husband. “If Teddy doesn’t pick him up
+by the tail, or try to put him in a cage, he’ll run in and out of the house all
+day long. Let’s give him something to eat.”
+</p>
+<p>
+They gave him a little piece of raw meat. Rikki-tikki liked it immensely, and
+when it was finished he went out into the veranda and sat in the sunshine and
+fluffed up his fur to make it dry to the roots. Then he felt better.
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155621.png" >
+<p ><b>He put his nose into the ink</b></p>
+</div>
+<p>
+“There are more things to find out about in this house,” he said to himself,
+“than all my family could find out in all their lives. I shall certainly stay
+and find out.”
+</p>
+<p>
+He spent all that day roaming over the house. He nearly drowned himself in the
+bath-tubs, put his nose into the ink on a writing table, and burned it on the
+end of the big man’s cigar, for he climbed up in the big man’s lap to see how
+writing was done. At nightfall he ran into Teddy’s nursery to watch how
+kerosene lamps were lighted, and when Teddy went to bed Rikki-tikki climbed up
+too. But he was a restless companion, because he had to get up and attend to
+every noise all through the night, and find out what made it. Teddy’s mother
+and father came in, the last thing, to look at their boy, and Rikki-tikki was
+awake on the pillow. “I don’t like that,” said Teddy’s mother. “He may bite the
+child.” “He’ll do no such thing,” said the father. “Teddy’s safer with that
+little beast than if he had a bloodhound to watch him. If a snake came into the
+nursery now—”
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155627.png" >
+<p ><b>Rikki-tikki was awake on the pillow.</b></p>
+</div>
+<p>
+But Teddy’s mother wouldn’t think of anything so awful.
+</p>
+<p>
+Early in the morning Rikki-tikki came to early breakfast in the veranda riding
+on Teddy’s shoulder, and they gave him banana and some boiled egg. He sat on
+all their laps one after the other, because every well-brought-up mongoose
+always hopes to be a house mongoose some day and have rooms to run about in;
+and Rikki-tikki’s mother (she used to live in the general’s house at Segowlee)
+had carefully told Rikki what to do if ever he came across white men.
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155632.png">
+<p ><b>He came to breakfast riding on Teddy’s shoulder.</b></p>
+</div>
+<p>
+Then Rikki-tikki went out into the garden to see what was to be seen. It was a
+large garden, only half cultivated, with bushes, as big as summer-houses, of
+Marshal Niel roses, lime and orange trees, clumps of bamboos, and thickets of
+high grass. Rikki-tikki licked his lips. “This is a splendid hunting-ground,”
+he said, and his tail grew bottle-brushy at the thought of it, and he scuttled
+up and down the garden, snuffing here and there till he heard very sorrowful
+voices in a thorn-bush.
+</p>
+<p>
+It was Darzee, the Tailor-bird, and his wife. They had made a beautiful nest by
+pulling two big leaves together and stitching them up the edges with fibers,
+and had filled the hollow with cotton and downy fluff. The nest swayed to and
+fro, as they sat on the rim and cried.
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155639.png" >
+<p ><b>“We are very miserable,” said Darzee.</b></p>
+</div>
+<p>
+“What is the matter?” asked Rikki-tikki.
+</p>
+<p>
+“We are very miserable,” said Darzee. “One of our babies fell out of the nest
+yesterday and Nag ate him.”
+</p>
+<p>
+“H’m!” said Rikki-tikki, “that is very sad—but I am a stranger here. Who is
+Nag?”
+</p>
+<p>
+Darzee and his wife only cowered down in the nest without answering, for from
+the thick grass at the foot of the bush there came a low hiss—a horrid cold
+sound that made Rikki-tikki jump back two clear feet. Then inch by inch out of
+the grass rose up the head and spread hood of Nag, the big black cobra, and he
+was five feet long from tongue to tail. When he had lifted one-third of himself
+clear of the ground, he stayed balancing to and fro exactly as a dandelion tuft
+balances in the wind, and he looked at Rikki-tikki with the wicked snake’s eyes
+that never change their expression, whatever the snake may be thinking of.
+</p>
+<p>
+“Who is Nag?” said he. “I am Nag. The great God Brahm put his mark upon all our
+people, when the first cobra spread his hood to keep the sun off Brahm as he
+slept. Look, and be afraid!”
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155645.png">
+<p ><b>“I am Nag,” said the cobra: “Look, and be afraid!”
+But at the bottom of his cold heart, he was afraid.</b></p>
+</div>
+<p>
+He spread out his hood more than ever, and Rikki-tikki saw the spectacle-mark
+on the back of it that looks exactly like the eye part of a hook-and-eye
+fastening. He was afraid for the minute, but it is impossible for a mongoose to
+stay frightened for any length of time, and though Rikki-tikki had never met a
+live cobra before, his mother had fed him on dead ones, and he knew that all a
+grown mongoose’s business in life was to fight and eat snakes. Nag knew that
+too and, at the bottom of his cold heart, he was afraid.
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155651.png">
+<p ><b>Rikki-Tikki-Tavi and Nag</b></p>
+</div>
+<p>
+“Well,” said Rikki-tikki, and his tail began to fluff up again, “marks or no
+marks, do you think it is right for you to eat fledglings out of a nest?”
+</p>
+<p>
+Nag was thinking to himself, and watching the least little movement in the
+grass behind Rikki-tikki. He knew that mongooses in the garden meant death
+sooner or later for him and his family, but he wanted to get Rikki-tikki off
+his guard. So he dropped his head a little, and put it on one side.
+</p>
+<p>
+“Let us talk,” he said. “You eat eggs. Why should not I eat birds?”
+</p>
+<p>
+“Behind you! Look behind you!” sang Darzee.
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155658.png" >
+<p ><b>He jumped up in the air, and just under him whizzed by the
+head of Nagaina.</b></p>
+</div>
+<p>
+Rikki-tikki knew better than to waste time in staring. He jumped up in the air
+as high as he could go, and just under him whizzed by the head of Nagaina,
+Nag’s wicked wife. She had crept up behind him as he was talking, to make an
+end of him. He heard her savage hiss as the stroke missed. He came down almost
+across her back, and if he had been an old mongoose he would have known that
+then was the time to break her back with one bite; but he was afraid of the
+terrible lashing return stroke of the cobra. He bit, indeed, but did not bite
+long enough, and he jumped clear of the whisking tail, leaving Nagaina torn and
+angry.
+</p>
+<p>
+“Wicked, wicked Darzee!” said Nag, lashing up as high as he could reach toward
+the nest in the thorn-bush. But Darzee had built it out of reach of snakes, and
+it only swayed to and fro.
+</p>
+<p>
+Rikki-tikki felt his eyes growing red and hot (when a mongoose’s eyes grow red,
+he is angry), and he sat back on his tail and hind legs like a little kangaroo,
+and looked all round him, and chattered with rage. But Nag and Nagaina had
+disappeared into the grass. When a snake misses its stroke, it never says
+anything or gives any sign of what it means to do next. Rikki-tikki did not
+care to follow them, for he did not feel sure that he could manage two snakes
+at once. So he trotted off to the gravel path near the house, and sat down to
+think. It was a serious matter for him.
+</p>
+<p>
+If you read the old books of natural history, you will find they say that when
+the mongoose fights the snake and happens to get bitten, he runs off and eats
+some herb that cures him. That is not true. The victory is only a matter of
+quickness of eye and quickness of foot—snake’s blow against mongoose’s jump—and
+as no eye can follow the motion of a snake’s head when it strikes, this makes
+things much more wonderful than any magic herb. Rikki-tikki knew he was a young
+mongoose, and it made him all the more pleased to think that he had managed to
+escape a blow from behind. It gave him confidence in himself, and when Teddy
+came running down the path, Rikki-tikki was ready to be petted.
+</p>
+<p>
+But just as Teddy was stooping, something wriggled a little in the dust, and a
+tiny voice said: “Be careful. I am Death!” It was Karait, the dusty brown
+snakeling that lies for choice on the dusty earth; and his bite is as dangerous
+as the cobra’s. But he is so small that nobody thinks of him, and so he does
+the more harm to people.
+</p>
+<p>
+Rikki-tikki’s eyes grew red again, and he danced up to Karait with the peculiar
+rocking, swaying motion that he had inherited from his family. It looks very
+funny, but it is so perfectly balanced a gait that you can fly off from it at
+any angle you please, and in dealing with snakes this is an advantage. If
+Rikki-tikki had only known, he was doing a much more dangerous thing than
+fighting Nag, for Karait is so small, and can turn so quickly, that unless
+Rikki bit him close to the back of the head, he would get the return stroke in
+his eye or his lip. But Rikki did not know. His eyes were all red, and he
+rocked back and forth, looking for a good place to hold. Karait struck out.
+Rikki jumped sideways and tried to run in, but the wicked little dusty gray
+head lashed within a fraction of his shoulder, and he had to jump over the
+body, and the head followed his heels close.
+</p>
+<p>
+Teddy shouted to the house: “Oh, look here! Our mongoose is killing a snake.”
+And Rikki-tikki heard a scream from Teddy’s mother. His father ran out with a
+stick, but by the time he came up, Karait had lunged out once too far, and
+Rikki-tikki had sprung, jumped on the snake’s back, dropped his head far
+between his forelegs, bitten as high up the back as he could get hold, and
+rolled away. That bite paralyzed Karait, and Rikki-tikki was just going to eat
+him up from the tail, after the custom of his family at dinner, when he
+remembered that a full meal makes a slow mongoose, and if he wanted all his
+strength and quickness ready, he must keep himself thin.
+</p>
+<p>
+He went away for a dust bath under the castor-oil bushes, while Teddy’s father
+beat the dead Karait. “What is the use of that?” thought Rikki-tikki. “I have
+settled it all;” and then Teddy’s mother picked him up from the dust and hugged
+him, crying that he had saved Teddy from death, and Teddy’s father said that he
+was a providence, and Teddy looked on with big scared eyes. Rikki-tikki was
+rather amused at all the fuss, which, of course, he did not understand. Teddy’s
+mother might just as well have petted Teddy for playing in the dust. Rikki was
+thoroughly enjoying himself.
+</p>
+<p>
+That night at dinner, walking to and fro among the wine-glasses on the table,
+he might have stuffed himself three times over with nice things. But he
+remembered Nag and Nagaina, and though it was very pleasant to be patted and
+petted by Teddy’s mother, and to sit on Teddy’s shoulder, his eyes would get
+red from time to time, and he would go off into his long war cry of
+“Rikk-tikk-tikki-tikki-tchk!”
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155706.png">
+<p ><b>In the dark he ran up against Chuchundra, the muskrat.</b></p>
+</div>
+<p>
+Teddy carried him off to bed, and insisted on Rikki-tikki sleeping under his
+chin. Rikki-tikki was too well bred to bite or scratch, but as soon as Teddy
+was asleep he went off for his nightly walk round the house, and in the dark he
+ran up against Chuchundra, the muskrat, creeping around by the wall.
+Chuchundra is a broken-hearted little beast. He whimpers and cheeps all the
+night, trying to make up his mind to run into the middle of the room. But he
+never gets there.
+</p>
+<p>
+“Don’t kill me,” said Chuchundra, almost weeping. “Rikki-tikki, don’t kill me!”
+</p>
+<p>
+“Do you think a snake-killer kills muskrats?” said Rikki-tikki scornfully.
+</p>
+<p>
+“Those who kill snakes get killed by snakes,” said Chuchundra, more sorrowfully
+than ever. “And how am I to be sure that Nag won’t mistake me for you some dark
+night?”
+</p>
+<p>
+“There’s not the least danger,” said Rikki-tikki. “But Nag is in the garden,
+and I know you don’t go there.”
+</p>
+<p>
+“My cousin Chua, the rat, told me—” said Chuchundra, and then he stopped.
+</p>
+<p>
+“Told you what?”
+</p>
+<p>
+“H’sh! Nag is everywhere, Rikki-tikki. You should have talked to Chua in the
+garden.”
+</p>
+<p>
+“I didn’t—so you must tell me. Quick, Chuchundra, or I’ll bite you!”
+</p>
+<p>
+Chuchundra sat down and cried till the tears rolled off his whiskers. “I am a
+very poor man,” he sobbed. “I never had spirit enough to run out into the
+middle of the room. H’sh! I mustn’t tell you anything. Can’t you hear,
+Rikki-tikki?”
+</p>
+<p>
+Rikki-tikki listened. The house was as still as still, but he thought he could
+just catch the faintest scratch-scratch in the world—a noise as faint as that
+of a wasp walking on a window-pane—the dry scratch of a snake’s scales on
+brick-work.
+</p>
+<p>
+“That’s Nag or Nagaina,” he said to himself, “and he is crawling into the
+bath-room sluice. You’re right, Chuchundra; I should have talked to Chua.”
+</p>
+<p>
+He stole off to Teddy’s bath-room, but there was nothing there, and then to
+Teddy’s mother’s bathroom. At the bottom of the smooth plaster wall there was a
+brick pulled out to make a sluice for the bath water, and as Rikki-tikki stole
+in by the masonry curb where the bath is put, he heard Nag and Nagaina
+whispering together outside in the moonlight.
+</p>
+<p>
+“When the house is emptied of people,” said Nagaina to her husband, “he will
+have to go away, and then the garden will be our own again. Go in quietly, and
+remember that the big man who killed Karait is the first one to bite. Then come
+out and tell me, and we will hunt for Rikki-tikki together.”
+</p>
+<p>
+“But are you sure that there is anything to be gained by killing the people?”
+said Nag.
+</p>
+<p>
+“Everything. When there were no people in the bungalow, did we have any
+mongoose in the garden? So long as the bungalow is empty, we are king and queen
+of the garden; and remember that as soon as our eggs in the melon bed hatch (as
+they may tomorrow), our children will need room and quiet.”
+</p>
+<p>
+“I had not thought of that,” said Nag. “I will go, but there is no need that we
+should hunt for Rikki-tikki afterward. I will kill the big man and his wife,
+and the child if I can, and come away quietly. Then the bungalow will be empty,
+and Rikki-tikki will go.”
+</p>
+<p>
+Rikki-tikki tingled all over with rage and hatred at this, and then Nag’s head
+came through the sluice, and his five feet of cold body followed it. Angry as
+he was, Rikki-tikki was very frightened as he saw the size of the big cobra.
+Nag coiled himself up, raised his head, and looked into the bathroom in the
+dark, and Rikki could see his eyes glitter.
+</p>
+<p>
+“Now, if I kill him here, Nagaina will know; and if I fight him on the open
+floor, the odds are in his favor. What am I to do?” said Rikki-tikki-tavi.
+</p>
+<p>
+Nag waved to and fro, and then Rikki-tikki heard him drinking from the biggest
+water-jar that was used to fill the bath. “That is good,” said the snake. “Now,
+when Karait was killed, the big man had a stick. He may have that stick still,
+but when he comes in to bathe in the morning he will not have a stick. I shall
+wait here till he comes. Nagaina—do you hear me?—I shall wait here in the cool
+till daytime.”
+</p>
+<p>
+There was no answer from outside, so Rikki-tikki knew Nagaina had gone away.
+Nag coiled himself down, coil by coil, round the bulge at the bottom of the
+water jar, and Rikki-tikki stayed still as death. After an hour he began to
+move, muscle by muscle, toward the jar. Nag was asleep, and Rikki-tikki looked
+at his big back, wondering which would be the best place for a good hold. “If I
+don’t break his back at the first jump,” said Rikki, “he can still fight. And
+if he fights—O Rikki!” He looked at the thickness of the neck below the hood,
+but that was too much for him; and a bite near the tail would only make Nag
+savage.
+</p>
+<p>
+“It must be the head”’ he said at last; “the head above the hood. And, when I
+am once there, I must not let go.”
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155714.png" >
+<p ><b>Then Rikki-tikki was battered to and fro as a rat is shaken
+by a dog.</b></p>
+</div>
+<p>
+Then he jumped. The head was lying a little clear of the water jar, under the
+curve of it; and, as his teeth met, Rikki braced his back against the bulge of
+the red earthenware to hold down the head. This gave him just one second’s
+purchase, and he made the most of it. Then he was battered to and fro as a rat
+is shaken by a dog—to and fro on the floor, up and down, and around in great
+circles, but his eyes were red and he held on as the body cart-whipped over the
+floor, upsetting the tin dipper and the soap dish and the flesh brush, and
+banged against the tin side of the bath. As he held he closed his jaws tighter
+and tighter, for he made sure he would be banged to death, and, for the honor
+of his family, he preferred to be found with his teeth locked. He was dizzy,
+aching, and felt shaken to pieces when something went off like a thunderclap
+just behind him. A hot wind knocked him senseless and red fire singed his fur.
+The big man had been wakened by the noise, and had fired both barrels of a
+shotgun into Nag just behind the hood.
+</p>
+<p>
+Rikki-tikki held on with his eyes shut, for now he was quite sure he was dead.
+But the head did not move, and the big man picked him up and said, “It’s the
+mongoose again, Alice. The little chap has saved our lives now.”
+</p>
+<p>
+Then Teddy’s mother came in with a very white face, and saw what was left of
+Nag, and Rikki-tikki dragged himself to Teddy’s bedroom and spent half the rest
+of the night shaking himself tenderly to find out whether he really was broken
+into forty pieces, as he fancied.
+</p>
+<p>
+When morning came he was very stiff, but well pleased with his doings. “Now I
+have Nagaina to settle with, and she will be worse than five Nags, and there’s
+no knowing when the eggs she spoke of will hatch. Goodness! I must go and see
+Darzee,” he said.
+</p>
+<p>
+Without waiting for breakfast, Rikki-tikki ran to the thornbush where Darzee
+was singing a song of triumph at the top of his voice. The news of Nag’s death
+was all over the garden, for the sweeper had thrown the body on the
+rubbish-heap.
+</p>
+<p>
+“Oh, you stupid tuft of feathers!” said Rikki-tikki angrily. “Is this the time
+to sing?”
+</p>
+<p>
+“Nag is dead—is dead—is dead!” sang Darzee. “The valiant Rikki-tikki caught him
+by the head and held fast. The big man brought the bang-stick, and Nag fell in
+two pieces! He will never eat my babies again.”
+</p>
+<p>
+“All that’s true enough. But where’s Nagaina?” said Rikki-tikki, looking
+carefully round him.
+</p>
+<p>
+“Nagaina came to the bathroom sluice and called for Nag,” Darzee went on, “and
+Nag came out on the end of a stick—the sweeper picked him up on the end of a
+stick and threw him upon the rubbish heap. Let us sing about the great, the
+red-eyed Rikki-tikki!” And Darzee filled his throat and sang.
+</p>
+<p>
+“If I could get up to your nest, I’d roll your babies out!” said Rikki-tikki.
+“You don’t know when to do the right thing at the right time. You’re safe
+enough in your nest there, but it’s war for me down here. Stop singing a
+minute, Darzee.”
+</p>
+<p>
+“For the great, the beautiful Rikki-tikki’s sake I will stop,” said Darzee.
+“What is it, O Killer of the terrible Nag?”
+</p>
+<p>
+“Where is Nagaina, for the third time?”
+</p>
+<p>
+“On the rubbish heap by the stables, mourning for Nag. Great is Rikki-tikki
+with the white teeth.”
+</p>
+<p>
+“Bother my white teeth! Have you ever heard where she keeps her eggs?”
+</p>
+<p>
+“In the melon bed, on the end nearest the wall, where the sun strikes nearly
+all day. She hid them there weeks ago.”
+</p>
+<p>
+“And you never thought it worth while to tell me? The end nearest the wall, you
+said?”
+</p>
+<p>
+“Rikki-tikki, you are not going to eat her eggs?”
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155720.png">
+<p ><b>Darzee’s wife pretends to have a broken wing</b></p>
+</div>
+<p>
+“Not eat exactly; no. Darzee, if you have a grain of sense you will fly off to
+the stables and pretend that your wing is broken, and let Nagaina chase you
+away to this bush. I must get to the melon-bed, and if I went there now she’d
+see me.”
+</p>
+<p>
+Darzee was a feather-brained little fellow who could never hold more than one
+idea at a time in his head. And just because he knew that Nagaina’s children
+were born in eggs like his own, he didn’t think at first that it was fair to
+kill them. But his wife was a sensible bird, and she knew that cobra’s eggs
+meant young cobras later on. So she flew off from the nest, and left Darzee to
+keep the babies warm, and continue his song about the death of Nag. Darzee was
+very like a man in some ways.
+</p>
+<p>
+She fluttered in front of Nagaina by the rubbish heap and cried out, “Oh, my
+wing is broken! The boy in the house threw a stone at me and broke it.” Then
+she fluttered more desperately than ever.
+</p>
+<p>
+Nagaina lifted up her head and hissed, “You warned Rikki-tikki when I would
+have killed him. Indeed and truly, you’ve chosen a bad place to be lame in.”
+And she moved toward Darzee’s wife, slipping along over the dust.
+</p>
+<p>
+“The boy broke it with a stone!” shrieked Darzee’s wife.
+</p>
+<p>
+“Well! It may be some consolation to you when you’re dead to know that I shall
+settle accounts with the boy. My husband lies on the rubbish heap this morning,
+but before night the boy in the house will lie very still. What is the use of
+running away? I am sure to catch you. Little fool, look at me!”
+</p>
+<p>
+Darzee’s wife knew better than to do that, for a bird who looks at a snake’s
+eyes gets so frightened that she cannot move. Darzee’s wife fluttered on,
+piping sorrowfully, and never leaving the ground, and Nagaina quickened her
+pace.
+</p>
+<p>
+Rikki-tikki heard them going up the path from the stables, and he raced for the
+end of the melon patch near the wall. There, in the warm litter above the
+melons, very cunningly hidden, he found twenty-five eggs, about the size of a
+bantam’s eggs, but with whitish skin instead of shell.
+</p>
+<p>
+“I was not a day too soon,” he said, for he could see the baby cobras curled up
+inside the skin, and he knew that the minute they were hatched they could each
+kill a man or a mongoose. He bit off the tops of the eggs as fast as he could,
+taking care to crush the young cobras, and turned over the litter from time to
+time to see whether he had missed any. At last there were only three eggs left,
+and Rikki-tikki began to chuckle to himself, when he heard Darzee’s wife
+screaming:
+</p>
+<p>
+“Rikki-tikki, I led Nagaina toward the house, and she has gone into the
+veranda, and—oh, come quickly—she means killing!”
+</p>
+<p>
+Rikki-tikki smashed two eggs, and tumbled backward down the melon-bed with the
+third egg in his mouth, and scuttled to the veranda as hard as he could put
+foot to the ground. Teddy and his mother and father were there at early
+breakfast, but Rikki-tikki saw that they were not eating anything. They sat
+stone-still, and their faces were white. Nagaina was coiled up on the matting
+by Teddy’s chair, within easy striking distance of Teddy’s bare leg, and she
+was swaying to and fro, singing a song of triumph.
+</p>
+<p>
+“Son of the big man that killed Nag,” she hissed, “stay still. I am not ready
+yet. Wait a little. Keep very still, all you three! If you move I strike, and
+if you do not move I strike. Oh, foolish people, who killed my Nag!”
+</p>
+<p>
+Teddy’s eyes were fixed on his father, and all his father could do was to
+whisper, “Sit still, Teddy. You mustn’t move. Teddy, keep still.”
+</p>
+<p>
+Then Rikki-tikki came up and cried, “Turn round, Nagaina. Turn and fight!”
+</p>
+<p>
+“All in good time,” said she, without moving her eyes. “I will settle my
+account with you presently. Look at your friends, Rikki-tikki. They are still
+and white. They are afraid. They dare not move, and if you come a step nearer I
+strike.”
+</p>
+<p>
+“Look at your eggs,” said Rikki-tikki, “in the melon bed near the wall. Go and
+look, Nagaina!”
+</p>
+<p>
+The big snake turned half around, and saw the egg on the veranda. “Ah-h! Give
+it to me,” she said.
+</p>
+<p>
+Rikki-tikki put his paws one on each side of the egg, and his eyes were
+blood-red. “What price for a snake’s egg? For a young cobra? For a young king
+cobra? For the last—the very last of the brood? The ants are eating all the
+others down by the melon bed.”
+</p>
+<p>
+Nagaina spun clear round, forgetting everything for the sake of the one egg.
+Rikki-tikki saw Teddy’s father shoot out a big hand, catch Teddy by the
+shoulder, and drag him across the little table with the tea-cups, safe and out
+of reach of Nagaina.
+</p>
+<p>
+“Tricked! Tricked! Tricked! Rikk-tck-tck!” chuckled Rikki-tikki. “The boy is
+safe, and it was I—I—I that caught Nag by the hood last night in the bathroom.”
+Then he began to jump up and down, all four feet together, his head close to
+the floor. “He threw me to and fro, but he could not shake me off. He was dead
+before the big man blew him in two. I did it! Rikki-tikki-tck-tck! Come then,
+Nagaina. Come and fight with me. You shall not be a widow long.”
+</p>
+<p>
+Nagaina saw that she had lost her chance of killing Teddy, and the egg lay
+between Rikki-tikki’s paws. “Give me the egg, Rikki-tikki. Give me the last of
+my eggs, and I will go away and never come back,” she said, lowering her hood.
+</p>
+<p>
+“Yes, you will go away, and you will never come back. For you will go to the
+rubbish heap with Nag. Fight, widow! The big man has gone for his gun! Fight!”
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155728.png" >
+<p ><b>Nagaina flew down the path, with Rikki-tikki behind her.</b></p>
+</div>
+<p>
+Rikki-tikki was bounding all round Nagaina, keeping just out of reach of her
+stroke, his little eyes like hot coals. Nagaina gathered herself together and
+flung out at him. Rikki-tikki jumped up and backward. Again and again and again
+she struck, and each time her head came with a whack on the matting of the
+veranda and she gathered herself together like a watch spring. Then Rikki-tikki
+danced in a circle to get behind her, and Nagaina spun round to keep her head
+to his head, so that the rustle of her tail on the matting sounded like dry
+leaves blown along by the wind.
+</p>
+<p>
+He had forgotten the egg. It still lay on the veranda, and Nagaina came nearer
+and nearer to it, till at last, while Rikki-tikki was drawing breath, she
+caught it in her mouth, turned to the veranda steps, and flew like an arrow
+down the path, with Rikki-tikki behind her. When the cobra runs for her life,
+she goes like a whip-lash flicked across a horse’s neck.
+</p>
+<p>
+Rikki-tikki knew that he must catch her, or all the trouble would begin again.
+She headed straight for the long grass by the thorn-bush, and as he was running
+Rikki-tikki heard Darzee still singing his foolish little song of triumph. But
+Darzee’s wife was wiser. She flew off her nest as Nagaina came along, and
+flapped her wings about Nagaina’s head. If Darzee had helped they might have
+turned her, but Nagaina only lowered her hood and went on. Still, the instant’s
+delay brought Rikki-tikki up to her, and as she plunged into the rat-hole where
+she and Nag used to live, his little white teeth were clenched on her tail, and
+he went down with her—and very few mongooses, however wise and old they may be,
+care to follow a cobra into its hole. It was dark in the hole; and Rikki-tikki
+never knew when it might open out and give Nagaina room to turn and strike at
+him. He held on savagely, and stuck out his feet to act as brakes on the dark
+slope of the hot, moist earth.
+</p>
+<p>
+Then the grass by the mouth of the hole stopped waving, and Darzee said, “It is
+all over with Rikki-tikki! We must sing his death song. Valiant Rikki-tikki is
+dead! For Nagaina will surely kill him underground.”
+</p>
+<p>
+So he sang a very mournful song that he made up on the spur of the minute, and
+just as he got to the most touching part, the grass quivered again, and
+Rikki-tikki, covered with dirt, dragged himself out of the hole leg by leg,
+licking his whiskers. Darzee stopped with a little shout. Rikki-tikki shook
+some of the dust out of his fur and sneezed. “It is all over,” he said. “The
+widow will never come out again.” And the red ants that live between the grass
+stems heard him, and began to troop down one after another to see if he had
+spoken the truth.
+</p>
+<p>
+Rikki-tikki curled himself up in the grass and slept where he was—slept and
+slept till it was late in the afternoon, for he had done a hard day’s work.
+</p>
+<p>
+“Now,” he said, when he awoke, “I will go back to the house. Tell the
+Coppersmith, Darzee, and he will tell the garden that Nagaina is dead.”
+</p>
+<div >
+<img alt="image" src="Screenshot 2025-07-05 155734.png" >
+<p ><b>It is all over.</b></p>
+</div>
+<p>
+The Coppersmith is a bird who makes a noise exactly like the beating of a
+little hammer on a copper pot; and the reason he is always making it is because
+he is the town crier to every Indian garden, and tells all the news to
+everybody who cares to listen. As Rikki-tikki went up the path, he heard his
+“attention” notes like a tiny dinner gong, and then the steady “Ding-dong-tock!
+Nag is dead—dong! Nagaina is dead! Ding-dong-tock!” That set all the birds in
+the garden singing, and the frogs croaking, for Nag and Nagaina used to eat
+frogs as well as little birds.
+</p>
+<p>
+When Rikki got to the house, Teddy and Teddy’s mother (she looked very white
+still, for she had been fainting) and Teddy’s father came out and almost cried
+over him; and that night he ate all that was given him till he could eat no
+more, and went to bed on Teddy’s shoulder, where Teddy’s mother saw him when
+she came to look late at night.
+</p>
+<p>
+“He saved our lives and Teddy’s life,” she said to her husband. “Just think, he
+saved all our lives.”
+</p>
+<p>
+Rikki-tikki woke up with a jump, for the mongooses are light sleepers.
+</p>
+<p>
+“Oh, it’s you,” said he. “What are you bothering for? All the cobras are dead.
+And if they weren’t, I’m here.”
+</p>
+<p>
+Rikki-tikki had a right to be proud of himself. But he did not grow too proud,
+and he kept that garden as a mongoose should keep it, with tooth and jump and
+spring and bite, till never a cobra dared show its head inside the walls.
+</p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter8.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter10.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

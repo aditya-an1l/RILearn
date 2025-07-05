@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter17</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Seventeen</p>
+      <p> Learning From the Past and Making a Better Future  </p>
+    </h1>
+    <p class="side">Chapter Inspiration: </p>
+    <p>“For most of history, Anonymous was a woman.” –Virginia Woolf</p>
+<p>“Why is it called history and not herstory?” –Riane Eisler</p>
+<p>“Some people make headlines while others make history.” –Philip Elmer-DeWitt</p>
+<p>“Better late than never.” –Titus Livius</p>
+<p>“History is the witness that testifies to the passing of time; it illumines reality, vitalizes memory, provides guidance in daily life, and brings us tidings of antiquity.” –Cicero</p>
+<p>“History is a voice forever sounding across the centuries the laws of right and wrong. Opinions alter, manners change, creeds rise and fall, but the moral law is written on the tablets of eternity.” –James A. Forude</p>
+<p>“History teaches that wars begin when governments believe the price of aggression is cheap.” –Ronald Reagan</p>
+<p>“History repeats itself. That’s one of the things wrong with history.” –Clarence Darrow</p>
+<p>“Not the power to conquer others, but the power to become one with others is the ultimate power.” –Sri Chinmoy</p>
+<p>“We learn from history that we do not learn from history.” –Georg Friedrich Wilhelm Hegel</p>
+<p>“This is our opportunity to grab the moment and say, ‘Let me extract out of it all that I can.’ For here is real history in the making. The passage of each moment is real history in the making.” –Prem Rawat</p>
+<p>“It is from numberless diverse acts of courage and belief that human history is shaped. Each time a man stands up for an ideal, or acts to improve the lot of others, or strikes out against injustice, he sends forth a tiny ripple of hope, and crossing each other from a million different centers of energy and daring, those ripples build a current that can sweep down the mightiest walls of oppression and resistance.” –Robert F. Kennedy, South Africa 1966</p>
+<p>“History, although sometimes made up of the few acts of the great, is more often shaped by the many acts of the small.” –Mark Yost</p>
+
+<p class="side"> Chapter Story:
+</p>
+<p> Mother Teresa was born in Skopje, Macedonia on August 27, 1910. Her
+ parents were Albanian.   Her name was Agnes Gonxha Bojaxhiu.  She took the
+ name of Mother Teresa later in her life, when she committed herself to life as a
+ Catholic nun.
+</p>
+<p>At the age of 12, Mother Teresa started to have spiritual or religious expe
+riences.  In her prayers she felt she was talking to God and she felt that God was
+ guiding her.  She started to feel strongly that she would like to do something very
+ special in her life.  She was brought up in the Catholic religion and her main
+ inspiration was Jesus Christ.  She felt that Jesus was a perfect example for how to
+ live her life – a life of helping and giving to others.  She knew she had to be a
+ missionary, to spread the love of Christ. At age 18, Mother Teresa left her parents’
+ home and joined the Sisters of Loreto, an Irish community of nuns with missions
+ in India.
+</p>
+<p>After a short period of training, she was sent to India, where, on May 24,
+ 1931, she took her initial vows as a nun.  Vows are the promises or the commit
+ments a woman makes when she becomes a nun.  From 1931-1948 Mother Teresa
+ taught at St. Mary’s High School in Calcutta. During this time, the suffering and
+ poverty she saw outside the convent school made a deep impression on her. She
+ couldn’t believe how poor and how sick people on the streets of Calcutta were.
+ Even worse was that it seemed nobody was caring for them.  On the street people
+ would just walk by, as if they didn’t even see those who were lying on the side
+ too weak to get up or help themselves.  She wondered what she could do to help
+ them. She could not bear to watch them each day and to do nothing.</p>
+<p>Mother Teresa finally received an answer to her prayers and her questions.
+ On a train ride from Calcutta to Darjeeling, India on September 10, 1946 she had
+ a vision: She could form a new order of nuns with the mission of helping the
+ poor, sick and needy. Since nobody else was doing it, she would do it, and in her
+ vision she saw others coming to help her.  Mother Teresa asked permission from
+ her superiors to leave the convent school and devote herself to working among
+the poorest of the poor in the slums of Calcutta.  She had no money, but she had a
+ strong belief that God would help her. She started an open-air school for slum
+ children. Soon volunteer helpers came to help because they were inspired. Other
+ people who had enough money made donations to help Mother Teresa.  Because
+ of the help she received, Mother Teresa was able to expand her work.</p>
+<p>On October 7, 1950, Mother Teresa got permission from the pope to start
+ her own order of nuns - the Missionaries of Charity.  Its main task was to love
+ and care for those people whom nobody else could or would care for.  Soon
+ Mother Teresa opened her first home for the destitute and dying, in Calcutta, with
+ a staff of 12 nuns, including Mother Teresa herself. Over time, Mother Teresa’s
+ mission spread and spread.  Some nuns or sisters who wanted to follow her inspi
+ration wanted to focus mostly on prayer and meditation.  For them Mother Teresa
+ established a Contemplative Branch of her order. Others wanted to work directly
+ with the needy and for them Mother Teresa established the Active Branch of her
+ order. In addition, men wanted to join the order and to follow Mother Teresa’s
+ leadership.  Mother Teresa established Contemplative and Active Branches of her
+ order for men or brothers. Eventually Mother Teresa established a branch for
+ priests.  She also encouraged married couples to help in the mission as well.
+ Mother Teresa believed everyone could work together!  It was a big job to create
+ better conditions for destitute people all over the world.  All of the Branches
+ together were called the Society of Missionaries. Over time, they spread all over
+ the world
+</p>
+<p>Mother Teresa’s Society of Missionaries provides help to the poorest of the
+ poor in a number of countries in Asia, Africa, Latin America, Russia and Eastern
+ Europe. The order consists of over 4,500 nuns and is active in 133 countries.  In
+ addition, there are more than one million co-workers who help the mission in a
+ wide variety of ways.  They undertake relief work after natural catastrophes such
+ as floods, epidemics, and famine and also help with refugees.  The order also has
+ houses in North America, Europe and Australia where they take care of shut-ins,
+ alcoholics, homeless people, and AIDS sufferers.
+</p>
+<p> Mother Teresa’s work has been recognized and acclaimed throughout the
+ world.  During her lifetime, she received a number of awards and distinctions,
+ including the Pope John XXIII Peace Prize (1971) and the Nehru Prize for pro
+motion of international peace and understanding (1972). She received the Nobel
+ Peace Prize in 1979. Mother Teresa died on September 5, 1997, but her mission is
+ strong and continues to grow. Mother Teresa proved that one person could change
+ the world.  So many people continue to be inspired by her work and her life, that
+ her mission continues to expand to more and more countries around the world.  
+</p>
+<p>Before Mother Teresa, the poorest of the poor, and the very sick, in India
+ and in so many other places, had no hope, no love, and no care.  Because Mother
+ Teresa provided food and medical care, and would sit with them and hold their
+ 189
+hands, talk to them, and look into their eyes with the love of her heart, the poor
+ and the sick people not only got physical help, but also they did not feel so lonely
+ and depressed.  They felt that someone cared about them, and that that their lives
+ were meaningful and important. Mother Teresa taught all of her followers how to
+ love and care for people in this way.</p>
+<p> Before Mother Teresa began her work, most people who had money and a
+ good life in India did not know how to help poor people.  It seemed like too big
+ of a job and nobody knew where to start. Sometimes, people didn’t even want to
+ think about the poor, because their situation was so sad and desperate.  Mother
+ Teresa changed all of that. She believed that it was our duty as fellow human
+ beings not to forget those who are less fortunate than we are. Because of Mother
+ Teresa’s positive attitude towards those who were poor, sick, or dying, the atti
+tudes of others started to change as well.  Today, because of Mother Teresa, we
+ know that doing something to help, even something small, is much better than
+ doing nothing at all.  Mother Teresa was just one person, yet she affected millions
+ of people by the way she lived her life.
+</p>
+<p class="side"> Chapter Overview: 
+</p>
+<p>History is the written story of life on earth.  Sometimes the story of history
+ begins with the beginning of the universe, sometimes it begins with the creation
+ of the earth, and sometimes it begins with the development of life on earth.  The
+ story of history can also begin with the first humans that appeared on earth.  It all
+ depends on which story you want to read or tell.  It also depends on when you
+ want the story to begin and how long you want it to be.
+</p>
+<p> History has many different versions. There is not just one history.  In fact
+ there are thousands and thousands of history books.  Each story is different,
+ depending upon who is telling the story and what part of the story they are telling.
+ So how do we know which story is true?  Well, one way is that we can rely on the
+ evidence discovered by scientists such as paleontologists, geologists, archeolo
+gists, anthropologists, historians, and others.  We can look at the things these sci
+entists have discovered and then try to decide what those discoveries mean.</p>
+<p> The history of human beings on earth is very long. The first human-like
+ creatures appeared on earth millions of years ago.  The earliest humans were not
+ that much different from apes.  Gradually, over a long period of time, humans
+ learned how to use tools, make fire, and defend themselves against wild animals.
+ About 50,000 years ago, human beings made an enormous leap in evolution. This
+ was the time of human beings that we now call Cro-Magnon.  The Cro-Magnon
+ people were the first people to look like modern human beings. They were also
+ the first to make clothes, to create art, to use metal for tools, to think about
+ abstract things like heaven or the after-life, and to do many other new things.</p>
+<p>Another great leap in human history occurred six to eight thousand years
+ ago, when human beings first organized into large communities – sometimes
+ called city-states. In this time, people learned how to domesticate animals, grow
+ crops, build common defenses, transport water, make jewelry, travel long dis
+tances, use boats, roll things on wheels, create written language, trade with others,
+ make laws, have ceremonies and celebrations, and do many, many other new
+ things. This is the era in which the life of human beings started to resemble
+ human life as we know it. During this time, human beings had to learn how to
+ cooperate, to share information, and to form creative solutions to problems.  It
+ was a very important period in human development.</p>
+<p> From this period of about eight thousand years ago, until today, human
+ beings have gone through tremendous changes.  First, human beings were telling
+ their stories, orally, but then, about five thousand years ago, written language was
+ invented. Human beings started writing down their stories, and written history
+ was born. During this time period, human beings developed different languages,
+ the arts, philosophy, architecture, religion, government, agriculture, warfare, many
+ modes of travel, different sources of energy, and all kinds of other things.  As the
+ human population grew and humans traveled from one part of the planet to the
+ other, people had to face many challenges: how to share land and food, how to
+ live peacefully together, how to accept and respect each other’s differences, and
+ how to care for those who are sick or needy. The human race has made tremen
+dous progress over these last eight thousand years, but we are still learning how
+ to best meet these basic challenges.  We are still learning tolerance, respect,
+ peacefulness, conflict resolution, cooperation, creative problem solving, sharing,
+ and compassion.</p>
+<p> Sometimes, when history is written, it seems like human beings are always
+ acting badly – being mean or hurting each other, getting into fights and war con
+stantly.  When we read this kind of history, it seems as if human beings have
+ always been the same, as if they haven’t changed or improved at all over the cen
+turies.  Looking at history this way, for example, it seems that war is always
+ going to happen – that war is the only way human beings know how to solve
+ problems.  </p>
+<p>But that is only one way of looking at history.  The other way to look at
+ history is to see that human beings are constantly learning, changing, evolving
+ and improving. To look at history this way, we have to pay close attention to the
+ little changes and improvements in human culture throughout the ages.  We also
+ have to learn more about the human beings who have helped humanity to move
+ forward and make progress.  Instead of focusing on the wars and the bad things in
+ history we have to celebrate the positive achievements of human beings. Then we
+ can begin to see properly where we have come from and where we might be
+ going as a human family on planet earth.</p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson #1 - Make a chart of inventions </p>
+<p>In this lesson we will make a chart of the significant inventions in history.
+ Our chart will have three parts: one column will be for ‘Good Inventions’; one
+ column will be for ‘Bad Inventions’; and one column will be for ‘In-Between
+ Inventions’.  Good inventions are things that have been good for human beings
+ and have had only a positive impact.  Bad inventions are things that have not
+ been good for human beings and have had mostly a negative impact.  In-between
+ inventions are inventions that have been somewhat good and somewhat bad.</p>
+<p> We will break up into groups of 3-5 people. Each group will discuss the
+ inventions one at a time for a short time. Then the group will vote on which col
+umn to put the invention in.  Once you have voted, write the invention in the col
+umn based upon your group’s vote.  The list of inventions is below. Your group
+ can add inventions to the list if you have enough time. We will discuss each
+ group's voting results once we are finished.
+</p>
+<h2><p>Inventions by Human Beings Throughout History:</p></h2>
+  <div class="columns">
+    <p>
+    <ul>
+      <li><p>the wheel</p></li>
+      <li><p>the arch</p></li>
+      <li><p>gunpowder</p></li>
+      <li><p>chemical fertilizer</p></li>
+      <li><p>dams to block rivers</p></li>
+      <li><p>chemical pesticides</p></li>
+      <li><p>preservatives for food</p></li>
+      <li><p>the Frisbee</p></li>
+      <li><p>the beach ball</p></li>
+      <li><p>the bicycle</p></li>
+      <li><p>the rifle</p></li>
+      <li><p>rubber tires</p></li>
+      <li><p>the drill</p></li>
+      <li><p>the saw</p></li>
+      <li><p>the sail boat</p></li>
+      <li><p>the airplane</p></li>
+      <li><p>the hamburger</p></li>
+      <li><p>Fruit Loops</p></li>
+    </ul>
+    <ul>
+      <li><p>the gasoline engine</p></li>
+      <li><p>asphalt</p></li>
+      <li><p>neon lights</p></li>
+      <li><p>nuclear reactors</p></li>
+      <li><p>hydrogen and atom bombs</p></li>
+      <li><p>the television</p></li>
+      <li><p>the oil-burning furnace</p></li>
+      <li><p>solar power</p></li>
+      <li><p>the antennae</p></li>
+      <li><p>the thermometer</p></li>
+      <li><p>Crackerjacks</p></li>
+      <li><p>penicillin/antibiotics</p></li>
+      <li><p>the X-ray machine</p></li>
+      <li><p>the telephone</p></li>
+      <li><p>the motor boat</p></li>
+      <li><p>the rocket engine</p></li>
+      <li><p>the fur coat</p></li>
+      <li><p>refined sugar</p></li>
+    </ul>
+    <ul>
+      <li><p>Pasteurizing machines</p></li>
+      <li><p>electricity</p></li>
+      <li><p>water and sewer pipe systems</p></li>
+      <li><p>audio recording devices</p></li>
+      <li><p>the printing press</p></li>
+      <li><p>cement</p></li>
+      <li><p>plastic</p></li>
+      <li><p>Styrofoam</p></li>
+      <li><p>the stop sign</p></li>
+      <li><p>money</p></li>
+      <li><p>the process of genetic engineering of living things</p></li>
+      <li><p>the refrigerator</p></li>
+      <li><p>light bulbs</p></li>
+      <li><p>the CD player</p></li>
+      <li><p>writing</p></li>
+      <li><p>the radio</p></li>
+      <li><p>steel</p></li>
+      <li><p>cardboard</p></li>
+      <li><p>the window</p></li>
+      <li><p>the skyscraper</p></li>
+    </ul>
+    </p>
+  </div>
+<p class="side"> Lesson #2 - The great ideas of history </p>
+<p> It is hard for us to imagine a world without art or music or democracy or
+ conflict resolution.  These great ideas have become very important parts of our
+ lives.  They help us to live in peace, to share, to enjoy ourselves, and to plan for
+ future generations. Yet there was a time when these ideas did not exist.  Someone,
+ once upon a time, had to create each one of them. Choose one of the great ideas
+ of humanity below and try to imagine how it might have first come to be.  First
+ draw a picture or write a story about this imaginary beginning.  Then we will
+ share our stories and drawings.  We will select a few of the stories to turn into
+ skits showing our imaginary version of how some of these great ideas came to be
+</p>
+<ul>
+  <li><p>music</p></li>
+  <li><p>art</p></li>
+  <li><p>dance</p></li>
+  <li><p>drama</p></li>
+  <li><p>democracy</p></li>
+  <li><p>conflict resolution</p></li>
+  <li><p>tolerance</p></li>
+  <li><p>compassion</p></li>
+  <li><p>peace treaties</p></li>
+  <li><p>speed limits</p></li>
+</ul>
+<ul>
+  <li><p>recycling</p></li>
+  <li><p>prayer</p></li>
+  <li><p>meditation</p></li>
+  <li><p>story telling</p></li>
+  <li><p>myths and beliefs</p></li>
+  <li><p>friendship</p></li>
+  <li><p>cooperation</p></li>
+  <li><p>fairness</p></li>
+  <li><p>sharing</p></li>
+  <li><p>laws</p></li>
+</ul>
+
+<p class="side"> Lesson #3 - The time machine</p>
+<p> Close your eyes and imagine you have a time machine.  In this time
+ machine you can travel back in time as far as you want to. You can go back to the
+time of the dinosaurs, the time of Neanderthal people, the time of an ancient civi
+lization, the time of the knights in armor, the time of Shakespeare, or any other
+ time. Imagine yourself going back in time to a certain point in history to meet
+ somebody special, to help somebody, to do something special, to change the
+ course of history, or to stop something from happening. Where would you like to
+ go? What would you like to do? Imagine yourself at that point in time. What was
+ it like back then?  How was it different from today? Imagine yourself going back
+ in time, and doing the special thing you want to do.  Later, after we open our
+ eyes, we will draw a picture of ourselves going back in time.  In your picture try
+ to show yourself and the place you are in.  Make sure you draw something that
+ shows the time you went back to. After we do our drawings we will share about
+ which point in history we went back to.
+</p>
+<p class="side">Lesson #4 - Important people in human history
+</p>
+<p> Millions of people in history have helped humanity move forward and
+ make progress in small and big ways. Certain individuals have made very impor
+tant contributions to human history. They have created ideas or inventions that
+ changed the course of human history in very positive ways.  A few of them are
+ listed below along with their accomplishments.  Choose one person from the list
+ that you would like to learn more about. Use the following outline to answer and
+ write down some important  information about the person you have chosen</p>
+ <p>a) Write the person’s full name.</p>
+<p>b) When did the person live?</p>
+<p>c) Where did the person live?</p>
+<p>d) What was the person’s main accomplishment or achievement?</p>
+<p>e) Did the person’s accomplishments inspire others? If yes, what kinds of organizations, movements, or institutions, traditions, or ideas were started due to the inspiration of this person? Give some details, including whether the organization, tradition, or ideas are still happening today.</p>
+<p>f) Write down any famous or interesting quotations from the person that explain their philosophy or express their unique spirit.</p>
+<p>g) Write down any other interesting facts about this person that you would like to remember or share with others.</p>
+<p>h) After doing your research and writing your answers, make either a drawing of your person or a map of where they lived or traveled.</p>
+<p>i) We will choose a day on which we will each dress as the character we have studied. In costume, the characters will make a short speech about who they are, when and where they lived, and what their main accomplishments were. If possible we can make a video of our presentations. Here is the list of names you can choose from, grouped according to the different fields of achievement.</p>
+<h2><p> Spiritual Teachers and Philosophers:</h2>
+</p>
+<p>Buddha</p>
+<p>Jesus Christ</p>
+<p>St. Francis of Assisi</p>
+<p>Mirabai</p>
+<p>Lao Tzu</p>
+<p>Confucius</p>
+<p>Guru Nanak</p>
+<p>Mary Wollstonecraft</p>
+<p>Henry David Thoreau</p>
+<p>Ralph Waldo Emerson</p>
+<p>Hildegard of Bingen</p>
+<p>St. Teresa of Avila</p>
+<p>Socrates</p>
+<p>Mother Teresa</p>
+<p>Moses</p>
+<p>Muhammad</p>
+<p>Hypatia of Alexandria</p>
+<p>Christina of Sweden</p>
+<p>Elizabeth Palmer Peabody</p>
+<p>Riane Eisler</p>
+
+<h2><p> Artists, Musicians, Writers, Athletes:</h2>
+</p>
+<p>Mozart</p>
+<p>Charlie Chaplin</p>
+<p>Enheduanna</p>
+<p>Isadora Duncan</p>
+<p>Wilma Rudolph</p>
+<p>Phyllis Wheatley</p>
+<p>Georgia O’Keefe</p>
+<p>Emily Dickinson</p>
+<p>Michelangelo</p>
+<p>Goethe</p>
+<p>Marian Anderson</p>
+<p>Louisa May Alcott</p>
+<p>Rachel Carson</p>
+<p>Muhammad Ali</p>
+<p>Jim Thorpe</p>
+<p>Harriet Beecher Stowe</p>
+<p>William Shakespeare</p>
+<p>Claude Monet</p>
+<p>Leonardo Da Vinci</p>
+<p>Leo Tolstoy</p>
+
+<h2><p>Inventors, Scientists, and Doctors:</p></h2>
+<p>Thomas Edison</p>
+<p>Luis Pasteur</p>
+<p>Margaret Meade</p>
+<p>Marie Curie</p>
+<p>Albert Einstein</p>
+<p>Aglaonike</p>
+<p>Barbapiccola</p>
+<p>Gargi</p>
+<p>Herrad</p>
+<p>Hipparchia</p>
+<p>Pan Chao</p>
+<p>Maria Mitchell</p>
+<p>Beatrix Potter</p>
+<p>Florence Nightingale</p>
+<p>Shi Dun</p>
+<p>Marija Gimbutas</p>
+<p>Alessandra Giliani</p>
+<p>Elizabeth Blackwell</p>
+<p>Benjamin Banneker</p>
+<p>Clara Barton</p>
+<h2><p> Politicians and Leaders:</p></h2>
+<p>Abraham Lincoln</p>
+<p>Frederick Douglas</p>
+<p>Harriet Tubman</p>
+<p>Sojourner Truth</p>
+<p>Eleanor of Aquitaine</p>
+<p>Joan of Arc</p>
+<p>Nur Jahan</p>
+<p>Hammurabi</p>
+<p>Queen Sondok</p>
+<p>Empress Wu Zetian</p>
+<p>Akbar</p>
+<p>Rosa Parks</p>
+<p>Jane Addams</p>
+<p>Abigail Adams</p>
+<p>Eleanor Roosevelt</p>
+<p>Madame C.J. Walker</p>
+<p>Isabel Allende</p>
+<p>Domitilia Barrios</p>
+<p>Winston Churchill</p>
+<p>Nelson Mandela</p>
+<h2><p> Adventurers and Explorers:</p></h2>
+<p>Yuri Gagarin</p>
+<p>Sally Ride</p>
+<p>Ashrita Furman</p>
+<p>Sacagawea</p>
+<p>Sir Edmund Hillary</p>
+<p>Amelia Earhart</p>
+<p>Neil Armstrong</p>
+<p>Matthew Henson</p>
+<p>Jacques Cousteau</p>
+<p>Earnest Shackleton</p>
+<p>William Clark</p>
+<p>Meriwether Lewis</p>
+<p>Annie Oakley</p>
+<p>Charles Lindbergh</p>
+<p>Bert Hinkler</p>
+<p>Ruth Nichols</p>
+<p>Suprabha Beckjord</p>
+<p>Marco Polo</p>
+<p>Ferdinand Magellan</p>
+<p>Valentina Grizodubova</p>
+
+<p> Let’s close our eyes for a few minutes and think about some things.  Our
+ world today is very different from the way it was five thousand, fifty thousand, or
+ five hundred thousand years ago.  Human beings today are also very different
+ from how they were in times past. In the distant future, as evolution continues,
+ what will the earth be like?  As human beings continue to learn from their mis
+takes and to change, what will human beings be like? Will they look different?
+ Will they act differently towards each other?  Will they solve conflicts in a more
+ peaceful way?  How will they solve the most difficult problems – such as war,
+ poverty, and pollution?  Spend a little time imagining this future world.  Then we
+ will hear from everybody about what they imagined.  We will write a little bit of
+ each person’s vision on the board in front of the room.  Then we will make a
+ story or a group collage using elements of everyone’s vision combined.</p>
+<p> Lesson #6 - Some of the things that changed history
+</p>
+<p> Certain crops, products and natural resources have played a major role in human
+ evolution.  Research the history of one of the items below and write a short sum
+mary about the importance of this product or natural resource in history and the
+ impact of this product on humanity.  Remember that the impact of the product can
+ be positive or negative or sometimes both. Here is the list of products and natural
+ resources:</p>
+ <p>
+ <ul>
+  <li><p>bronze</p></li>
+  <li><p>iron</p></li>
+  <li><p>tin</p></li>
+  <li><p>silver</p></li>
+  <li><p>tea</p></li>
+  <li><p>sugar</p></li>
+  <li><p>corn</p></li>
+  <li><p>rice</p></li>
+  <li><p>rum</p></li>
+  <li><p>salt</p></li>
+  <li><p>pepper</p></li>
+  <li><p>coal</p></li>
+  <li><p>gems</p></li>
+  <li><p>copper</p></li>
+  <li><p>steel</p></li>
+  <li><p>gold</p></li>
+  <li><p>fur</p></li>
+  <li><p>coffee</p></li>
+  <li><p>wheat</p></li>
+  <li><p>cotton</p></li>
+  <li><p>chocolate</p></li>
+  <li><p>tobacco</p></li>
+  <li><p>cinnamon</p></li>
+  <li><p>rubber</p></li>
+  <li><p>petroleum</p></li>
+  <li><p>wood</p></li>
+</ul>
+</p><p class="side">Discussion Questions:</p>
+<p>a)  Clarence Darrow said, “History repeats itself. That’s one of the things wrong
+ with history.”  Georg Hegel said, “We learn from history that we do not learn
+ from history.”  These are both somewhat pessimistic ways of looking at history.
+ In this chapter and in this book we are discovering that people do learn from his
+tory, even though it might seem we are learning slowly.  The more we study his
+tory and understand the mistakes of the past, the faster humanity can progress.
+ Each time we can avoid the mistakes of the past and make positive changes we
+ can move evolution forward.  As Titus Livius said, “Better late than never.” In
+ other words, it is never too late to try to do something good and to try to create
+ progressive changes.  Discuss these quotes in light of the challenge and impor
+tance of keeping a positive attitude as we think about history and actively make
+ history.
+</p>
+<p>b)  The first two quotations above are about the place of women in history.  Of
+ course, women have made just as many positive contributions to the world as
+ men have.  However, most traditional history books talk much more about men
+ than women.  Can you think of some reasons why this might be?</p>
+ <p> c)   Discuss what you think was the turning point in Mother Teresa’s life. What
+ was the one thing that changed the direction of her life and placed her on the path
+ towards her great achievements?  There might be more than one answer!</p>
+ <p class="side"> Supplemental Activities:</p>
+ <p>
+    <ul>
+        <li><p>Choose any of the lessons above and make a crossword, acrostic, or word-find
+ puzzle using the words or names in that lesson.  Photocopy the puzzles and give
+ them out for the rest the class to solve.  Make sure you draw and write your puz
+zles neatly and clearly if you want others to be able to enjoy them -  or better yet
+ type your puzzles.  Don’t forget to include a title or a heading and instructions for
+ your puzzle.  Good luck and have fun!</p></li>
+ <li><p> Older students are emotionally and intellectually prepared to engage some of the
+ more disturbing ‘mistakes’ of humanity.  These things are very painful and upset
+ting to learn about, but the best way, and perhaps the only way, for human beings
+ not to repeat the mistakes of the past is to face them, learn about them,  and ask
+ what caused them to happen. Once we know the source of these mistakes – the
+ main things that caused them – then we will be empowered to change things so
+ that the causes of the mistakes cease to exist.
+Choose one of the following terms.  Write down the term and its definition and
+ then research the term and write a brief description of one instance in history
+ where this type of event or incident happened or one place in the world where it
+ is still happening.  Be sure to indicate the date, the place, and the culture, nation,
+ race, or people that were affected.
+ Terms to choose from:</p></li>
+ <ul>
+  <li><p>torture</p></li>
+  <li><p>genocide</p></li>
+  <li><p>atom bomb</p></li>
+  <li><p>epidemic</p></li>
+  <li><p>Black Death</p></li>
+  <li><p>apartheid</p></li>
+  <li><p>execution</p></li>
+  <li><p>ghetto</p></li>
+  <li><p>internment camp</p></li>
+  <li><p>political prisoner</p></li>
+  <li><p>slavery</p></li>
+  <li><p>famine</p></li>
+  <li><p>AIDS</p></li>
+  <li><p>world war</p></li>
+  <li><p>concentration camp</p></li>
+  <li><p>pogrom</p></li>
+  <li><p>prejudice</p></li>
+  <li><p>terrorism</p></li>
+</ul>
+
+    </ul>
+ </p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter16.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter18.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

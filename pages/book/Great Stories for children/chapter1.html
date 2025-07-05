@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter1</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>A Special Tree</p>
+    </h1>
+    <p>One day, when Rakesh was six, he walked home from the Mussoorie bazaar eating
+cherries. They were a little sweet, a little sour; small, bright red cherries, which
+had come all the way from the Kashmir Valley.
+</p>
+<p>Here in the Himalayan foothills where Rakesh lived, there were not many fruit trees.
+The soil was stony, and the dry cold winds stunted the growth of most plants. But on the
+more sheltered slopes there were forests of oak and deodar.
+</p>
+<p>Rakesh lived with his grandfather on the outskirts of Mussoorie, just where the
+forest began. His father and mother lived in a small village fifty miles away, where they
+grew maize and rice and barley in narrow terraced fields on the lower slopes of the
+mountain. But there were no schools in the village, and Rakesh’s parents were keen that
+he should go to school. As soon as he was of school-going age, they sent him to stay
+with his grandfather in Mussoorie.
+</p>
+<p>He had a little cottage outside the town</p>
+<p>Rakesh was on his way home from school when he bought the cherries. He paid fifty
+paise for the bunch. It took him about half-an-hour to walk home, and by the time he
+reached the cottage there were only three cherries left.</p>
+<p>‘Have a cherry, Grandfather,’ he said, as soon as he saw his grandfather in the
+garden</p>
+<p>Grandfather took one cherry and Rakesh promptly ate the other two. He kept the last
+seed in his mouth for some time, rolling it round and round on his tongue until all the
+tang had gone. Then he placed the seed on the palm of his hand and studied it.</p>
+<p>‘Are cherry seeds lucky?’ asked Rakesh.</p>
+<p>‘Of course.’</p>
+<p>‘Then I’ll keep it.’</p>
+<p>‘Nothing is lucky if you put it away. If you want luck, you must put it to some use.’
+</p>
+<p>‘What can I do with a seed?’
+</p>
+<p>‘Plant it.’</p>
+<p>So Rakesh found a small space and began to dig up a flowerbed</p>
+<p>‘Hey, not there,’ said Grandfather, ‘I’ve sown mustard in that bed. Plant it in that
+shady corner, where it won’t be disturbed.’
+</p>
+<p>Rakesh went to a corner of the garden where the earth was soft and yielding. He did
+not have to dig. He pressed the seed into the soil with his thumb and it went right in.
+</p>
+<p>Then he had his lunch, and ran off to play cricket with his friends, and forgot all
+about the cherry seed.
+</p>
+<p>When it was winter in the hills, a cold wind blew down from the snows and went
+whoo-whoo-whoo in the deodar trees, and the garden was dry and bare. In the evenings
+Grandfather and Rakesh sat over a charcoal fire, and Grandfather told Rakesh stories –
+stories about people who turned into animals, and ghosts who lived in trees, and beans
+that jumped and stones that wept – and in turn Rakesh would read to him from the
+newspaper, Grandfather’s eyesight being rather weak. Rakesh found the newspaper
+very dull – especially after the stories – but Grandfather wanted all the news…</p>
+<p>They knew it was spring when the wild duck flew north again, to Siberia. Early in
+the morning, when he got up to chop wood and light a fire, Rakesh saw the V–shaped
+formation streaming northward, the calls of the birds carrying clearly through the thin
+mountain air.
+</p>
+<p>One morning in the garden he bent to pick up what he thought was a small twig and
+found to his surprise that it was well rooted. He stared at it for a moment, then ran to
+fetch Grandfather, calling, ‘Dada, come and look, the cherry tree has come up!’</p>
+<p>‘What cherry tree?’ asked Grandfather, who had forgotten about it. ‘The seed we
+planted last year – look, it’s come up!’
+</p>
+<p>Rakesh went down on his haunches, while Grandfather bent almost double and
+peered down at the tiny tree. It was about four inches high.</p>
+<p>‘Yes, it’s a cherry tree,’ said Grandfather. ‘You should water it now and then.’</p>
+<p>Rakesh ran indoors and came back with a bucket of water.</p>
+<p>‘Don’t drown it!’ said Grandfather.
+</p>
+<p>Rakesh gave it a sprinkling and circled it with pebbles.
+</p>
+<p>‘What are the pebbles for?’ asked Grandfather.
+</p>
+<p>‘For privacy,’ said Rakesh.</p>
+<p>He looked at the tree every morning but it did not seem to be growing very fast, so
+he stopped looking at it except quickly, out of the corner of his eye. And, after a week
+or two, when he allowed himself to look at it properly, he found that it had grown – at
+least an inch!</p>
+<p>That year the monsoon rains came early and Rakesh plodded to and from school in
+raincoat and chappals. Ferns sprang from the trunks of trees, strange-looking lilies
+came up in the long grass, and even when it wasn’t raining the trees dripped and mist
+came curling up the valley. The cherry tree grew quickly in this season.
+</p>
+<p>It was about two feet high when a goat entered the garden and ate all the leaves.
+Only the main stem and two thin branches remained.
+</p>
+<p>‘Never mind,’ said Grandfather, seeing that Rakesh was upset. ‘It will grow again,
+cherry trees are tough.’
+</p>
+<p>Towards the end of the rainy season new leaves appeared on the tree. Then a woman
+cutting grass scrambled down the hillside, her scythe swishing through the heavy
+monsoon foliage. She did not try to avoid the tree: one sweep, and the cherry tree was
+cut in two.</p>
+<p>When Grandfather saw what had happened, he went after the woman and scolded
+her; but the damage could not be repaired.
+</p>
+<p>‘Maybe it will die now,’ said Rakesh.
+</p>
+<p>‘Maybe,’ said Grandfather.
+</p>
+<p>But the cherry tree had no intention of dying.</p>
+<p>By the time summer came round again, it had sent out several new shoots with tender
+green leaves. Rakesh had grown taller too. He was eight now, a sturdy boy with curly
+black hair and deep black eyes. ‘Blackberry eyes,’ Grandfather called them.
+</p>
+<p>That monsoon Rakesh went home to his village, to help his father and mother with
+the planting and ploughing and sowing. He was thinner but stronger when he came back
+to Grandfather’s house at the end of the rains to find that the cherry tree had grown
+another foot. It was now up to his chest.</p>
+<p>Even when there was rain, Rakesh would sometimes water the tree. He wanted it to
+know that he was there.</p>
+<p>One day he found a bright green praying-mantis perched on a branch, peering at him
+with bulging eyes. Rakesh let it remain there; it was the cherry tree’s first visitor.</p>
+<p>The next visitor was a hairy caterpillar, who started making a meal of the leaves.
+Rakesh removed it quickly and dropped it on a heap of dry leaves.
+</p>
+<p>Come back when you’re a butterfly,’ he said.
+
+</p>
+<p>Winter came early. The cherry tree bent low with the weight of snow. Field-mice
+sought shelter in the roof of the cottage. The road from the valley was blocked, and for
+several days there was no newspaper, and this made Grandfather quite grumpy. His
+stories began to have unhappy endings.
+</p>
+<p>In February it was Rakesh’s birthday. He was nine – and the tree was four, but
+almost as tall as Rakesh.</p>
+<p>One morning, when the sun came out, Grandfather came into the garden to ‘let some
+warmth get into my bones,’ as he put it. He stopped in front of the cherry tree, stared at
+it for a few moments, and then called out, ‘Rakesh! Come and look! Come quickly
+before it falls!’</p>
+<p>Rakesh and Grandfather gazed at the tree as though it had performed a miracle.
+There was a pale pink blossom at the end of a branch.
+</p>
+<p>The following year there were more blossoms. And suddenly the tree was taller than
+Rakesh, even though it was less than half his age. And then it was taller than
+Grandfather, who was older than some of the oak trees.
+</p>
+<p>But Rakesh had grown too. He could run and jump and climb trees as well as most
+boys, and he read a lot of books, although he still liked listening to Grandfather’s tales.
+</p>
+<p>In the cherry tree, bees came to feed on the nectar in the blossoms, and tiny birds
+pecked at the blossoms and broke them off. But the tree kept blossoming right through
+the spring, and there were always more blossoms than birds.
+</p>
+<p>That summer there were small cherries on the tree. Rakesh tasted one and spat it out.</p>
+<p>‘It’s too sour,’ he said.</p>
+<p>‘They’ll be better next year,’ said Grandfather</p>
+<p>But the birds liked them – especially the bigger birds, such as the bulbuls and scarlet
+minivets – and they flitted in and out of the foliage, feasting on the cherries.
+</p>
+<p>On a warm sunny afternoon, when even the bees looked sleepy, Rakesh was looking
+for Grandfather without finding him in any of his favourite places around the house.
+Then he looked out of the bedroom window and saw Grandfather reclining on a cane
+chair under the cherry tree.
+</p>
+<p>‘There’s just the right amount of shade here,’ said Grandfather. ‘And I like looking at
+the leaves.’</p>
+<p>‘They’re pretty leaves,’ said Rakesh. ‘And they are always ready to dance, if there’s
+a breeze.’</p>
+<p>After Grandfather had come indoors, Rakesh went into the garden and lay down on
+the grass beneath the tree. He gazed up through the leaves at the great blue sky; and
+turning on his side, he could see the mountains striding away into the clouds. He was
+still lying beneath the tree when the evening shadows crept across the garden.
+Grandfather came back and sat down beside Rakesh, and they waited in silence until
+the stars came out and the nightjar began to call. In the forest below, the crickets and
+cicadas began tuning up; and suddenly the trees were full of the sound of insects.
+</p>
+<p>‘There are so many trees in the forest,’ said Rakesh. ‘What’s so special about this
+tree? Why do we like it so much?’
+</p>
+<p>‘We planted it ourselves,’ said Grandfather. That’s why it’s special.’
+</p>
+<p>‘Just one small seed,’ said Rakesh, and he touched the smooth bark of the tree that he
+had grown. He ran his hand along the trunk of the tree and put his finger to the tip of a
+leaf. ‘I wonder,’ he whispered. ‘Is this what it feels to be God?’</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter1.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter2.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

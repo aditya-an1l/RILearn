@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter5</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Five</p>
+      <p> Feeling and Expressing Harmony through Art</p>
+    </h1>
+    <p class="side"> Chapter Inspiration:</p>
+<p>“The purpose of art is to transmit to others the highest and best feelings to which
+ human beings have risen.” –Count Leo Tolstoy
+</p>
+<p> “Art is man’s nature; nature is God’s art.” –Philip James Bailey
+</p>
+<p>“If you want to remain always happy, always perfect and always fulfilled, then
+ always keep inside your heart a pocketful of sweet dreams.” –Sri Chinmoy
+</p>
+<p class="side"> Chapter Story:</p>
+<p> Claude Monet (1840-1926) was an artist who lived in France.  What
+ Claude loved more than anything was to observe different kinds of light – morn
+ing light, regular daylight, evening light, moonlight, starlight and even foggy
+ light. Claude would pay close attention to the way that the light changed the
+ objects that it touched.  He noticed that the light gave different feelings to objects– sometimes happy and bright, sometimes peaceful, sometimes sad, and some
+times even scary. Then Claude painted the different kinds of light touching all
+ kinds of things, such as bridges, rivers, oceans, gardens, farms, meadows and
+ people.  One of his favorite things to paint was a flower.  He didn’t paint these
+ things the way they were ‘supposed’ to look. Instead, he painted the deep feelings
+ that the things gave him – especially when the light touched them. Claude became
+ famous for his painting.   His style of painting was called Impressionism. When
+ Claude was an old man, he became almost totally blind.  Still he was able to paint
+ the most beautiful paintings even though he could hardly see.  Because he had
+ painted the feelings of light for his whole life, he didn’t really need to see things
+ anymore to be able to paint.  </p>
+<p class="side">Chapter Overview: 
+</p>
+<p>Enjoying art can be one of the best ways for us to feel harmony and to
+ express ourselves.  There are many different kinds of art.  When we make some
+thing with colors and shapes, it is called visual arts.  The visual arts include things
+ like drawing, painting, sculpture and mosaics.  Every one of us sees the world in
+ our own unique way, because we each have special feelings, ideas and dreams
+ that nobody else has.  When we practice art we have a chance to create pictures of
+ the world the way we see the world, and at the same time to express the feelings
+ that we have about different things in the world.  Art is one way for us to connect
+ to our inner world – who we are inside. When we have a chance to express our
+selves through art, we feel harmony and a sense of accomplishment inside us. 
+</p>
+<p class="side">Chapter Lessons:
+</p>
+<p class="side"> Lesson #1 – Clay</p>
+<p> To create a special atmosphere, play some peaceful, reflective music.  Dur
+ing this activity, it is best if we all stay silent, so that we can focus on our work
+ with the clay. We will need to cover our tables with plastic or newspapers, and we
+ will need a cup of water for each student.  Take a piece of self-hardening clay and
+ work with it for awhile. Clay comes directly from the earth.  It is part of the earth
+ that you are touching.  What does it feel like?  Our bodies are made of the same
+ elements that are in the clay and in the earth.  It is all the same substance.  We are
+ connected to the earth because we are made of the same stuff.  So we are all con
+nected to each other. Now try to shape the clay into something special. What did
+ you make?  Share your sculpture with the class and share how you felt working
+ with the clay.
+</p>
+<p class="side"> Lesson #2 — Beeswax  
+</p>
+<p>Using colored beeswax, make a mini sculpture of yourself and of some
+body or something that is very close to you.  It can be a person you love or a pet
+ that is very special to you.  It can be a stuffed animal or an object that is special
+ to you.  (Note that you will have to soften the beeswax first by making it warm in
+ your hands and fingers.)  When working with beeswax you can make very small
+ parts and fine objects if you just have a little patience.  It also helps to move your
+ fingers gently and in small motions.  Working with beeswax is very fine work!
+ What is special about the thing you made into a sculpture?  What kind of connec
+tion do you feel with that special person or object?  Make a display of all the dif
+ferent sculptures.  You can label the sculptures with a title and with your name.
+ For example: ‘My Grandma and Me, by Andrea.’ You won’t need lots of space todisplay your beeswax sculptures.  They are so tiny!
+</p>
+<p class="side"> Lesson #3 — Watercolors (a). Paint with just one color</p>
+<p>Choose one color you want to work with.  First dip your paintbrush into
+ the water.   Then just move your paintbrush back and forth on the paper, and get a
+ feeling for how the brush moves across the wet paper.  You can make a beautiful
+ painting without any color at all – just using the water!  Now dip your brush into
+ the color you want to use.  You will use only one color for this lesson.  Use the
+ watercolor paint to gently put swatches of your color onto the paper.  You will see
+ that the paint will go onto the paper in dark and light shades.  Pay attention to the
+ different shades and to how one color can have so many different variations!</p>
+<p class="side"> Lesson #4 — Watercolors (b). Paint your favorite time of day</p>
+<p>For this activity you will use two or three colors.  What is your favorite
+ time of day?  Choose the colors that will be best to paint the light at this time of
+ day.  Follow the instructions in Lesson #3 to prepare your paper and to begin
+ painting. Try to paint the light at your favorite time of day.  Pay special attention
+ to the feelings that you get when you think of that time of day.  Try to paint those
+ feelings into your picture – just like Claude Monet did!</p>
+<p class="side"> Lesson #5 – Using pastels</p>
+<p> Go to visit some cherry or apple trees when they are in blossom, or go to
+ visit some daffodils or lilacs nearby. You can also bring cherry blossoms, apple
+ blossoms or other flowers into the classroom.  Use the pastels on your art paper to
+ try to express the feelings of the colors and fragrance of the flowers. Share or dis
+play your work – it doesn’t have to be ‘perfect.’</p>
+<p class="side"> Discussion Questions:</p>
+<p> a) Discuss the first quotation.  What do you think Leo Tolstoy meant by the
+ “highest and best feeling to which human beings have risen”?  Can you give some
+ examples?</p>
+<p> b) Discuss what you think the first part of the second quotation means, when it
+ says, “Art is man’s nature.”  What about the second part?</p>
+<p> c) Gather some prints of Impressionist paintings.  Can you name some of the
+ other Impressionist painters?  What do their paintings have in common?  Did all
+ of the Impressionist painters see light in the same way?  Were they expressing the
+ same feelings?
+</p>
+<p class="side"> Supplemental Activities:</p>
+<ul>
+<li><p> Claude Monet saw the world and painted the world in his own unique way.
+ What is special about the way you see the world?  Close your eyes and visualize a
+ place in nature.  It could be a place you have visited that has stuck in your memo
+ry, or even a place that you have seen only in a picture. What is special about this
+ place?  Why do you remember it so vividly? What do you feel about this place?
+ Now open your eyes and draw or paint this place the way you experienced it or
+ remember it. Don’t draw or paint what it is supposed to look like.  Draw or paint
+ what you saw that nobody else could see. Draw or paint what you feel about this
+ place.</p>
+</li>
+<li> <p>Making a mask of yourself: Use papier mache, clay, or some other material to
+ make a mask of yourself.  Paint the mask according to how the best or happiest
+ part of you looks.  In other words, paint your face when you are your brightest
+ self.  What does the best part of you look like?</p></li>
+</ul>
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter4.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter6.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter13</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Thirteen</p>
+      <p> Let’s Do It Together: 
+Learning the Skills of Cooperation and Teamwork</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“Power consists in one’s capacity to link his will with the purpose of others, 
+to lead by reason and a gift of cooperation.” – Woodrow Wilson, 
+Letter to Mary A. Hulbert
+</p>
+<p> “Leadership is based on inspiration, not domination; on cooperation, not 
+intimidation.” –William Arthur Wood
+</p>
+<p> “Let it be our choice to make a world where everyone helps each other.” –Sri Chinmoy
+</p>
+<p> “Every kind of peaceful cooperation among men is primarily based on mutual
+ trust and only secondarily on institutions such as courts of justice and police.”–Albert Einstein</p>
+<p> “The only thing that will redeem mankind is cooperation.” –Bertrand Russell.</p>
+<p> “If we prepare today’s children to meet the unprecedented challenges they face, 
+if we help them begin to lay the foundations for a partnership world, then tomor
+row’s children will have the potential to create a new era of evolution.”  –Riane Eisle
+</p>
+<p> “Individual commitment to a group effort – that is what makes a team work, 
+a company work, a society work, a civilization work.”  –Vince Lombardi
+</p>
+<p> “This is a world of independence and interdependence.”  –Margaret Wheatley,
+ Leadership and the New Science
+</p>
+<p class="side">Chapter Story:</p>
+<p> Earnest H. Shackleton (1874-1922) was born in County Kildare, Ireland.
+ Shackleton became very well-known for his Nimrod Expedition to Antarctica
+ from 1907-1909. Then in 1913 he announced plans for a new expedition to do
+ something nobody had ever done: To reach the South Pole and to cross Antarctica
+ from one end to the other.  His expedition would be called the Endurance 
+named after the ship he would sail on.  His expedition would require lots of coop
+eration among the teammates, but nobody knew how the expedition would turn
+ out!
+ 
+</p>
+<p> People across Britain became very excited about their journey.  Wealthy
+ citizens donated money to make the expedition possible.  Public schools in Great
+ Britain contributed money to pay for dog teams, and each dog team was named
+ after a school that had donated funds. More than five thousand sailors, scientists,
+ and adventurers applied to go on the expedition.  Out of these five thousand,
+ Shackleton chose fifty-six men with different talents and skills that he felt were
+ the most qualified to accomplish his mission.  Twenty-eight of the men sailed
+ with Shackleton on the ship Endurance along with several sled dogs. The other
+ twenty-eight men would sail on a different ship. 
+</p>
+<p>Shackleton’s expedition began on August 1, 1914, when the Endurance set
+ sail from England.  After making the long journey around Cape Horn in Africa
+ and arriving closer to the Antarctic, the weather started to become colder and the
+ ship had trouble making it through the ice in the water. The ice grew thicker and
+ thicker and some days the ship could not move at all.
+</p>
+<p> On January 19th the ship Endurance became solidly frozen in ice. It could
+ not move.  Shackleton and his crew had no choice but to stay there stuck in the
+ ice for the winter. They were hoping that when the spring came and the ice melt
+ed, they would be able to get the ship out.  The crew passed lots of time singing
+ songs and by having the first ever dog sled races, and by cleaning their ship,
+ which they called ‘the Ritz’, as if it were a hotel.  The crew played their final
+ football and hockey games on the ice.</p>
+<p>The sun disappeared as the seventy-day Antarctic winter night began.  The
+ temperature fell to –23F at midnight on July 11.  Around that time there was a
+ severe blizzard. The winds blew at the rate of 70 miles an hour. The snow piled
+ five feet deep – 100 tons of snow piled up on the sides of the ship. Shackleton
+ was very concerned about pressure from the ice on the sides of the ship. By
+ August they were running out of food for the dogs. Seals and penguins had disap
+peared. It had even become too cold for them!  By Sunday, October 23rd the ship
+ could not take the severe pressure of the ice and it began to leak. Shackleton and
+ his crew worked together feverishly to pump the water from the ship and to patch
+ the leak. But on Wednesday, Oct. 26th, they had to abandon the ship because it
+was crushed beyond repair. Shackleton and his crew were very sad about the ship
+ but they had to focus on what to do next.   They took provisions and equipment
+ and abandoned the ship.  </p>
+<p>At that time Shackleton and his crew were 346 miles from Paulet Island.
+ That was the nearest place where there was any food or shelter. Shackleton knew
+ that at Paulet Island there was a shelter, with extra food left by a previous expedi
+tion. Somehow he had to get to Paulet Island, but how?</p>
+<p> Shackleton thought about his dangerous situation.  The only solution was
+ to drift between the icebergs in the smaller boats that were attached to the sides of
+ their ship, Endurance.  They took the boats off the Endurance and no sooner than
+ they did, their beloved ship began to sink beneath the ice!  Endurance had been
+ locked in ice for 281 days and now she was gone forever.  It was November 21,
+ 1915, and it was a very sad day for Shackleton and his crew.  Nevertheless they
+ had to move on.</p>
+<p>Shackleton and his crew departed in two small sailboats. With their gear,
+ food and sledges, there was barely room to sit comfortably, let alone sleep.
+ Shackleton and his crew stopped to rest and camped on different ice flows
+ (chunks of ice), but each time the ice flows started breaking up beneath them. It
+ was not safe, so they had to keep drifting and just sleep on the boats.  The night
+time on the boats was the scariest thing of all.  The boats were very small and the
+ waves sometimes were very big and splashed over the sides of the boat.  It was
+ very hard to sleep since they were not sure if the sea would tip them over at any
+ moment.  Yet somehow they made it to land – but not to the place they thought
+ they were going to. On April 12th, the two small boats drifted to a place called
+ Elephant Island.  They found a spit of land where they could safely land.  This
+ was not Paulet Island, where they were trying to go, but at least they were on
+ land.  Shackleton and his crew were so happy! This was their first time on land in
+ 16 months, if you count all the time they were at sea and then stuck on their
+ frozen ship!</p>
+<p> Even though they were happy to be on land, Shackleton and his crew cer
+tainly didn’t want to spend the rest of their lives on Elephant Island. There were
+ no human beings there besides them! They had to find a way to make it to some
+place where there was civilization - where they could be safe and where they
+ could ask for help to make it back to England. The only solution Shackleton
+ could think of was to make a dangerous, 800 mile, voyage to a whaling station at
+ a place called South Georgia. However, in order to get there, they would have to
+ cross the ocean south of Cape Horn, Africa, which at that time of year was known
+ to be the stormiest area of water in the world. The voyage would take about a
+ month.</p>
+<p>Shackleton began the voyage along with five members of his crew, named
+ Worsley, Crean, McNeish, McCarthy and Vincent. The rest of the crew, Shackle
+ton left behind on Elephant Island. Shackleton appointed a man named Wild to be
+ Captain in charge, because he thought that Wild was the strongest and bravest.
+ Wild’s team on Elephant Island faced many challenges.  Food came to be in short
+ supply. They made stew of seal bones and seaweed.  They had to share the tiny
+ amount of food they had. One day, a man named Blackborrow fell into the icy
+ water and he developed severe frostbite on his feet. Captain Wild instructed two
+ of his crew to amputate Blackborrow’s feet.  As hard as this was to do, they had
+ to do it because Blackborrow would die from gangrene if they didn’t.  In the end
+ they saved Blackborrow’s life in this way.</p>
+<p> Meanwhile, a man named Hussey would play banjo at night while the men
+ would sing.  This would cheer everybody up, because they had to face so many
+ challenges each day just to stay alive. After many days and weeks of waiting,
+ some of the men began to lose hope that Shackleton would ever return to rescue
+ them.  Commander Wild told them not to lose hope and that if they helped each
+ other and supported each other they would survive and be rescued.</p>
+<p> Meanwhile, on Shackleton’s journey around Cape Horn, it seemed like
+ their small boat would capsize a thousand times, but it never did.  They passed
+ icebergs of all different shapes. Sometimes, because the men were so tired and
+ hungry, they imagined that the icebergs were alive!  It was quite scary when this
+ happened.  One day there was a huge snowstorm and the boat became covered in
+ heavy ice.  The boat looked more like a log than a boat.  The men had to work
+ together to chip the ice away from the boat. They had to throw many things over
+board to lessen the weight and they had to break away from their anchor to try to
+ get away.  It was dangerous to cut away the anchor but they had no choice.  They
+ chipped ice from the sails and hoisted them up, and luckily the sails worked! The
+ boat was able to move again. They were on their way, but frostbite became a seri
+ous problem because they had gotten so wet. They all developed frostbite blisters
+ that were very painful.</p>
+<p> After seven days, the wind finally subsided and the sun came out. They
+ dried their clothes in the sun. The ice on the boat and around the boat began to
+ melt and porpoises came blowing along the boat. To feel the sun and to see the
+ porpoises was one of the happiest experiences for Shackleton and his crew.  But
+ they still had not reached their destination and they had to face one more storm,
+ which surprised them suddenly. It was a major blizzard with enormous waves.
+ Shackleton told his men to hold on and help each other stay aboard the boat and
+ not fall into the deadly, icy waves.  He told them to not get too afraid and to work
+ together to bale the water out of the boat. Because they cooperated completely,
+ they survived the storm.  In two more days they made it to their destination 
+South Georgia. They had crossed the most dangerous part of the sea in the world
+ in a small sailboat in just 14 days.
+</p>
+<p>They were still 17 miles from the whaling station on South Georgia. They
+ would still have to cross over mountains and glaciers. It seemed almost impossi
+ble since they were so tired from their journey and from lack of good food.
+ McNeish and Vincent were too weak to go on. Shackleton, Crean and Worsley set
+ out to cross the mountains to the whaling station.  It was a difficult journey.
+ Shackleton’s companions were so tired during the night, they wanted to just lie
+ down on the snow and sleep.</p>
+<p> Shackleton would not let them sleep because they were so tired and wet
+ that they would not have been able to get up again and they would have died on
+ the ice.  They finally heard the sweet sound of the steam whistle at the whaling
+ station. This made them very excited and they rushed down the side of the moun
+tain. They were almost there, but on the way Shackleton fell through the ice and
+ had to be pulled out of the water by the others.  The whaling station finally came
+ into sight and they congratulated themselves on their heroic journey. The guard at
+ the whaling station was scared at first, when he saw them, because they looked so
+ dirty and wild, having traveled so long in such bad conditions.
+</p>
+<p> Shackleton and his companions got a bath, some good food, and lots of
+ rest at the whaling station.  The next and final goals were to retrieve McNeish and
+ Vincent from the other side of the mountains and then to sail to Elephant Island to
+ rescue Captain Wild and the other half of his original crew. It took Shackleton
+ four attempts with four different boats to go back and rescue the men on Elephant
+ Island.  Each time something went wrong, but he didn’t give up. He knew he had
+ to rescue Captain Wild and the others.  The men on Elephant Island under the
+ leadership of Wild had survived and waited 105 days to be rescued. During that
+ time they had no news from the outside world or any way of contacting Shackle
+ton.  Yet they all had faith that Shackleton would return. The men on Elephant
+ Island never saw a happier sight than when they saw Shackleton’s ship approach
+ing Elephant Island.  As the ship approached the island, Captain Wild directed the
+ men on the island to carry Blackborrow to a hillside so he could see all the activi
+ty (since he had lost his feet and could not walk).  </p>
+<p>When the ship got close enough, Shackleton yelled to Wild on the shore:
+ “Are you all well?”  And the boss of the island, Wild, shouted back, “All safe, all
+ well, thank God!”  Somehow, every one of Shackleton’s 26-member crew had
+ survived – those who were on the boat with him and those who stayed on Ele
+phant Island with Captain Wild.  They were able to make it because of their
+ courage, their ingenuity, and their amazing trust in one another.  Shackleton and
+ his crew returned to England in May, 1917.  He did not accomplish his original
+ mission but he had successfully completed one of the greatest adventures ever!
+</p>
+<p class="side">Chapter Overview: 
+</p>
+<p>In the world we live in there is a lot of focus on competition and winning.
+ We celebrate champions and people like to be Number One.  Sometimes we for
+get that not everyone can be Number One.  Sometimes, if we lose a game, we
+ might feel sad because we didn’t win.  In the worst case, the other team might
+ make fun of us because we didn’t win.  Competition can challenge us to do well,
+ but it can also result in hurt feelings.</p>
+<p> When we are focused on competition we often have the feeling that it is
+ ‘me against you’ or ‘us against them’.  This kind of attitude happens when we are
+ playing on the playground when we are trying to win the game and defeat the
+ other team.  We can also see this attitude when we are doing our schoolwork,
+ when we are trying to get a better grade than someone else.  This attitude is very
+ common and we see it all the time.  However, just because it is common does not
+ mean it is completely good.  It is also very important to know that we can make a
+ choice about whether we want to be in a competitive mind or not.
+</p>
+<p> There is another way to be – another way to work and play together.  It is
+ called cooperation.  Cooperation means working together as a team for a common
+ goal. When we are stuck in competition we often use the words ‘I’, ‘me’ or ‘my
+ team’.  On the other hand, when we practice cooperation we use the words ‘we’,
+ ‘us’ and ‘ours’.  In competition, the focus is on what is best for me.  In coopera
+tion, the emphasis is on what is good for us – the whole group.  In competition,
+ very often somebody can get left out or left behind. There is a special advantage
+ to cooperation and that is that nobody gets left out or left behind.  Cooperation
+ involves everyone and is good for everyone.
+</p>
+<p>We can practice cooperation in many different ways.  We can learn coop
+erative games to play where everyone can win and everyone can have fun.  We
+ can learn how to cooperate and help each other with our schoolwork.  Each of us
+ has subjects we are strong in and other subjects we are not as strong in.  We can
+ work together so that those of us who are strong in math can help those who are
+ not as strong, and those who are strong in reading and writing can help those who
+ are not as strong.  In this way, everyone at school can be successful. Everyone at
+ school can be both a teacher and a learner. We can also practice cooperation in
+ building a harmonious community, by setting goals we all want to achieve and
+ then by supporting and encouraging each other as we try to meet those goals.
+</p>
+<p>All of these kinds of kinds of cooperation will help to prepare us for the
+ most important cooperation challenge of all – that is the challenge of helping peo
+ple across the whole world learn how to cooperate.  Learning how to cooperate
+ means seeing things in a different way. Instead of looking at what is good just for
+ me, we learn to look at might be good for everybody. This takes lots and lots of
+ practice.  Yet if we start practicing now at home, on the playground, and in our
+classroom, then one day we will become experts in cooperation. We will be able
+ to become teachers of cooperation if we want to. We will be able to be leaders
+ and show others that cooperation is a better way for everyone.</p>
+<p> Chapter Lessons:
+</p>
+<p class="side"> Lesson #1 - Building a cooperative community</p>
+<p> a) Setting a Class or Family Meeting
+</p>
+<p> We are all gathered here to make a plan to create a more harmonious,
+ happy, and fulfilling classroom or home environment.  We want to give everyone
+ a chance to give his or her ideas for helping make the system work.  We will have
+ regular meetings where we can talk about the community we are building, to
+ learn new ways of cooperating and to practice our cooperation skills.</p>
+ <p>b) Creating Our Goals </p>
+ <p>To build a cooperative community we need to make some decisions as a
+ family or as a classroom as to what our specific goals are. It is best to do this with
+ the participation of everyone. This is your community and whatever guidelines
+ we agree upon must be important and meaningful to you.  It is also helpful to
+ keep your list of goals short and simple.  Here is a sample list of goals:</p>
+ <p> Peace- striving to create peace within oneself as well as in the home or classroom</p>
+ <p>Excellence - doing one's very best in academics, arts, athletics, and in the class
+ community or family community </p>
+ <p>Transcendence - achieving something that one has never achieved before; meeting
+ a goal that was set; beating a previous score or attaining a new level, etc.</p>
+ <p> c) Acknowledgements</p>
+ <p>Each time we gather for our meetings we will practice something called
+ ‘acknowledgements’. Acknowledgements means showing our appreciation for
+ each other.  When we practice acknowledgements, we tell about a special thing
+ that someone has done or about a special quality, talent or skill that they have.
+ Today we’ll begin to practice acknowledgements. Think of something special
+ someone has done or accomplished this week. Then raise your hand and share
+ what it is with the group.  It is important to try to acknowledge everyone in your
+ class, not just your friends. You can also acknowledge your teachers, and your
+ teachers can acknowledge you!</p>
+ <p>d) Achievements and Actions that Deserve Acknowledgements
+ Brainstorming a list of achievements or actions that deserve to be acknowl
+edged can be helpful in giving us a good idea of what kinds of things we can
+ acknowledge people for. Here is a sample list of achievements and actions you
+ might want to acknowledge. They are listed under the headings of the sample
+ goals we learned earlier.</p>
+ <p> Sample Excellence Achievements:</p>
+ <ul>
+  <li><p>Working hard on a report or project</p></li>
+  <li><p>Showing determination and persistence</p></li>
+  <li><p>Using good manners / being polite</p></li>
+  <li><p>Showing good sportsmanship</p></li>
+  <li><p>Showing good teamwork</p></li>
+  <li><p>Doing chores at home or at school</p></li>
+  <li><p>Eating a healthy meal</p></li>
+  <li><p>Reading a good book</p></li>
+  <li><p>Learning a new concept or skill</p></li>
+  <li><p>Caring for your pet</p></li>
+</ul>
+
+ <p> Sample Peace Achievements:</p>
+ <ul>
+  <li><p>Cleaning up a park or the neighborhood</p></li>
+  <li><p>Planting a garden</p></li>
+  <li><p>Making a compost pile</p></li>
+  <li><p>Visiting a nursing home</p></li>
+  <li><p>Visiting someone who is sick</p></li>
+  <li><p>Cooking or gathering food for a homeless shelter</p></li>
+  <li><p>Doing a car wash or bake sale to earn money for a charity</p></li>
+  <li><p>Solving a conflict in a nonviolent manner</p></li>
+  <li><p>Becoming a patrol at school</p></li>
+  <li><p>Writing a peace poem or essay</p></li>
+  <li><p>Making a drawing or a poster that illustrates peace</p></li>
+  <li><p>Reading or learning about the United Nations</p></li>
+  <li><p>Helping Mom or Dad wash dishes or mow the lawn</p></li>
+  <li><p>Reading a biography of a peace maker from history</p></li>
+  <li><p>Helping a younger brother or sister</p></li>
+  <li><p>Helping a younger student</p></li>
+</ul>
+<p> Sample Self-Transcendence Achievements:</p>
+<ul>
+  <li><p>Working harder on a project than you ever have</p></li>
+  <li><p>Getting a better score than you have in the past</p></li>
+  <li><p>Running a certain distance faster than ever before</p></li>
+  <li><p>Gaining more confidence in a certain skill</p></li>
+  <li><p>Forgiving someone for something they did</p></li>
+  <li><p>Taking or showing responsibility for something</p></li>
+  <li><p>Displaying more tidiness than ever before</p></li>
+  <li><p>Showing more self-discipline than usual</p></li>
+  <li><p>Showing more tolerance about someone or something</p></li>
+  <li><p>Exhibiting patience</p></li>
+  <li><p>Being true to yourself</p></li>
+  <li><p>Being flexible in a challenging situation</p></li>
+  <li><p>Showing generosity towards someone</p></li>
+  <li><p>Displaying self-control</p></li>
+  <li><p>Showing moderation in an unhealthy habit</p></li>
+</ul>
+<p>We can also refer to a list to learn of new ways we can contribute to the
+ community.  We can try to do different kinds of achievements and actions instead
+ of just starring in one or two of the same areas all the time. The most important
+ thing to remember is that all of your efforts and achievements are part of our
+ cooperation as a community. Every positive achievement or effort we make builds
+ a more special and harmonious community for all of us!</p>
+ <p> e) Acknowledgements - ‘Harmony Tokens’ and the ‘Harmony Bank’</p>
+ <p> Today we are going to add a new activity to make acknowledgements even
+ more fun and to help us to see how much we are working together.  We are going
+ to create ‘harmony tokens’ and a ‘harmony token bank’.  Our harmony tokens can
+ be polished stones, seashells, polished glass pieces, marbles, colored ping-pong
+ balls or something else that you want to create.  (Colored ping-pong balls are fun
+ because everyone gets to color them with markers.)  We have to decide as a class
+ what we want to use as harmony tokens. We also need to create a harmony token
+ bank – some place to collect all the harmony tokens we collect.   Then, each time
+ someone gets acknowledged they will put a harmony token into the bank. We will
+ watch our bank fill up more and more each day with the harmony tokens that
+ everyone earns. We will be able to see all of the good things we are doing and we
+ will be cooperating to fill the bank to the top!</p>
+ <p> f) Acknowledgements – Celebration</p>
+<p> When we fill up our harmony token bank we can celebrate together.  In
+ other words, if our class earns enough harmony tokens, a special activity might
+ take place - we might have some extra recess or free time, a special pizza lunch, a
+ board game time, extra computer privileges, or a story time, an educational or
+ uplifting video, or some other privilege. We could also ‘save up’ our harmony
+ tokens, and fill up several banks’ worth of tokens to earn a special field trip or
+ some such larger privilege.  The only guideline for our privileges is that they
+ should be for all of our class to enjoy; all earned special activities or privileges
+ should be group activities – things that we do all together.  We may also want to
+ create or invent a special ceremony to do when we fill up our harmony token
+ bank.  Our ceremony can include a song, a dance, a poem, or some other special
+ activities.</p>
+ <p> g) Acknowledgements </p>
+ <p>Extension One</p>
+ <p> We will have a special day where we get to acknowledge ourselves for
+ something we are good at, something we have done well, or something we are
+ proud of.  This will be a day for us to give ourselves credit for some things that
+ others may not be aware of or may have overlooked.  It is OK to acknowledge
+ ourselves sometimes! </p>
+ <p>Extension Two</p>
+ <p> Today we will practice a special kind of acknowledgement. We will
+ acknowledge ourselves for trying something and making a mistake.  Mistakes are
+ very important – they are the main reason we learn! It is healthy to acknowledge
+ our mistakes once in a while and to share what we have learned from our mistake.
+ Even the teacher can share a mistake he made.  It is so important for the students
+ to hear that their teacher has made a mistake.  Note: Nobody has to do this activi
+ty if they don’t feel comfortable with it.</p>
+<p class="side"> Lesson #2 - Beach ball teamwork</p>
+<p>We will divide participants into three groups.  Each group will sit on the
+ ground in a circle with their shoulders touching one another while facing outward.
+ All three groups should form a straight line with about fifteen feet separating each
+ group. About ten feet from the last group, place a container, such as a bucket.</p>
+ <p>To begin the game, place an inflated beach ball along the backs of the first
+ group. Everyone in Group One must make contact with the ball without touching
+ it with their hands or feet, and they must transfer the ball to the second group
+ without dropping it. Then Group Two will do the same by transferring the ball to
+ Group Three who will then deposit the ball in the bucket. This is a timed event.
+ We will go through at least three rounds. Each round we want the groups to
+ improve the quality of their teamwork and the time of their solutions. The game
+ ends when the groups are satisfied that the game can’t be done more quickly.</p>
+ <p class="side"> Lesson #3 - Blind trust walk</p>
+ <p> Version One:</p>
+ <p>We are going to walk to a spot across an empty field, across the play
+ground, or across the classroom to see the spot where you will need to go. Then
+ we are going to put on blindfolds and you will try to go to that spot with your
+ blindfold on. We will choose certain people to be ‘spotters’.   It will be the job of
+ the spotters to ensure the safety of the participants who are blindfolded.</p>
+ <p>Version Two:</p>
+ <p> I am going to show you a route that you will be traveling while blindfold
+ed. After you get started and after a couple of minutes of observation, stop the
+ group and appoint a leader who will not be blindfolded.  It will be the leader’s job
+ to get the group safely to the appointed spot, but he/she will only be able to give
+ them three separate sets of directions. If the group starts going off course, the
+ leader can only stop them three times. It will be the leader’s job to ensure the
+ safety of the participants.</p>
+ <p class="side">Lesson #4 - Hula hoop circle</p>
+ <p> Level One: </p>
+ <p>All participants will stand in a circle and hold hands. Break the circle and
+ place a hula-hoop on one side of the circle, then rejoin the hands together. The
+ hula-hoop must travel around the circle, and end where it started. Connection
+ must be maintained as if an electrical current were running through the group.
+ Your hands cannot come apart at any time.  The event will be timed and repeated
+ at least twice. The job of your group will be to cut your previous time down with
+ each go round.</p>
+ <p> Level Two:</p>
+ <p>We will now add a hula-hoop on the opposite side of the first one! The
+ instructions are that the hula hoops must travel around the circle in opposite
+ directions and end where they started. Connection must be maintained as if an
+ electrical current were running through the group. Your hands cannot come apart
+ at any time. The event will be timed and repeated at least twice.  Your goal will
+ be to cut your previous time down with each go round.</p>
+ <p class="side"> Lesson #5 - Animal game</p>
+ <p> Level One:  </p>
+ <p>We are going to divide our group into teams of 3-5 people. Each group will
+ come up with a barnyard animal that they will pretend to be. Once your group
+ decides on which animal you want to be, you cannot talk from this point forward.
+ Each person will put on a blindfold Make sure you put the blindfolds over your
+ eyes so you can’t see. It’s no fun if you cheat or try to speak!   First we will move
+ each person to a different spot in the room. Now, when we begin the game, you
+ are going to try to find the group you belong to by making the noise of your
+ group’s animal. After you’ve found your group, keep making the noise of your
+ animal so everyone else in your group can find their proper group. When the
+ game is done you will be able to take your blindfolds off.</p>
+ <p> Level Two: </p>
+ <p>In Level Two, we will whisper a secret number into each person’s ear.
+ This time, after you find your group you will have an additional task: You must
+ communicate your secret number to the rest of the group without talking. You
+ will have to be creative and use your animal language.  You will also have to lis
+ten carefully to hear the other secret numbers!  The teacher will let you know
+ when the game is finished.</p>
+ <p class="side">Lesson #6 - The shoe game</p>
+ <p> Level One:  </p>
+ <p>In this game we are all going to remove our shoes and put them into a big
+ pile in the middle of the room.  We will mix up all of the shoes so they are all in a
+ jumble. All of the participants will sit in a circle surrounding the shoes.  When the
+ teacher gives a signal we will all try to find our shoes, put the shoes on the right
+ feet, and tie the laces, and then sit down silently in the circle again.  We will time
+ the activity to see how long it takes us.  We will try to do the activity as quickly
+ as we can, so it will be important that we try to help each other. It will also be
+ helpful if we don't become too loud and crazy because that will make it more dif
+ficult for us to communicate and to cooperate and our time will not be as good.
+ Once we do this activity, we will do it one more time to see if we can improve
+ our group time. We can keep track of our times so that in the future we can try
+ again to improve our time.</p>
+ <p> Level Two: </p>
+ <p>In Level Two the game is the same as in Level One, except that we will
+ give blindfolds to all of the participants. We will tell them to put the blindfolds
+ on, covering their eyes so that they can’t see. We will shuffle the shoes as we did
+ in Level One and then we will tell the participants to find their own shoes and put
+ them on. The game is over when each participant is wearing his/her own shoes 
+on the correct feet and tied properly – and sitting silently back on the circle.  For
+ this level you may want to have one or two un-blindfolded ‘spotters’ to help
+ everyone find their shoes!  We will also keep track of our time in Level Two as
+ we did for Level One. When we do Level Two, we will not compare our Level
+ Two times with Level One times because Level Two is much harder!  After we
+ play the game once at Level Two, we will repeat it in the same way we did for
+ Level One, to see if we can improve our score.</p>
+ <p class="side"> Discussion Questions:</p>
+ <p> a) Here is a quotation from Shackleton’s journal, towards the end of the
+ Endurance Expedition: “We had suffered, starved and triumphed, groveled down
+ yet grasped at glory, grown bigger in the bigness of the whole. We had seen God
+ in His splendors, heard the text that nature renders.  We had reached the naked
+ soul of man.”  Discuss this quotation, focusing on the meaning of some of the
+ vocabulary, the poetic imagery, and the deeper meaning of the passage.</p>
+ <p>b) “This is a world of independence and interdependence.”  Discuss this quotation
+ from Margaret Wheatley.  Why is it important that we have both independence
+ and interdependence for the world to progress?  You might want to start by defin
+ing ‘independence’ and ‘interdependence’.</p>
+<p> c)  “Individual commitment to a group effort – that is what makes a team work, a
+ company work, a society work, a civilization work.”  This quotation by Vince
+ Lombardi is very interesting because he is pointing out the fact that cooperation is
+ needed to succeed in every kind of group – from a team to a company to a society
+ to a civilization.  Discuss the kinds of cooperation that need to exist at all these
+ different levels in order for the group to succeed.  Also, define what Vince Lom
+bardi might mean by: “Individual commitment to a group effort.”</p>
+<p> d) “Let it be our choice to make a world where everyone helps each other.” This
+ quotation by Sri Chinmoy implies that we have a choice about whether to make
+ the world better or not.  We have a choice about whether we want to learn and
+ practice cooperation.  If you have begun to practice some of the lessons and skills
+ in this book and in this chapter, then you have made the choice to try and improve
+ the world.  In what other ways can we choose to change the world?  What is the
+ best way to inspire others to make the choice to cooperate?</p>
+ <p class="side"> Supplemental Activities:</p>
+<ul>
+  <li>
+    <p>
+      Make a map of Shackleton’s Expedition. Show his voyage, from where he started in Britain all the way to Antarctica. Then show where the Endurance got stuck and sank beneath the ice. After that you can show his journey to Elephant Island and to the whaling station in South Georgia. Finally you can show how he went back to Elephant Island to rescue Captain Wild and the others and then how they made their journey back to England. Note: You can make one big map or you might want to make two maps instead of one. The first map can be a map of Europe and Africa showing the big picture of the journey. The second map can show the details of all the adventures and challenges near Antarctica, including Elephant Island and South Georgia.
+    </p>
+  </li>
+  <li>
+    <p>
+      Make a timeline of Shackelton’s Expedition. A timeline is a list of the important dates of the expedition. Next to the date you can write a brief description of what happened on that date. Creating a timeline is a great way to remember a story and a great tool to be able to tell the story to others.
+    </p>
+  </li>
+  <li>
+    <p>
+      Choose a quotation from the chapter quotations above. Write the quotation in your journal or on a piece of paper and then write your thoughts and reflections on the meaning of the quotation.
+    </p>
+  </li>
+  <li>
+    <p>
+      During most of the latter part of Shackleton’s Expedition, when his crew was fighting for survival, the men had to work cooperatively to hunt animals for food for themselves and for their dogs. They had to share the food so that everyone – people and dogs – could stay as strong and healthy as possible. There were not so many kinds of animals to hunt. Do some research about Antarctica and the area of Elephant Island to see if you can guess what kind of animals Shackleton and his crew might have hunted for food. If you choose, you can read a longer version of Shackleton’s story in order to find out the answer that way. Note: You might even find a few clues in the story of Shackleton in this chapter – but not all the possible answers.
+    </p>
+  </li>
+</ul>
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter12.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter14.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

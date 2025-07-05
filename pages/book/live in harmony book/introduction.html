@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>introduction</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Introduction</p>
+    </h1>
+    <p> Living in Harmony is intended to provide a pathway for students and
+ teachers towards the goals of fostering greater harmony in their schools, in their
+ communities and in the world. There are two primary aspects of our experience as
+ human beings – an inner, personal, and individual aspect; and an outer, social and
+ communal aspect. In order to build a world of greater harmony, we must first
+ establish some measure of harmony in our own personality. Then we must learn
+ the skills of creating harmony in our relationships with others. With a sense of
+ harmony within ourselves, combined with the tools necessary to create harmo
+nious relationships with others, we have the resources with which to build harmo
+nious communities – both local and global.</p>
+
+<p> Living in Harmony focuses on these aspects of human development.  The
+ inner aspect is addressed in Part I and the outer aspect is the focus of Part II.  In
+ Part I, we explore ten ways for students to get in touch with their own inner world– that is, with their own feelings, thoughts, and dreams.  The first and primary
+ relationship we have is with ourselves.  It is on this relationship that all of our
+ other relationships hinge.  Children who are balanced, confident, sensitive indi
+viduals with a healthy self-image are more likely to have positive and productive
+ relationships with others.  Their ability to accept who they are, to appreciate their
+ own talents, and to express their feelings and ideas in constructive ways will
+ directly affect their capacity to be caring, understanding, and communicative part
+ners with others
+</p>
+<p>  The first ten chapters of this book present a broad spectrum of activities
+ designed to help foster and guide this inner aspect of development. Studying the
+ curriculum of the inner life is different from studying math, reading, geography or
+ science.  When we teach ‘normal’ academic subjects, we look to books and to the
+ world around us.  To help students study the subject of their inner world, we turn
+ their attention to their feelings, ideas, dreams and visions.  To study academic
+ subjects, we encourage students to use their minds, and the aim is to gain knowl
+edge and skills.  To study the inner life, we must help students make a connection
+ to their own private selves - their hearts and souls. The aim here is to help them
+ gain wisdom, peace, and the development of their nobler qualities. The ‘inner’
+ curriculum is about helping students become more aligned with their own source,
+ in order that they may attain greater happiness and be of better service to the
+ world.
+ 
+</p>
+<p>The second ten chapters of the book help teachers and students move from
+ the realm of the personal to the realm of society. These chapters are aimed at
+building what Riane Eisler would call partnership skills - that is, skills in building
+ relationships based upon mutual trust, respect, and communication.  The relation
+ships built by means of partnership skills are ones undertaken with a clear under
+standing of the common benefits working together can bring.  Some partnership
+ skills have to do with helping students gain a better understanding of the geogra
+phy and the history of the world, so that they are able to begin to place their own
+ culture, perspectives and opinions into a broader global context.  Other partner
+ship skills, such as cooperation skills and conflict resolution skills, focus on help
+ing students learn to weave the fabric of relationships – communication – into
+ productive results. Still other partnership skills have to do with helping students
+ develop their inborn human capacity for caring, compassion, and empathy.  All
+ of these partnership skills comprise the larger building blocks of leadership qual
+ities that students can develop with the ultimate purpose of building a peaceful
+ and just society on earth. 
+</p>
+<p>The language of Living in Harmony is directed at students.  In other words,
+ it is written to bypass the need of the teacher to interpret the lessons and to put
+ them into child-oriented language.  It is intended to be less like an instructional
+ manual for teachers and more like a storybook.  The teacher of students in grades
+ 1-3 can simply read the book aloud to the students.  Students in grades 4-6 can
+ read some sections silently, but they will benefit from reading aloud to each other,
+ or teachers of students in these grades can read the entire book aloud to the stu
+dents.  Students in grades 7 and 8 can read some sections silently on their own,
+ read other sections aloud to each other, or they can occasionally read sections to
+ younger students.  </p>
+<p>ger students.  
+The chapter lessons are intended to appeal to a wide variety of learners.
+ The activities are designed to appeal to different interests and to involve many
+ learning modes – imagination, creativity, mind-body fitness, language, nature, etc.
+ There is a wide enough variety of activities to suit all kinds of learners.  By
+ exposing children to a full spectrum of activities, we enhance their holistic devel
+opment into healthy, balanced, insightful, happy, and confident young adults. The
+ language, and the topics covered, lend themselves to many opportunities for addi
+tional spelling, vocabulary, writing, reading, and artistic activities that could be
+ created by the teacher and the students – if they have the space in their curriculum</p>
+<p> “The language of the heart is the only language that everybody can under
+stand,” as Sri Chinmoy says. The ultimate goal of this book is to put students in
+ touch with their own hearts, so that they can ultimately express their nobler quali
+ties and develop their unique talents for the greater good of the world at large.
+ The world desperately needs a new generation of leaders who understand and
+ speak the language of the heart.  It is hoped that this book will facilitate the stu
+dents’ journey to their own highest and best selves, and from there outward
+ towards the communities they will be charged with constructing as future leaders Riane Eisler has said, “"I see a world where the most highly valued work will
+ have the consciousness of caring."  It is hoped that Living in Harmony will help
+ students, teachers, and parents alike to move forward towards the fulfillment of
+ that vision.
+ 
+</p>
+<p> I want to thank Sri Chinmoy for all of his work for world harmony and for
+ inspiring the writing of this book.  I want also to thank Riane Eisler for being a
+ source of spiritual light and wisdom.  Thanks to all of my colleagues - especially
+ Tim Seldin, Jonathan Wolff, Margaret Wolff, Paul Epstein, Ann Epstein and Aline
+ Wolf for their tireless support and encouragement. Thank you to dear friends, Zoe
+ Handerson, June Lang, Stefania Rubino and Sahayak Plowman for their invalu
+able contributions. I also want to thank Paula Kleinman for her invaluable help in
+ editing this book. Finally, thank you to all the students, fellow teachers, and par
+ents throughout the years from whom I have gained insights, ideas, and inspira
+tion in ways great and small
+</p>
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    
+    <a href="chapter1.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

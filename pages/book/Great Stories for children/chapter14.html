@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter14</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>The Overcoat</p>
+    </h1>
+    <p>It was clear frosty weather, and as the moon came up over the Himalayan peaks, I could
+see that patches of snow still lay on the roads of the hill-station. I would have been
+quite happy in bed, with a book and a hot-water bottle at my side, but I’d promised the
+Kapadias that I’d go to their party, and I felt it would be churlish of me to stay away. I
+put on two sweaters, an old football scarf, and an overcoat, and set off down the
+moonlit road.</p>
+<p>It was a walk of just over a mile to the Kapadias’ house, and I had covered about
+half the distance when I saw a girl standing in the middle of the road.</p>
+<p>She must have been sixteen or seventeen. She looked rather old-fashioned – long
+hair, hanging to her waist, and a flummoxy sequined dress, pink and lavender, that
+reminded me of the photos in my grandmother’s family album. When I went closer, I
+noticed that she had lovely eyes and a winning smile.
+</p>
+<p>‘Good evening,’ I said. ‘It’s a cold night to be out.’
+</p>
+<p>‘Are you going to the party?’ she asked.
+</p>
+<p>‘That’s right. And I can see from your lovely dress that you’re going too. Come
+along, we’re nearly there.’</p>
+<p>She fell into step beside me and we soon saw lights from the Kapadias’ house
+shining brightly through the deodars. The girl told me her name was Julie. I hadn’t seen
+her before, but I’d only been in the hill-station a few months.
+</p>
+<p>There was quite a crowd at the party, and no one seemed to know Julie. Everyone
+thought she was a friend of mine. I did not deny it. Obviously she was someone who
+was feeling lonely and wanted to be friendly with people. And she was certainly
+enjoying herself. I did not see her do much eating or drinking, but she flitted about from
+one group to another, talking, listening, laughing; and when the music began, she was
+dancing almost continuously, alone or with partners, it didn’t matter which, she was
+completely wrapped up in the music.
+</p>
+<p>It was almost midnight when I got up to go. I had drunk a fair amount of punch, and I
+was ready for bed. As I was saying goodnight to my hosts and wishing everyone a
+merry Christmas, Julie slipped her arm into mine and said she’d be going home too.</p>
+<p>When we were outside, I said, ‘Where do you live, Julie?’
+</p>
+<p>‘At Wolfsburn,’ she said. ‘Right at the top of the hill.’
+</p>
+<p>‘There’s a cold wind,’ I said. ‘And although your dress is beautiful, it doesn’t look
+very warm. Here, you’d better wear my overcoat. I’ve plenty of protection.’
+</p>
+<p>She did not protest, and allowed me to slip my overcoat over her shoulders. Then
+we started out on the walk home. But I did not have to escort her all the way. At about
+the spot where we had met, she said, ‘There’s a short cut from here. I’ll just scramble
+up the hillside.’
+</p>
+<p>‘Do you know it well?’ I asked. ‘It’s a very narrow path.’
+</p>
+<p>‘Oh, I know every stone on the path. I use it all the time. And besides, it’s a really
+bright night.’</p>
+<p>‘Well, keep the coat on,’ I said. ‘I can collect it tomorrow.’</p>
+<p>She hesitated for a moment, then smiled and nodded. She then disappeared up the
+hill, and I went home alone.
+</p>
+<p>The next day I walked up to Wolfsburn. I crossed a little brook, from which the
+house had probably got its name, and entered an open iron gate. But of the house itself,
+little remained. Just a roofless ruin, a pile of stones, a shattered chimney, a few Doric
+pillars where a veranda had once stood.
+</p>
+<p>Had Julie played a joke on me? Or had I found the wrong house?</p>
+<p>I walked around the hill, to the mission house where the Taylors lived and asked old
+Mrs Taylor if she knew a girl called Julie.
+</p>
+<p>‘No, I don’t think so,’ she said. ‘Where does she live?’</p>
+<p>‘At Wolfsburn, I was told. But the house is just a ruin.’
+</p>
+<p>‘Nobody has lived at Wolfsburn for over forty years. The Mackinnons lived there.
+One of the old families who settled here. But when their girl died…’ She stopped and
+gave me a queer look. ‘I think her name was Julie…Anyway, when she died, they sold
+the house and went away. No one ever lived in it again, and it fell into decay. But it
+couldn’t be the same Julie you’re looking for. She died of consumption – there wasn’t
+much you could do about it in those days. Her grave is in the cemetery, just down the
+road.’
+</p>
+<p>I thanked Mrs Taylor and walked slowly down the road to the cemetery; not really
+wanting to know any more, but propelled forward almost against my will.
+</p>
+<p>It was a small cemetery under the deodars. You could see the eternal snows of the
+Himalayas standing out against the pristine blue of the sky. Here lay the bones of
+forgotten empire-builders – soldiers, merchants, adventurers, their wives and children.
+It did not take me long to find Julie’s grave. It had a simple headstone with her name
+clearly outlined on it:</p>
+<p>Julie Mackinnon<br>
+1923-39<br>
+‘With us one moment,<br>
+Taken the next,<br>
+Gone to her Maker,<br>
+Gone to her rest.’</p>
+<p>Although many monsoons had swept across the cemetery wearing down the stones,
+they had not touched this little tombstone.
+</p>
+<p>I was turning to leave when I caught a glimpse of something familiar behind the
+headstone. I walked round to where it lay.
+</p>
+<p>Neatly folded on the grass was my overcoat.</p>
+<p>No thank-you note. But something soft and invisible brushed against my cheek, and I
+knew someone was trying to thank me.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter13.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter15.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter19</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Nineteen</p>
+      <p>  Everyone is Born a Leader: Discovering and Practicing
+ Your Own Leadership Qualities</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+    <p>“The world belongs to the energetic.” –Ralph Waldo Emerson</p>
+<p>“Laugh and the world laughs with you, snore and you sleep alone.” –Anthony Burgess</p>
+<p>“Nothing significant can come into existence from mere wishing.” –Sri Chinmoy</p>
+<p>“You can have anything you want if you want it desperately enough. You must want it with an inner exuberance that erupts through the skin and joins the energy that created the world.” –Sheila Graham</p>
+<p>“This art of resting the mind and the power of dismissing from it all care and worry is probably one of the secrets of energy in our great men.” –Captain J.A. Hadfield</p>
+<p>“Whoever you are or whatever you do, you are important. And that importance doesn’t come from how people view you. It comes from how you view yourself.” –Prem Rawat</p>
+<p>“To bring oneself to a frame of mind and to the proper energy to accomplish things that require plain hard work continuously is the one big battle that everyone has. When this battle is won for all time, then everything is easy.” –Thomas A. Buckner</p>
+<p>“Energy and persistence conquer all things.” –Benjamin Franklin</p>
+<p>“Thoughts give birth to a creative force ...Thoughts create a new heaven, a new firmament, a new source of energy, from which new arts flow. When a man undertakes to create something, he establishes a new heaven, as it were, and from it the work that he desires to create flows into him. For such is the immensity of man that he is greater than heaven and earth.” –Philipus Aureolus Paracelsus</p>
+<p>“Men make history, and not the other way around. In periods where there is no leadership, society stands still. Progress occurs when courageous, skillful leaders seize the opportunity to change things for the better.” –Harry S. Truman</p>
+
+<p class="side">Chapter Story:
+</p>
+<p> Maria Montessori was born in 1870 in Italy.  She grew up as a very intelli
+gent young girl who had a compassionate heart and a very determined mind.
+ Maria’s parents said that growing up she was "talented but headstrong." She often
+ interrupted her parents during discussions they had in order to offer her opinions,
+ even if her parents were talking about adult topics.  In games with other children
+ Maria was often the leader.  At school, Maria learned very easily and did excep
+tionally well on her exams.  In those days, most elementary schools were very
+ dirty and crowded. This is something that Maria noticed and remembered later on
+ in life when she founded her own school.
+</p>
+<p> She enjoyed talking to her neighbor, a little girl who had been born as a
+ hunchback.  The girl didn’t have many friends and so she valued her friendship
+ with Maria. Maria liked to take the little girl out for walks.
+</p>
+<p> Maria’s father and mother were both very important in her life.  It was
+ Maria’s mother who encouraged Maria to keep on studying hard and to follow her
+ dreams and ambitions. Maria’s mother believed her daughter would one day
+ accomplish something great -- and she was right. Maria did very well in all of her
+ high school subjects and she passed her high school final exams with very high
+ grades. In college she studied modern language and natural sciences.  Of all of
+ her classes, math was her favorite subject. She did very well in college also and
+ graduated with honors.  </p>
+<p>Maria decided she wanted to continue studying so she could become a doc
+tor. However, at that time, no woman had ever been allowed to go to medical
+ school in Italy. In the 1890’s in Italy, a woman could not walk in the street alone,
+ could not write her own check, and basically could not do anything without her
+ husband.  Maria did not believe these customs were right and when the University
+ of Rome told her she could not go to the medical school, she became even more
+ determined to reach her dream.</p>
+<p> Maria enrolled as a student in physics, mathematics and natural sciences.
+ Her plan was to keep on studying until she could convince the university to
+ accept her as a medical student.  During this time Maria’s father was very
+ opposed to the idea of his daughter becoming a doctor. According to his beliefs,
+ this was just wrong; but Maria’s mother continued to support her. While other stu
+dents would be having fun with their friends in the evenings, Maria just kept on
+ studying. She passed a special exam that showed she was qualified to become a
+medical student.  She never stopped asking the University to allow her to join the
+ medical school, and finally the University gave up trying to say no. They decided
+ to accept her into medical school.
+</p>
+<p>In medical school it was not easy to be the only woman. Maria did not
+ have any female students she could be friends with and the men often made fun
+ of her. Because she was so smart and so determined, the male medical students
+ eventually accepted her, treated her more nicely and became her friends. Mean
+while, Maria’s father did not speak to her very much because he was still upset
+ with her decision to study medicine. Maria’s mother continued to support her and
+ even helped her to study sometimes. In 1896 Maria presented her medical thesis
+ to a board of ten men.  They were very impressed and granted her the doctor of
+ medicine degree.  Maria Montessori had become the first woman to graduate
+ from medical school in Italy!  But that was just the beginning of her accomplish
+ments.
+ 
+</p>
+<p> Maria began her career as a doctor working in a hospital for the mentally
+ ill. There she became interested in mentally and emotionally challenged children.
+ In 1898 she was appointed director of the Orthophrenic School in Rome.  There
+ she pioneered in the instruction of retarded children, especially through the use of
+ an environment rich in manipulative materials.  She saw how the retarded chil
+dren made incredible progress in learning when they were in an inspiring learning
+ environment, and surrounded by loving care and encouragement.  Maria believed
+ that if she provided the same kind of teaching atmosphere for children who were
+ not retarded that they, too, would show remarkable progress. In 1907 Maria
+ opened the first Casa dei Bambini (Children’s House) as a day care center in the
+ San Lorenzo district of Rome.  In this first school, Maria worked with some of
+ the poorest children in Rome.  In those days, many people believed that poor chil
+dren could not learn well or behave well.  Maria proved this was wrong, because
+ her preschool children made tremendous progress in their learning.
+</p>
+<p> Maria’s success with the underprivileged children in San Lorenzo made
+ her famous.  Maria began to teach others about how to make this kind of school.
+ Her method was called the Montessori Method and the schools that she and her
+ followers founded were called Montessori schools.  They were started all over
+ Europe and in the United States.  The first Montessori school in the U.S. was
+ started in 1912, near Tarrytown, New York.  </p>
+<p>Eventually, there were Montessori schools around the whole world.
+ Maria’s schools had a very special philosophy.  She always remembered how
+ dirty and crowded her own elementary school was when she was growing up.
+ Maria was determined that her own schools would be beautiful, clean, and well
+ organized.  During Maria’s time there was a general belief that children naturally
+ wanted to behave badly.  Most people believed that children needed to be taught
+ to fear teachers and parents, and that they needed to be punished when they did
+things wrong.  It was also believed that children were lazy and had to be forced to
+ study and learn.  Maria believed this attitude was wrong and incorrect.  In Maria’s
+ schools, children were treated with love and respect.  Children were allowed to
+ follow their own interests and to learn how to be a part of a community. The chil
+dren made great progress because they were having fun. They behaved well
+ because they learned to respect each other.
+</p>
+<p> Maria believed that if children were allowed to learn in an accepting
+ atmosphere, they would grow into adults who would be able to make a more
+ peaceful and just planet.  Maria did not believe it was right that so many people
+ in the world lived in poverty. During her time in San Lorenzo, and later during
+ her travels in India, Maria saw many very poor people and many children who
+ could not go to school.  She wanted her educational system to inspire people
+ across the world to help these children and give them an opportunity to go to
+ school and blossom. 
+</p>
+<p>Maria thought that everyone in the world deserves to have healthy food to
+ eat, a safe home to live in, good medicine, and a school that has a peaceful envi
+ronment.  In her speeches around the world, Maria spoke out against the unfair
+ness of the world situation, where some people have so much and others have to
+ survive on so little.  Maria believed that the students at her schools around the
+ world would grow up and make the world a different and better place for all.
+</p>
+<p> Maria thought that war was a failure of humanity to find peaceful solu
+tions.  During World War II, Maria spoke out against her own government in Italy
+ because she did not believe her government was truly trying to make peace and
+ justice for all. The Italian government did not like this, and, in order to avoid
+ being arrested, Maria had to live in other countries for the final years of her life.
+ Throughout her life Maria worked for the rights of women and children around
+ the world.  She was nominated for the Nobel Peace Prize several times, though
+ she never received it.  Some of her followers believe she deserves to receive it
+ still, even though she is no longer alive. Maria Montessori’s whole life was dedi
+cated to the idea that all people on the planet need to learn to peacefully share the
+ earth’s resources.  Today, students, parents, and teachers at Montessori schools
+ around the world still work for this goal.  Maria was a leader in showing that
+ women can succeed in medical school, a leader in speaking out for the rights of
+ women and children, and a leader in showing teachers that children can be taught
+ most effectively when they are treated with love and respect.</p>
+<p>Chapter Overview: </p>
+<p>Leadership is something difficult to define. What makes a good leader?  A
+ good leader is somebody who is strong but not too bossy; someone who is coura
+geous but not foolhardy; someone who is compassionate but who gets his follow
+ers to transcend themselves; someone who is wise but is not a know- it-all; some
+one who has a vision but doesn’t impose it on others; someone who knows the
+ right things to say but also the right time to say them.  </p>
+<p>Some of the greatest definitions of leadership have come from an ancient
+ Chinese philosopher called Lao Tzu, who was the founder of the philosophy of
+ Taoism.  Here are some of Lao Tzu’s statements about what it means to be a good
+ leader:</p>
+<p> Agood leader is constantly without a mind of his own. He takes as his
+ own the mind of the people.</p>
+<p> People often prefer a mountainous way. The leader tries to find the
+ smoothest way</p>
+<p>The leader does not take too many actions to get the people to follow.  By
+ remaining positive and trusting in them, the people are transformed of them
+selves.</p>
+<p> Aleader is sparing in his accumulation of material things, but he accumu
+lates an abundance of spiritual virtues.</p>
+<p> Aleader tries to be good and does not worry about becoming great.</p>
+<p> Aleader focuses on the little things because they are the most important.
+ He lets the big things come on their own.
+</p>
+<p> Aleader doesn’t make promises rashly because such promises he may not
+ be able to keep. A leader doesn’t make decisions too quickly because those might
+ not be the best decisions.  A leader considers things thoroughly before making a
+ promise or a decision.</p>
+<p> Aleader sees and addresses possible problems before they get to be too
+ big. When they are still small or still out on the horizon, they can be solved much
+ more easily than if they are allowed to get big.
+</p>
+<p> Aleader has the vision to keep focused on the goal when others lose
+ track of it.</p>
+<p> Aleader is humble and doesn’t brag or become a bother to others.  There
+fore, people follow a leader joyfully because they just want to.
+</p>
+<p>Aleader gives of himself – both in terms of his wisdom and in terms of his
+ willingness to help others. He doesn’t hold back when it comes to supporting others.
+</p>
+<p> Aleader is compassionate to all.  The followers feel that the leader cares
+ for everyone equally.</p>
+<p> Aleader is quick to forgive others an injury.  He knows it is one of the best
+ ways to build friendship and loyalty.
+</p>
+<p> Aleader does not get angry very easily and does not engage in too many
+ arguments. The best way to stay strong is to be in control of one’s emotions and
+ to not be too insistent on one point of view.
+</p>
+<p> These are some of the lessons of leadership from Lao Tzu.  There have
+ been many leaders in human history. Some of them have been good leaders who
+ have worked for peace and partnership. Some have been bad leaders who started
+ wars or took high taxes from their people.  To learn be a good leader, it is helpful
+ to practice some of the guidelines of Lao Tzu. We can all become positive leaders
+ if we want to.  Each of us has that capacity, that potential inside us. In fact, if we
+ all become positive leaders – each in our own way – then we can all help the
+ world move forward towards harmony and partnership.  There have been many
+ brave men and women in the past who decided to become positive leaders in their
+ lives.  You can become one too!
+</p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson #1- Aphorisms on leadership  
+</p>
+<p>In this lesson we will read some aphorisms about leadership. We will dis
+cuss the meaning and the main point of each one briefly. Then we will each pick
+ one that we like and write it into our journal. After you copy one of the aphorisms
+ into your journal, then either write a paragraph about the meaning of the aphorism
+ or draw a picture that illustrates the aphorism.  You can do both a paragraph and a
+ picture if you wish. Note that girls and boys both can be leaders so it doesn’t mat
+ter if we use the word ‘she’ or ‘he’ in the aphorisms. </p>
+<p>a)</p>
+<p>A leader is she who looks to see</p>
+<p>What might possibly be coming to be,</p>
+<p>Or how she can help others in need</p>
+<p>And keep everyone conflict-free.</p>
+
+<p>b)</p>
+<p>A leader has patience and always can wait</p>
+<p>To see the truth, even if it comes late.</p>
+<p>She strives to be good instead of just great,</p>
+<p>But when it’s time to act, she won’t hesitate.</p>
+
+<p>c)</p>
+<p>A leader listens with heart and with mind,</p>
+<p>To hear clearly what might be the bind,</p>
+<p>So she can more wisely and aptly find</p>
+<p>The way to be helpful and to be kind.</p>
+
+<p>d)</p>
+<p>A leader has courage to do or to say</p>
+<p>What’s righteous and good every day.</p>
+<p>Whether it’s at work or it’s at play,</p>
+<p>She’s for the just and the fair kind of way.</p>
+
+<p>e)</p>
+<p>A leader can appreciate the important thing,</p>
+<p>Not the radio or the telephone’s ring,</p>
+<p>But the song that the spring bird might sing,</p>
+<p>Or the good news the shining sun can bring.</p>
+
+<p>f)</p>
+<p>A leader meditates at those special times,</p>
+<p>When she needs to feel the inner rhymes</p>
+<p>And the sweet ringing of her spirit-chimes</p>
+<p>To help get her through the stormy climes.</p>
+
+<p>g)</p>
+<p>A leader strives for a wisdom that’s deep,</p>
+<p>A message that everyone might want to keep,</p>
+<p>To help them climb a mountain steep,</p>
+<p>Or to make them smile instead of weep.</p>
+
+<p>h)</p>
+<p>A leader can focus on what she must do</p>
+<p>To help pull her team all the way through.</p>
+<p>She shows everyone how they can choose</p>
+<p>A game where nobody needs ever to lose.</p>
+
+<p>i)</p>
+<p>A leader likes to use humor in doses</p>
+<p>So others won’t just turn up their noses.</p>
+<p>At times she might like to give out some roses</p>
+<p>Flowers spread love, is what she supposes.</p>
+
+<p class="side"> Lesson #2 - Creating and performing a skit on the life of Maria Montessor
+</p>
+<p> For this lesson we will break into groups of two to five people.  Each
+ group will create a short skit about an incident or a part of Maria Montessori’s
+ life.  First, your group will need to write a short script. Then you will need to
+ make or find some simple props and costumes. Finally, you will need to practice
+ your skits before it is time to perform them for the class.  Here are a few ideas for
+ your skits:</p>
+ <p>a) In this skit, show a conversation between Maria, her father and her mother, when Maria announces that she wants to become a doctor. Maria’s father was very upset by this and did not agree with her decision. Her mother was much more understanding and supportive. How do you think the conversation went? How did it end?</p>
+
+<p>b) A skit showing what happened when Maria met with the administrators at the University of Rome. (The administrators can be the president of the university, the vice-president, the dean, or one of the other people who help to run the university). During this skit, Maria tries to convince them that she should be allowed to go to medical school even though she is a woman. The administrators do not want to allow it, even though she shows them her medical entrance exam scores, which are outstanding. She pleads with them that it is not fair for her not to be allowed to go. At the end, they decide to consider it. Or, you can make Maria’s meeting with the administrators be Scene One, and then you can show the administrators discussing the situation at a private meeting in Scene Two. Then, in Scene Three, you can show the administrators announcing to Maria that they have finally decided to accept her.</p>
+
+<p>c) This skit will show Italian government officials telling Maria she must live in another country because of her peace protests against the Italian government. During this meeting, Maria tells them that she has a right to say what she believes and she has a right to stay in her own country – the country she was born in. She tells the government officials that their attitudes and policies are not peaceful ones because they focus on dividing people and not on unifying them. She tells them that it is not just or fair to separate the Jewish people from the rest of society and to give them fewer rights than other kinds of people. She also tells them that to support Adolf Hitler is wrong because he is killing millions of Jews and others whom he considers inferior. The government officials listen to Maria but do not agree with her. They tell her that if she does not stop her protests or leave the country she will be put in jail. Maria tells them again that she will not stop speaking out for peace and justice and that she will move to another country – a more peaceful country – if she has to.</p>
+
+<p>d) This skit will show Maria’s first conversations or meetings with the other medical students at the University of Rome, who are all men. The male medical students make fun of Maria because she is a woman and because they have stereotyped attitudes toward women. They are not used to a woman who wants to be independent, and who believes that women deserve the same rights as men. This skit can have two or three scenes. By the end of the skit, the men begin to accept Maria because they can see how determined she is to be a doctor and how much she wants to help the world. They also begin to see how smart and funny she can be, and so they accept her as a friend and as a colleague. They apologize for their bad treatment of her.</p>
+
+<p>e) This skit will show a fictional (a make believe) debate between Maria and some other educators. The other educators believe in the old way of educating. They believe that children are lazy and don’t like to do school work. They also believe that children behave badly and that they need to be punished, that they need to learn to be afraid of teachers and parents. Maria tells them that this attitude is wrong and incorrect. She tells them that children can behave very well naturally, on their own, if they are doing activities that are interesting and fun for them. You can decide how you want this skit to end. Perhaps it can end with the educators telling Maria that they don’t believe in her kind of education and that she will have
+
+ <p class="side"> Lesson #3 - Leadership qualities</p>
+ <p> Using the guidelines of Lao Tzu presented in the Chapter Overview, and
+ the aphorisms in Lesson #1, let’s make a list of some of the most important quali
+ties of leadership. We will write them first on the blackboard, and then everyone
+ will write them into their journals. Each day we can be on the look-out for when
+ our classmates, our teachers, our family members or others show these qualities
+ through their different actions.  We will set a time each day, or at least once each
+ week, when we can share the leadership qualities we have observed and when we
+ can acknowledge each other for practicing them.</p>
+ <p class="side">Lesson #4 - Guidance about leadership from the literature of indigenous peoples</p>
+ <p> The indigenous people of the earth are those people who have lived in one
+ place for a very long time and who practice traditional ways of living.  These are
+ people such as the Native American tribes of North America, the Aborigines in
+ Australia, the Maori in New Zealand, and many others. These people have
+ learned how to live in harmony with the earth and to survive in harsh natural con
+ditions.  For them, having a strong leader has always been very important. They
+ have passed down many stories about leadership from generation to generation.
+ For the indigenous peoples, leadership often has to do with stewardship of the
+ earth and protecting the future generations who will live on it.</p>
+ <p> Choose from one of the passages of leadership wisdom of indigenous
+ people, presented below.  Then write it into your journal in your best handwriting.
+ Draw a picture or do a piece of writing to go with the quotation. Note: After each
+ passage there is a brief note which explains the main image of the passage.</p>
+ <p>a) “Treat the earth well: it was not given to you by your parents, it was loaned to you by your children. We do not inherit the earth from our ancestors; we borrow it from our children. We are more than the sum or our knowledge, we are products of our imagination.” –Ancient proverb</p>
+
+<p>b) “Peace and happiness are available at every moment. Peace is in every step. We shall walk hand-in-hand. There are no political solutions to spiritual problems. Remember: If the Creator put it there, it is in the right place. The soul would have no rainbow if the eyes had no tears.” –An Indian Chief, 1876</p>
+
+<p>c) “I was not raised to look at people racially. What I was taught is that we’re flowers in the Great Spirit’s garden. We share a common root, and the root is Mother Earth.” –Oh Shinnah</p>
+
+<p>d) “We must protect the forests for our children, grandchildren, and children yet to be born. We must protect the forests for those who can’t speak for themselves, such as the birds, animals, fish, and trees.” –Qwatsinas Edward Moody, Nuxalk Nation</p>
+
+<p>e) "We learned to be patient observers, like the owl. We learned cleverness from the crow, and courage from the jay, who will attack an owl ten times its size to drive it off its territory. But above all of them ranked the chickadee because of its indomitable spirit." –Tom Brown, Jr., The Tracker</p>
+
+<p>f) "When we Indians kill meat, we eat it all up. When we dig roots, we make little holes. When we build houses, we make little holes. When we burn grass for grasshoppers, we don't ruin things. We shake down acorns and pine nuts -- we don't chop down the trees. We only use dead wood. But the white people plow up the ground, pull down the trees, kill everything. ... the white people pay no attention. ...How can the spirit of the earth like the white man? ... everywhere the white man has touched it, it is sore." –Wintu Woman, 19th Century</p>
+
+<p>g) "The Circle will not be mended as long as the People war among themselves. It will not be mended as long as we try to mend the Sacred Circle with broken Circles. We all need to pray on this..." –Gary Armstrong</p>
+
+<p>h) "Once I was in Victoria, and I saw a very large house. They told me it was a bank and that the white men place their money there to be taken care of, and that by and by they get it back with interest. We are Indians and we have no such bank; but when we have plenty of money or blankets, we give them away to other chiefs and people, and by and by they return them with interest, and our hearts feel good. Our way of giving is our bank." –Chief Maquinna, Nootka</p>
+
+<p>i) "Nuclear waste is a heavy burden to lay on our children and their children and their children's children and their children's children's children and their children's children's children's children..." –Rufina M. Laws</p>
+
+<p>j) "In an eagle there is all the wisdom of the world." –Lame Deer, Minnicoujou</p>
+
+<p>k) "There are many things to be shared with the Four Colors of humanity, in our common destiny, at one with our Mother the Earth. It is this sharing that must be considered with great care by the Elders and the medicine people who carry the Sacred Trusts, so that no harm may come to people through ignorance and misuse of these powerful forces." –Resolution of the Fifth Annual Meetings of the Traditional Elders Circle, 1980</p>
+
+<p>l) I know that all must be brought into the Sacred Hoop for it to be mended. I often wonder how we will bring those who do not see even the simplest of Circles into the greatest Circle of all. Then I remember it is a thing that has been promised by Spirit. That is how I know it will come to be. –Gary Night Owl</p>
+
+ <p class="side"> Lesson #5 - Leadership cards</p>
+ <p>In this lesson, we will each create leadership cards for ourselves.
+ First, you will choose ten special qualities that you have or that you would like to
+ remember.  Or you can choose leadership actions you want to try to practice.
+Then you will write these qualities or actions neatly on 3 x 5 cards. We can deco
+rate each card a bit in order to make it special.  Then each day we will take a few
+ minutes when everyone can pick out one of their cards to look at and to reflect
+ upon.  Each day, when you pick out one card, ask yourself whether you have been
+ practicing that quality or action or not. If you have been practicing it, ask yourself
+ how you can do an even better job of practicing it.  Here are some examples of
+ what you write on your cards:</p>
+ <h2><p>Qualities</h2></p>
+
+<p>patience</p>
+<p>caring</p>
+<p>sharing</p>
+<p>forgiveness</p>
+<p>creativity</p>
+<p>courtesy</p>
+<p>honesty</p>
+<p>courage</p>
+<p>imagination</p>
+<p>self-reflection</p>
+<p>non-violence</p>
+<p>compassion</p>
+<h2><p> Actions:</p></h2>
+<p>helping others</p>
+<p>respecting people’s property</p>
+<p>keeping room/desk tidy</p>
+<p>being a problem solver</p>
+<p>practicing conflict resolution</p>
+<p>being polite towards others</p>
+<p>expressing your feelings</p>
+<p>speaking your truth</p>
+<p>using your ‘mind’s eye’</p>
+<p>visiting your ‘invisible heart’</p>
+<p>not harming living things</p>
+<p>using your words for good</p>
+
+ <p class="side"> Lesson #6 - Leadership Pledge</p>
+ <p> We will recite the leadership pledge below and discuss the meaning of the
+ different parts of it. We will explain any words that might be difficult to under
+stand. A pledge is like a promise or a commitment that you make to yourself and
+ to others.  If you wish, and whenever you are ready, you can sign the Leadership
+ Pledge and paste it into your journal or keep it in some other special place.</p>
+ <p> Leadership Pledge</p>
+ <p> I will practice nonviolence on a daily basis, in words and in deeds.  This
+ means I will strive not to intentionally hurt others through what I say or what I
+ do. This also means I will try to avoid violent games and entertainment.</p>
+ <p> I will strive to learn and practice patience, tolerance, respect and accept
+ance of others.  I will try to see things from other people’s points of view, and to
+ honor their work, feelings, and ideas.</p>
+ <p> I will strive to practice openness and flexibility so that I can learn from
+ new situations and appreciate different ways of doing things.</p>
+ <p></p>
+ <p>I will strive to practice cooperation and conflict resolution so I can learn
+to work with others productively and to solve problems peacefully.</p>
+
+<p>I will strive to keep on learning about the world and all the living things in
+it, so I can keep expanding my mental horizons and become a knowledgeable
+global citizen.</p>
+
+<p>I will strive to practice caring and compassion so I can enhance my heart’s
+capacity for giving to others and for feeling oneness with others.</p>
+
+<p>I will strive to practice honesty and courage so I can express my feelings
+and needs honestly, and so that I can speak my truth about what I believe.</p>
+
+<p>I commit to taking some time each day to reflect in silence upon my
+progress as a leader, as well as upon my own personal thoughts, feelings, and
+dreams.</p>
+
+<p>I will work towards being a good citizen of my community. This means I
+will do my chores and keep up with my other responsibilities at home and at
+school. It means I will listen to my parents and my teachers, as well as respectfully speak my truth to my parents and teachers. It means I will try to be a supportive classmate and friend, as well as a good ‘buddy’ to the younger students. It
+also means I will do some form of regular community service for my school, my
+town/city, or the world.</p>
+
+<p>I will aim to be an excellent student at school and in life. This does not
+mean that I have to always get the highest grades. It means I will always give my
+best effort. It means I will try to learn from every subject and from all kinds of
+situations.</p>
+
+<p>I will practice self-transcendence – not competition with others. This
+means that what is most important is my own self-improvement and not whether I
+am better than someone else.</p>
+
+<p>I will try my utmost to live each day according to the ideals of this pledge.</p>
+<p class="side"> Discussion Questions:</p>
+<p>a) What do you think Harry Truman meant when he said, “Men make history and not the other way around”? Note: When he said “men” he meant people.</p>
+
+<p>b) Captain J.A. Hadfield says that the art of resting the mind is the secret to being a good leader and to having positive energy. Study his quotation above. Given what you have learned in this book, why do you think it is important to rest your mind and reflect on a regular basis?</p>
+
+<p>c) “The world belongs to the energetic,” said Ralph Waldo Emerson. Why do you think energy is so important to being a leader? What kind of energy does a leader have?</p>
+
+<p>d) Anthony Burgess said, “Laugh and the world laughs with you, snore and you sleep alone.” Discuss the possible meaning or meanings of this quotation.</p>
+<p class="side">Supplemental Activities</p>
+<p>
+    <ul>
+  <li>
+    <p>Think of someone you know who is a leader. It could be someone in your family, in your neighborhood, at your church, on your sports team, or at school. Think about this person and about what makes them a leader. Take a few minutes to write down what it is that makes that person special. Share with the class about this special person. The next time you see this person, why not tell them what you think of them!</p>
+  </li>
+  <li>
+    <p>Write down the leadership guidelines from Lao Tzu in your journal.</p>
+  </li>
+  <li>
+    <p>As you have time, copy into your journal all of the leadership aphorisms in this chapter. Or, if you prefer, you can copy the leadership qualities from the quotations from indigenous peoples and do a drawing or paragraph for each one.</p>
+  </li>
+</ul>
+
+</p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter18.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter20.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

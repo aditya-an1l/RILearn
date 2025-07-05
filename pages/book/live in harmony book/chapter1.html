@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter1</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter One</p>
+      <p> Silence and Concentration</p>
+    </h1>
+    <p class="side">Chapter Inspiration: </p>
+<p>“Silence is more musical than any song.” –Christina Rossetti
+</p>
+<p> “My personal hobbies are reading, listening to music, and silence.” –Edith Sitwell
+</p>
+<p> “By not setting foot outside the door one knows the whole world;
+ By not looking out of the window one knows the way of heaven.” –Lao Tzu
+</p>
+<p> “Only when we have established peace in our entire being can there be peace all
+ over the world.” –Sri Chinmoy</p>
+<p class="side"> Chapter Story:</p>
+<p> Once upon a time in France a man named Marcel Proust liked to sit quietly
+ and be still.  This used to make him feel peaceful and happy. Sometimes when he
+ was sitting like this, he would remember things from his childhood.  One day
+ when he was sitting quietly, he suddenly smelled the sweet fragrance of a tea that
+ he used to drink when he was young.  It was the same smell that he used to smell
+ every day when his grandmother would make bergamot tea and give him a
+ madeleine cookie.  With his eyes closed, he started to remember those long-ago
+ times.  He could almost taste the tea and see his grandmother again.  It was
+ almost as if he were going back in time.  This made him feel very joyful.
+</p>
+<p> When he opened his eyes again, he decided to write about his happy times
+ as a child.  He began his story by telling about the tea, the cookies and his grand
+mother.  He started to get excited about his story, so he kept writing.  He didn’t
+ stop for many years! His story stretched into a book and his book stretched into
+ many books.  His books became very famous and they are still in libraries all
+ over the world.  This series of books is called Remembrance of Things Past
+</p>
+<p class="side"> Chapter Overview:
+</p>
+<p>Deep inside each of us is the place where the real ‘me’ lives.  It is the place
+ we point to when we say ‘me.’ We can learn, with a little practice, how to go to
+that special place and just be with ourselves when we want to or need to.  Being
+ there can make us feel peaceful and happy.  This place can become like a friend
+ to us.  In it we can find our ‘sparkler mind’ (see Chapter 3). Our sparkler mind is
+ at work when we feel good about ourselves, and get new and exciting ideas</p>
+<p class="side"> Chapter Lessons:
+</p>
+<p class="side"> Lesson #1 – Breathing 
+</p>
+<p>Practice sitting cross-legged (‘Indian style’) on the floor. Or you can just
+ try to sit up straight in a chair.  Close your eyes and just breathe.  Feel your breath
+ go in and out.  Your breath is bringing you new energy and it cleans and enriches
+ your blood every time it goes in and out.  Breathing is natural and breathing is
+ good for you.  Remember to enjoy your breath.  And let’s be thankful for it too!
+ Once in awhile we can say, “Thank you, breath!”
+</p>
+<p class="side"> Lesson #2 – Silence </p>
+<p>As you sit with your eyes closed, pay attention to the silence in the room.
+ Is it totally silent?  What sounds can you still hear?  How does it make you feel to
+ be without noise for a few moments?  Sometimes the best ideas or the most inter
+esting images come to us in the silence.  Are you getting any special thoughts or
+ seeing any special images? Take a piece of paper and write down your special
+ thoughts or draw your special images, if you wish.</p>
+<p class="side">Lesson #3 – Concentration and the breath</p>
+<p>Just sitting and being quiet with yourself is the simplest thing in the whole
+ world.  When you sit and pay extra attention to your breathing and to the silence,
+ this is called concentration.  If you focus on your breathing, this makes you feel
+ more relaxed.  If you focus on the silence, you can get even more positive feel
+ings, new ideas, and creative images. </p>
+<p>The way you focus is to just remember what you are concentrating on.  If
+ you start thinking about something else, just say, “Oops, I am trying to focus on
+ my breathing,” or “Oops, I want to focus on the silence.” Practicing concentration
+ like this can help you in lots of other ways.  It can help you do well in your
+ schoolwork and to be patient when things that you do not like are happening.</p>
+<p class="side"> Lesson #4 – Concentration on a flower</p>
+<p>Today, when you sit quietly, first enjoy your breathing and pay attention to
+the silence for a few moments with your eyes closed. Then gently open your eyes,
+ but not all the way.  Just open your eyes a little bit, so that they are half-open and
+ half-closed.  Now hold a flower in your hands and look at it for a minute or so.  If
+ your mind starts to think of something else, just remember, “I am looking at my
+ flower for a minute,” and bring your attention back to the flower.  What is special
+ about your flower?  How does it look?  What does it feel like?  Does it have a
+ fragrance?  Does the flower give you any special feelings?  Make a drawing of
+ the flower if you wish, or write a few words or even a poem about your experi
+ence of looking at the flower.  You can also do this lesson with a stone, a crystal,
+ a shell, or even a stick from the woods!</p>
+<p class="side">Lesson #5 – Personal reflection  </p>
+<p>After you have been sitting for awhile, ask yourself this question:  “What
+ is the best thing about me?”  Are you kind? Peaceful? Friendly? Cheerful?
+ Funny? Helpful? Caring?  What is the most special thing about who you are?
+ Whatever that thing is, say to yourself: “I am friendly,” or, “The best thing about
+ me is I am cheerful.”   Say this to yourself three times.  You will most likely think
+ of several things that are the best things about you.  On a piece of paper write
+ down these things. Each time you sit quietly, you can choose a different one of
+ these things to think about.  The best things about you are called your positive
+ qualities or your good qualities.  These are the things that make you ‘you’!</p>
+<p class="side"> Discussion Questions:
+</p>
+<p> a) What was your favorite lesson? Why?  How do you feel after doing the lessons
+ in this chapter?</p>
+<p>b) How do you think you would feel if you were able to sit quietly for a few min
+utes each day?
+</p>
+<p> c) What is most special about you?  Write a poem or draw a picture about what is
+ special about you.  Share your poem or drawing with the class.</p>
+<p> d) What kind of job or occupation do you think it would be extra helpful for, if
+ you were able to stay peaceful or concentrated?
+</p>
+<p class="side">Supplemental Activities:
+</p>
+<ul><li>   <p>See if you and your class can practice one of the lessons in this chapter each
+ day for a week or even a month.  If you can’t do it at school, maybe you can try it
+ at home with your mother or father.</p></li>
+<li> <p> Teach one of the lessons to your mother or father or your grandma or grandpa.
+ How do they like it?  Report back to the class about how your family member
+ enjoyed your lesson.</p>
+</li>
+<li>  <p> Close your eyes and pay attention to your heartbeat.  You can feel it by softly
+ putting two fingers on top of the veins on your opposite wrist; or you can touch
+ your thumb to your pointer finger; or you can put your fingers on the large vein at
+ the side of your neck.  Just focus on your heartbeat for a while.  This can be a
+ good way to practice concentration and also to notice the difference between your
+ physical, beating heart and your ‘invisible heart.’</p>
+</li>
+<li><p>Can you create your own lesson like the ones in this chapter?</p>
+</li></ul>
+
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="introduction.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter2.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Five</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Five</p>
+    </h1>
+    <p>BINYA was in the forest glade where she had first seen the umbrella. No
+one came there for picnics during the monsoon. The grass was always
+wet and the pine-needles were slippery underfoot. The tall trees shut
+out the light, and poisonous-looking mushrooms, orange and purple, sprang
+up everywhere. But it was a good place for porcupines, who seemed to like
+the mushrooms; and Binya was searching for porcupine-quills.</p>
+<p>The hill people didn’t think much of porcupine-quills, but far away in
+southern India the quills were valued as charms and sold at a rupee each. So
+Ram Bharosa paid a tenth of a rupee for each quill brought to him, and he in
+turn sold the quills at a profit to a trader from the plains</p>
+<p>Binya had already found five quills, and she knew there’d be more in
+the long grass. For once, she’d put her umbrella down. She had to put it
+aside if she was to search the ground thoroughly.</p>
+<p>It was Rajaram’s chance.
+</p>
+<p>He’d been following Binya for some time, concealing himself behind
+trees and rocks, creeping closer whenever she became absorbed in her
+search. He was anxious that she should not see him and be able to recognize
+him later</p>
+<p>He waited until Binya had wandered some distance from the umbrella.
+Then, running forward at a crouch, he seized the open umbrella and dashed
+off with it.
+</p>
+<p>But Rajaram had very big feet. Binya heard his heavy footsteps and
+turned just in tune to see him as he disappeared between the trees. She cried
+out, dropped the porcupine-quills, and gave chase.</p>
+<p>Binya was swift and sure-footed, but Rajaram had a long stride. All the
+same, he made the mistake of running downhill. A long-legged person is
+much faster going up hill than down. Binya reached the edge of the forest
+glade in time to see the thief scrambling down the path to the stream. He
+had closed the umbrella so that it would not hinder his flight.</p>
+<p>Binya was beginning to gain on the boy. He kept to the path, while she
+simply slid and leapt down the steep hillside. Near the bottom of the hill the
+path began to straighten out, and it was here that the long-legged boy began
+to forge ahead again.
+</p>
+<p>Bijju was coming home from another direction. He had a bundle of
+sticks which he’d collected for the kitchen fire. As he reached the path, he
+saw Binya rushing down the hill as though all the mountain-spirits in
+Garhwal were after her.</p>
+<p>“What’s wrong?” he called. “Why are you running?”</p>
+<p>Binya paused only to point at the fleeing Rajaram.</p>
+<p>“My umbrella!” she cried. “He has stolen it!”</p>
+<p>Bijju dropped his bundle of sticks, and ran after his sister. When he
+reached her side, he said, “I’ll soon catch him!” and went sprinting away
+over the lush green grass. He was fresh, and he was soon well ahead of
+Binya and gaining on the thief.
+</p>
+<p>Rajaram was crossing the shallow stream when Bijju caught up with
+him. Rajaram was the taller boy, but Bijju was much stronger. He flung
+himself at the thief, caught him by the legs, and brought him down in the
+water. Rajaram got to his feet, and tried to drag himself away; but Bijju still
+had him by a leg. Rajaram overbalanced and came down with a great
+splash. He had let the umbrella fall. It began to float away on the current.
+Just then Binya arrived, flushed and breathless, and went dashing into the
+stream after the umbrella.
+</p>
+<p>Meanwhile, a tremendous fight was taking place. Locked in fierce
+combat, the two boys swayed together on a rock, tumbled on to the sand,
+rolled over and over the pebbled bank until they were again threshing about
+in the shallows of the stream. The magpies, bulbuls and other birds were
+disturbed, and flew away with cries of alarm.
+</p>
+<p>Covered with mud, gasping and spluttering, the boys groped for each
+other in the water. After five minutes of frenzied struggle, Bijju emerged
+victorious. Rajaram lay flat on his back on the sand, exhausted, while Bijju
+sat astride him, pinning him down with his arms and legs.
+</p>
+<p>“Let me get up!” gasped Rajaram. “let me go—i don’t want your
+useless umbrella!”</p>
+<p>“Then why did you take it?” demanded Bijju. “Come on—tell me
+why!”</p>
+<p>“It was that skinflint Ram Bharosa,” said Rajaram. “He told me to get it
+for him. He said if I didn’t fetch it, I’d lose my job.”</p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="Four.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="Six.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

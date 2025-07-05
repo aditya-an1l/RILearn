@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter18</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>A Traveller’s Tale
+</p>
+    </h1>
+    <p>Gopalpur-on-sea!<br>
+A name to conjure with… And as a boy I’d heard it mentioned, by my father and
+others, and described as a quaint little seaside resort with a small port on the Orissa
+coast. The years passed, and I went from boyhood to manhood and eventually old age
+(is seventy-six old age? I wouldn’t know) and still it was only a place I’d heard about
+and dreamt about but never visited.</p>
+<p>Until last month, when I was a guest of KiiT International School in Bhubaneswar,
+and someone asked me where I’d like to go, and I said, ‘Is Gopalpur very far?’</p>
+<p>‘And off I went, along a plam-fringed highway, through busy little market-towns
+with names Rhamba and Humma, past the enormous Chilika Lake which opens into the
+sea through paddy fields and keora plantations, and finally on to Gopalpur’s beach
+road, with the sun glinting like gold on the great waves of the ocean, and the fishermen
+counting their catch, and the children sprinting into the sea, tumbling about in the
+shallows.
+</p>
+<p>But the seafront wore a neglected look. The hotels were empty, the cafés deserted. A
+cheeky crow greeted me with a disconsolate caw from its perch on a weathered old
+wall. Some of the buildings were recent, but around us there were also the shells of
+older buildings that had fallen into ruin. And no one was going to preserve these relics
+of a colonial past. A small house called ‘Brighton Villa’ still survived.
+</p>
+<p>But away from the seafront a tree-lined road took us past some well-maintained
+bungalows, a school, an old cemetery, and finally a PWD rest house where we were to
+spend the night.
+</p>
+<p>It was growing dark when we arrived, and in the twilight I could just make out the
+shapes of the trees that surround the old bungalow – a hoary old banyan, a jack-fruit and
+several mango trees. The light from the bungalow’s veranda fell on some oleander
+bushes. A hawk moth landed on my shirt-front and appeared reluctant to leave. I took it
+between my fingers and deposited it on the oleander bush.</p>
+<p>It was almost midnight when I went to bed. The rest-house staff – the caretaker and
+the gardener – went to some trouble to arrange a meal, but it was a long time coming.
+The gardener told me the house had once been the residence of an Englishman who had
+left the country at the time of Independence, some sixty years or more ago. Some
+changes had been carried out, but the basic structure remained – high-ceilinged rooms
+with skylights, a long veranda and enormous bathrooms. The bathroom was so large
+you could have held a party in it. But there was just one potty and a basin. You could sit
+on the potty and meditate, fixing your thoughts (or absence of thought) on the distant
+basin.
+</p>
+<p>I closed all doors and windows, switched off all lights (I find it impossible to sleep
+with a light on), and went to bed.</p>
+<p>It was a comfortable bed, and I soon fell asleep. Only to be awakened by a light
+tapping on the window near my bed.
+</p>
+<p>Probably a branch of the oleander bush, I thought, and fell asleep again. But there
+was more tapping, louder this time, and then I was fully awake.</p>
+<p>I sat up in bed and drew aside the curtains.</p>
+<p>There was a face at the window.
+</p>
+<p>In the half-light from the veranda I could not make out the features, but it was
+definitely a human face.</p>
+<p>Obviously someone wanted to come in, the caretaker perhaps, or the chowkidar. But
+then, why not knock on the door? Perhaps he had. The door was at the other end of the
+room, and I may not have heard the knocking.
+</p>
+<p>I am not in the habit of opening my doors to strangers in the night, but somehow I did
+not feel threatened or uneasy, so I got up, unlatched the door, and opened it for my
+midnight visitor</p>
+<p>Standing on the threshold was an imposing figure.
+</p>
+<p>A tall dark man, turbaned, and dressed all in white. He wore some sort of uniform –
+the kind worn by those immaculate doormen at five-star hotels; but a rare sight in
+Gopalpur-on-sea.
+</p>
+<p>‘What is it you want?’ I asked. ‘Are you staying here?’</p>
+<p>He did not reply but looked past me, possibly through me, and then walked silently
+into the room. I stood there, bewildered and awestruck, as he strode across to my bed,
+smoothed out the sheets and patted down my pillow. He then walked over to the next
+room and came back with a glass and a jug of water, which he placed on the bedside
+table. As if that were not enough, he picked up my day clothes, folded them neatly and
+placed them on a vacant chair. Then, just as unobtrusively and without so much as a
+glance in my direction, he left the room and walked out into the night.
+</p>
+<p>Early next morning, as the sun came up like thunder over the Bay of Bengal, I went
+down to the sea again, picking my way over the puddles of human excreta that
+decorated parts of the beach. Well, you can’t have everything. The world might be more
+beautiful without the human presence; but then, who would appreciate it?</p>
+<p>Back at the rest house for breakfast, I was reminded of my visitor of the previous
+night.</p>
+<p>‘Who was the tall gentleman who came to my room last night?’ I asked. ‘He looked
+like a butler. Smartly dressed, very dignified.’</p>
+<p>The caretaker and the gardener exchanged meaningful glances</p>
+<p>‘You tell him,’ said the caretaker to his companion.
+‘It must have been Hazoor Ali,’ said the gardener, nodding. ‘He was the orderly, the
+personal servant of Mr Robbins, the port commissioner – the Englishman who lived
+here.’
+</p>
+<p>‘But that was over sixty years ago,’ I said. ‘They must all be dead.’
+</p>
+<p>‘Yes, all are dead, sir. But sometimes the ghost of Hazoor Ali appears, especially if
+one of our guests reminds him of his old master. He was quite devoted to him, sir. In
+fact, he received this bungalow as a parting gift when Mr Robbins left the country. But
+unable to maintain it, he sold it to the government and returned to his home in Cuttack.
+He died many years ago, but revisits this place sometimes. Do not feel alarmed, sir. He
+means no harm. And he does not appear to everyone – you are the lucky one this year! I
+have but seen him twice. Once, when I took service here twenty years ago, and then,
+last year, the night before the cyclone. He came to warn us, I think. Went to every door
+and window and made sure they were secured. Never said a word. Just vanished into
+the night.’
+</p>
+<p>‘And it’s time for me to vanish by day,’ I said, getting my things ready. I had to be in
+Bhubaneswar by late afternoon, to board the plane for Delhi. I was sorry it had been
+such a short stay. I would have liked to spend a few days in Gopalpur, wandering about
+its backwaters, old roads, mango groves, fishing villages, sandy inlets… Another time
+perhaps. In this life, if I am so lucky. Or the next, if I am luckier still.
+</p>
+<p>At the airport in Bhubaneswar, the security asked me for my photo-identity. ‘Driving
+licence, pan card, passport? Anything with your picture on it will do, since you have an
+e-ticket,’ he explained.</p>
+<p>I do not have a driving licence and have never felt the need to carry my pan card
+with me. Luckily, I always carry my passport on my travels. I looked for it in my little
+travel-bag and then in my suitcase, but couldn’t find it. I was feeling awkward fumbling
+in all my pockets, when another senior officer came to my rescue. ‘It’s all right. Let him
+in. I know Mr Ruskin Bond,’ he called out, and beckoned me inside. I thanked him and
+hurried into the check-in area.
+</p>
+<p>All the time in the flight, I was trying to recollect where I might have kept my
+passport. Possibly tucked away somewhere inside the suitcase, I thought. Now that my
+baggage was sealed at the airport, I decided to look for it when I reached home.
+</p>
+<p>A day later I was back in my home in the hills, tired after a long road journey from
+Delhi. I like travelling by road, there is so much to see, but the ever-increasing volume
+of traffic turns it into an obstacle race most of the time. To add to my woes, my passport
+was still missing. I looked for it everywhere – my suitcase, travel-bag, in all my
+pockets</p>
+<p>I gave up the search. Either I had dropped it somewhere, or I had left it at Gopalpur.
+I decided to ring up and check with the rest house staff the next day.</p>
+<p>It was a frosty night, bitingly cold, so I went to bed early, well-covered with razai
+and blanket. Only two nights previously I had been sleeping under a fan!</p>
+<p>It was a windy night, the windows were rattling; and the old tin roof was groaning, a
+loose sheet flapping about and making a frightful din.
+</p>
+<p>I slept only fitfully.</p>
+<p>When the wind abated, I heard someone knocking on my front door.</p>
+<p>‘Who’s there?’ I called, but there was no answer.
+</p>
+<p>The knocking continued, insistent, growing louder all the time.</p>
+<p>‘Who’s there? Kaun hai?’ I call again.</p>
+<p>Only that knocking</p>
+<p>Someone in distress, I thought. I’d better see who it is. I got up shivering, and
+walked barefoot to the front door. Opened it slowly, opened it wider, someone stepped
+out of the shadows.
+</p>
+<p>Hazoor Ali salaamed, entered the room, and as in Gopalpur, he walked silently into
+the room. It was lying in disarray because of my frantic search for my passport. He
+arranged the room, removed my garments from my travel-bag, folded them and placed
+them neatly upon the cupboard shelves. Then, he did a salaam again and waited at the
+door.</p>
+<p>Strange, I thought. If he did the entire room why did he not set the travel-bag in its
+right place? Why did he leave it lying on the floor? Possibly he didn't know where to
+keep it; he left the last bit of work for me. I picked up the bag to place it on the top
+shelf. And there, from its front pocket my passport fell out, on to the floor</p>
+<p>I turned to look at Hazoor Ali, but he had already walked out into the cold darkness.</p>
+    
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter17.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter19.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Three</p>
+    </h1>
+    <p>ABOUT four years previously, Bijju had knocked a hive out of an oak
+tree, and had been badly stung about the face and legs. It had been a
+painful experience. But now, if a bee stung him, he felt nothing at all:
+he had been immunised for life!
+</p>
+<p>He was on his way home from school. It was two o’clock and he hadn’t
+eaten since six in the morning. Fortunately, the Kingora bushes—the
+bilberries—were in fruit, and already Bijju’s lips were stained purple with
+the juice of the wild, sour fruit.
+</p>
+<p>He didn’t have any money to spend at Ram Bharosa’s shop, but he
+stopped there anyway, to look at the sweets in their glass jars.</p>
+<p>“And what will you have today?” asked Ram Bharosa.
+</p>
+<p>“No money,” said Bijju.
+</p>
+<p>“You can pay me later.”
+</p>
+<p>Bijju shook his head. Some of his friends had taken sweets on credit,
+and at the end of the month they had found they’d eaten more sweets than
+they could possibly pay for! As a result, they’d had to hand over to Ram
+Bharosa some of their most treasured possessions—such as a curved knife
+for cutting grass, or a small hand-axe, or a jar for pickles, or a pair of
+earrings—and these had become the shopkeeper’s possessions and were
+kept by him or sold in his shop.</p>
+<p>Ram Bharosa had set his heart on having Binya’s blue umbrella, and so
+naturally he was anxious to give credit to either of the children; but so far
+neither had fallen into the trap.
+</p>
+<p>Bijju moved on, his mouth full of Kingora berries. Half way home, he
+saw Binya with the cows. It was late evening, and the sun had gone down,
+but Binya still had the umbrella open. The two small rents had been stitched
+up by her mother.</p>
+<p>Bijju gave his sister a handful of berries. She handed him the umbrella
+while she ate the berries.</p>
+<p>“You can have the umbrella until we get home,” she said. It was her
+way of rewarding Bijju for bringing her the wild fruit.
+</p>
+<p>Calling “neelu! Gori!” Binya and Bijju set out for home, followed at
+some distance by the cows.</p>
+<p>It was dark before they reached the village, but Bijju still had the
+umbrella open.
+</p>
+<p>Most of the people in the village were a little envious of Binya’s blue
+umbrella. No one else had ever possessed one like it. The schoolmaster’s
+wife thought it was quite wrong for a poor cultivator’s daughter to have
+such a fine umbrella while she, a second-class B.A., had to make do with an
+ordinary black one. Her husband offered to have their old umbrella dyed
+blue; she gave him a scornful look, and loved him a little less than before.
+The Pujari, who looked after the temple, announced that he would buy a
+multicoloured umbrella the next time he was in the town. A few days later
+he returned, looking annoyed and grumbling that they weren’t available
+except in Delhi. Most people consoled themselves by saying that Binya’s
+pretty umbrella wouldn’t keep out the rain, if it rained heavily; that it would
+shrivel in the sun, if the sun was fierce; that it would collapse in a wind, if
+the wind was strong; that it would attract lightning, if lightning fell near it;
+and that it would prove unlucky, if there was any ill-luck going about.
+Secretly, everyone admired it.</p>
+<p>Unlike the adults, the children didn’t have to pretend. They were full of
+praise for the umbrella. It was so light, so pretty, so bright a blue! And it
+was just the right size for Binya. They knew that if they said nice things
+about the umbrella, Binya would smile and give it to them to hold for a
+little while—just a very little while!</p>
+<p>Soon it was the time of the monsoon. Big black clouds kept piling up,
+and thunder rolled over the hills.</p>
+<p>Binya sat on the hillside all afternoon, waiting for the rain. As soon as
+the first big drop of rain came down, she raised the umbrella over her head.
+More drops, big ones, came pattering down. She could see them through the
+umbrella silk, as they broke against the cloth.</p>
+<p>And then there was a cloudburst, and it was like standing under a
+waterfall. The umbrella wasn’t really a rain-umbrella, but it held up bravely.
+Only Binya’s feet got wet. Rods of rain fell around her in a curtain of
+shivered glass</p>
+<p>Everywhere on the hillside people were scurrying for shelter. Some
+made for a charcoal-burner’s hut; others for a mule-shed, or Ram Bharosa’s
+shop. Binya was the only one who didn’t run. This was what she’d been
+waiting for—rain on her umbrella—and she wasn’t in a hurry to go home.
+She didn’t mind getting her feet wet. The cows didn’t mind getting wet,
+either.
+</p>
+<p>Presently she found Bijju sheltering in a cave. He would have enjoyed
+getting wet, but he had his school books with him and he couldn’t afford to
+let them get spoilt. When he saw Binya, he came out of the cave and shared
+the umbrella. He was a head taller than his sister, so he had to hold the
+umbrella for her, while she held his books.</p>
+<p>The cows had been left far behind.</p>
+<p>“Neelu, Neelu!” called Binya</p>
+<p>“Gori!” called Bijju.
+</p>
+<p>When their mother saw them sauntering home through the driving rain,
+she called out: “Binya! Bijju! Hurry up, and bring the cows in! What are
+you doing out there in the rain?”</p>
+<p>“Just testing the umbrella,” said Bijju.</p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="Two.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="Four.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

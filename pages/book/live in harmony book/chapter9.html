@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter9</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+   <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Nine</p>
+      <p> Fitness</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“Running ultra-distance races has given me a wealth of first-hand experience of
+ God’s compassion. On my own, attempting to run such long distances, I would be
+ nowhere, but when God’s grace descends, I am able to complete the distance.”–Suprabha Beckjord
+</p>
+<p> “Challenge the fear of trying.  You will succeed.” –Sri Chinmoy
+</p>
+<p> “Health is not simply the absence of sickness.” –Hannah Green
+</p>
+<p> “Laughter is by definition healthy.”  —Doris Lessing</p>
+<p> “Sleep is the golden chain that ties health and our bodies together.”  —Thomas
+ Dekker</p>
+<p> “Happiness gives us energy which is the basis of health.” –Adele Davis
+</p>
+<p>“By health I mean the power to live a full, adult, living, breathing life in close
+ contact with... the earth and the wonders thereof— the sea – the sun.” —Kather
+ine Mansfield
+</p>
+<p class="side"> Chapter Story: 
+</p>
+<p> Suprabha Beckjord (1956-      ) was born and grew up in Washington, DC.
+ Today Suprabha is one of the greatest runners in the world.  Suprabha is not
+ known for the speed of her running, but rather for her endurance.  She has run
+ races of up to 3100 miles!  During her career, Suprabha has set four world
+ records, including in the 1,000-mile, in the 2,700-mile, and in the 3,100-mile
+ races.
+ </p>
+<p> Suprabha started running in 1978, at the age of twenty-two,  because of the
+ encouragement of her meditation teacher, Sri Chinmoy.  The first race she ever
+ ran was a four-mile race.  About two years later she ran her first marathon.  In the
+ following year she tried a 47-mile race.  In 1986, she was inspired to run a 200
+mile race in honor of her meditation teacher’s athletic accomplishment of lifting
+two hundred pounds with one hand.
+</p>
+<p> Ever since then Suprabha has been practicing ultra-distance running.
+ (Ultra-distance running is running over very long distances.)  In fact, she has been
+ doing it for 19 years!  In addition to staying physically fit, Suprabha gets a special
+ energy and joy from running. She keeps running because she loves it. She never
+ intended to enter so many races or to become a champion, but that is exactly what
+ happened.  In 1998, when Suprabha set the world record for the 3100-mile race, it
+ took her just under 50 days.
+</p>
+<p>Suprabha’s running is a great example of how fitness can bring us health,
+ joy and a sense of accomplishment.  Running, like other fitness activities, can
+ also bring us many other benefits, such as more energy, new ideas, and a positive
+ attitude.  Suprabha’s accomplishments in running can be a great inspiration to us,
+ even if we don’t run.  The lesson we can learn from her running is to find a fit
+ness activity that we like and stick with it. If we keep practicing it, it will help us
+ in many ways.  Find your own favorite sport, and stick with it!
+</p>
+<p class="side">Chapter Overview: </p>
+<p>Physical fitness is an essential part of being a healthy and happy person.
+ There are many kinds of fitness activities, including aerobic activities such as run
+ning and brisk walking, strengthening activities such as push-ups or sit-ups, flexi
+bility activities such as stretching, and coordination activities such as throwing or
+ kicking a ball. </p>
+<p>There is also another kind of fitness, which is “mind-body” fitness. This
+ type of fitness has the goal of bringing our body and mind into harmony, so that
+ we can have positive energy in our day-to-day lives. This chapter will focus on
+ mind-body fitness, as it is a type of fitness that can most easily and quickly help
+ us to bring harmony into our being. It is important to note that all of the kinds of
+ fitness are important, as is good nutrition.  If we practice all the different kinds of
+ fitness, as well as good nutrition, we can be assured of being healthy, happy and
+ well-balanced in the physical, emotional and spiritual parts of ourselves. </p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson #1 — The Five Tibetan Rites</p>
+<p> Tibetan Buddhist monks say that their long lives are due to the daily per
+formance of these five simple exercises, which they have practiced for hundreds
+ of years.</p>
+<p>a)  Gently spin yourself around clockwise.  Keep your eyes fixed on one point.
+ This will focus your energy and keep you from getting dizzy.  After each revolu
+tion, pause briefly. Repeat seven times.</p>
+<p> b) Lie flat on your back.  Then raise your legs and head off the ground at the
+ same time.  Gently lower your head and legs back down to the ground at the same
+ time.  Repeat seven times.</p>
+<p> c)  Sit with your knees forward and your feet behind you.  Keep your toes folded
+ underneath you so they are not pointing straight back.  Begin with your head bent
+ forward and downward.  Then gently bend your head backward, arching your
+ back slightly.  Pause briefly, then return your head to the starting position by
+ slowly bringing your head forward and lowering your head. Repeat seven times.</p>
+<p> d) Sit with your legs straight out in front of you, your feet together, and your
+ hands on the ground somewhat behind you.    Make a bridge by raising yourself
+ upward on your hands, using your feet for balance, and arching your back.  Pause
+ briefly then return to your original sitting position. Repeat seven times.
+</p>
+<p> e) With your face pointing downward and your hands and knees on the ground,
+ straighten your legs and push your buttocks upward, making an angle with your
+ body.  Pause for as long as is comfortable, then return to the starting position with
+ your hands and knees on the ground.   Repeat seven times.</p>
+<p> Note:  Start out by repeating the five rites seven times each.  You can try to
+ increase your repetitions (as time allows) to eventually reach twenty-one 
+or as many as you feel comfortable with. 
+</p>
+<p class="side">Lesson #2 — Hatha Yoga</p>
+<p> Yoga is a Sanskrit word that means ‘union.’Yoga is a vast collection of spir
+itual techniques and practices, all aimed at integrating mind, body and spirit.  Its
+ goal is to achieve a state of enlightenment (wisdom) or oneness (connection) with
+ the universe.  What is normally though of as ‘yoga’ in our Western part of the
+ world is really Hatha Yoga, one of the many paths of yoga.  These different paths
+ of yoga are simply different approaches and techniques that all lead to the same
+ goal of enlightenment and oneness.
+</p>
+<p>Yoga is not a religion, but a spiritual practice, or sadhana, which does not
+ require any specific belief system to participate.  The philosophies of yoga are
+ universal and can be incorporated within any belief system.
+</p>
+<p>The goal of Hatha Yoga is to arrive at union of the mind, body and spirit
+through a practice of yoga postures, yoga breathing, body gestures and internal
+ cleansing. These body-centered practices are used to purify the body, cultivate
+ prana (breath) and activate kundalini, the hidden energies of the body. Yoga,
+ therefore aims at a state of union between the body and the mind, as well as
+ between our individual selves and the universe.  When engaging in the practice of
+ Hatha Yoga, the yogic practice of non-violence should be adhered to.</p>
+<p> There are hundreds of asanas, or poses, in Hatha Yoga.  The Mountain Pose
+ is one of them.
+</p>
+<p>The Mountain Pose:
+</p>
+<ul>
+     <li> <p>Stand with your feet about eight to twelve inches apart.</p></li>
+ <li><p>Begin with your hands folded in the center of your chest where your invisible
+ heart is located.</p></li> 
+ <li><p>Try to stand straight and tall with your spine in one vertical line, and your shoul
+ders relaxed, arched down and back. Imagine that your feet are rooted in the
+ earth, and that from the earth you are getting strength and stability.</p></li>
+ <li><p>Close your eyes and breathe in.  Imagine that you are breathing in the positive
+ energy of the earth. Imagine that this positive energy is flowing upward from the
+ earth through your feet, up your spine and throughout your whole body.</p></li>
+ <li> <p> As you breathe out, imagine that you are breathing out anything you don’t want
+ in your system – restlessness, anger or any other negative emotion.  Imagine that
+ these things are flowing right out into the sky and out into the universe.</p></li>
+ <li><p>Repeat this type of breathing several times.  Then gather your energy where
+ your hands are folded – in your invisible heart.</p></li> 
+<li><p>With your eyes still closed, pay attention to how you feel right now.  Is it
+ peaceful, energized, relaxed, and released? Try to name the feeling you are expe
+riencing, so that you can remember it.</p></li> 
+ <li><p>When you are ready, open your eyes and just rest for a few moments.</p></li>  
+</ul>
+<p class="side"> Lesson #3 — Tai Chi 
+</p>
+<p>The words “tai chi” come from the Chinese characters for Tai Chi Chuan.
+ These words can be translated as the ‘Supreme Ultimate Force.’ The idea of
+ ‘supreme ultimate’ is often connected with the Chinese concept of yin-yang, the
+ idea that one can see a dynamic duality (male/female, active/passive, dark/light,
+ forceful/yielding, etc.) in all things.  Force can be thought of here as the means or
+ way of achieving this yin-yang, or supreme-ultimate discipline.</p>
+<p> Tai Chi, as it is practiced in our part of the world today, can perhaps best be
+ thought of as a moving form of yoga and meditation combined. There are a num-
+ber of so-called forms, or sets, which consist of sequences of movements. Many
+ of these movements were originally derived from the martial arts (and perhaps
+ even more ancestrally than that, from the natural movements of animals and
+ birds), although the way they are performed in Tai Chi is slowly, softly and grace
+fully, with smooth and even transitions between them.
+</p>
+<p> One of the central aims of Tai Chi is to foster the circulation of the ‘chi,’ or
+ vital force, within the body. According to the philosophy of Tai Chi, if ‘chi’ ener
+gy is in good circulation in our body, we will have better physical health and
+ vitality. This ‘chi’ circulates in patterns that are closely related to the nervous and
+ vascular systems, and thus the practice of Tai Chi is closely connected with the
+ practice of acupuncture and other Eastern healing arts.</p>
+<p> Another aim of Tai Chi is to foster a calm and tranquil mind, focused on the
+ precise execution of the exercises. Learning to do them correctly provides a prac
+tical avenue for learning about such things as balance, alignment, fine-scale motor
+ control, and the rhythm of movement. Thus the practice of Tai Chi can in some
+ measure contribute to being able to stand, walk, move and run better in other
+ spheres of life as well. Many practitioners notice benefits in the correction of poor
+ postural, alignment or movement patterns which can contribute to tension or
+ injury. Furthermore, the meditative nature of the exercises is calming and relaxing
+ in and of itself.
+</p>
+<p>Tai Chi Walking:</p>
+<ul>
+    <li> <p>Begin with your feet shoulder-width apart and your hands behind your back, and
+ now lower your body by bending your knees.</p></li>
+ <li><p>Raise your right leg slowly and take a step forward, bringing down your foot,
+ heel and then toe. </p></li>
+ <li> <p>Shift your weight forward onto your bent right leg.</p></li>
+ <li><p> Now move left foot out. Slowly raise left leg and take a step forward, staying in
+ crouched position, heel and then toe. </p> </li>
+ <li> <p>Imagine a direction you want to go in, in your life, or a problem that you need
+ to solve.  As you practice the walking, you are beginning that 1,000-mile journey.
+ It begins with one step. </p></li>
+ <li><p>Take that step, and practice breathing out as you come down with your foot and
+ breathing in as you come up with your foot, slowly. The more slowly one goes,
+ the more chi is generated. It takes greater control to go slow, rather than fast.</p></li>
+ <li> <p>Repeat the steps above as you visualize yourself moving confidently and pow
+erfully towards your goal.</p></li>
+</ul>
+<p class="side">Lesson #4 – ‘Brain Gym’Exercises</p>
+<p>These simple exercises are based on the work presented by Carla Hannaford,
+ Ph.D.  Dr. Hannaford is a neurophysiologist and educator with more than 28 years
+ of teaching experience. In her best-selling book, Smart Moves, Dr. Hannaford
+ states that our bodies are very much a part of all of our learning — that learning
+ is not an isolated ‘brain’ function. Every nerve and cell is a network contributing
+ to our intelligence and our learning capability.  ‘Brain Gym’ exercises can help
+ improve your concentration in class.  Here are four basic ‘Brain Gym’ exercises
+ which implement the ideas developed by Carla Hannover.  They can be used
+ quickly in any classroom. They are surprisingly simple, but very effective!</p>
+<p> Drink Water:</p>
+<p>As Carla Hannaford says, “Water comprises more of the brain than of any
+ other organ of the body.” Having students drink some water before and during
+ class can help ‘grease the wheel.’ Drinking water is very important before any
+ stressful situation – for example, tests! - as we tend to perspire under stress, and
+ de-hydration can have a bad effect on our concentration.</p>
+<p> Brain Buttons: </p>
+<p>This exercise helps improve blood flow to the brain, in order to “switch
+ on” the entire brain before a lesson begins. The increased blood flow helps
+ improve concentration skills required for reading, writing, etc.</p>
+ <ul>
+    <li><p>Position one hand so that there is as wide a space as possible between the
+ thumb and index finger.</p></li>
+    <li><p>Place your index finger and thumb into the slight indentations below the collar
+ bone on each side of the sternum. Press lightly in a pulsing manner.</p></li>
+    <li> <p>At the same time put the other hand over the navel area of the stomach. Gently
+ press on these points for about 2 minutes</p></li>
+ </ul>
+<p> Cross Crawl:</p>
+<p>This exercise helps coordinate the right and left brains by increasing the
+ information flow between the two hemispheres. It is useful for spelling, writing,
+ listening, reading and comprehension.</p>
+ <ul>
+    <li> <p>Stand or sit. Put the right hand across the body to the left knee as you raise it,
+ and then do the same thing with the left hand on the right knee, just as if you
+ were marching.</p></li>
+ <li> <p>Continue doing this for about 2 minutes.</p></li>
+ </ul>
+<p>Hook-Ups:</p>
+<p> This works well for nerves before a test or special event such as making a
+ speech. Any situation which could cause nervousness calls for a few “hook-ups”
+ to calm the mind and improve concentration.</p>
+ <ul>
+    <li><p>Stand or sit. Cross the right leg over the left at the ankles.</p></li>
+    <li><p>Take your right wrist and cross it over the left wrist and link up the fingers so
+ that the right wrist is on top.</p></li>
+ <li><p>Bend the elbows out and gently turn the fingers in towards the body until they
+ rest on the sternum (breast bone) in the center of the chest. Stay in this position.</p></li>
+ <li><p>Keep the ankles crossed and the wrists crossed and then breathe evenly in this
+ position for a few minutes. You will be noticeably calmer after that time.</p></li>
+ </ul>
+<p class="side">Discussion Questions:</p>
+<p> a) How do you feel after doing some of the exercises in this chapter? Do you feel
+ any changes? Do you feel better?  What is your favorite lesson or exercise?</p>
+<p>b) Congratulations! Now you are on the road to becoming an expert on your own
+ body. Why do you think it is important to be in tune with your body?</p>
+<p> c) Can you think of reasons why doing these kinds of exercises with your body
+ might help your mind?  You can make a list of your answers.</p>
+<p> d) Can you think of reasons why doing these kinds of exercises with your body
+ might help your invisible heart or your spirit?  How might they make you feel
+ inside if you practice some of them regularly?  You can make a list of these
+ answers, too, if you wish.</p>
+<p class="side">Supplemental Activities:</p>
+<ul>
+    <li><p>Aerobics: Aerobic activities such as running, walking, or playing sports are
+ extremely important for overall fitness. They help keep our heart and lungs
+ strong, improve our circulation, and cleanse our blood.  Which aerobics activities
+ do you practice? Try to practice some aerobic activity each day or at least three
+ times per week.</p></li>
+ <li><p>Coordination:  Coordination activities such as ball games, dancing, and other
+creative movement activities are important for connecting our senses with our
+ bodies. These kinds of activities are also very good for activating the different
+ parts of our brain, and they can help us to concentrate and do our academic work.
+ Practice coordination by choosing a partner and throwing a small, softball back
+ and forth.  After you are good at catching with two hands try catching with one!</p></li>
+ <li> <p>Strength: Strengthening activities such as push-ups, pull-ups, sit-ups, or work
+ing with weights, help us to maintain healthy muscles. If our muscles are not used
+ they can become weak.   Strong muscles not only improve our blood flow and
+ keep our back and joints healthy, they are very useful too!  Practice a few
+ strengthening activities such as push-ups or sit-ups.</p></li>
+ <li> <p>Nutrition: Good nutrition is essential to being physically fit.  It is also crucial to
+ maintaining emotional balance and mental sharpness. Let’s ask everyone in the
+ class to try to go one week without eating any kind of sugar. During this time, try
+ to eat more fruits and vegetables and drink lots of water.  After one week, how
+ many students in the class were able to do it?  Discuss how those who did it feel.
+ Also discuss any changes you noticed in your routine, in your sleep patterns, and
+ in your ability to do your schoolwork.</p></li>
+ <li> <p>Mind-body fitness includes the martial arts.  How many people in the class
+ practice a martial art?  Make a list of the different martial arts that people practice
+ or that you know of.</p></li>
+ <li> <p>Many of the mind-body lessons we have studied come from places in Asia.
+ Look on a map and try to locate India (the birthplace of yoga), China (the birth
+place of Tai Chi) and Tibet (the birthplace of the Tibetan rites). </p></li>
+</ul>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter8.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter10.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter19</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>And Now We are Twelve</p>
+    </h1>
+    <p>People often ask me why I’ve chosen to live in Mussoorie for so long – almost forty
+years, without any significant breaks.</p>
+<p>‘I forgot to go away,’ I tell them, but of course, that isn’t the real reason.
+</p>
+<p>The people here are friendly, but then people are friendly in a great many other
+places. The hills, the valleys are beautiful; but they are just as beautiful in Kulu or
+Kumaon.</p>
+<p>‘This is where the family has grown up and where we all live,’ I say, and those who
+don’t know me are puzzled because the general impression of the writer is of a
+reclusive old bachelor.
+</p>
+<p>Unmarried I may be, but single I am not. Not since Prem came to live and work with
+me in 1970. A year later, he was married. Then his children came along and stole my
+heart; and when they grew up, their children came along and stole my wits. So now I’m
+an enchanted bachelor, head of a family of twelve. Sometimes I go out to bat,
+sometimes to bowl, but generally I prefer to be twelfth man, carrying out the drinks.</p>
+<p>In the old days, when I was a solitary writer living on baked beans, the prospect of
+my suffering from obesity was very remote. Now there is a little more of author than
+there used to be, and the other day five-year-old Gautam patted me on my tummy (or
+balcony, as I prefer to call it) and remarked; ‘Dada, you should join the WWF.’
+</p>
+<p>‘I’m already a member,’ I said, ‘I joined the World Wildlife Fund years ago.’</p>
+<p>‘Not that,’ he said. ‘I mean the World Wrestling Federation.’</p>
+<p>If I have a tummy today, it’s thanks to Gautam’s grandfather and now his mother who,
+over the years, have made sure that I am well-fed and well-proportioned.</p>
+<p>Forty years ago, when I was a lean young man, people would look at me and say,
+‘Poor chap, he’s definitely undernourished. What on earth made him take up writing as
+a profession?’ Now they look at me and say, ‘You wouldn’t think he was a writer,
+would you? Too well nourished!’</p>
+<p>It was a cold, wet and windy March evening when Prem came back from the village
+with his wife and first-born child, then just four months old. In those days, they had to
+walk to the house from the bus stand; it was a half-hour walk in the cold rain, and the
+baby was all wrapped up when they entered the front room. Finally, I got a glimpse of
+him. And he of me, and it was friendship at first sight. Little Rakesh (as he was to be
+called) grabbed me by the nose and held on. He did not have much of a nose to grab,
+but he had a dimpled chin and I played with it until he smiled.
+</p>
+<p>The little chap spent a good deal of his time with me during those first two years in
+Maplewood – learning to crawl, to toddle, and then to walk unsteadily about the little
+sitting-room. I would carry him into the garden, and later, up the steep gravel path to the
+main road. Rakesh enjoyed these little excursions, and so did I, because in pointing out
+trees, flowers, birds, butterflies, beetles, grasshoppers, et al, I was giving myself a
+chance to observe them better instead of just taking them for granted.
+</p>
+<p>In particular, there was a pair of squirrels that lived in the big oak tree outside the
+cottage. Squirrels are rare in Mussoorie though common enough down in the valley.
+This couple must have come up for the summer. They became quite friendly, and
+although they never got around to taking food from our hands, they were soon entering
+the house quite freely. The sitting room window opened directly on to the oak tree
+whose various denizens – ranging from stag-beetles to small birds and even an
+acrobatic bat – took to darting in and out of the cottage at various times of the day or
+night.</p>
+<p>Life at Maplewood was quite idyllic, and when Rakesh’s baby brother, Suresh,
+came into the world, it seemed we were all set for a long period of domestic bliss; but
+at such times tragedy is often lurking just around the corner. Suresh was just over a year
+old when he contracted tetanus. Doctors and hospitals were of no avail. He suffered –
+as any child would from this terrible affliction – and left this world before he had a
+chance of getting to know it. His parents were broken-hearted. And I feared for Rakesh,
+for he wasn’t a very healthy boy, and two of his cousins in the village had already
+succumbed to tuberculosis.</p>
+<p>It was to be a difficult year for me. A criminal charge was brought against me for a
+slightly risqué story I’d written for a Bombay magazine. I had to face trial in Bombay
+and this involved three journeys there over a period of a year and a half, before an irate
+but perceptive judge found the charges baseless and gave me an honourable acquittal.</p>
+<p>It’s the only time I’ve been involved with the law and I sincerely hope it is the last.
+Most cases drag on interminably, and the main beneficiaries are the lawyers. My trial
+would have been much longer had not the prosecutor died of a heart attack in the middle
+of the proceedings. His successor did not pursue it with the same vigour. His heart was
+not in it. The whole issue had started with a complaint by a local politician, and when
+he lost interest so did the prosecution. Nevertheless the trial, once begun, had to be
+seen through. The defence (organised by the concerned magazine) marshalled its
+witnesses (which included Nissim Ezekiel and the Marathi playwright Vijay
+Tendulkar). I made a short speech which couldn’t have been very memorable as I have
+forgotten it! And everyone, including the judge, was bored with the whole business.
+After that, I steered clear of controversial publications. I have never set out to shock the
+world. Telling a meaningful story was all that really mattered. And that is still the case.
+</p>
+<p>I was looking forward to continuing our idyllic existence in Maplewood, but it was
+not to be. The powers-that-be, in the shape of the Public Works Department (PWD), had
+decided to build a ‘strategic’ road just below the cottage and without any warning to us,
+all the trees in the vicinity were felled (including the friendly old oak) and the hillside
+was rocked by explosives and bludgeoned by bulldozers. I decided it was time to
+move. Prem and Chandra (Rakesh’s mother) wanted to move too; not because of the
+road, but because they associated the house with the death of little Suresh, whose
+presence seemed to haunt every room, every corner of the cottage. His little cries of
+pain and suffering still echoed through the still hours of the night.
+</p>
+<p>I rented rooms at the top of Landour, a good thousand feet higher up the mountain.
+Rakesh was now old enough to go to school, and every morning I would walk with him
+down to the little convent school near the clock tower. Prem would go to fetch him in
+the afternoon. The walk took us about half-an-hour, and on the way Rakesh would ask
+for a story and I would have to rack my brains in order to invent one. I am not the most
+inventive of writers, and fantastical plots are beyond me. My forte is observation,
+recollection, and reflection. Small boys prefer action. So I invented a leopard who
+suffered from acute indigestion because he’d eaten one human too many and a belt
+buckle was causing an obstruction.
+</p>
+<p>This went down quite well until Rakesh asked me how the leopard got around the
+problem of the victim’s clothes.
+</p>
+<p>‘The secret,’ I said, ‘is to pounce on them when their trousers are off!’
+</p>
+<p>Not the stuff of which great picture books are made, but then, I’ve never attempted to
+write stories for beginners. Red Riding Hood’s granny-eating wolf always scared me
+as a small boy, and yet parents have always found it acceptable for toddlers. Possibly
+they feel grannies are expendable</p>
+<p>Mukesh was born around this time and Savitri (Dolly) a couple of years later. When
+Dolly grew older, she was annoyed at having been named Savitri (my choice), which is
+now considered very old-fashioned; so we settled for Dolly. I can understand a child’s
+dissatisfaction with given names.
+</p>
+<p>My first name was Owen, which in Welsh means ‘brave’. As I am not in the least
+brave, I have preferred not to use it. One given name and one surname should be
+enough.</p>
+<p>When my granny said, ‘But you should try to be brave, otherwise how will you
+survive in this cruel world?’ I replied: ‘Don’t worry, I can run very fast.’</p>
+<p>Not that I’ve ever had to do much running, except when I was pursued by a lissome
+Australian lady who thought I’d make a good obedient husband. It wasn’t so much the
+lady I was running from, but the prospect of spending the rest of my life in some remote
+cattle station in the Australian outback. Anyone who has tried to drag me away from
+India has always met with stout resistance.</p>
+<p>Up on the heights of Landour lived a motley crowd. My immediate neighbours included
+a Frenchwoman who played the sitar (very badly) all through the night; and a Spanish
+lady with two husbands, one of whom practised acupuncture – rather ineffectively as
+far as he was concerned, for he seemed to be dying of some mysterious debilitating
+disease. Another neighbour came and went rather mysteriously, and finally ended up in
+Tihar jail, having been apprehended at Delhi carrying a large amount of contraband
+hashish.
+</p>
+<p>Apart from these and a few other colourful characters, the area was inhabitated by
+some very respectable people, retired brigadiers, air marshals and rear admirals,
+almost all of whom were busy writing their memoirs. I had to read or listen to extracts
+from their literary efforts. This was slow torture. A few years before, I had done a stint
+of editing for a magazine called Imprint. It had involved going through hundreds of
+badly written manuscripts, and in some cases (friends of the owner!) rewriting some of
+them for publication. One of life’s joys had been to throw up that particular job, and
+now here I was, besieged by all the top brass of the army, navy and air force, each one
+determined that I should read, inwardly digest, improve, and if possible find a
+publisher for their outpourings. Thank goodness they were all retired. I could not be
+shot or court-martialled. But at least two of them set their wives upon me, and these
+intrepid ladies would turn up around noon with my ‘homework’ – typescripts to read
+and edit! There was no escape. My own writing was of no consequence to them. I told
+them that I was taking sitar lessons, but they disapproved, saying I was more suited to
+the tabla.</p>
+<p>When Prem discovered a set of vacant rooms further down the Landour slope, close
+to school and bazaar, I rented them without hesitation. This was Ivy Cottage. Come up
+and see me sometime, but leave your manuscripts behind.</p>
+<p>When we came to Ivy Cottage in 1980, we were six, Dolly having just been born.
+Now, twenty-four years later, we are twelve. I think that’s a reasonable expansion. The
+increase has been brought about by Rakesh’s marriage twelve years ago, and Mukesh’s
+marriage two years ago. Both precipitated themselves into marriage when they were
+barely twenty, and both were lucky. Beena and Binita, who happen to be real sisters,
+have brightened and enlivened our lives with their happy, positive natures and the
+wonderful children they have brought into the world. More about them later.</p>
+<p>Ivy Cottage has, on the whole, been kind to us, and particularly kind to me. Some
+houses like their occupants, others don’t. Maplewood, set in the shadow of the hill,
+lacked a natural cheerfulness; there was a settled gloom about the place. The house at
+the top of Landour was too exposed to the elements to have any sort of character. The
+wind moaning in the deodars may have inspired the sitar player but it did nothing for
+my writing. I produced very little up there.
+</p>
+<p>On the other hand, Ivy Cottage – especially my little room facing the sunrise – has
+been conducive to creative work. Novellas, poems, essays, children’s stories,
+anthologies, have all come tumbling on to whatever sheets of paper happen to be
+nearest me. As I write by hand, I have only to grab for the nearest pad, loose sheet,
+page-proof or envelope whenever the muse take hold of me; which is surprisingly often</p>
+<p>I came here when I was nearing fifty. Now I’m approaching eighty, and instead of
+drying up, as some writers do in their later years, I find myself writing with as much
+ease and assurance as when I was twenty. And I enjoy writing, it’s not a burdensome
+task. I may not have anything of earth-shattering significance to convey to the world, but
+in conveying my sentiments to you, dear readers, and in telling you something about my
+relationship with people and the natural world, I hope to bring a little pleasure and
+sunshine into your life.
+</p>
+<p>Life isn’t a bed of roses, not for any of us, and I have never had the comforts or
+luxuries that wealth can provide. But here I am, doing my own thing, in my own time
+and my own way. What more can I ask of life? Give me a big cash prize and I’d still be
+here. I happen to like the view from my window. And I like to have Gautam coming up
+to me, patting me on the tummy, and telling me that I’ll make a good goalkeeper one day.
+</p>
+<p>It’s a Sunday morning, as I come to the conclusion of this chapter. There’s bedlam in
+the house. Siddharth’s football keeps smashing against the front door. Shrishti is
+practising her dance routine in the back verandah. Gautam has cut his finger and is
+trying his best to bandage it with cellotape. He is, of course, the youngest of Rakesh’s
+three musketeers, and probably the most independent-minded. Siddharth, now ten, is
+restless, never quite able to expend all his energy. ‘Does not pay enough attention,’ says
+his teacher. It must be hard for anyone to pay attention in a class of sixty! How does the
+poor teacher pay attention?</p>
+<p>If you, dear reader, have any ambitions to be a writer, you must first rid yourself of
+any notion that perfect peace and quiet is the first requirement. There is no such thing as
+perfect peace and quiet except perhaps in a monastery or a cave in the mountains. And
+what would you write about, living in a cave? One should be able to write in a train, a
+bus, a bullock-cart, in good weather or bad, on a park bench or in the middle of a noisy
+classroom.
+</p>
+<p>Of course, the best place is the sun-drenched desk right next to my bed. It isn’t
+always sunny here, but on a good day like this, it’s ideal. The children are getting ready
+for school, dogs are barking in the street, and down near the water tap there’s an
+altercation between two women with empty buckets, the tap having dried up. But these
+are all background noises and will subside in due course. They are not directed at me.
+</p>
+<p>Hello! Here’s Atish, Mukesh’s little ten-month old infant, crawling over the rug,
+curious to know why I’m sitting on the edge of my bed scribbling away, when I should
+be playing with him. So I shall play with him for five minutes and then come back to
+this page. Giving him my time is important. After all, I won’t be around when he grows
+up.
+</p>
+<p>Half-an-hour later. Atish soon tired of playing with me, but meanwhile Gautam had
+absconded with my pen. When I asked him to return it, he asked, ‘Why don’t you get a
+computer? Then we can play games on it.’</p>
+<p>‘My pen is faster than any computer,’ I tell him. ‘I wrote three pages this morning
+without getting out of bed. And yesterday I wrote two pages sitting under the chestnut
+tree.’</p>
+<p>‘Until a chestnut fell on your head,’ says Gautam, ‘did it hurt?’</p>
+<p>‘Only a little,’ I said, putting on a brave front.</p>
+<p>He had saved the chestnut and now he showed it to me. The smooth brown horsechestnut shone in the sunlight.
+</p>
+<p>Let’s stick it in the ground,’ I said. ‘Then in the spring a chestnut tree will come up.’</p>
+<p>So we went outside and planted the chestnut on a plot of wasteland. Hopefully a
+small tree will burst through the earth at about the time this book is published.
+</p>
+<p>Thirty years ago, Rakesh and I had planted a cherry seed on the hillside. It grew into
+a tree, which is still bursting with blossoms every year. Now it’s Gautam’s turn. And so
+we move on.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter18.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="copyright.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

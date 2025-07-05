@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter4</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Four</p>
+      <p>  The Good Things about Ourselves – Our Virtues</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“One path alone leads to a life of peace: the path of virtue.”
+ —Juvenal
+</p>
+<p>“From virtue comes every other good of man.” –Socrates
+</p>
+<p> “ Recommend to your children virtue; that alone can make them happy.” –Ludwig van Beethoven
+</p>
+<p> “The very nature of kindness is to spread.
+ If you are kind to others, today they will be kind to you,
+ And tomorrow to somebody else.”  —Sri Chinmoy</p>
+<p> “Alarge part of virtue consists in good habits.” –William Paley</p>
+<p> “Is virtue a thing remote?  I wish to be virtuous, and lo, virtue is at hand.” 
+—Confucius
+</p>
+<p class="side"> Chapter Story:
+</p>
+<p> Harriet Tubman was born into slavery in 1820.  Her parents were brought
+ to the United States in chains. They were members of the Ashanti nation – a war
+rior nation in West Africa.
+</p>
+<p>When Harriet was only five, she was rented out as a worker, and for the
+ next 25 years she lived in slavery.  Harriet often worked with the male slaves, cut
+ting wood and doing other kinds of hard labor.  She was strong, and by the age of
+ 29, she had had more than enough of slavery. She lived only ninety miles from
+ freedom.  When she learned that she had been sold, and was going to be sent to
+ the deep South, she decided to attempt an escape.  She was told of a local white
+ woman who helped runaways, and this woman helped her by giving her two slips
+ of paper, each containing the name of a family who would help her on the road
+ northward. Her trip was successful.  Over the next eleven years, Harriet made
+nineteen trips back into slave-holding territory, to help others escape through the
+ Underground Railway.  She brought more than 300 slaves to freedom, risking her
+ life for every one of them.  </p>
+<p>Harriet was a deeply spiritual woman.  She knew that God was protecting
+ her, and she remained courageous, believing that she ventured only where God
+ sent her.  She often had prophetic dreams about the future.  Harriet Tubman lived
+ and died without material wealth, yet she possessed the unlimited wealth of the
+ spirit.  She lectured against slavery throughout the North.  During the Civil War,
+ she worked as a spy going deep into the South to gather information on the Con
+federate army’s movements.  She led a platoon of black soldiers in three steam
+powered gunboats on a mission which freed 800 slaves.  After that, she worked
+ tirelessly as a nurse, and when the Civil War was over in 1865, she joined the
+ Women’s Rights movement.  She died in 1913 at the age of 93.
+</p>
+<p class="side"> Chapter Overview:
+</p>
+<p>Avirtue is a positive quality or attribute that we have inside of us. It is like
+ a variety or a type of goodness, for example, courage, energy, or patience.  We
+ can’t see a virtue but we can see the expression of virtues.  For example, we can’t
+ see kindness inside someone, but we can see someone helping a friend when they
+ fall down on the playground.  We all have different virtues to share.  Some of us
+ have a lot of ambition, while others are very honest. 
+</p>
+<p>If we want to have more virtues we can learn about them and try to prac
+tice them.  Virtues live inside our invisible hearts.  They make each one of us
+ very special, because they are like gifts that we have.  We can share our gifts,
+ share our virtues, with the world, and we can help others to gain more virtues.
+ When we share our virtues we can make the world a happier and more harmo
+nious place.  There is no end to the virtues we can gain and practice.  Everybody
+ has virtues.  Some people have had a longer time to learn and practice virtues.
+ When people have learned and practiced virtues for a long time, they can become
+ leaders who help to guide others about virtues.</p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson #1 – Kindness</p>
+<p>Kindness is about helping others.  Kindness means we open our hearts.
+ Kindness means imagining what it is like for someone else. </p>
+<p>Think of one kind thing that you have seen this week. Share that with the
+ class. Who was being kind? How did that person show their kindness? Were they
+ being kind to you or to someone else? </p>
+<p>Now think of one act of kindness that you did in your life.  What kind
+ thing did you do? How did you help someone or how did it make someone feel?</p>
+<p>Using our imagination can be a big help when we are trying to be kind.
+ Think of someone you know who might need help. Who is it that might need
+ your help? What kind of help do you think they might need?  Next, think of one
+ kind thing that you can do today, or later this week, to help that person.  If you
+ cannot help that person yourself, then maybe you can talk to someone else who
+ can help that person instead. </p>
+<p>Write in your journal or diary about kindness.</p>
+<p class="side">Lesson #2 — Honesty</p>
+<p> Honesty means telling the truth. It also means telling others how you really
+ feel.  Sometimes telling the truth can be scary because we think we might get into
+ trouble or hurt someone’s feelings.  Do you try to tell the truth? Can you think of
+ a time when you did not tell the truth?  Why didn’t you want to tell the truth?
+ What happened when you didn’t tell the truth? Most often, if we don’t tell the
+ truth, the situation becomes worse and we have more problems than before. 
+</p>
+<p>Can you also think of a time when you did tell the truth, even though it
+ might have been hard or scary?  What happened when you told the truth?  Did
+ you feel better? It is not easy to be honest and tell the truth, but if we practice, we
+ can make it into a positive habit.  There is an old aphorism that says: “Honesty is
+ the best policy.”  To be honest is to be wise, because being honest can save us a
+ lot of trouble.  Being honest is also an important virtue to practice because it is a
+ major part of being a good person.</p>
+<p class="side">Lesson #3 – Courage
+</p>
+<p> Courage means following your conscience – that little voice inside of you
+ that tells you what is right and what is wrong. Courage means standing up for fair
+ness and justice. It means speaking out for what you feel is right even if others are
+ telling you something different. Courage means not being afraid to be different.
+ Courage happens in different ways. Harriet Tubman had courage because she risked
+ her life to help others.  Modern Superheroes, and heroes from ancient myths and
+ stories, show courage because they solve big problems and bring freedom and safe
+ty to kingdoms or whole lands.</p>
+<p>Yet courage is something that everyone can practice.   Courage is a virtue
+ that helps us to be good citizens and to improve our community and our world. With
+ your class share stories about courage that you know or that you have heard.  They
+ can be stories about any kind of courage, but it is good to have stories showing the
+ different kinds of courage.  Write about your favorite story that was shared in class.
+</p>
+<p class="side">Lesson #4 – Forgiveness
+</p>
+<p> Forgiveness means letting go of bad feelings we might have about another
+ person. Maybe someone has pushed us down on the playground or has hurt our
+ feelings by telling us that they won’t be our friend anymore. It is important to tell
+ them how we feel when this happens – to tell them we are sad or hurt that they
+ did what they did.  Then, once we talk to the person about what happened, and
+ once they acknowledge what they did by saying they are sorry, then we can prac
+tice forgiveness.   Forgiveness means being willing to forget what happened and
+ to make a fresh start with the person.  </p>
+<p>It is easier to practice forgiveness if we remember that everybody makes
+ mistakes, and if we recall a mistake that we ourselves have made recently.  We all
+ make mistakes.  Mistakes are an important part of life.  They help us to learn and
+ to grow into better people.  So forgiveness helps us to move past mistakes into
+ learning and growth.  
+</p>
+<p>Think of a situation in the past or the present that could be an opportunity
+ to practice forgiveness.  What is the thing that happened to you? Did you talk
+ about your feelings with that person, or did that person already apologize?  If one
+ or both of these things has already happened, then you can move to the step of
+ forgiveness.  If you want to, you can even say to the person, “I forgive you for
+ what you did.”  This sends a clear and powerful message to the person that you
+ care enough about your friendship to let go of the past and move on to the future
+ together. Make a cartoon about a situation between two people who practice for
+giveness.
+</p>
+<p class="side">Lesson #5 — Gratitude
+</p>
+<p>Gratitude is like saying ‘thank you,’ for the things that are special to us, the
+ things that make us feel happy, the things that make us who we are.  We can express
+ gratitude by saying ‘thank you,’ directly to the people we love or to someone who
+ has given us something special.  We can say ‘thank you’ to God or to the universe
+ for the good things we have in our life.  Or, you can say ‘thank you,’ just to your
+self for being you!  We have many gifts in our lives, if we just think about it.  Gifts
+can be special people, things that are precious to us, good feelings or even new
+ ideas. </p>
+<p>Can you name one or two of the gifts you are grateful for in your life?  Share
+ one of them with the class.  Make a list of all the things you are grateful for.  Watch
+ out!  It might become a pretty long list.  Then decorate your list with some art mate
+rials to make a beautiful memento of your gratitude lesson. You can hang it on your
+ wall at home or give it to someone special in your life.  Gratitude is a special virtue
+ to practice because it can help us to gain appreciation for the gifts in our lives.   If
+ we practice gratitude each day it can also help us to develop our other virtues  
+especially contentment. 
+</p>
+<p class="side">Lesson #6 – Determination</p>
+<p> Determination means never giving up. Sometimes we have to try to do
+ something many times before we can do it. Determination also means working for
+ something continually over a long period of time in order to reach a goal.  When
+ we want to learn something new or achieve something special we have to try very
+ hard and to practice in order to do that thing. When we have determination and
+ we finally accomplish that special thing, we get a deep feeling of satisfaction.
+ Satisfaction is like a deep happiness or thrill inside of us.  We need determination
+ to learn new things, and to grow in our lives.  Can you think of a time when you
+ showed determination? Can you think of someone special in your life or someone
+ from history who showed determination?
+</p>
+<p class="side"> Lesson #7 – Contentment</p>
+<p> Contentment means being happy right now with who you are and what you
+ have. Siddhartha Gautama Buddha was a great leader who taught that contentment
+ is a very helpful virtue to practice if you want to have a happy life. When you look
+ at a statue of Buddha, he always looks very content. </p>
+ <p>Close your eyes for a few moments and just feel contentment right here and
+ right now.  Just take a few breaths and be happy inside yourself.  You have every
+thing inside you that you need to be happy.  If you get a new toy or a new game,
+ you might get excited, but then once you get used to it, you might not feel as excit
+ed.  You might even want to get another toy at that point.  But contentment you can
+ always have, no matter what. You don’t need to get anything new or have anything
+ more, you can just close your eyes and feel contentment. When you get new toys it
+ is natural to have fun with them.  You can enjoy contentment all the time, whether
+ you get a new toy or not. Draw a picture of yourself feeling contentment or write a
+ poem about contentment. </p>
+ <p class="side">Discussion Questions:</p>
+ <p> a) Talk with your class about quotation #1.  Why do you think Juvenal says that
+ virtue is the only path to peace?  What do people have to have inside of them in
+ order to be peaceful and to spread harmony in the world?</p>
+ <p> b) In quotation #2 Socrates says that all other good things come to us if we prac
+tice virtues, and in quotation #3 Beethoven says that learning virtues is the only
+ way to be happy.  How do you think practicing virtues might help you to gain
+ happiness?  What kinds of good things might happen if you practice your virtues
+ every day and every week?</p>
+ <p> c) In quotation #6 Confucius tells us that practicing virtues is easy once you
+ decide to do it. In fact, he says that if we decide to practice virtues then we are
+ already a better person. Have you decided to try to practice virtues? Can you
+ share what virtues you have noticed classmates, teachers, other school workers,
+ your parents, or your grandparents practicing? </p>
+ <p class="side">Supplemental Activities:</p>
+ <ul>
+  <li> <p>With your class, make a list of all the virtues you can think of. Remember that
+ virtues are positive qualities that make us good and decent human beings.  You
+ can make the virtues into a class mural for display on the wall or the bulletin
+ board</p></li>
+ <li> <p>Fables, fairy tales and other stories are great ways to learn about virtues and to
+ remember to practice them.  With your teacher’s help, find stories that teach les
+sons about virtues and share them with the class.</p> </li>
+<li> <p> Once you have heard several stories about virtues, why not write your own?
+ You can make it a fable, a fairy tale, a myth, a real life story or anything else you
+ want.  Just make sure you first decide what virtue your story is going to teach
+ about.</p></li>
+ <li> <p>Which virtue are you going to start practicing first?  Maybe if you write it
+ down on a note card and decorate your note card, it will help you to remember
+ the virtue you are practicing.  You can do the same for all the virtues you have
+ studied and want to practice.</p></li>
+ </ul>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter3.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter5.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

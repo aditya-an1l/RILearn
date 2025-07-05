@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter7</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Seven</p>
+      <p>  Music</p>
+    </h1>
+    <p>Chapter Inspiration: </p>
+<p>“After silence, that which comes nearest to expressing the inexpressible is
+ music.” –Aldous Huxley
+</p>
+<p> “What do I do every night?  I listen to the silence-music of the twinkling stars.”–Sri Chinmoy
+</p>
+<p> “Music has charms to soothe the savage breast
+ To soften rocks, or bend a knotted oak.” –William Congreve
+</p>
+<p> “Take a music bath once or twice a week for a few seasons, and you will find that
+ it is to the soul what the water bath is to the body.”  –Oliver Wendell Holmes</p>
+<p> “Music is the pathway to the heart.”  –Voltaire</p>
+<p> “ Music makes people milder, and gentler, more moral and more reasonable.”–Martin Luthe
+</p>
+<p> “ Life is everywhere.  The earth is throbbing with it.  It’s like music. The plants,
+ the creatures, the ones we see, the ones we don’t see, it’s like one big, pulsating
+ symphony.” –Diane Frolov, Northern Exposure
+</p>
+<p> “When gripping grief the heart doth wound,
+ And doleful dumps the mind oppress,
+ Then music, with her silver sound
+ With speedy help doth lend redress.” –William Shakespeare
+</p>
+<p>Chapter Story:</p>
+<p> Ludwig van Beethoven (1770-1827) was born in Bonn, Germany. Today
+ we refer to Ludwig by his last name – Beethoven.  Beethoven’s father wanted
+ him to start learning music at a very young age – when he was only five years
+ old.  Ludwig’s father wanted Ludwig to be like Mozart, who was the most
+ famous musician at that time.  Beethoven did learn music at a young age, and he
+ did eventually become famous, but the music he wrote in his life was very differ
+ent from Mozart’s music!  By the age of twelve Beethoven was already an assis
+tant to the local organist, who was also his teacher.  By this age, Beethoven was
+ already composing his own music as well. (When a musician writes music it is
+ called composing.)
+</p>
+<p> Beethoven’s mother died when he was seventeen years old and, at about
+ the same time, Beethoven’s father had to go to live in a hospital because he was
+ very sick from alcoholism.  Soon afterwards he also died. This meant that
+ Beethoven had to care for his two younger brothers.  Even though Beethoven had
+ these important responsibilities, he still continued practicing and composing his
+ music.
+</p>
+<p> Beethoven moved to Vienna to study with one of the best musicians of
+ that time, Franz Josef Hadyn.  He took his two brothers with him.  Beethoven
+ liked Vienna so much that he stayed there for the rest of his life.  In Vienna,
+ Beethoven continued to practice playing the piano, and he continued to compose
+ his own music.  He wrote symphonies, sonatas, quartets and even a ballet.
+ Some of Beethoven’s most famous pieces are his Eighth Piano Sonata, called the
+ Pathetique, his Sixth Symphony, called the Pastoral Symphony, his Ninth Sym
+phony, called the Ode to Joy, and, what is perhaps his most famous work, the
+ Moonlight Sonata.  
+</p>
+<p>Beethoven’s music was very different from the other music of his time,
+ and because of this it took Beethoven a long time to be accepted and appreciated.
+ Some people did not like Beethoven’s music at all, and they wrote negative arti
+cles about him and spread nasty rumors about him in order to discourage him.
+ Beethoven did not let these things stop him.  He continued to make the kind of
+ music that sprang up in his invisible heart, the music that he heard in his head,
+ that was specially his and that nobody else could write.  Beethoven’s composi
+tions contained many new musical ideas that were able to express deep feelings
+ and powerful images.</p>
+<p> One of the biggest challenges that Beethoven faced in his life was that
+ when he was only thirty he started to go deaf.  Deafness is a difficult challenge
+ for any person, but especially for a musician. His deafness became worse and
+ worse, and finally he was unable to perform in public.  Because he could no
+ longer hear people speak, and because deafness makes it very hard to speak prop
+erly, Beethoven had to communicate with friends and visitors by writing things
+ down on a slate or in little notebooks.  The amazing thing, though, is that
+ Beethoven did not let his deafness stop him from composing music!  Beethoven
+ composed many pieces of music during the period in which he was partially or
+ totally deaf.  He could still hear music in his imagination, even though he could
+ not hear it with his ears.  He was able to write down the music that he heard, so
+ that others could play it.  In this way, even though he could no longer hear his</p>
+<p>music with his ears, he was able to share it with others so they could hear it.  In
+ this way he triumphed over his disability.    Beethoven’s independence and deter
+mination as an artist, and his courage in overcoming adversity, have been an
+ inspiration not just to musicians but also to poets, painters, dancers and other
+ artists.  His life and his accomplishments continue to be an inspiration to all of us
+ even today.</p>
+<p> Chapter Overview:</p>
+<p>There are many, many different kinds of music.  Besides the kind of music
+ that Beethoven wrote, sometimes called “classical” music, there are jazz, blues,
+ hip-hop, and others.  Music is something that everyone enjoys and everyone can
+ benefit from. Did you know that human beings have been making music for thou
+sands and thousands of years? Why do you think that is?  </p>
+<p>Today, music is a very important part of our lives.  We find it everywhere.
+ Can you name some places where you might find or hear music.  Let’s try to cele
+brate music each day, or at least each week, here at school.  It will be a fun activi
+ty we can do together.  We can all help to find different kinds of music that we
+ can listen to.  We can also make up our own music and even make our own musi
+cal instruments. Enjoying music will help us to feel harmony inside ourselves and
+ also to make harmony in our classroom.</p>
+<p> Chapter Lessons:</p>
+<p> Lesson #1— Let’s enjoy music together every day</p>
+<p>How many of you students have parents or grandparents who play a musi
+cal instrument?  How many of you are learning an instrument yourselves?  If you
+ are not yet learning an instrument, what instrument would you like to learn?
+ Let’s make a list of as many musical instruments as we can think of.  How many
+ did we come up with?  What is your favorite kind of music?  What is special
+ about the kind of music you like?</p>
+<p> Since we will be making lots of music together, we can make some percus
+sion instruments to help us make rhythm for the songs we will sing. You can
+ make a shaker or a drum, or both.  For a shaker, you can bring in an empty soda
+ can.  Fill the can about one third to one half full with popcorn or small stones.
+ Then seal the hole and decorate the can with some art paper.  To make a drum,
+ bring in an empty, round Quaker Oatmeal container that still has the top.  Wipe
+ out the inside of the box with a tissue or cloth. Seal the top with some strong tape.
+ You can also decorate your drum with art paper or tissue paper.  Instead of the
+ container top you can also cover the container with a piece of leather.  Now you
+ have a drum! With your shaker or your drum you are ready to make music with
+ your class.
+</p>
+<p> Lesson #2 — Music for personal reflection and to create harmony inside us</p>
+<p>Listen for a few minutes to music for relaxation, such as Sri Chinmoy’s
+ flute music.  Close your eyes while you are listening to the music.  Let your
+ breath flow smoothly and gently, in and out. When you breathe in, let your breath
+ go way down into your belly, and when you breathe out, let as much of your
+ breath out as you can before you breathe in again.  As you listen to the music
+ allow all of your muscles to relax.  Let go of any tension you are feeling.  Let
+ your mind become calm and quiet.  The music can fill you with peaceful energy,
+ if you focus on it and let your thoughts flow along with it.  Now open your eyes
+ and rest for a few moments. Did the music help you to feel peaceful?
+</p>
+<p> Lesson #3 — Music for visualization – Moonlight Sonata of Beethoven</p>
+<p> Dim the lights in the room to create a peaceful atmosphere. Close your
+ eyes and listen to the Moonlight Sonata by Beethoven. As you listen to
+ Beethoven’s music, imagine the moon shining on the waves of the ocean. In your
+ mind’s eye see the waves rolling into the shore and shining like twinkling dia
+monds in the light of the moon.  Imagine you can hear the waves and feel the
+ sand under your feet. Imagine there is nobody on the beach except for you.  Imag
+ine you are feeling peaceful and joyful at the sight of the beautiful, shimmering
+ waves.   When the music is over gently open your eyes. Share with the class what
+ you saw in your imagination and how Beethoven’s music made you feel.
+</p>
+<p> Lesson #4 – Music to teach about feelings
+</p>
+<p> What kinds of feelings do you get when you listen to music?  Listen to
+ three or four different kinds of music – classical, jazz, relaxation music, hip-hop,
+ or rock.  What kinds of feelings do you get from the different kinds of music?
+ What kind of music would you like to listen to when you are reading or doing
+ school work?  What kind of music would you like to dance to?  What kind of
+ music makes you feel the most peaceful? What kind of music would you like to
+ listen to just for fun?  Different kinds of music help us to feel different things.
+ Music can be our friend when we are lonely or sad, and music can help us cele
+brate when we are feeling happy or excited.</p>
+<p> Recommended Songs:
+    <p>Circle of Friends I Love</p>
+ <p>You Are My Sunshine</p>
+</p>
+<p> Lesson #5 — Music to teach about virtues
+</p>
+<p> Music can be an excellent way to learn about virtues.  For example, the
+ song, This Land is My Land, by Woody Guthrie, is a song about compassion.
+ Woody Guthrie wrote this song during the Great Depression in the United States,
+ when many people did not have jobs or enough food to eat.  New immigrants
+ were coming to America and some people who were already here were saying,
+ “We don’t even have enough food for ourselves, why should we let more people
+ come here?”  Woody Guthrie had a different philosophy.  In his song he says,
+ “This land is your land, this land is my land … this land was made for you and
+ me.” In other words, this land of America is for everyone who wants to come,
+ work hard, and join our community.  We can learn lessons like this from many
+ songs – especially from folk songs from America and other lands around the
+ world.
+</p>
+<p> Recommended Songs:
+    <p>This Land is Your Land– Woody Guthrie</p>
+    <p> The Sparrow and The Thief– Andrew Kutt</p>
+    <p> This Little Light of Mine</p>
+    <p> Make New Friends</p>
+</p>
+<p> Lesson #6 – Music from other lands 
+</p>
+<p>Music is an ideal way for us to learn about the people of other cultures.
+ Each culture of the world has its own kind of music.  The music of each culture
+ expresses the feelings, dreams, ideas, and stories of that culture. When people of
+ other cultures sing and dance to their own music, they feel they are expressing the
+ soul or message of their culture.  So, when we learn and play music from some
+one else’s culture we can gain a deeper understanding of people who are different
+ from ourselves.  Music from other cultures can help us to feel connected with oth
+ers from around the world. </p>
+<p>Recommended Songs:
+    <p>Tue Tue Barima Tue (African)</p>
+    <p>Quay Ah He Ah No (Native American)</p>
+</p>
+<p class="side"> Lesson #7 — Music just for fun – Rhymes and games </p>
+<p>Sometimes it is nice to just have fun with music. Here is a word, rhythm
+ and movement activity that you can do for fun. You do not need to have any
+ music.</p>
+<p> Kerplink
+ (For this activity you can easily make up your own movements or gestures, 
+by listening to the story.)</p>
+<p> One day when my dad was reading the paper</p>
+ <p>And my mom was doing the dishes</p>
+ <p>And I was practicing piano (kerplink, kerplink, kerplink),</p>
+ <p>There was a knock-knock-knock on the door.</p>
+ <p>(A knock-knock-knock on the door.)</p>
+ <p>Mom said, “Patricia! Open the door!”</p>
+ <p>Dad said, “Patricia! Open the door!”</p>
+ <p>“Yes sir, yes sir,” but I wouldn’t do it.</p>
+ <p>(“Yes sir, yes sir,” but I wouldn’t do it.)</p>
+ <p>So I did it!</p>
+ <p>It was a tall-fat-skinny-little man-y</p>
+ <p>(A tall-fat-skinny-little-man-y)</p>
+ <p>Who wanted to talk to dad!</p>
+ <p>The next day when my mom was reading the paper</p>
+ <p>And my dad was doing the dishes</p>
+ <p>And I was practicing piano (kerplink, kerplink, kerplink),</p>
+ <p>There was a knock-knock-knock on the door.</p>
+ <p>(A knock-knock-knock on the door.)</p>
+ <p>Mom said “Patricia! Open the door!”</p>
+ <p>Dad said, “Patricia! Open the door!”</p>
+ <p>“Yes sir, yes sir,” but I wouldn’t do it.</p>
+ <p>(“Yes sir, yes sir,” but I wouldn’t do it.)</p>
+ <p>So I did it!</p>
+ <p>It was a tall-fat-skinny-little man-y</p>
+ <p>(A tall fat skinny little man-y)</p>
+ <p>Who wanted to talk to mom!</p>
+ <p>The next day when dad and mom were both doing the dishes </p>
+<p>And I was practicing piano (kerplink, kerplink, kerplink),</p>
+ <p>There was a knock-knock-knock on the door.</p>
+ <p>(A knock-knock-knock on the door.)</p>
+ <p>Mom said, “Patricia! Open the door!”</p>
+ <p>Dad said, “Patricia! Open the door!”</p>
+ <p>“Yes sir, yes sir,” but I wouldn’t do it.</p>
+<p>(“Yes sir, yes sir,” but I wouldn’t do it).</p>
+ <p>So I did it!</p>
+ <p>It was a tall-fat-skinny-little man</p>
+ <p>(A tall fat skinny little man)</p>
+ <p>Who wanted to talk to me!</p>
+ <p>The man said, “Patricia, will you marry me?”</p>
+ <p>“Yes sir, yes sir,” but I wouldn’t do it</p>
+ <p>(“Yes sir, yes sir,” but I wouldn’t do it.)</p>
+ <p>And SO I DID IT!</p>
+ <p>Additional recommended “for fun” songs: </p>
+<p>Miss Mary Mack</p>
+ <p>She’ll Be Coming Round the Mountain</p>
+ <p>Note: There are a variety of hand-clapping games for Miss Mary Mack, and</p>
+ <p>some classic hand and body movements for She’ll Be Coming ‘Round the</p>
+ Mountain.</p>
+<p class="side"> Lesson #8 — Music for peace and harmony</p>
+<p> And Every One with Their Vine and Fig Tree is a traditional song based
+ upon a verse from the Old Testament of the Bible. It is a wonderful song to sing
+ whenever you want to bring forth a peaceful spirit and create a feeling of harmo
+ny. Below are the words to the song. In italics after each line are some move
+ments you can do along with the song to bring it more to life.</p>
+<p> And everyone with their vine and fig tree.</p>
+<p> With one hand make the motion of a vine growing, by putting your thumb and
+ your first two fingers together and moving them upward in a swirling motion.
+ With the other hand make the motion of a fig tree blossoming, by letting your fin
+gertips wiggle as your hand rises higher.</p>
+<p> Shall live in peace and unafraid</p>
+<p>Both hands cross flat one over the other in the middle of your chest</p>
+<p> And everyone with their vine and fig tree </p>
+<p>Repeat movements as above</p>
+<p> Shall live in peace and unafraid</p>
+<p> Repeat movements as above</p>
+<p> And into ploughshares turn their swords</p>
+<p> Starting with hands folded in the center of the chest, spread your hands slowly
+ outward as if to embrace the sky. Then above your forehead let your hands come
+ together again. Finally let your hands come to rest again – 
+folded in front of your chest.</p>
+<p>Nations shall make war no more</p>
+<p> With folded hands bow forward gently</p>
+<p>And into ploughshares turn their swords</p>
+<p> Repeat movements as above</p>
+<p> Nations shall make war no more</p>
+<p>Repeat movements as above</p>
+<p> Alternate Verse: We shall be friends more and more</p>
+<p> Additional Recommended Songs:</p>
+<p> Peace Like a River</p>
+<p> From a Distance</p>
+<p> Deep Peace–Donovan  </p>
+<p class="side">Discussion Questions:</p>
+<p> a) Voltaire said, “Music is the pathway to the heart.”  What do you think he
+ meant?</p>
+<p> b) Which one of the chapter quotations do you like the best?  Can you say why?</p>
+<p> c) What do you think was the biggest challenge in Beethoven’s life?  Why?</p>
+<p> d) What was your favorite lesson in this chapter?  What did you like about your
+ favorite lesson?</p>
+<p class="side">Supplemental Activities:</p>
+<ul>
+    <li> <p>Learn about some of the basic kinds of classical music and listen to some
+ examples of each. A symphony is a piece of music played by a whole orchestra. A
+ sonata is a musical piece for just one instrument.  A quartet is for four instruments– usually two violins, a viola, and a cello in classical music.  A concerto is a piece
+ for a small or large orchestra that features one main instrument such as the piano
+ or the flute.  A ballet is a piece of music written for a dance performance.</p></li>
+ <li> <p>Decide what instrument you would like to play, and say why.</p></li>
+</ul>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter6.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter8.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

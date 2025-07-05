@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter10</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+   <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Ten</p>
+      <p>  Involvement with Nature</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“Climb the mountains and get their good tidings.  Nature’s peace will flow into
+ you as sunshine flows into trees.  The winds will blow their own freshness into
+ you, and the storms their energy, while cares will drop away from you like the
+ leaves of Autumn.” –John Muir
+</p>
+<p>“I believe in God, only I spell it Nature.” –Frank Lloyd Wright
+</p>
+<p> “ The aim of life is self-development.  To realize one’s nature perfectly – that is
+ what each of us is here for.” –Oscar Wilde
+</p>
+<p> “Wake up, look around and see the blossoming of a totally new world.”   —Sri
+ Chinmoy</p>
+<p> “ Nature is wont to hide herself.”  —Heraclitus</p>
+<p> “ In all things of nature there is something of the marvelous.” –Aristotle
+</p>
+<p> “Nature does nothing uselessly.” –Aristotle
+</p>
+<p>“The goal of life is living in agreement with nature.” –Zeno
+</p>
+<p> “Think not disdainfully of death, but look on it with favor; for even death is one
+ of the things that Nature wills.”   —Marcus Aurelius Antoninus</p>
+<p> “In the state of nature ... all men are born equal, but they cannot continue in this
+ equality, society makes them lose it, and they recover it only by protection of the
+ law.”  —Charles de Montesquieu
+</p>
+<p class="side"> Chapter Story:
+</p>
+<p>Rachel Louise Carson was born in the small, river town of Springdale,
+ Pennsylvania, in 1907.  Rachel’s mother was a great lover of nature and living
+ things, and so Rachel spent much of her childhood outside in nature and talking
+ about the natural world with her mother.  In school, Rachel loved science and she
+went on to study science in college. She received a Bachelor’s Degree in Biology
+ from Pennsylvania College for Women and a Masters Degree in Zoology from
+ John’s Hopkins University.  
+</p>
+<p>After college, Rachel got a job with the United States Bureau of Fisheries,
+ writing radio scripts about nature.  During this time, she also wrote feature arti
+cles about natural history for the Baltimore Sun.  She then began a fifteen-year
+ career with the federal service as a scientist and editor in l936, and eventually
+ rose to become Editor-in-Chief of all publications for the U.S Fish and Wildlife
+ Service.  </p>
+<p>Rachel continued to write about important topics such as conservation and
+ natural resources and edited many scientific articles.  During her free time she
+ started writing more creatively, in a style called lyric prose.  She wrote an article
+ called Undersea in 1937, and then a book called Under the Sea-Wind in 1941.  In
+ 1952 she published her prize-winning study of the ocean, The Sea Around Us,
+ which was followed by The Edge of the Sea in 1955.  These books were like a
+ biography of the ocean and they became very popular.  Rachel Carson became
+ famous as a naturalist and science writer for the public.  She resigned her job in
+ government service in 1952 to devote herself to writing.</p>
+<p> During her career as a writer, Rachel wrote several other articles that were
+ intended to teach people about the wonders of the living world.  These articles
+ included Help Your Child to Wonder (1956) and Our Ever Changing Shore
+ (1957).  She was also planning another book about the ecology of life, but she
+ was never able to complete it.  All of Rachel’s writing expressed the philosophy
+ that human beings were only one part of nature and that human beings had a
+ power that other living things did not have – human beings could either help
+ nature or hurt nature.</p>
+<p>Around the time of World War II, Rachel became very concerned about the
+ widespread use of pesticides around the world and the dangerous impact of chem
+icals on the environment, on animals, and on people.  Rachel felt a responsibility
+ to warn people that the chemicals in pesticides were very harmful and that some
+thing had to be done to protect people and nature from them. In 1962 she wrote a
+ book called Silent Spring, in which she spoke out against the practices of agricul
+tural scientists and the government.   In this book, Rachel called for a change in
+ the way people were viewing and treating the natural world.  </p>
+<p>Some people did not like what Rachel was saying, especially the compa
+nies that made the chemicals for the pesticides.  Rachel was criticized and some
+times ridiculed by the chemical industry and by some members of the govern
+ment.  Yet Rachel continued to speak out about what she believed and about what
+ her scientific research was showing. She continued to try to teach people to see
+ humanity as part of the fabric of nature, and that if we treat nature badly, we will
+all suffer in the end.  In 1963 Rachel was called to testify before Congress, and
+ during her testimony she pleaded for new policies to protect people and the envi
+ronment from dangerous chemicals.</p>
+<p> Rachel Carson died from breast cancer in 1964.  Her work lives on in her
+ books.  Her life is an inspiration to all of us to try to be more aware of our
+ capacity to live more harmoniously with nature.</p>
+<p>Chapter Overview: </p>
+<p>Living in harmony with Nature is one of our most important jobs as human
+ beings.  As Rachel Carson and many others have taught us, we human beings are
+ the stewards of the earth.  We have a very important responsibility to treat the
+ earth kindly, to use the earth’s resources wisely, and to preserve the beauty and
+ health of the earth for the future. Nature herself can provide us with comfort and
+ support as we try to live up to our responsibility. When we need guidance, wis
+dom, or inspiration, we can go out into nature to play, walk, run, write, paint,
+ sing, or just to be.  </p>
+<p>There is a great harmony that exists in nature. As creatures that are a part
+ of nature, we can enjoy that harmony and that connection every time we go out
+ into the forest, to the mountains, to the sea, or just to a local meadow, a park, or
+ our back yard.  Nature is one of our most special friends.  It is important that we
+ get to know nature’s gifts so we can get help and healing from nature when we
+ need it – and so we can support nature when she needs our help.</p>
+<p class="side">Chapter Lessons:
+</p>
+<p class="side"> Lesson #1 — Mini Vision Quest</p>
+<p> If possible, the vision quest should take place in the forest, in the moun
+tains, in a meadow, by the sea, near a lake, or in some other natural setting.  If
+ your school is not near wilderness, you can go to a local park, a nature center, or
+ even to a quiet spot on your playground.  
+</p>
+<p>Vision quests were and continue to be an important  coming of age cere
+mony in many native tribes of North America.  In many Native American tribes, a
+ young person in the early teen years goes out into nature and spends some time
+ by themselves.  Sometimes they may even spend a night, or even two or three
+ nights, alone in the wilderness.  During this time the young person is expected to
+ practice the skills of living in the wilderness that they have learned, and they are
+ also supposed to spend time in reflection about this important stage of their lives.</p>
+<p>Many tribes believe that during the vision quest the young person should
+wait until they are visited by an animal or a spirit guide who will give them an
+ important message or some kind of wisdom for their personal life or for their
+ tribe.  The native people believe that the person on the vision quest may have
+ ‘visions’- that they may see things or stories in their mind’s eye, that have impor
+tant meanings.  The stories of Black Elk in Black Elk Speaks are good examples
+ of these kinds of visions.
+</p>
+<p> When you do your own vision quests, you will not be staying in the
+ wilderness alone for a long time as the young Native Americans do.  You will
+ simply go to spend some time in a natural place.  Here are a few guidelines you
+ might find helpful for a successful vision quest:
+</p>
+<p> a) Take the class to a natural place or to a local park.</p>
+<p>b) Each student should bring a pen or pencil and a small notebook to write or
+ draw in.  A marble composition book is fine, though a smaller, pocket-sized note
+book is even better.
+</p>
+<p>c) Each student should be prepared to be silent for at least 15 minutes.  30 min
+utes of silence is ideal.  It might be very helpful to practice being silent in class
+ for some minutes each day prior to going on your vision quest.
+</p>
+<p>d) Once you arrive at your natural location, each student should pick a different
+ spot to be. They should select a spot that ‘speaks to them’– a place where they
+ will be comfortable and peaceful and not distracted. It is important for each stu
+dent to be far enough from other students that they can’t really see them directly
+ or at least that they can’t really talk to each other.
+</p>
+<p>e) During the vision quest everyone should maintain silence.  If someone needs
+ the teacher’s attention for some important reason, they can make a signal or a
+ motion to the teacher and the teacher can quietly come over to the student.</p>
+<p> f) The teacher’s job is to walk around quietly and unobtrusively, to make sure
+ everyone is safe and focused.  If everything is going as planned the teacher can sit
+ in a central place and enjoy nature too!
+</p>
+<p> g) Each person should be encouraged to pay attention to the things of nature that
+ surround them – especially the small things.  Look and listen to the sights and
+ sounds of nature – the songs of the birds, the rush of the water, the insects on the
+ ground, the flowers, the ferns, the grass and the trees.</p>
+<p>h) Each student should be encouraged to listen with their inner ears and to look
+ with their mind’s eye during their vision quest.  If they do, they very likely will
+ get a message or an image that they want to write down or draw in their note
+books.
+</p>
+<p> i) Sometimes it is best to advise the students to wait until they get back to class to
+ share about their vision quests.  This gives each person time to think about and
+ absorb their own experience.</p>
+ <p>j) Once back at school, invite students to share about their vision quests if they
+ want to.  Students should also be invited to write more in-depth journal entries or
+ more detailed pictures once they are back in class.  This will make their overall
+ experience much deeper and more memorable. Enjoy your vision quest!</p>
+<p class="side"> Lesson #2 — Making and using talking sticks</p>
+<p> A‘talking stick’ is a valuable tool in talking about feelings.  Find a stick in
+ the forest or in the park. Break off any small twigs or branches and use some
+ sandpaper to take the bark off and make it smooth. Then, using craft glue or hot
+ glue, attach feathers, stones, shells, yarn, polished glass, dried flowers or other
+ natural objects to your stick. Remember that your stick is going to help you to
+ share your feelings with others, so your stick should have a special design that is
+ just yours. Once your stick is finished, you can use it when you need to speak
+ your feelings with others.  Simply hold the stick when you are speaking. Give the
+ stick to your partner when you are finished.  Whoever is not holding the stick has
+ the job of listening with ‘giraffe ears’ (see Chapter 3). Good luck! (You can use a
+ talking stick in the same way you use the harmony flower described in Chapter
+ 3.)</p>
+<p class="side"> Lesson #3 — Making a God’s Eye</p>
+<p> Nobody really knows the origin of the ‘God’s Eye.’ ‘God’s Eye’ is the
+ name given to a certain artistic, geometric design, which is described below.
+ Nature is full of geometric forms, from snowflakes to crystals and from atoms to
+ nebulae.  Making a ‘God’s Eye’ can remind us of nature’s many beautiful designs. </p>
+<p>Materials:  Two sticks of equal length: anything from toothpicks to popsicle sticks
+ to branches or dowels)
+ Yarn:  embroidery floss, or cotton or wool yarn (several different colors)
+ Decorations:  feathers, beads, seeds, bells, etc</p>
+<p>a) Cross the sticks at the center, and tie together with the end of one piece of
+ yarn.  Tie the yarn in the back.</p>
+<p> b) Wind the yarn around the intersection in a figure eight or in any other pattern
+ that will secure the center.</p>
+<p>c) Then begin weaving by winding the yarn behind and then over one stick,
+ behind and over the next stick, until you are ready to change colors.</p>
+<p> d) Then tie on a second color and continue weaving around the sticks. You may
+ add several colors, and you can reverse the direction of the weaving to make
+ more complex weaving patterns.</p>
+<p> e) Stop before you have filled the sticks completely and knot the yarn on the
+ back.  (Remember to make all knots on the reverse side when changing colors.)</p>
+ <p> f) Attach feathers, bells, beads, etc. by tying them to the ends of the sticks.</p>
+ <p> g) Some color meanings: Yellow: Sun, Moon, Stars</p>
+ <p> Blue:Sky and Water</p>
+ <p> Brown: Earth</p>
+ <p>Green:
+ Plant Life</p>
+ <p>Black:
+Death and Transformation</p>
+ <p> Red:
+ Life</p>
+ <p class="side"> Lesson #4 — Sand painting </p>
+ <p>Sand painting is very popular in different cultures around the world,
+ including the Navajo culture in the Southwestern United States and the Buddhist
+ culture of Tibet (near China).  Sand paintings are usually made of colored sand
+ and the designs are usually symbols of life, renewal, energy, or other inspiring
+ things.  Traditional sand paintings are often made by simply pouring or dropping
+ sand on a certain kind of paper or smooth surface.  Quite often the sand is not
+ fixed to the surface in any way – so it can be brushed or whisked away when the
+ sand painting and whatever ceremony it might be used for are finished.  This
+ brushing or whisking away symbolizes the impermanence of all things and the
+ constant change occurring in the universe. It also helps us to appreciate the
+ process of creation, to live in the moment, and to learn how to let go of the past.</p>
+ <p> If you wish, you can make “impermanent” sand paintings as the native
+ people do.  You can also make sand paintings that are more permanent which you
+ can keep.  To do this, follow the directions below.</p>
+ <p>a) You need some solid art paper – either poster board, card stock, watercolor
+ paper, or other heavier grade art paper.  You can also use cardboard, but do not try
+ to use regular copy paper or other thin paper. You will also need colored sand,
+ which you can get at a local art store or craft store</p>
+ <p> b) It is best if the sheets of paper are at least 18” by 12” in size.  Even larger
+ sheets of paper are better if that is possible.  </p>
+ <p>c) The first step is to think about your image or picture and to sketch it first on
+ another paper – a piece of scrap paper.  Usually sand paintings are either scenes
+ from nature or geometric designs.  Sometimes they also show a simple image of
+ certain mythological creatures.  You might want to look at a book of nature
+ scenes, a book of mandala designs (from Tibet), or a book of native symbols, if
+ you want to get more specific ideas.  You can also come up with your own ideas.
+ However, it is important to make your design simple.</p>
+ <p>d) Once you have chosen a design or image, and once you have practiced it on a
+ piece of scrap paper, you can copy your design onto your final art paper using a
+ pencil. You might want to press down lightly with your pencil in case you want to
+ erase something.</p>
+ <p> e) After you have sketched your design or image, you can decide what colors
+ each part of your painting will be. Be sure you know what sand colors you have
+ available.  It is best not to try to mix colors and it is also easier if you try not to
+ create too many tiny or thin spaces with different colors – at least when you are
+ doing your first sand painting.  With your pencil you should very lightly write the
+ colors you want to put on the different sections of your drawing.  In other words
+ you will write the words ‘blue,’ ‘green,’ and so on, in every section where there
+ will be a different color.  Every section should have a note about what color of
+ sand you want to put there.  You can use abbreviations if you don’t want to write
+ the whole word.</p>
+ <p> f) Now the fun part!  Get some Elmer’s glue and carefully drip just enough of it
+ on only one section of your painting.  Gently spread the glue evenly across the
+ whole section using your finger or a q-tip cotton stick.   Be sure the whole section
+ is covered, but only do one section.  If some glue spills or leaks over to another
+ section just wipe it off gently with a tissue or napkin before it dries</p>
+ <p> g) After you have a nice, smooth spread of glue over one section you can careful
+ly pour the color of sand you want onto that section.  For this you can use a paper
+ cup or a small pitcher.  Your sand will stick to the glue automatically.  Just keep
+pouring it until the sand is spread across the whole section.  If you have to lift up
+ your picture</p>
+ <p> h) You must let your first section dry for at least a few minutes before you spread
+ your glue for the second section.  In the meantime, you can save any extra sand
+ by shaking it off onto your table and using a small whiskbroom to put it back into
+ your cup or pitcher</p>
+ <p> i) Just don’t be in too much of a hurry, and you will end up with a beautiful sand
+ painting.  (Note: It may take more than one sitting or class to finish).</p>
+ <p>j) You can make a display for your sand paintings when your class is finished.  It
+ is always good to include labels for each painting and a written, posted descrip
+tion of the project to put on the bulletin board with your paintings.  Good luck!</p>
+ <p class="side"> Lesson #5 — Making dream catchers</p>
+ <p> ‘Dream catchers’ are an important part of the culture of some Native
+ American tribes.  Dream catchers have also become a very popular item in
+ today’s modern world as well.  The belief or idea behind the dream catcher is that
+ the web of the dream catcher catches bad dreams or negative thoughts, while it
+ lets good dreams and positive thoughts pass through.  Good dreams or positive
+ thoughts are dreams and thoughts that are fulfilling and enriching, that bring us
+ greater peace and happiness.  The dreams or thoughts that get caught in the web
+ are all those things that don’t help us on our journey; things that might block us
+ or limit us from reaching our personal harmony.  You can learn how to make a
+ dream catcher, and then you can hang your dream catcher in your classroom or in
+ your house to bring more harmony into your life.</p>
+ <p> a) Use about 2-6 feet of soaked vines (willow or grapevine preferably).  Carefully
+ bend the vine around to form a circle with a 3 - 8 inch diameter.  (Usually dream
+catchers are no wider than an adult’s hand.)</p>
+ <p>b) Twist the vine around the circle to strengthen the hoop.</p>
+ <p> c) Use about 4-16 feet of strong, thin string (hemp, jute, or any natural fiber).
+ Knot a loop in one end. This will become the hanger.</p>
+ <p>d) Tie the hanging loop around the weakest point.</p>
+ <p> e) Hold the string and place it loosely over the top of the loop.  Move the string
+ around to the back of the hoop (making a hole) and pull the string back through
+ the hole. Repeat this stitch all around the loop, progressively making a smaller
+ and smaller opening.</p>
+ <p> f) Pull each stitch taut, but not too tight, so that it will lie flat. Space the stitches
+ evenly, about 1 and 1/2 to 2 inches apart.</p>
+ <p>g) On the following rounds, place the string around the center of each stitch from
+ the previous round.</p>
+ <p> h) As you work through the rounds, the string from the previous rounds should
+ bend towards the center of the hoop slightly.  A spider web begins to form.</p>
+ <p> i) You can place a bead on the string to represent the spider.</p>
+ <p> j) Make sure you leave a hole in the center of the dream catcher.</p>
+ <p> k) End by stitching twice in the same place, forming a knot, and pull tight.</p>
+ <p> l) You have completed your dream catcher.  Find a place to hang it at school or at
+ home and enjoy sweet dreams and pleasant thoughts.</p>
+ <p class="side"> Lesson # 6 —Nature poem/Circle game</p>
+ <p> For this game you will need some special things that you have found in
+ nature – some small stones, some shells, some chestnuts, black walnuts in their
+ green shells, or some other roundish natural objects.  You can use apples, oranges,
+ or ordinary balls if you wish.  It is quite possible that a few objects will be
+ dropped and lost to the game, so plan accordingly.  You should have enough items
+ of the same object, all stones or all shells, for example, so everyone in the circle
+ will have one.</p>
+ <p>a) For this game, stand in a circle with just enough distance between each person
+ so that everyone can touch hands.  During this game you don’t actually hold
+ hands, but you gently touch each other’s hands by holding your left palm upward
+ and your right palm downward.  Eventually you will be receiving an object in
+your left hand from the person to your left and you will be passing the object on
+ to the person to your right with your right hand.
+ b) You begin the game, however, with each person holding their object in their
+ own two hands in front of their invisible heart – the left hand palm up and the
+ right hand palm down.  In other words, the object will be sitting in the left palm
+ and it will be covered gently by the right hand.</p>
+ <p> c) You will stand still during this game.  The only motion is with your hands and
+ arms.  Basically there are only two motions.  In one motion you are moving your
+ hands towards your neighbors’ hands on your left and right.   In the other motion,
+ you are moving your hands back to the middle of your chest, as described above.
+ First you will receive an object in your left hand, then you will move your hands
+ to the middle of your chest, and then you will pass the object to the person on the
+ right.  </p>
+ <p>d) It is important to keep a steady rhythm. Otherwise folks will not pass at the
+ same time.  In other words, everyone in the circle needs to do the actions in uni
+son – that is the object of the game. If you think of each motion described above
+ as having one drumbeat, this will help you to ‘get it.’</p>
+ <p> e) There is a poem that goes with the game.  Wherever you see the slash (‘/’) in
+ the poem, that is where your hands are coming to the center. Whenever you are
+ saying the words of the poem, that is where you are receiving or giving the
+ object.  It is important to pause briefly after every motion – after every part of the
+ poem.  Each part of the poem goes with one beat. Here is the poem:</p>
+ <p> We give / we care</p>
+ <p> We learn / to share</p>
+ <p> And as / we give</p>
+ <p>We learn / to weave</p>
+ <p>Aweb / of love </p>
+ <p>As bright /as stars</p>
+ <p> That shine / above</p>
+ <p> f) When you are done with the game, you can talk about the game – what was
+ challenging and what was fun.  You can also talk about the meaning of the poem.
+ This poem is borrowed from the Rudolph Steiner educational program – also
+ called the Waldorf educational approach.</p>
+ <p> g) You may find it very helpful to practice this game without any objects first, so
+ you can learn the motions, the proper rhythm, and the words to the poem.</p>
+ <p class="side">Discussion Questions:</p>
+ <p> a) Compare the two meanings of  ‘nature.’ One meaning is Mother Earth and all
+ of her manifestations.  The other meaning means the essence of being human.
+ Can you find one quotation from the chapter quotations above that uses ‘nature’
+ in the first way and another quotation that uses ‘nature’ in the second way?  How
+ do you think these two kinds of nature are connected?  Brainstorm the different
+ ways – there is not just one ‘right’ answer!</p>
+ <p> b) Chief Seattle was a great Native American Chief.  He was an eloquent speaker.
+ One of his speeches was written down by people who attended the occasion
+ (there were no recording devices back then!).  This speech was about the end of
+ the way of life of the Native Americans and the beginning of the ‘white man’s’
+ control of North America.   The speech is also about the different ways of seeing
+ and treating Mother Earth.  This speech became very famous. You can find this
+ famous Chief Seattle speech about Mother Earth in the encyclopedia, in many
+ books, or on the Internet.  Read all or part of this speech with your class. If it is
+ too long for one person to read the whole thing, each person can read part of it.
+ Discuss the meaning of this important speech with your class.</p>
+ <p> c) Frank Lloyd Wright was a very famous American architect and philosopher.
+ Discuss what you think he meant in quotation #2.</p>
+ <p class="side">Supplemental Activities:</p>
+ <p>Make a seed collection.  See how many different kinds of seeds you can collect.
+ You can paste them onto paper or put them into containers with compartments.  It
+ will be good to label your seeds, if you can identify them.  You can also try to
+ sketch them on some art paper or in a science journal.  You can also sketch what
+ the seeds will sprout into and what they will become as adults.  Discuss with your
+ class what it is inside the seed that determines what kind of plant it will become.
+ Is it the same for humans?  What is it inside you that shapes what kind of body
+ shape and size and color you will become?  What is it that shapes what kind of
+ person you will become? </p>
+ 
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter9.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter11.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

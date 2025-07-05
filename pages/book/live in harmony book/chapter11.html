@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter11</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+   <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Eleven</p>
+      <p>  Welcome to the Web of Life: Understanding How
+ Every Relationship Can Build a Positive World</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“Man did not weave the web of life, he is merely a strand in it. Whatever he does
+ to the web, he does to himself.”  –Chief Seattle
+</p>
+<p> “Peace is not a relationship of nations. It is a condition of mind brought about by
+ a serenity of soul. Peace is not merely the absence of war.  It is also a state of
+ mind.  Lasting peace can come only to peaceful people.” –Jawaharlal Nehru
+</p>
+<p> “Treasure your relationships, not your possessions.” –Anthony J. D’Angelo, The
+ College Bluebook
+</p>
+<p> “Relationships of trust depend on our willingness to look not only to our own
+ interest, but also the interest of others.” –Peter  Farquharson</p>
+<p> “As bad as physical disease is for the eyes, there is another disease, which can
+ ruin your relationships. It is the ‘I’ disease where your conversation contains the
+ words, ‘I’, ‘me’, ‘my’ and ‘mine’, every eight to ten words.  If these words were
+ removed from most people’s conversation they would have nothing to say.”  –Sidney Madwe</p>
+<p> “Without relationships, no matter how much wealth, fame, power, prestige and
+ seeming success by the standards and opinions of the world one has, happiness
+ will constantly elude him.” –Sidney Madwed 
+</p>
+<p>“Religion holds the solution to all problems of human relationship, whether they
+ are between parents and children or nation and nation. Sooner or later, man has
+ always had to decide whether he worships his own power or the power of God.”–A.J. Toynbee
+</p>
+<p> “My true friend is he who loves me for what I inwardly am
+ And not for what I outwardly have.” –Sri Chinmoy
+</p>
+<p> “Our differences disappear the moment we come to realize
+ that all hearts are one.” –Sri Chinmoy</p>
+<p class="side">Chapter Story: 
+</p>
+<p>When Helen Keller was less than two years old, she suddenly became ill
+ with a fever.  The fever was very strong and she became unconscious.  When the
+ fever finally went away, her family was happy, but then they realized something
+ was wrong.  Helen could no longer see or hear. The fever damaged her brain and
+ took away her senses of hearing and vision.
+</p>
+<p> Between the ages of two and seven, Helen lived a very difficult and chal
+lenging life.  She could not communicate with anyone.  Without the ability to see
+ or to hear the world she could not really understand the world.  Sometimes she
+ became very frustrated and angry at her condition. Other times she became very
+ frightened, and she felt alone and sad. 
+</p>
+<p>Helen’s life changed forever when she was seven years old. That is when a
+ teacher named Anne Sullivan came to live with Helen’s family. Anne Sullivan had
+ received special training that taught her to help someone who was blind or deaf,
+ but she had never worked with somebody who was both blind and deaf.  </p>
+<p>Helen was very excited at first to have a teacher who was going to help
+ her.  Yet things were not easy at first.  Everything Anne Sullivan tried to commu
+nicate she did by drawing on Helen’s hand, for it was only the sense of touch that
+ was left as a connection between them. It took a tremendous amount of determi
+nation and courage for Helen to learn from Anne.  And it took great imagination,
+ patience and love for Anne to be able to teach Helen.   </p>
+<p>There were times when Helen became angry that she couldn’t learn.  Anne
+ was able to identify with Helen’s condition and to sympathize with Helen, so it
+ did not bother Anne when Helen became angry, even the time that Helen threw
+ down her rag doll on the floor and broke it into pieces.  Anne never judged Helen
+ in a harsh way or made her feel bad, and in this way she gained Helen’s trust.
+ Because of the very close bond of friendship between Helen and Anne, Anne was
+ able to teach Helen how to read using a method called Braille.  Using Braille,
+ Helen became a prolific reader and she read as many books as she possibly could
+ because she always felt she had to ‘catch up’ to the people who had sight and
+ hearing. </p>
+<p>Eventually Anne was even able to teach Helen how to communicate with
+ the world. Anne and Helen spent many years together, learning from each other.
+ Then, sadly, in 1936, Helen’s teacher Anne Sullivan passed away.  Helen went on
+ to live another 32 years. She lived a very full life, helping the blind and being an
+ advocate for racial and gender equality. She learned to speak and to deliver
+ speeches. She wrote books, including her famous autobiography and she even
+ performed in theater productions.  Helen Keller went on to live a very full and
+ even happy life, in spite of her condition.  She  believed  that people who are
+ blind or deaf are like everybody else – they want to get the most out of life and to
+feel connected to other people. The friendship between Helen and Anne is a
+ tremendous example of how a positive relationship can change someone’s life.</p>
+<p class="side"> Chapter Overview: </p>
+<p>Understanding the web of life means being aware of how all things, living
+ and non-living, are interconnected.  Everything in the universe has some relation
+ship or connection to every other thing in the universe.  Sometimes we cannot see
+ the connections between things but we can come to understand that they are con
+nected.  For example, we cannot see raindrops leaving a cloud and falling to
+ earth, but we know that raindrops come from clouds because when there are no
+ clouds there is no rain.</p>
+<p>The connection between living things is very significant because we all
+ share the same planet.  All of us living things --plants, animals and humans -- use
+ the same air, the same water, and the same minerals in the earth.  We also need
+ each other in many ways. For example, the kind of air humans and animals
+ breathe out – carbon dioxide – is the very thing that plants need to breathe in.
+ And the kind of air that plants breathe out – oxygen – is the exact kind of air
+ humans and animals need to breathe in.</p>
+<p> Human beings have a very special connection with each other because
+ human beings are the stewards of the planet.  This does not mean we are the boss
+es of the planet but that we have a special responsibility to care for our planet.  In
+ order to best care for the planet, human beings need to learn how to get along
+ with each other – how to work and play together.  Human  beings need to learn
+ how to share.  Human beings need to learn how to learn from each other and how
+ to help each other.  The story of Helen Keller and Anne Sullivan is a wonderful
+ example of how much people can help each other if they really try.</p>
+<p class="side">Chapter Lessons:</p>
+<p class="side"> Lesson #1 - The Web of Life Game (Copyright Andrew Kutt 2005)
+</p>
+<p>Note: For this activity you will need ten strands of yarn about four to six
+ feet long.  The strands should be of the colors indicated below if possible.  The
+ strands, when stretched out should all be connected to a central point – some kind
+ of stationary object, for example, a ball of multicolored, uncarded wool.  The
+ strands can be attached with a safety pin, a clip, Velcro or in some other manner.
+ Instead of the uncarded wool ball you can also use an ordinary ball of wool
+ thread, a decorated beach ball, or something in the shape of a heart.  If necessary
+or if you prefer, a person or persons can become the central point where all the
+ strands of yarn connect, instead of a  ball.  The person(s) would have to have all
+ the strands of yarn attached to them, or the person could hold them all.  Two peo
+ple standing or sitting back to back might be ideal.  The activity is for ten people
+ at a time.</p>
+<p> Today we are going to play the Web of Life Game.  We are going to
+ unwind all of our strands of yarn. Each person will take the end of one strand and
+ gently stretch it out so we make one large circle around the center – where all the
+ strands come together.  We are going to begin with a special poem we will say at
+ the beginning and at the end of our game. Then, whatever color you have, you
+ will take turns saying the poem that goes along with that particular color. After
+ we say all ten poems for all ten strands, then we will gently put the end of our
+ strand down on the floor and move to the strand to our right. Then we will repeat
+ the poems, except this time each person will have a different strand of yarn and
+ so each person will say a different poem. We will repeat this up to ten times, so
+ that at the end each person has had the chance to say each poem once. At the end
+ we can all say the beginning and ending prayer together.  Note:  It will be helpful
+ to have the poems written or typed on cards.
+</p>
+<p> Here are the preferred colors of yarn, the meanings of the colors, and the
+ poem that goes with each color:</p>
+<p>Red:
+</p>
+<p>Red is for the blood that goes through every human’s veins; that gives us
+ strength and health.  All human beings have the same blood. We are all part of the
+ same species. We are all one family.
+</p>
+<p>Red is the blood in you and me,</p>
+<p> It’s red no matter what, you see.
+</p>
+<p> Whether we are black or brown or white,
+</p>
+<p>We’re all one color deep inside.
+</p>
+<p>Blue: </p>
+<p>Blue is for the air we breathe and for the sky that gives us inspiration. Blue
+ is for beauty and for inspiration.  Blue is a heavenly color, which shows us the
+ way to transform earth.
+</p>
+<p> Blue is for the sky above,</p>
+<p> Your beauty, which our eyes do love.
+</p>
+<p> When we can breathe the purest air,</p>
+<p> We know we’re safe in blue sky’s care.</p>
+<p>Brown:</p>
+<p> Brown is for the earth. Brown, our Mother Earth who gave us birth and
+ who nurtures us always. Brown is for the soil made of the same substance as our
+ bodies and to which our bodies will return.</p>
+<p> This I say to Mother Earth:</p>
+<p>You were the one who gave us birth,</p>
+<p>Your soil is fertile and so deep,</p>
+<p>Your loving care we always keep</p>
+<p>Yellow:</p>
+<p> Yellow is for the sun - the source of our energy, or comfort and warmth,
+ our inspiration.  The sun is the source of food, through photosynthesis, for all
+ plants.  Plants, in turn, provide food for all animals and humans.</p>
+<p> Oh great sun that shines so bright,</p>
+<p> You give us life you give us light.</p>
+<p>You provide food for plants to eat,</p>
+<p> And when we’re cold you give us heat.</p>
+<p>Black:</p>
+<p> Black is for space, the mystery of how we came to be, for the night in
+ which we dream and have visions. Night is dark, but it is there we can see the
+ majesty of the stars and the vastness of the universe.</p>
+<p> Black, you stand for deepest space.</p>
+<p> We cannot see your hidden face.</p>
+<p> But when the stars and planets shine,</p>
+<p> We can see your smiles divine. </p>
+<p>White:</p>
+<p>White is for goodness and purity and wisdom. White is for the knight who
+ comes to help his brothers and sisters.  White is the color of our hearts when we
+ give the best of ourselves.</p>
+ <p> White, you stand for all that’s true,</p>
+ <p> For purity and wisdom too.</p>
+ <p> In you all colors find their home,</p>
+ <p>With you we’ll never feel alone.</p>
+ <p>Green:</p>
+ <p> Green is for creativity and imagination. Green is for newness.  Whatever is
+ old cannot be green.  Green reminds us to keep our hearts joyful and our minds
+ young.</p>
+ <p> Create, create, forever green,</p>
+ <p> Every day a brand new scene.</p>
+ <p> Imagination is the key</p>
+ <p> To staying happy and carefree</p>
+ <p>Lavender:</p>
+ <p> Lavender is for healing, caring and compassion. Lavender reminds us that
+ our better nature is sweet.  It softens us when we are harsh, so we can be a heal
+ing force.</p>
+ <p> Lavender is a healing thing,</p>
+ <p> It helps us when we hurt or sting.</p>
+ <p> Just like lavender, we can be</p>
+ <p> Ahelp to those with injury.</p>
+ <p>Orange:</p>
+ <p> Orange is for bravery, courage and determination.  Orange is different
+ because it has no fear.  Orange always shines no matter what.  Orange reminds us
+ to stay determined.</p>
+ <p> Orange no one can imitate,</p>
+ <p> Your bravery’s what makes you great.</p>
+ <p> Courageous means to say what’s true,</p>
+ <p> No matter what your fears tell you.</p>
+ <p>Burgundy:</p>
+ <p>Burgundy is faith and loyalty, burgundy is the color of our royalty.   It is
+ the color of the banner of peace we hold when we walk in the way of love and
+ compassion.</p>
+ <p>There is nothing quite like burgundy</p>
+ <p>When it comes to loyalty.</p>
+ <p> If we have faith in who we are,</p>
+ <p> We can twinkle like the stars.</p>
+ <p>Beginning and concluding poem: </p>
+ <p>We weave a web of life each day</p>
+ <p>In our work and in our play.</p>
+ <p>The strands we cannot always see,</p>
+ <p>But they weave together you and me. </p>
+ <p>Each thought or action done with care</p>
+ <p>Means someone’s happy here or there.</p>
+ <p>Whatever goodness we can sew</p>
+ <p>Will make our fabric strong and grow,</p>
+ <p>So it can spread across the world,</p>
+ <p>Like a flag of endless love unfurled.</p>
+ <p>And who or what is at the source-</p>
+ <p>Well it’s you and me and God, of course.</p>
+ <p>That love has a thousand names,</p>
+ <p>It’s why we like to play this game.</p>
+ <p> Note: Be creative. You can invent different kinds of weaves that you can
+ make during the game.  Instead of just putting the strands down after the poems
+ are read, the strands can be intertwined or looped under and over each other.   In
+ this way, at the end you can create a woven web.  However, remember to be gen
+tle with the strands of yarn – they are fragile! You will also have to think this out
+ and plan it in advance with much smaller pieces of yarn or string to make sure it
+ will work when you are doing the actual game.</p>
+ <p class="side"> Lesson #2 - Dr. Untangle</p>
+ <p> Gather in a group of six to ten people.  One or two people will not join the
+ group, but will stand outside the group and wait. They are the ‘doctors’.  We will
+ stand in a circle, and then everybody will walk towards the middle of the circle,
+ until the group is kind of bunched up but not squished. Each person should take
+ hold of the hand of another person, using one hand.  Using the other hand, they
+ should take hold of the hand of a second person.  Each person should now be
+ holding hands with two other people.   You are now like a tangled knot. (If you
+ are not tangled enough, the teacher might move you around to get you tangled
+ some more!) </p>
+ <p>Now, your job is to get everyone untangled and make a circle without
+ breaking the chain – that means without letting your hands go from any of your
+ partners.  Dr. Untangle will help you, so listen to his/her instructions. You will
+ have to cooperate to be able to move your bodies in the ways you need to get
+ untangled and to make a circle.  Be patient, otherwise your chain will break!
+Once you have the circle, it’s all right if some people are looking in one direction
+ and some are looking in the other direction.  If it’s too hard to end up in a circle,
+ you can at least try to end up in a straight line.  If anyone gets frustrated along the
+ way, Dr. Untangle can administer ‘knot-aid’ by gently breaking a pair of hands
+ and reconnecting them at a better place, to make the task a little easier. </p>
+ <p>We are still all connected!  Now let’s take a break and discuss the meaning
+ of this lesson. The purpose of this lesson is to show that because we are all con
+nected, we must work together to solve our problems.  In real life our hands are
+ not chained together, but nevertheless we are all part of one human family.  Our
+ human family has to work together to solve the world’s problems, just as we did
+ today in getting ourselves untangled.</p>
+ <p class="side"> Lesson #3 – The planet earth </p>
+ <p>Look at a picture of the earth taken by the space shuttle or another picture
+ of planet earth taken from space for a minute or two.  What colors do you see?
+ Look closely, there may be more colors than you think! </p>
+ <p>a) What kinds of  feelings  do you get when you see the earth?   We will work as
+ a team and make a list of the kinds of feelings we get when we look at or think
+ about the earth.  </p>
+ <p>b)  If you had to choose an adjective to describe the earth, what adjective would
+ you choose?  Now let’s make a list of all the adjectives we can think of, that we
+ could use to describe the earth.  </p>
+ <p>c) Have you ever heard the expression ‘the earth is our mother’?  In what ways is
+ the earth our mother?  Think of what our own biological mother gives us and then
+ compare it to what Mother Earth gives us. (Our biological mother is the mother
+ who gave us birth.) We can do this by making a chart:  On the left column of our
+ chart we will write all of the things we get from our own biological mother. In the
+ right column we will write all the things we get from Mother Earth.  Now look at
+ the chart and compare the things in the left column with the ones in the right col
+umn.  Do you see some similar things?  Do you see any differences? </p>
+ <p>d)  We have a relationship - a deep connection - with both our own mother and
+ with Mother Earth.  Without our biological mother none of us would be here.
+ Without Mother Earth, we would not be able to live.  Using all of the words we
+ have discovered, write a poem, story, or essay about your relationship with your
+ own mother or with Mother Earth – or you can write about your relationship with
+ both of them and about how those relationships are similar.  If you wish, you can
+illustrate your writing with small pictures, make a border around your writing
+ with earth symbols, or make one single drawing to go with your writing.  Share
+ your writing and your artwork with the class or display your classwork on the
+ bulletin board.</p>
+ <p class="side">Lesson #4 – What we are made of</p>
+ <p> Did you know that every star and every planet including our earth is made of the
+ same stuff as you and me?  Our physical bodies and every other thing in the uni
+verse are all made of the same elements – such as hydrogen, oxygen, carbon and
+ many others. That’s one reason why, if the soil, the air, or the water is sick
+ because of pollution, then we might get sick too. Minerals from the soil enter into
+ us when we eat our food.  If there is pollution or bad chemicals in the soil, then
+ this pollution will come into us from the plants or animals we eat.  In the same
+ way, air and water are flowing through us all the time. If the air or the water is
+ dirty then our bodies will get dirty on the inside also.  This is proof of how con
+nected we are to the earth and to everything on the earth.  As Chief Seattle once
+ said, “Whatever we do to the earth we do to ourselves.”  Choose from one of the
+ following activities:   </p>
+ <p>a) Make a poem, story, picture,  or  cartoon  that shows in a creative way how
+ everything – water, soil, air, fire, rocks, mountains, animals, plants, human bod
+ies, planets, and stars are all made of the same elements. If you prefer, you can
+ create a skit, a musical piece, or a creative movement piece to illustrate the same
+ lesson.</p>
+ <p> b) Make a poem, story, picture, or cartoon about how you imagine the universe
+ was created. </p>
+ <p>c) In small teams of two or three people, create a dramatic skit that shows how
+ people are affected by pollution in the air, water, or land.  You can also show how
+ healthy we can be if our air, water, and land are free from pollution. Your skit can
+ use music or creative movements if you wish.</p>
+ <p class="side"> Lesson #5 – How we get our morning milk</p>
+ <p> Here is a story about how we are all connected.  Everything we touch or
+ see has invisible threads connecting it not only to us but to many other people in
+ ways we are not even aware of.  For example, the milk we drank this morning
+ came out of a carton or a jug that we got at the grocery store.  But the story of the
+ milk and of all the people who played a part in helping the milk get to our table
+began long before the milk got to the store.  Somewhere a person had to build
+ fences and prepare grazing pastures for the cows to eat. Somebody had to watch
+ the cows and make sure they were safe and had enough to eat.  A different person
+ was responsible for milking the cows and for gathering all the milk in large con
+tainers.  Then somebody had to drive the large containers of milk to a milk pro
+cessing plant where the milk was pasteurized to make it safe to drink and where it
+ was put into cartons.  Many different people work at the processing plant to make
+ the milk safe and to prepare it to go into the cartons.  After that, another driver
+ had to take all the cartons to the grocery store to be delivered.  At the store, a
+ worker had to take the cartons off the delivery truck and put them into the store
+ refrigerator. Finally, another worker at the store took the cartons out of the refrig
+erator and put them into the display case where you found the carton you bought
+ to take home.  </p>
+ <p>So you see, even in the case of something as simple as milk, many people
+ had a role to play in the carton of milk getting to our kitchen table.  All of these
+ people had to do their jobs properly and carefully in order for us to be able to
+ drink a glass of milk.  We are connected to all of these people as if we had invisi
+ble threads because we all have something to do with the same milk!</p>
+ <p> a) Create a picture, poem, story, cartoon, song or a dramatic skit about the story in
+ Lesson Five.  </p>
+ <p>b) Write your own story of connectedness using the story in lesson five as your
+ model</p>
+ <p class="side"> Lesson #6 – Essential communication skills</p>
+ <p> Since communication is the key to building positive relationships, it is
+ important to learn the mechanics of communication. Building positive relation
+ships depends upon some basic communication skills.   Here are some communi
+cation guidelines that will help you to be a better communicator.</p>
+ <p>a) When someone is speaking to you, it is polite to look at the person instead of
+ looking in some other direction. This shows the person that you are paying atten
+tion and that you want to hear what they have to say.  If you do not look at them,
+ the person might think you don’t really care to hear what they have to say and
+ their feelings might be hurt.</p>
+ <p> b) If you nod your head when someone is explaining something or if you say,
+ “Yes I understand,” this is very helpful to the person who is explaining.  Other
+wise the person might not know whether you understand or not.</p>
+ <p> c) If you are the person doing the talking, it is important once again to look at the
+person you are talking to.  If you don’t, the person you want to communicate with
+ might not be sure you are talking to them.</p>
+ <p> d) If you are near someone, try to find a good voice level or tone to use that is not
+ too loud or too soft.  A voice too loud might make the other person feel uncom
+fortable.  A voice too soft might make them strain to hear you or to hear incor
+rectly.  In both cases – too  loud or too soft – the person cannot hear you very
+ comfortably or well.  So try to find a medium voice tone that will be not too loud
+ or too soft.  If you are not sure, you can always ask the person.</p>
+ <p> e) Your body language is what you do with your body when you are communicat
+ing.  If your body is very stiff and rigid then the other person might think you are
+ afraid of them.  If your body is lazy and falling all over the place, the other per
+son might think you are being silly and that you don’t take them seriously.  If
+ your body is fidgeting the other person might think you are nervous or the other
+ person might be distracted or uncomfortable. When having a conversation with
+ someone, it is best to sit fairly still in a way that is comfortable for you to listen
+ effectively.</p>
+ <p> f) Saying ‘please’ and ‘thank you’ are not only good things to say every day to be
+ polite. They are especially helpful when you are trying to communicate with
+ someone.  For example, when you say, “Could you please repeat that because I
+ didn’t understand,” the word please is very inviting to the other person and
+ encourages them to want to help.  And if you say, “Thank you very much for
+ sharing with me,” it makes the other person feel that you appreciate the conversa
+tion and that the conversation was worthwhile.</p>
+ <p class="side"> Discussion Questions:</p>
+ <p> Below are some passages from Helen Keller’s autobiography, followed by
+ some questions for reflection and discussion.</p>
+ <p>a)  “Everything Miss Sullivan taught me she illustrated by a beautiful story or a
+ poem. Whenever anything delighted or interested me she talked it over with me
+ just as if she were a little girl herself... I cannot explain the peculiar sympathy
+ Miss Sullivan had with my pleasures and desires. Perhaps it was the result of long
+ association with the blind. Added to this she had a wonderful faculty for descrip
+tion. She went quickly over uninteresting details, and never nagged me with ques
+tions to see if I remembered the day-before-yesterday's lesson. She introduced dry
+ technicalities of science little by little, making every subject so real that I could
+ not help remembering what she taught.”</p>
+ <p>What things does this passage tell you about what kind of teacher Anne Sullivan
+ 99
+was and about the relationship between Anne and Helen?</p>
+ <p> b)  "Love is something like the clouds that were in the sky before the sun came
+ out," Anne replied. Then in simpler words than these, which at that time I could
+ not have understood, Anne explained: “You cannot touch the clouds, you know;
+ but you feel the rain and know how glad the flowers and the thirsty earth are to
+ have it after a hot day. You cannot touch love either; but you feel the sweetness
+ that it pours into everything. Without love you would not be happy or want to
+ play." The beautiful truth burst upon my mind--I felt that there were invisible
+ lines stretched between my spirit and the spirits of others.</p>
+ <p> Love was a very difficult word for Helen to understand because she could
+ not touch it.  The passage above shows how Anne Sullivan finally was able to get
+ Helen to understand what the word love meant and how Helen felt when she
+ finally understood. How would you describe love?</p>
+ <p>c) “I recall many incidents of the summer of 1887 that followed my soul's sudden
+ awakening. I did nothing but explore with my hands and learn the name of every
+ object that I touched; and the more I handled things and learned their names and
+ uses, the more joyous and confident grew my sense of kinship with the rest of the
+ world.”   </p>
+ <p>When you learn the names of things how does this make you feel more
+ connected with world?</p>
+ <p> d) What many children think of with dread, as a painful plodding through gram
+mar, hard sums and harder definitions, is today one of my most precious memo
+ries.”  </p>
+<p>Why do you think Helen felt this much enthusiasm and joy about learning
+ grammar and math and definitions?  Imagine for a moment that these things are
+ great gifts to us and that it is a privilege to be able to learn reading, writing, math,
+ and other subjects.  These are things that animals cannot do.  Why not? These are
+ things that we can do much more easily in our country than in other parts of the
+ world. Why is this?</p>
+ <p> e) “On entering the door I remembered the doll I had broken. I felt my way to the
+ hearth and picked up the pieces. I tried vainly to put them together. Then my eyes
+ filled with tears; for I realized what I had done, and for the first time I felt repen
+tance and sorrow.”</p>
+ <p> To feel repentance or sorrow is a very human thing to feel.  Can you
+ remember the first time you felt something like this? What happened that caused
+ you to feel this way?</p>
+ <p>f) “A day or two afterward I was stringing beads of different sizes in symmetrical
+ groups--two large beads, three small ones, and soon I had made many mistakes,
+ and Miss Sullivan had pointed them out again and again with gentle patience.
+ Finally I noticed a very obvious error in the sequence and for an instant I concen
+trated my attention on the lesson and tried to think how I should have arranged
+ the beads. Miss Sullivan touched my forehead and spelled with decided emphasis,
+ ‘Think’.  In a flash I knew that the word was the name of the process that
+ was going on in my head. This was my first conscious perception of an abstract
+ idea.”
+ </p>
+ <p>What is an abstract idea and how is it different from the name of some
+ ordinary thing or the word for some physical object that you can see, hear, touch,
+ smell, or taste?</p>
+ <p> g) “When the time of daisies and buttercups came, Miss Sullivan took me by the
+ hand across the fields, where men were preparing the earth for the seed, to the
+ banks of the Tennessee River, and there, sitting on the warm grass, I had my first
+ lessons in the beneficence of nature. I learned how the sun and the rain make to
+ grow out of the ground every tree that is pleasant to the sight and good for food,
+ how birds build their nests and live and thrive from land to land, how the squirrel,
+ the deer, the lion and every other creature finds food and shelter. As my knowl
+edge of things grew I felt more and more the delight of the world I was in. Long
+ before I learned to do a sum in arithmetic or describe the shape of the earth, Miss
+ Sullivan had taught me to find beauty in the fragrant woods, in every blade of
+ grass, and in the curves and dimples of my baby sister's hand. She linked my ear
+liest thoughts with nature, and made me feel that ‘birds and flowers and I were
+ happy peers.’</p>
+ <p> In this passage Helen is talking about discovering her friendship with
+ nature. What does she mean when she says that Anne Sullivan made me feel that
+ the “birds and flowers and I were happy peers”?</p>
+ <p> h) “But my teacher had been with me several weeks before I understood that
+ everything has a name....Some one was drawing water and my teacher placed my
+ hand under the spout. As the cool stream gushed over one hand she spelled into
+ the other the word water, first slowly, then rapidly. I stood still, my whole atten
+tion fixed upon the motions of her fingers. Suddenly I felt a misty consciousness
+ as of something forgotten--a thrill of returning thought; and somehow the mystery
+ of language was revealed to me. I knew then that ‘w-a-t-e-r’ meant the wonderful
+ cool something that was flowing over my hand. That living word awakened my
+ soul, gave it light, hope, joy, set it free! There were barriers still, it is true, but
+ barriers that could in time be swept away.”</p>
+ <p>Language is quite a miracle when you think about it. Imagine and describe
+ what the world would be like or how the world would be different without any
+ spoken language.</p>
+ <p class="side">Supplemental Activities:</p>
+ <ul>
+    <li> <p>Read more of the autobiography of Helen Keller.  Pick out a passage that strikes
+ you or interests you to share with your class.</p></li>
+ <li> <p>Make a list of all of the most important people in your life.  Next to each person
+ write why that person is important to you.  What is it that you have gotten or
+ gained from that person?</p></li>
+ <li> <p>Make a colorful drawing that illustrates the web of life game from Lesson #1
+ above.  This project can be done as individual drawings or in teams that work on
+ larger group drawings.  The drawing should show the different colored strands of
+ the web and something special at the middle, such as a colorful ball, a globe, or a
+ beautiful heart, where all the strands come together.  An extra challenge would be
+ to include all the poems about the different colors in your drawing.  The poems
+ can be written directly onto your drawing, or the poems can be written on sepa
+rate paper and then cut and pasted onto the drawing. </p></li>
+ </ul>
+
+
+
+
+
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter10.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter12.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

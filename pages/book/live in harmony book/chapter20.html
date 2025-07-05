@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter20</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Twenty</p>
+      <p>  Love Starts Here: Building a Just and Peaceful World</p>
+    </h1>
+    <p class="side"> Chapter Inspiration:</p>
+    <p>“Peace has to be created, in order to be maintained. It is the product of Faith, Strength, Energy, Will, Sympathy, Justice, Imagination, and the triumph of principle. It will never be achieved by passivity and quietism.” – Dorothy Thompson</p>
+
+<p>“If we fight a war and win it with H-bombs, what history will remember is not the ideals we were fighting for but the methods we used to accomplish them. These methods will be compared to the warfare of Genghis Khan who ruthlessly killed every last inhabitant of Persia.” –Hans A. Bethe</p>
+
+<p>“Everyone associates the words: war and peace. Remove the word war. Let’s talk about peace – the peace that is felt in the hearts of human beings, not in their minds.” –Prem Rawat</p>
+
+<p>“Peace is not an absence of war, it is a virtue, a state of mind, a disposition for benevolence, confidence, justice.” –Baruch Spinoza</p>
+
+<p>“Justice does not come from the outside. It comes from inner peace.” –Barbara Hall</p>
+
+<p>“The sword of justice has no scabbard.” –Antoine De Riveral</p>
+
+<p>“Injustice anywhere is a threat to justice everywhere.” – Martin Luther King Jr., Letter from Birmingham Jail</p>
+
+<p>“Justice is the end [goal] of government. It is the end [goal] of civil society. It ever has been and ever will be pursued until [one day] it be obtained…. [We all] wish for a government which will protect the parties, the weaker as well as the more powerful.” –Alexander Hamilton</p>
+
+<p>“Peace is first an individual achievement, then it grows into a collective achievement. Finally it becomes a universal achievement.” –Sri Chinmoy</p>
+
+<p>“You can no more win a war than you can win an earthquake.” –Jeannette Rankin</p>
+
+<p class="side">Chapter Story:
+</p>
+<p> Archbishop Desmond Tutu was born in 1931 in Klerksdorp, Transvaal,
+ South Africa. His father was a teacher, and he himself was educated at Johannes
+burg Bantu High School. After leaving school, he trained first as a teacher at Pre
+toria Bantu Normal College and then, in 1954, he graduated from the University
+ of South Africa. After three years as a high school teacher he began to study the
+ology.  Desmond Tutu was ordained as a priest in 1960. The years 1962-66 were
+ devoted to further theological study in England, leading to a Master of Theology
+ degree.  From 1967 to 1972, Desmond taught theology in South Africa, before
+ returning to England for three years as the assistant director of  a theological insti
+tute in London. 
+</p>
+<p>In 1975 Desmond Tutu was appointed Dean of St. Mary's Cathedral in
+ Johannesburg.   He was the first black person ever to hold that position. From
+ 1976 to 1978 he was Bishop of Lesotho, and in 1978 he became the first black
+ General Secretary of the South African Council of Churches. Living with and
+ preaching in South Africa about apartheid, Desmond joined in the struggle of
+ compatriots like Nelson Mandela. Desmond Tutu spoke out courageously and elo
+quently against the racist policies of the South African Government.  He gave
+ many speeches in which he described the pathway that the government should
+ take to become more peaceful and just for all.  In the speeches he would say,
+ “South Africa will one day be a democratic and just society without racial divi
+sions.”  Desmond Tutu set forward a four-point plan for the achievement of this
+ goal:
+</p>
+<p><ol>
+  <li><p>equal civil rights for all;</p></li>
+  <li><p>the abolition of South Africa's passport laws;</p></li>
+  <li><p>a common system of education;</p></li>
+  <li><p>the cessation of forced deportation from South Africa to the so-called ‘homelands’.</p></li>
+</ol>
+</p>
+<p>Desmond Tutu repeated this plan in speech after speech.  His words made
+ sense, and his speeches became famous around the world.  What he said strength
+ened the activities of Nelson Mandela and the African National Congress.  As we
+ saw in Chapter 18, more and more people around the world began to unite in the
+ cause of changing the policies of the South African government.  In 1984, Des
+mond Tutu was awarded the Nobel Peace Prize for his courage and for his non
+violent protests against apartheid.  The award of this prize to Desmond Tutu
+ called even more worldwide attention to the unfair situation of blacks in South
+ Africa.  It was the beginning of the end for the apartheid system and the old form
+ of government in South Africa</p>
+<p>In 1986 Desmond Tutu became the first black to be elected the Archbishop
+ of Cape Town.  He served in that capacity until 1996.  Desmond Tutu has
+ remained active in South Africa's political affairs, and from 1996 to 2003 he
+ headed the Truth and Reconciliation Commission. This was a very important job
+ because the Truth and Reconciliation Commission was responsible for investigat
+ing and documenting human rights abuses during the apartheid era.  In other
+ words, the job of the commission was to look back at what happened during the
+ apartheid era and to take note of all the people who were killed, injured, impris
+oned and relocated so that there could be a historical record of those terrible
+ times, and so the mistakes of that era would never be repeated.
+</p>
+<p> Desmond Tutu still leads a very active life.  He still speaks out for peace
+ and justice in the world. While blacks in South Africa might be better off than
+ they were under the apartheid system, many of them still live in poverty.  In addi
+tion, there are still many places in the world where blacks and other minority
+ groups have not yet achieved equal rights. Desmond Tutu continues to speak and
+ to write about these issues.  His latest book is called God Has a Dream.
+</p>
+<p class="side">Chapter Overview: 
+</p>
+<p>Aworld of peace and justice is what all the great religions speak of. It is
+ what all of our spiritual teachers have taught us throughout the ages. It is what all
+ human beings ache for deep in their hearts.  We have not yet succeeded in making
+ our world peaceful and just, so much work remains to be done. Some people on
+ our planet live in prosperity while many more live in poverty. Some people can
+ enjoy school and the chance to have a job and a career, while for many others this
+ remains a distant dream. Some live in peace and tranquillity, while other cannot
+ sleep at night because they can hear shooting and bombs.  Some citizens of the
+ planet have freedom and can speak their opinions openly and without punishment.
+ Others are in prisons because they dared to disagree with their government.</p>
+<p>Each day we can take a step closer towards our vision of a peaceful and
+ just world.  The more we learn about the world and the challenges people face,
+ the more we will want to help. The more we hear about the unfairness in the
+ world, the more we will want to make it fair. The more knowledge we have, the
+ more power we have to do good.  And the more we practice giving of ourselves,
+ the larger our ‘invisible hearts’ will become. Our invisible heart is our source of
+ compassion, healing and oneness with the world.  As Sri Chinmoy says, “the
+ heart that loves unites all.” Our first and foremost job is to foster a heart that
+ loves. When each one of us on earth has a loving heart, we will all be united, and
+ peace and justice can reign on earth.
+</p>
+<p>We cannot abandon our brothers and sisters around the world. We cannot
+ just enjoy our comforts and our pleasures, without ever thinking of those in the
+world who have so little and who live in such terrible circumstances.  We can
+ have fun, live our lives, enjoy ourselves and still have a sense of social responsi
+bility. There are many little ways we can help build a better world. There is no
+ limit to what we can do if we want to do more.  It isn’t just a few global citizens
+ that we need. All of us must learn to be global citizens, because the planet is
+ home to everyone. Therefore, as Sri Chinmoy says, “Let it be the bounden
+ responsibility of all human beings to love and help one another.” Part of our duty
+ as human beings is to work to make a better world for the children that will inher
+it the earth after us
+</p>
+<p class="side"> Chapter Lessons:
+</p>
+<p class="side"> Lesson #1 - Tug of peace</p>
+<p> Tug of war is a game most of us have played. It is a game in which two
+ teams, of equal size, pull on opposite ends of a rope to see which team can pull
+ the other across the midline to the opposite side. Tug of war can be a fun game,
+ but sometimes it can lead to hurt feelings and even hurt hands from the burns of
+ the rope.  Also, the name ‘tug of war’ is kind of upsetting, considering that there
+ are more than 30 wars going on around the world right now. So why don’t we
+ create a different game, called the ‘tug of peace’? It can spread the message of
+ peace and it can be a lot more fun.</p>
+<p> For the tug of peace, we will need to find an old rubber automobile tire
+ and tie it to one end of a rope. We can arrange for teams of two, three, four, or
+ five people to pull the rope. Instead of pulling against another team, we will pull
+ the tire a certain measured distance.  We will keep track of how many seconds it
+ takes each team to pull the tire the designated distance. Then each team will get
+ two chances to try to beat their original score.  As each team is trying to transcend
+ itself, the other teams should be encouraging them to beat their previous mark.
+ The tug of peace helps us to practice cooperation, teamwork, and sportsmanship,
+ and nobody’s feelings get hurt.</p>
+<p class="side"> Lesson #2 - Modified musical chairs</p>
+<p> Modified musical chairs is a great way to show that we can always find a
+ way to share if we keep a positive attitude and remember that it is never fair to
+ leave someone out.  This game is just like normal musical chairs with one big
+ exception:  In this version of the game, nobody ever gets left out. </p>
+ <p>a) Arrange a line of chairs as you normally would for musical chairs. There should be as many chairs as there are people. We will arrange the chairs in an alternating pattern so that the first chair is facing in one direction, and the next chair is facing in the opposite direction, and so on.</p>
+
+<p>b) The group of players stand around all sides of the chairs in a circle (it’s really more like an ellipse). We will make sure that the players are far enough apart so they are not touching.</p>
+
+<p>c) The music begins. (We can use a CD player, tape player, or a radio to provide our music. Another option is for the teacher, or an appointed leader who can sing or play an instrument, to make the music that way.) When the music stops, everyone must find a chair to sit in. In the first round everyone will have a chair.</p>
+
+<p>d) After the first round we take one chair away. The music begins again. This time someone will not have a chair to sit in. Instead of ‘putting them out’, the person who doesn’t have a seat will gently sit in someone’s lap. This usually creates a lot of laughter.</p>
+
+<p>e) As the game goes on, we will keep removing one chair. Soon everyone will have to sit in someone’s lap, and before we know it three people will have to find a way to sit on one chair.</p>
+
+<p>f) By the end of the game, everyone will have to sit on one chair. Of course this is not possible to actually do, but we will try our best to do it.</p>
+
+<p>g) This is intended to be a fun and gentle game. It is important that we make sure that nobody gets hurt.</p>
+
+<p class="side">Lesson #3 - Learning about peace heroe</p>
+<p> We can learn about and honor Peace Heroes or Peacemakers in our class
+room.  Below is a list of some of the most famous Peacemakers.  Peacemakers are
+ individuals whose special accomplishment was that they did something to create
+ more harmony, peace, or justice in the world. Choose one of the names below to
+ research. Do a short oral or written report on the person you study.  We can bring
+ in books from home and from the library, as well as print out information from
+ computer research, so we can gather as much information as possible to share
+ with each other about these special global citizens.</p>
+ <p>Jane Addams</p>
+<p>James Alexander</p>
+<p>Muhammad Ali</p>
+<p>Eberhard Arnold</p>
+<p>Joan Baez</p>
+<p>Judi Bari</p>
+<p>Melba Pattillo Beals</p>
+<p>Kees Boeke</p>
+<p>Dietrich Bonhoeffer</p>
+<p>Fr. Roy Bourgois</p>
+<p>Vera Brittain</p>
+<p>Helen Caldicott</p>
+<p>Dom Helder Camara</p>
+<p>Amy Carmichael</p>
+<p>Pierre Ceresole</p>
+<p>Cesar Chavez</p>
+<p>Ernesto Cortes</p>
+<p>Dorothy Day</p>
+<p>Fritz Eichenberg</p>
+<p>Ralph Waldo Emerson</p>
+<p>Adolfo Perez Ezquivel</p>
+<p>Dr. Paul Farmer</p>
+<p>George Fox</p>
+<p>St. Francis of Assissi</p>
+<p>Elizabeth Fry</p>
+<p>Mahatma Gandhi</p>
+<p>Woody Guthrie</p>
+<p>Fannie Lou Hamer</p>
+<p>Thich Nhat Hanh</p>
+<p>Gordon Kiyoshi Hirabayashi</p>
+<p>Josephy and Michaal Hofer</p>
+<p>Dolores Huerta</p>
+<p>Jakob Hutter</p>
+<p>Franz Jegerstatter</p>
+<p>Clarence Jordan</p>
+<p>Toyohiko Kagawa</p>
+<p>Helen Keller</p>
+<p>Badshah Khan</p>
+<p>Martin Luther King Jr.</p>
+<p>Kathe Kollwitz</p>
+<p>Ron Kovic</p>
+<p>The Dalai Lama</p>
+<p>John Lennon</p>
+<p>Nelson Mandela</p>
+<p>Richard McSorley</p>
+<p>Thomas Merton</p>
+<p>A.J. Muste</p>
+<p>Fridtjof Nansen</p>
+<p>Niall O’Brien</p>
+<p>Yoko Ono</p>
+<p>Rosa Parks</p>
+<p>Linus Pauling</p>
+<p>Pablo Picasso</p>
+<p>Peace Pilgrim</p>
+<p>Sister Helen Prejean</p>
+<p>Jeanette Rankin</p>
+<p>Paul Robeson</p>
+<p>Bishop Oscar Romero</p>
+<p>Betrand Russell</p>
+<p>Aung San Suu Kyi</p>
+<p>Albert Schweitzer</p>
+<p>Chief Seattle</p>
+<p>Pete Seeger</p>
+<p>Dr. Seuss</p>
+<p>Dick Sheppard</p>
+<p>Tom Slick</p>
+<p>Samantha Smith</p>
+<p>Rev. Leon Sullivan</p>
+<p>Sumiteru Taniguchi</p>
+<p>Emma Tenayuca</p>
+<p>Mother Teresa</p>
+<p>Henry David Thoreau</p>
+<p>Ernst Toller</p>
+<p>Leo Tolstoy</p>
+<p>Bishop Desmond Tutu</p>
+<p>Lech Walesa</p>
+<p>Elie Wiesel</p>
+<p>Leyla Zana</p>
+
+<p> Read and discuss the following information. Pay special attention to the
+ number of people who don’t have some of the basic necessities, and also take
+ note of how the wealth of the planet is distributed.</p>
+<p> If we could shrink the earth's population to a village of precisely 100 peo
+ple, with all existing human ratios remaining the same, it would look like this:</p>
+<p>There would be 57 Asians, 21 Europeans, 14 from the Western Hemisphere 
+(North and South America) and 8 Africans
+</p>
+<p>70 would be people of color; 30 would be white</p>
+
+<p>70 would be non-Christian; 30 would be Christian</p>
+
+<p>50% of the entire world's wealth would be in the hands of only six people, and all six would be citizens of the United States</p>
+
+<p>80 would live in substandard housing</p>
+
+<p>70 would be unable to read</p>
+
+<p>50 would suffer from malnutrition</p>
+
+<p>Only one would have a college education</p>
+
+<p class="side"> Lesson #5 - 100 hungry people</p>
+<p> In this lesson we will break into three groups:
+</p>
+<p>Group One will represent the U.S, Canada, Japan, Western Europe, Aus
+tralia, New Zealand, Israel and Saudi Arabia. These are the wealthiest countries in
+ the world and they have about 20% of the world’s population, so this group
+ should have a pretty small number of people.</p>
+<p> Group Two will represent Russia and Eastern Europe. These countries are
+ not the wealthiest but not the poorest either. They have about 10% of the world’s
+ population, so this group should have the smallest number of people.
+</p>
+<p>Group Three will represent Africa, Asia, and Central and South America.
+ These are among the poorest countries in the world and they have about 70% of
+ the world’s population, so this group should have the largest number of people.
+</p>
+<p> We will prepare some kind of snack that we can count easily.  For now, the
+ snack will not be for eating.  Instead we will use the snack for our demonstration.
+ We will give out 70% of the snack to Group One, 10 % to Group Two, and 20%
+ to Group Three.  The snack represents the percentages of food and other resources
+ that the different countries use. </p>
+<p>After giving out the snack, discuss the unfairness of the distribution of the
+ snack. How does it feel to get so little?  Does it seem right that the group with the
+ most people gets the fewest snacks?  This is exactly what happens in the world at
+ large. The wealthiest countries in the world get and consume most of the food,
+ energy and other resources, even though they don’t have nearly as many people as
+ the poorer countries do.  This is the challenge we all face, and this is the kind of
+ challenge that the United Nations and other world organizations are trying to
+ solve. For now, it is important for us to just be aware of the situation.  Then, as
+ we continue to learn the tools for becoming global citizens, we can begin to do
+ things to help.  Now we can divide the snack up fairly and have a treat. If only it
+ were that easy for countries to share their food and resources!
+</p>
+<p class="side"> Lesson # 6 - At this very moment
+</p>
+<p> At this very moment, the world is turning, and a thousand and one differ
+ent things are going on around the world. Some of them are happy and uplifting
+ and some of them are sad.  As we go through our day doing our normal activities,
+ it is important sometimes to pause and reflect on what others are doing – especial
+ly those who are less fortunate than we are in terms of  things and opportunities.
+</p>
+<p>As we read the vignettes below, we will try to find each place on a map or
+ globe. Then we will talk briefly about each situation, so we can really try to imag
+ine that situation for a little while.  The world is indeed a very big place, and
+ human beings are in all kinds of different circumstances.  Often, those circum
+stances are sad and desperate, because people do not have enough food, clean
+ water, medicine, shelter or money, nor do they have an opportunity to go to
+ school, to get a job, to buy things, or to travel. After we find all of the places and
+ talk about the different situations, each person will choose one of the vignettes,
+ either to illustrate with a drawing or to write a paragraph about. As a follow-up
+ activity, we can write more vignettes of our own based upon the knowledge we
+ have of people in various parts of the world.</p>
+ <p>At this very moment….</p>
+
+<p>A Hindu woman is bringing her child to pray at a shrine near the Ganges River.</p>
+
+<p>A Tibetan boy is walking up the mountainside to hear the Buddhist monks doing their morning chanting.</p>
+
+<p>A girl in Cambodia is helping her mother plant rice.</p>
+
+<p>An elder of the Lakota Tribe in South Dakota, USA, is telling a story to his grandson.</p>
+
+<p>A fisherman in Indonesia is taking his boat out onto the ocean.</p>
+
+<p>A mother is holding her sick and malnourished child in famine-stricken Niger.</p>
+
+<p>A teenaged boy in Sudan is learning how to shoot his first gun, because he has been forced to join the army.</p>
+
+<p>Two Inuit friends in Alaska are going out to hunt seal, so they can have food for their families.</p>
+
+<p>A 15-year-old Mexican girl is getting ready to work a 12-hour shift in a clothing factory, where she earns about two dollars per hour.</p>
+
+<p>A mother in Xian, China, is carrying her 2 year-old child to the bus with a cloth over his face, so he doesn’t breathe in so much of the burning air pollution.</p>
+
+<p>A group of people is getting ready to swim across the English Channel between England and France.</p>
+
+<p>Another group of people are preparing to climb the tallest mountain in the world – Mount Everest in Nepal.</p>
+
+<p>A little boy and a little girl wait for food at an orphanage in Ethiopia; both their parents have died from AIDS.</p>
+
+<p>A 10-year-old boy gets ready to work in a shoe factory in Malaysia, where he earns less than a dollar an hour.</p>
+
+<p>A mother and her two daughters are walking a half-mile through the desert sand to get water from a well so they can cook dinner.</p>
+
+<p> It is time to organize a ‘Peace and Justice Day’ celebration at our school.
+ We can put on display our journals and any projects we have done based upon
+ this book.  We can come to school dressed as our favorite Peacemaker or Person
+ from History.  We can try to bring some international food to taste. We can have a
+ parade and a ceremony in which we share poems, songs of harmony and other
+ peace performances.  We can also pause during our ceremony, to have a moment
+ of silent reflection for all of the people who are injured, sick, suffering, or in a
+ war around the world. We can invite our parents and special guests.  It can be a
+ tradition that we have every year.
+</p>
+<p class="side"> Discussion Questions:</p>
+<p>a) “Justice does not come from the outside. It comes from inner peace.” Given what you have learned in this book and in your other Global Citizen lessons, discuss what this quotation from Barbara Hall might mean.</p>
+
+<p>b) “The sword of justice has no scabbard,” said Antoine De Riveral. What is different about the “sword of justice”? How is it different from a normal sword?</p>
+
+<p>c) Prem Rawat says, “Let’s talk about peace – the peace that is felt in the hearts of human beings, not in their minds.” Why is it easier for us to feel and to make peace in our hearts than in our minds?</p>
+
+<p>d) “You can no more win a war than you can win an earthquake.” Discuss the meaning of this quotation by Jeannette Rankin.</p>
+
+<p>e) “Injustice anywhere is a threat to justice everywhere.” Martin Luther King Jr. spoke these words more than 40 years ago. They are still very true today. As long as injustice exists in some places on earth, then the justice we enjoy is not totally complete or permanent. Discuss.</p>
+
+<p class="side"> Supplemental Activities:
+</p>
+<p><ul>
+  <li>
+    <p>Right now in the world there are thousands of political prisoners who are in jail only because they spoke out against the policies of their government. Some of them we know by name. Many others we do not know by name. Some we know where they are imprisoned. For others, we can’t be sure what jails they are in. There are several organizations in the world whose mission it is to call global attention to these prisoners and their unfair plight. You can find out more about the political prisoners around the world and the organizations which try to help them through several websites:</p>
+    <p>www.amnesty.org</p>
+    <p>www.j12.org/ps/list0900.htm</p>
+    <p>www.derechos.org</p>
+  </li>
+  <li>
+    <p>Use some of the names from the list of Peacekeepers in Lesson #3, and facts you know about them, to make a word puzzle, a quiz, or a game that you can photocopy for the rest of the class to do.</p>
+  </li>
+  <li>
+    <p>For Lesson #4 above, make a chart to go on the wall, showing the information you learned. You can use pictures on the side of the chart to illustrate some of the facts.</p>
+  </li>
+  <li>
+    <p>Making peace cranes with origami paper is a wonderful peace-building activity, because as we make the cranes we are thinking of their meaning – they symbolize world peace. There are a number of good origami books from which you can learn how to make the cranes. We can display the cranes around our classroom and the school by making mobiles and other kinds of art projects. Each time we look at the cranes we can think peaceful thoughts.</p>
+  </li>
+</ul>
+</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter19.html" class="nav-button prev">← Previous Chapter</a>
+    
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

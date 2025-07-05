@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter3</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+   <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Three</p>
+      <p> Learning about Our Feelings</p>
+    </h1>
+    <p class="side"> Chapter Inspiration:</p>
+<p>“Love is our highest word and the synonym of God.”  —Ralph Waldo Emerson
+</p>
+<p> “There are two elements that go to the composition of friendship.  One is truth
+ (sincerity) and the other is tenderness.”  —Ralph Waldo Emerson
+</p>
+<p> “Understanding is the knowledge that suffering is shared by everyone. When you
+ understand that you aren’t alone in your suffering, there is the birth of love.
+ When there is love there is the opportunity for peace.”  —Deepak Chopra
+</p>
+<p> “Friendship is the soil where happiness proudly grows.” –Sri Chinmoy</p>
+<p class="side"> Chapter Story:</p>
+<p> Hans Christian Andersen (1805-1875) lived in Denmark.  When he was a
+ child, Hans was not a very happy person.  Other children teased him because he
+ looked different and did not like to play some of the most popular games.  Chil
+dren made fun of Hans because he did not act quite the same as everybody else.
+ He preferred reading to playing on the playground.  Hans was a very sensitive
+ young boy.  Because he was different he didn’t have many friends.  He felt alone
+ and because he was alone he felt sad.  When other children teased Hans, it made
+ him feel even more lonely and sad. When he felt lonely and sad it made him want
+ to stay away from others even more.  This cycle continued, and Hans went
+ through many years like this, feeling bad about himself, feeling alone, and feeling
+ ugly.
+ 
+</p>
+<p> Hans Christian Andersen had experiences and feelings like many young
+ children have when they are growing up.  He had many of the same feelings that
+ many people do.  He could have kept these feelings inside without ever sharing
+ them, but usually this is not very healthy.  He could have told a good friend about
+ how he was feeling, but maybe Hans didn’t have a good friend.  Instead, Hans
+ Christian Andersen did something different, something very special, with his feel
+ings. He started writing stories that described different situations that might cause
+ different kinds of feelings.  Most of his stories were about animals that had human feelings. The animals could also talk and solve problems and do other
+ things that normal animals cannot do.  Hans wrote over 200 stories in all, and
+ eventually he became very famous for his stories.
+</p>
+<p> Writing stories became the way for Hans to express his feelings. One of his
+ most well-known stories is called The Ugly Duckling.  It is the story of a baby
+ duck who doesn’t look like any of the other baby ducks, and who gets teased and
+ set apart from everybody else.  The Ugly Duckling is about someone who feels
+ very sad and lonely because he is different – just like the way Hans himself used
+ to feel when he was young.  Writing this story helped Hans to realize that feeling
+ lonely and sad is something that happens to everyone; that these feelings are part
+ of being human. 
+</p>
+<p class="side">Chapter Overview: </p>
+<p>Learning about feelings is one of the most helpful things that we can do in
+ order to understand ourselves and accept others.  All people have the same kinds
+ of feelings, but we don’t all have the same feelings at the same time. Hans Christ
+ian Andersen learned to express his feelings in a positive and useful way by writ
+ing stories.  Writing stories was how Hans was able to put his feelings into per
+spective so he could understand them better.  It was how Hans was able to move
+ through his different feelings, to learn from them and to grow.  The stories Hans
+ wrote were about feelings he actually had, or maybe about feelings that he saw in
+ other people.  Through his writing, Hans learned something that helps all of us 
+that learning to become aware of our feelings and learning to understand them
+ empowers us to channel our feelings in creative ways.  In this way Hans Christian
+ Andersen is a good role model for us, because there is much we can learn from
+ his life.  In this chapter we will learn about feelings, how to recognize them,
+ make friends with them, understand them, and work with them in creative ways,
+ to help us meet our goals.
+</p>
+<p class="side"> Chapter Lessons:
+</p>
+<p class="side"> Lesson #1— Naming feelings
+</p>
+<p> The first step in learning about feelings is learning their names. Feelings
+ are also sometimes called emotions.  Feelings and emotions are the same thing.
+ There are some basic feelings that every human being feels at one time or anther.
+ Here they are: compassion, fulfillment, happiness, peace, love, anger, frustration,
+ sadness, fear, and hate. </p>
+<p>Compassion: a loving connection to another person or group of people. Another
+ word for compassion is empathy.</p>
+<p> Fulfillment: a feeling of accomplishment deep inside us. Another word for fulfill
+ment is satisfaction.</p>
+<p> Happiness: a feeling of fullness inside us. Another word for happiness is joy. </p>
+<p>Peace: a feeling of calm and tranquillity throughout our body, mind, emotions
+ and spirit. Another word for peace is serenity.</p>
+<p> Love: a strong, deep affection or liking for somebody or something, which
+ engages your thoughts and your whole self in a powerful and potentially creative
+ way. </p>
+<p>Anger: a mean or hurtful feeling toward someone else, usually because of some
+thing we think that person did to us. Another word for angry is mad.</p>
+<p> Frustration: a feeling of being blocked, like there is an obstacle in our path.</p>
+<p> Sadness: a feeling of emptiness or loss, as if we are missing something.</p>
+<p>Fear: a feeling that something bad or dangerous is about to happen. A feeling that
+ causes our whole being to be upset.  Other words for fear are anxiety and worry.
+</p>
+<p> Hate: a very strong and deep disaffection or dislike for somebody or something,
+ which engages our thoughts and our whole self in a powerful and potentially
+ destructive way.  </p>
+<p>We can also think of the basic human feelings as pairs of opposites:
+ ‘Positive’ Feelings
+ ‘Negative’ Feelings
+ compassion ...................................…....anger
+ fulfillment.............................................frustration
+ happiness...............................................sadness
+ peace.....................................................fear
+ love........................................................hate
+</p>
+<p> Some feelings are positive — meaning they are productive, helpful and
+ creative.  Positive feelings give us energy, make us feel good and help the good
+ things inside us to come out.  Other feelings are negative – meaning they are not
+ productive; they can be hurtful or destructive. Negative feelings take energy from us, usually make us feel bad, and can block us from expressing our good quali
+ties.  However all feelings – both positive and negative ones – are necessary and
+ vital parts of who we are.  If we learn to accept all of them, then we can use them
+ all to learn and to grow.  Thinking of our feelings in terms of opposites helps us
+ to become more aware of what we are feeling at certain times. It can also help us
+ to move through a certain negative feeling by thinking of the opposite feeling.</p>
+<p class="side"> Lesson #2 (a)– Becoming aware of our feelings: What is going on inside?
+</p>
+<p>  Becoming aware of what you are feeling at any given time is a powerful
+ skill to learn.  It is something that can help you to keep your feelings in balance,
+ and to use your feelings in productive and creative ways.  Close your eyes for a
+ few moments and ask yourself: “What feeling or feelings do I have inside of me
+ right now?”  The teacher can read or say the basic feelings so that you can
+ remember the names.  Try to become aware of which one or ones you are feeling
+ at this moment.  Once you have identified it, you can complete this sentence: I am
+ feeling ____________ because_____________.  After the ‘because,’ you can
+ think of or say a reason.  Sometimes there is no reason that you can identify or
+ think of. In that case you can complete the sentence by saying because ‘that’s just
+ how I am feeling right now.’ If you did find a reason for your feelings you can
+ use some of the methods of lessons #3 and 4 below to help you to process them.
+</p>
+<p class="side"> Lesson #2 (b)– Becoming aware of our feelings: The three minds</p>
+<p> Pumsy the Dragon is a character, in a book by the same name, created by
+ author Jill Anderson (Timberline Press). Pumsy the Dragon is a creature who goes
+ on an adventure and learns valuable lessons about herself. One of the important
+ things Pumsy learns on her journey is about the three minds.
+</p>
+<p> The Clear Mind: </p>
+ <p>This is how our mind is when we feel calm and peaceful inside; when we
+ are feeling safe and secure and good about ourselves. When we are in the clear
+ mind we see the world as a happy place, and we see other people as partners and
+ friends who want to play with us, work with us, and help us.
+</p>
+<p> The Mud Mind: 
+</p>
+<p>This is how our mind is when we feel anxious and worried inside.  In the
+ Mud Mind we do not feel safe or secure. We don’t feel very good about our
+selves. When we are in the Mud Mind, we see the world as a scary or lonely
+ place and we see other people as competitors or threats to us who want to take
+ something from us or make us do things we don’t want to do.</p>
+<p>The Sparkler Mind: 
+</p>
+<p>This is how our mind is when our inner world is full of spontaneous cre
+ativity.  There are no blocks or obstacles to the flow of transforming energy and
+ new ideas.  When we are in the Sparkler Mind, we can tap into the universe of
+ knowledge and creativity. </p>
+<p>If we follow the lessons of Pumsy the Dragon, we can become aware of
+ the three minds and we can identify which mind we are in.  We can use the les
+sons of Pumsy as well as the lessons in this chapter, to help us move out of our
+ Mud Mind and into our Clear Mind and our Sparkler Mind.  Can you think of and
+ share examples of when you were in the different ‘minds’ of Pumsy?   What
+ ‘mind’ are you in today?
+</p>
+<p class="side"> Lesson #3 — Balancing and channelling feelings</p>
+<p> Once we know the names of feelings and we know how to recognize them
+ when they are happening inside us, the next lesson is to learn what to do with
+ them.  The first step is to realize that we are responsible for all of our feelings.
+ Nobody can make us feel the way we do.  We are the ones who choose to feel
+ what we feel.</p>
+<p> Sometimes, though, it is hard to get out of negative feelings. When we are
+ feeling sad, angry, or frustrated, some of the activities that can help us are: drawing
+ or other art activities; singing or playing a musical instrument; writing; or doing
+ various kinds of fitness activities.  We could call them ‘unsticking’ activities
+ because they help us to get unstuck from bad feelings. Most people already have
+ their own ways of getting unstuck, of dealing with negative feelings. What is your
+ way?  What activities do you do to get out of negative feelings you feel stuck in?
+ When we do these kinds of activities, we bring our life into balance, so that we
+ don’t feel overwhelmed by negative feelings.  We also get a kind of clarity in our
+ mind about how to get unstuck. </p>
+<p>Finally, when we do these activities we can begin to channel our energy to
+ accomplish the things we want to accomplish. Write in your journal about your
+ favorite activity – a sport, martial art, game, creative work, or other activity – and
+ about how doing your favorite thing helps you to get ‘unstuck’ from negative
+ feelings.</p>
+<p class="side"> Lesson #4 – Speaking our feelings </p>
+<p>If we think our feelings have to do with something another person did,
+ then it is important to try to talk to that person about it as honestly as possible.  If
+ we hold negative feelings inside us and never speak about them, that can be
+unhealthy and bring us anxiety or even health problems.  </p>
+<p>Try to arrange a time to speak with the person whom you feel has upset
+ you.  Try using ‘I’ messages when you talk.  For example: “I felt hurt because
+ you didn’t play with me at recess.”  Once you share your feelings, ask the person
+ if they understand what you are saying. Invite them to repeat back to you what
+ you have shared to make sure they ‘got it right.’ Then invite them to tell you how
+ they feel about the situation. You might be surprised at what you feel.  </p>
+<p>Break into groups of three to practice sharing feelings about different situa
+tions.  You can invent situations or you can use real situations in your class or
+ school if you feel ready.  Each team member should practice sharing feelings with
+ one other team member, while the third person always watches to make sure that:
+ a)  ‘I’ messages are being used; b) team members are regularly repeating back
+ what they hear; and c) all members have an equal amount of time to share their
+ feelings.</p>
+<p class="side">Lesson #5 — Listening for other people’s feelings: Jackal ears vs. giraffe ears*</p>
+<p> Listening to other people’s feelings is hard at first.  We often have such
+ strong feelings or stiff ideas in our head that we sometimes don’t really want to
+ listen to others.  We need to decide if we are going to listen to others with ‘jackal
+ ears’ or with ‘giraffe ears.’ These are terms invented by Kelly Bryson to describe
+ two kinds of listening.  Jackal ears mean that we are listening to the other person
+ while still stuck in our own bad feelings or stiff ideas.  We hear what the other
+ person says but we don’t trust what we are hearing, or we doubt that the other
+ person is being honest.  Instead of listening quietly we might interrupt and say
+ something like, “I don’t believe you,” or, even worse, “You are still a jerk for
+ what you did.”  If we are wearing giraffe ears we are trying to listen to the other
+ person with compassion and with the hope that we can better understand them so
+ we can resolve some of the bad feelings between us.</p>
+<p>Break into groups of two and create very short skits that show the differ
+ence between jackal and giraffe ears.  Have fun with your skits and be creative.
+ This will help you to learn and remember the concepts in this lesson.</p>
+<p> *Giraffe and jackal ears are described in Kelly Bryson’s book, Don’t Be Nice, Be Real.
+ More about that and his other books can be found on his web-site, www.languageofcom
+passion.com.</p>
+<p> Lesson #6 — A world of feelings</p>
+<p>Every day we have new feelings and everybody else is also carrying differ
+ent feelings around inside them.  We all act according to what we are feeling
+ inside.  The more we understand how feelings work, the more we can be supportive and responsive to other people. We cannot only be more successful ourselves,
+ but we will be in a position to help others. When we experience negative feelings,
+ they usually bring along concepts and attitudes of separateness and difference – of
+ less and more, of me and them, or of superiority and inferiority.  When we experi
+ence positive feelings, they usually bring along concepts and attitudes of balance,
+ connection with others and oneness. So the more we can be aware of our negative
+ feelings and accept them, the more we can balance them, channel them, and speak
+ them. At the same time, the more we can be aware of our positive feelings,
+ embrace them, and celebrate them, the happier we will be and the more we can
+ help others. </p>
+<p>Choose your favorite positive feeling and express that feeling in writing,
+ song, art, drama, storytelling or movement.   Share your creative expression with
+ the class if you wish.</p>
+ <p class="side">Discussion Questions:</p>
+ <p> a) Talk about the first chapter quotation. Why do you think Ralph Waldo Emerson
+ says, “love is our highest word”?</p>
+ <p> b) What about hate? It is such a powerful negative emotion.  How do you think
+ people get to a place where they start to hate?  What causes people to hate?</p>
+ <p> c) Look at quotation #2.  What are the two most important elements of friendship
+ according to Emerson?  Discuss what these two things mean. Give examples. Do
+ you try to practice these two things with your friends?</p>
+ <p> d) Read quotation #3.  Make a chart showing the connection between understand
+ing, love, and peace that Deepak Chopra is talking about.  Talk about what this
+ connection means and how we can practice it. </p>
+ <p class="side">Supplemental Activities:</p>
+ <ul>
+    <li> <p>Feelings can be thought of in different combinations, not just in pairs of oppo
+sites.  Below is an affirmation (see Chapter 8) that some people find useful.  Read
+ the affirmation below by yourself or together with your class.  Then discuss what
+ it means. </p>
+ <p>I am light – there is no darkness.</p>
+<p> I am love – there is no fear.</p>
+<p> I am one – there is no separateness. –Indian scriptures</p></li>
+ <li> <p>Break into small groups and do a cooperative creative expression of different
+ feelings.  You can use art, music, drama, movement, writing, or storytelling.
+Include both positive and negative feelings and try to use as many as possible in
+ your creation.</p></li>
+ <li><p>Using a harmony table and a harmony flower: Set aside a special table in your
+ classroom where two people can meet when they want to share feelings with each
+ other.  You can call it the ‘harmony table’ or you can give it another name.  At the
+ harmony table you can keep a plastic rose or another kind of flower, which you
+ can call the ‘harmony flower.’ The person who is sharing their feelings holds the
+ harmony flower while the other person is listening. Then the harmony flower is
+ given to the other person so that he or she can share.  Only the person holding the
+ harmony flower should talk.  Using the harmony table and the harmony flower,
+ you can practice sharing your feelings and listening to your classmates’ feelings.</p></li>
+ </ul>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter2.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter4.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter10</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>The Thief’s Story</p>
+    </h1>
+    <p> I was still a thief when I met Romi. And though I was only fifteen years old, I was an
+experienced and fairly successful hand. Romi was watching a wrestling match when I
+approached him. He was about twenty-five and he looked easygoing, kind, and simple
+enough for my purpose. I was sure I would be able to win the young man’s confidence.
+</p>
+<p>‘You look a bit of a wrestler yourself,’ I said. There’s nothing like flattery to break
+the ice!
+</p>
+<p>‘So do you,’ he replied, which put me off for a moment because at that time I was
+rather thin and bony.</p>
+<p>‘Well,’ I said modestly, ‘I do wrestle a bit.’</p>
+<p>‘What’s your name?’</p>
+<p>‘Hari Singh,’ I lied. I took a new name every month, which kept me ahead of the
+police and former employers.</p>
+<p>After these formalities Romi confined himself to commenting on the wrestlers, who
+were grunting, gasping, and heaving each other about. When he walked away, I
+followed him casually.
+</p>
+<p>‘Hello again,’ he said.</p>
+<p>I gave him my most appealing smile. ‘I want to work for you,’ I said.</p>
+<p>‘But I can’t pay you anything – not for some time, anyway.’</p>
+<p>I thought that over for a minute. Perhaps I had misjudged my man. ‘Can you feed
+me?’ I asked.
+</p>
+<p>‘Can you cook?’
+</p>
+<p>‘I can cook,’ I lied again</p>
+<p>‘If you can cook, then maybe I can feed you.’</p>
+<p>He took me to his room over the Delhi Sweet Shop and told me I could sleep on the
+balcony. But the meal I cooked that night must have been terrible because Romi gave it
+to a stray dog and told me to be off.</p>
+<p>But I just hung around, smiling in my most appealing way, and he couldn’t help
+laughing.
+</p>
+<p>Later, he said never mind, he’d teach me to cook. He also taught me to write my
+name and said he would soon teach me to write whole sentences and to add figures. I
+was grateful. I knew that once I could write like an educated person, there would be no
+limit to what I could achieve.</p>
+<p>It was quite pleasant working for Romi. I made tea in the morning and then took my
+time buying the day’s supplies, usually making a profit of two or three rupees. I think he
+knew I made a little money this way, but he didn’t seem to mind.
+</p>
+<p>Romi made money by fits and starts. He would borrow one week, lend the next. He
+kept worrying about his next cheque, but as soon as it arrived he would go out and
+celebrate. He wrote for the Delhi and Bombay magazines: a strange way to make a
+living.
+</p>
+<p>One evening he came home with a small bundle of notes, saying he had just sold a
+book to a publisher. That night I saw him put the money in an envelope and tuck it under
+the mattress.
+</p>
+<p>I had been working for Romi for almost a month and, apart from cheating on the
+shopping, had not done anything big in my real line of work. I had every opportunity for
+doing so. I could come and go as I pleased, and Romi was the most trusting person I
+had ever met.
+</p>
+<p>That was why it was so difficult to rob him. It was easy for me to rob a greedy man.
+But robbing a nice man could be a problem. And if he doesn’t notice he’s being robbed,
+then all the spice goes out of the undertaking!
+</p>
+<p>Well, it’s time I got down to some real work, I told myself. If I don’t take the money,
+he’ll only waste it on his so-called friends. After all, he doesn’t even give me a salary.</p>
+<p>Romi was sleeping peacefully. A beam of moonlight reached over the balcony and
+fell on his bed. I sat on the floor, considering the situation. If I took the money, I could
+catch the 10:30 express to Lucknow. Slipping out of my blanket, I crept over to the bed.</p>
+<p>My hand slid under the mattress, searching for the notes. When I found the packet, I
+drew it out without a sound. Romi sighed in his sleep and turned on his side. Startled, I
+moved quickly out of the room.
+</p>
+<p>Once on the road, I began to run. I had the money stuffed into a vest pocket under my
+shirt. When I’d gotten some distance from Romi’s place, I slowed to a walk and, taking
+the envelope from my pocket, counted the money. Seven hundred rupees in fifties. I
+could live like a prince for a week or two!
+</p>
+<p>When I reached the station, I did not stop at the ticket office (I had never bought a
+ticket in my life) but dashed straight onto the platform. The Lucknow Express was just
+moving out. The train had still to pick up speed and I should have been able to jump
+into one of the compartments, but I hesitated – for some reason I can’t explain – and I
+lost the chance to get away.
+</p>
+<p>When the train had gone, I found myself standing alone on the deserted platform. I
+had no idea where to spend the night. I had no friends, believing that friends were more
+trouble than help. And I did not want to arouse curiosity by staying at one of the small
+hotels nearby. The only person I knew really well was the man I had robbed. Leaving
+the station, I walked slowly through the bazaar.
+</p>
+<p>In my short career, I had made a study of people’s faces after they had discovered
+the loss of their valuables. The greedy showed panic; the rich showed anger; the poor,
+resignation. But I knew that Romi’s face when he discovered the theft would show only
+a touch of sadness – not for the loss of money, but for the loss of trust</p>
+<p>The night was chilly – November nights can be cold in northern India – and a
+shower of rain added to my discomfort. I sat down in the shelter of the clock tower. A
+few beggars and vagrants lay beside me, rolled up tight in their blankets. The clock
+showed midnight. I felt for the notes; they were soaked through.</p>
+<p>Romi’s money. In the morning, he would probably have given me five rupees to go
+to the movies, but now I had it all: no more cooking meals, running to the bazaar, or
+learning to write sentences.
+</p>
+<p>Sentences! I had forgotten about them in the excitement of the theft. Writing complete
+sentences, I knew, could one day bring me more than a few hundred rupees. It was a
+simple matter to steal. But to be a really big man, a clever and respected man, was
+something else. I should go back to Romi, I told myself, if only to learn to read and
+write.
+</p>
+<p>I hurried back to the room feeling very nervous, for it is much easier to steal
+something than to return it undetected.</p>
+<p>I opened the door quietly, then stood in the doorway in clouded moonlight. Romi
+was still asleep. I crept to the head of the bed, and my hand came up with the packet of
+notes. I felt his breath on my hand. I remained still for a few moments. Then my fingers
+found the edge of the mattress, and I slipped the money beneath it.
+</p>
+<p>I awoke late the next morning to find that Romi had already made the tea. He
+stretched out a hand to me. There was a fifty-rupee note between his fingers. My heart
+sank.</p>
+<p>‘I made some money yesterday,’ he said. ‘Now I’ll be able to pay you regularly.’
+My spirits rose. But when I took the note, I noticed that it was still wet from the
+night’s rain. So he knew what I’d done. But neither his lips nor his eyes revealed
+anything.
+</p>
+<p>‘Today we’ll start writing sentences,’ he said.
+</p>
+<p>I smiled at Romi in my most appealing way. And the smile came by itself, without
+any effort.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter9.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter11.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Four</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Four</p>
+    </h1>
+    <p>THE rains set in, and the sun only made brief appearances. The hills
+turned a lush green. Ferns sprang up on walls and tree-trunks. Giant
+lilies reared up like leopards from the tall grass. A white mist coiled
+and uncoiled as it floated up from the valley. It was a beautiful season,
+except for the leeches.
+</p>
+<p>Every day, Binya came home with a couple of leeches fastened to the
+flesh of her bare legs. They fell off by themselves just as soon as they’d had
+their thimbleful of blood; but you didn’t know they were on you until they
+fell off; and then, later, the skin became very sore and itchy. Some of the
+older people still believed that to be bled by leeches was a remedy for
+various ailments. Whenever Ram Bharosa had a headache, he applied a
+leech to his throbbing temple.
+</p>
+<p>Three days of incessant rain had flooded out a number of small animals
+who lived in holes in the ground. Binya’s mother suddenly found the roof
+full of field-rats. She had to drive them out; they ate too much of her storedup wheat flour and rice. Bijju liked lifting up large rocks, to disturb the
+scorpions who were sleeping beneath. And snakes came out to bask in the
+sun.
+</p>
+<p>Binya had just crossed the small stream at the bottom of the hill when
+she saw something gliding out of the bushes and coming towards her. It was
+a long black snake. A clatter of loose stones frightened it. Seeing the girl in
+its way, it rose up, hissing, prepared to strike. The forked tongue darted out,
+the venomous head lunged at Binya.
+</p>
+<p>Binya’s umbrella was open as usual. She thrust it forward, between
+herself and the snake, and the snake’s hard snout thudded twice against the
+strong silk of the umbrella. The reptile then turned and slithered away over
+the wet rocks, disappearing in a clump of ferns.
+</p>
+<p>Binya forgot about the cow’s and ran all the way home to tell her
+mother how she had been saved by the umbrella. Bijju had to put away his
+books and go out to fetch the cows. He carried a stout stick, in case he met
+with any snakes.</p>
+<p>First the summer sun, and now the endless rain, meant that the umbrella
+was beginning to fade a little. From a bright blue it had changed to a light
+blue. But it was still a pretty thing, and tougher than it looked, and Ram
+Bharosa still desired it. He did not want to sell it; he wanted to own it. He
+was probably the richest man in the area—so why shouldn’t he have a blue
+umbrella? Not a day passed without his getting a glimpse of Binya and the
+umbrella; and the more he saw the umbrella, the more he wanted it.</p>
+<p>The schools closed during the monsoon, but this didn’t mean that Bijju
+could sit at home doing nothing. Neelu and Gori were providing more milk
+than was required at home, so Binya’s mother was able to sell a kilo of milk
+every day: half a kilo to the schoolmaster, and half a kilo (at reduced rate)
+to the temple Pujari. Bijju had to deliver the milk every morning.
+</p>
+<p>Ram Bharosa had asked Bijju to work in his shop during the holidays,
+but Bijju didn’t have time; he had to help his mother with the ploughing and
+the transplanting of the rice-seedlings. So Ram Bharosa employed a boy
+from the next village, a boy called Rajaram. He did all the washing-up, and
+ran various errands. He went to the same school as Bijju, but the two boys
+were not friends.
+</p>
+<p>One day, as Binya passed the shop, twirling her blue umbrella, Rajaram
+noticed that his employer gave a deep sigh and began muttering to himself</p>
+<p>“What’s the matter, Babuji?” asked the boy</p>
+<p>“Oh, nothing,” said Ram Bharosa. “It’s just a sickness that has come
+upon me. And it’s all due to that girl Binya and her wretched umbrella.”
+</p>
+<p>“Why, what has she done to you?”
+</p>
+<p>“Refused to sell me her umbrella! There’s pride for you. And I offered
+her ten rupees.”</p>
+<p>“Perhaps, if you gave her twelve …”</p>
+<p>“But it isn’t new any longer. It isn’t worth eight rupees now. All the
+same, I’d like to have it.”
+</p>
+<p>“You wouldn’t make a profit on it,” said Rajaram</p>
+<p>“It’s not the profit I’m after, wretch! It’s the thing itself. It’s the beauty
+of it!”</p>
+<p>“And what would you do with it, Babuji? You don’t visit anyone—
+you’re seldom out of your shop. Of what use would it be to you?”
+</p>
+<p>“Of what use is a poppy in a cornfield? Of what use is a rainbow? Of
+what use are you, numbskull? Wretch! I, too, have a soul. I want the
+umbrella, because—because I want its beauty to be mine!”
+</p>
+<p>Rajaram put the kettle on to boil, began dusting the counter, all the time
+muttering: “I’m as useful as an umbrella,” and then, after a short period of
+intense thought, said: “What will you give me, Babuji, if i get the umbrella
+for you?”
+</p>
+<p>“What do you mean?” asked the old man.
+</p>
+<p>“You know what i mean. What will you give me?”</p>
+<p>“You mean to steal it, don’t you, you wretch? What a delightful child
+you are! I’m glad you’re not my son or my enemy. But look—everyone will
+know it has been stolen, and then how will I be able to show off with it?”</p>
+<p>“You will have to gaze upon it in secret,” said Rajaram with a chuckle.</p>
+<p>“Or take it into Tehri, and have it coloured red! That’s your problem. But
+tell me, Babuji, do you want it badly enough to pay me three rupees for
+stealing it without being seen?”
+</p>
+<p>Ram Bharosa gave the boy a long, sad look. ‘You’re a sharp boy,” he
+said. “You’ll come to a bad end. I’ll give you two rupees.”
+</p>
+<p>“Three,” said the boy.</p>
+<p>“Two,” said the old man.</p>
+<p>“You don’t really want it, i can see that,” said the boy</p>
+<p>“Wretch!” said the old man. “Evil one! Darkener of my doorstep! Fetch
+me the umbrella, and I’ll give you three rupees.”</p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="Three.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="Five.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

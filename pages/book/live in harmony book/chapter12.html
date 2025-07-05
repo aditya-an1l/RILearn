@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter12</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Twelve</p>
+      <p>  Creativity: 
+Becoming a Problem-Solver Every Day</p>
+    </h1>
+    <p class="side"> Chapter Inspiration: </p>
+<p>“Creativity can solve almost any problem.  The creative act, the defeat of habit by
+ originality, overcomes everything.” –George Lois
+</p>
+<p> “Creativity is allowing yourself to make mistakes. Art is knowing which ones to
+ keep.” –Scott Adams, The Dilbert Principle
+</p>
+<p>“When Alexander the Great visited the sage Diogenes and asked whether he
+ could do anything for the famed teacher, Diogenes replied: ‘Only stand out of my
+ light.’ Perhaps some day we shall know how to heighten creativity. Until then,
+ one of the best things we can do for creative men and women is to stand out of
+ their light.” –John W. Gardner
+</p>
+<p> “Creativity is ...seeing something that doesn’t exist already.  You need to find out
+ how you can bring it into being and that way be a playmate with God.”  –Michele Sh</p>
+<p>“Creativity comes from trust.  Trust your instincts.”  –Rita Mae Brown</p>
+<p> “The problem is never how to get new, innovative thoughts into your mind, but
+ how to get old ones out.  Every mind is a building filled with archaic furniture.
+ Clean out a corner of your mind and creativity will instantly fill it.” –Dee Hock
+</p>
+<p> “Creativity is the power to connect the seemingly unconnected.” –William Plomer
+</p>
+<p> “Alittle ripple wakes the sea. A tiny thought shakes the world.” –Sri Chinmoy
+</p>
+<p>“May my everyday life be a roaring waterfall of creativity!” –Sri Chinmoy</p>
+<p> “Don’t think. Thinking is the enemy of creativity. It is self-conscious, and any
+thing self-conscious is lousy.  You can’t try to do things.  You simply must do
+ things.”  –Ray Bradbury
+</p>
+<p>“Change is possible if we have the desire and commitment to make it happen.”–Mahatma Gandh
+</p>
+<p> “You must not for one instant give up the effort to build new lives for yourselves.
+ Creativity means to push open the heavy, groaning doorway to life.  This is not an
+ easy struggle. Indeed, it may be the most difficult task in the world, for opening
+ the door to your own life is, in the end, more difficult than opening the doors to
+ the mysteries of the universe.”  –Daisaku Ikeda
+</p>
+<p class="side"> Chapter Story:</p>
+<p> Ashrita Furman (1955- ) lives in Queens, New York.  He is fifty years old
+ and he owns a Health Food Store.  However, Ashrita’s health food store is not the
+ only thing that he owns.  Ashrita owns more than twenty-five Guinness World
+ Records!  He has more World Records than any one else on earth, which means
+ he also owns the World Record for the most world records.  Over the years he has
+ broken more the ninety records in all.</p>
+<p> Ashrita’s World Records require an amazing amount of practice – as well
+ as great strength, fitness, agility, concentration, and determination. His world
+ records also are an example of tremendous creativity. This past year he realized
+ his dream of breaking a record on all seven continents, when he successfully
+ raced the fastest mile while hula hooping at Ayers Rock (Uluru) in the Australian
+ desert.  Ashrita has pogo-stick-jumped in the Amazon River for three hours and
+ forty minutes; climbed sixteen miles up and down the foothills of Mount Fuji in
+ Japan on a pogo stick; and somersaulted the entire twelve and one quarter mile
+ length of Paul Revere’s ride in Massachusetts. These are just a few of Ashrita’s
+ amazing achievements.</p>
+<p> Why does Ashrita strive to break records and to perform these fantastic
+ feats in such creative ways?  He says, “I am trying to show others that our human
+ capacity is unlimited if we can truly believe in ourselves.” It doesn’t bother Ashri
+ta if people laugh at some of his achievements because they seem silly. Ashrita is
+ happiest when he is breaking records and he knows how much effort and work it
+ takes to break any record. Ashrita has completed four thousand, four hundred
+ ninety five deep knee bends in an hour; balanced a milk bottle on his head while
+ speed walking more than eighty miles; cranked out eight thousand stomach
+ crunches in an hour on an abdominal frame in Paris, France.</p>
+<p> Ashrita said that his ability to perform these amazing feats as well as the
+ ideas for them come from his meditation.  Ashrita has been practicing meditation
+ for more than twenty-five years, and he sees his world records as a demonstration
+ of the benefits of meditation. The name ‘Ashrita’ is from the Sanskrit language of
+ India.  His name means ‘protected by God’. This name was given to him by his
+meditation teacher, Sri Chinmoy.  Ashrita gives his meditation teacher lots of
+ credit for teaching him how to meditate and for finding the inner strength and
+ endurance he needs to accomplish his records.  Ashrita says, “I am not a natural
+ athlete, but my teacher has shown me that if one can be in touch with one’s inner
+ spirit anything is possible.”</p>
+<p> Ashrita’s life of physical accomplishments shows us what is possible
+ when we allow our life’s creativity to flow and if we ‘follow our bliss’.  Not all of
+ us may want to break world records like Ashrita, but we can all become creative
+ in our own ways.  We each have a creative spark inside of us that we can allow to
+ blossom.   We can develop our creativity through practice and determination if we
+ do as Ashrita says and believe in ourselves.  Ashrita’s creativity has enabled him
+ to bring enjoyment and inspiration to thousands and thousands of people.  How
+ will we use our creativity?  Creativity has no limit.  Creativity is the spark at the
+ heart of every human achievement whether it is in science, engineering, space
+ travel, agriculture, architecture, education, medicine or any other field. Ashrita’s
+ achievements show us what is possible when we go beyond our normal thinking
+ mind and discover something new!</p>
+<p class="side"> Chapter Overview:</p>
+<p>Creativity is one of the most enjoyable things about life.  Creativity is one
+ of the important and necessary forces on earth. It can bring us great joy and ful
+fillment when we do creative things such as art, music, drama, dance or other
+ kinds of creative things.  Creativity is also essential in helping us discover new
+ ideas, from improving life on earth to finding new ways of solving problems.</p>
+<p>Every invention that human beings have created to improve or enhance
+ lives was first an idea in someone’s mind:  the pyramids in Egypt, the Empire
+ State Building and other skyscrapers, automobiles, trains, airplanes, electricity,
+ radio, television, computers, rocket engines, etc.  Similarly, human beings who
+ have created great works of art such as Beethoven, Emily Dickinson, Vincent Van
+ Gogh and many others, all first had to conceive of their art works before they
+ could write them or draw them.  In the same way, every thing that was built or
+ created to help human beings in some specific way was first just an idea some
+body had.   Here are some examples: penicillin and other antibiotics, immuniza
+tions, the safety belts and air bags in our cars, life vests, helmets, water purifica
+tion systems, emission control devices, recycling machines, and even things like
+ democratic government and the United Nations.</p>
+<p>Creativity means taking an idea you have and making it into a reality. First
+ it starts in our imagination. Then we have to take it from our imagination and
+ make it so people can see it, hear it and touch it.  Without creativity human beings
+would still be roaming around like ignorant beasts.  Creativity has helped human
+ beings to gain greater control over our lives – to provide shelter, food, defense,
+ medicine, and enjoyment for ourselves.  Now the people of planet earth need to
+ use their creativity to solve the problems on planet earth.  Right now on our plan
+et some people are content because they have the things they need. However,
+ many, many other people are suffering because they don’t have what they need.
+ In this chapter we will learn to understand how important creativity is and we will
+ begin to build the skills of creativity – first with our bodies and then with our
+ minds.
+</p>
+<p class="side"> Chapter Lessons:</p>
+<p class="side"> Lesson #1 - Creative movement activity
+</p>
+<p>One of the best ways to learn to think creatively is to first become creative
+ with our bodies. In this activity we will learn how make certain movements with
+ our bodies.  Each movement we make is different.  The teacher will not use
+ words to tell you which movement to do.  Instead, the signal for each movement
+ will be a symbol that you will see on 8 and 1/2 by 11-inch cards.  You will need
+ to learn the symbols – a few at a time.  It won’t take long for you to learn all
+ twenty-four symbols.  Here is a description of each symbol and the movement
+ that goes with it:</p>
+  <p>a) A dotted line going horizontally across the card is ‘walk’
+</p>
+<p>b) A semicircle like a setting sun with a dot in the middle is ‘hide’
+</p>
+<p>c) Two parallel, straight vertical lines down the card means ‘jump’</p>
+<p>d) A complete circle with a dot in the middle means ‘form any shape’
+</p>
+<p>e) A single straight, vertical line down the card means ‘hop’
+</p>
+<p> f) Two horizontal parallel lines with little t’s at the end of each one means ‘push’
+ (pretend you are pushing something)
+<p>g) A picture of a simple comb with the threads or lines facing upward means
+ ‘skip’
+</p>
+<p>h) A stick or line picture of an arm with a fist means ‘pull’</p>
+<p>i) A semi-circle with a straight line underneath it means ‘leap’ (picture a ballet dancer or a long jumper)
+</p>
+<p>k) An X across the card means ‘balance’</p>
+<p>l) A single straight horizontal line across the card means ‘run’
+</p>
+<p>m) A series of curled lines facing upward (like a comb with curved threads)
+ means ‘gallop’ (you can pretend to be the horse or the rider)</p>
+ <p>o) A straight arrow pointing downward across the card means ‘fall’</p>
+ <p>p) An arrow that has a squiggly shaft instead of a straight one means ‘melt’</p>
+ <p>q) A series of connected m’s like the tops of picket fence posts means ‘march’</p>
+ <p> r) A curvy horizontal line across the card means ‘float’</p>
+ <p>s) A short vertical line with a slightly curved attachment on one side means
+ ‘reach’</p>
+ <p>t) A short vertical line with a shorter line going upward at a 45-degree angle from
+ the bottom of the first line means ‘kick’</p>
+ <p>u) A solid, large dot filling the middle part of the card means ‘freeze’</p>
+ <p>v) A bunch of dark, short horizontal lines making a kind of messy column means
+ ‘shake’</p>
+ <p>w) A swirling line like a bunch of little loops at a 45-degree angle across the page
+ means ‘twist’</p>
+ <p>x) A large slightly curved ‘v’ filling most of the card means ‘fly’</p>
+ <p>y) A large single swirl like a labyrinth means ‘spin’</p>
+ <p>z) A series of dark, short horizontal lines piled on top of one another with a little
+ space between them means ‘climb’</p>
+ <p> So these are the symbols and the movements that go with them. You don’t
+ have to wait to learn all the symbols before you begin to have fun with the move
+ments.  The teacher will stand with the cards in front of the group.  It is important
+ for everyone to stand far enough apart so that no body is touching another, even
+ when everyone’s hands are outstretched.  The teacher will hold up the cards one
+ at a time without saying anything. When you recognize the symbol – start the
+ movement that goes with the symbol.  Pay attention because the teacher might
+ change the card at any time!</p>
+ <p>It is best to never run when doing these movements. There is no symbol
+ for ‘run’.  We can always run at recess or at other times.  Usually it is best to do
+ the movements in silence. Sometimes you can add certain sounds with some
+ movements – like ‘giddy up’ when you are galloping.  However if it is too loud
+ and crazy during the activity it won’t be as enjoyable for everyone.  Once you
+ learn all the movements well, the students can take turns holding up the cards
+ instead of the teacher.</p>
+ <p class="side">Lesson #2 - Creating shapes with our bodies </p>
+ <p>This lesson will help us to learn how to use our creativity for group prob
+lem solving. For this activity we will break into groups of three to five people.
+ These will be your teams.   You will be working together in your teams to make
+ some specific shapes that the teacher will announce.  Some of these shapes you
+ can build standing up.  For other shapes you will have to get onto the floor.
+ There will be a time limit to make your shapes, which the teacher will announce.
+ When your team has successfully made the shape, your team leader can let the
+teacher know by saying, ‘finished!’ Here is a list of some shapes we might create:</p>
+<p>a) The letters of the alphabet. (Decide whether you will use capital letters or lowercase letters!)</p>
+<p>b) The numbers zero to ten.</p>
+<p>c) The shape of a candy cane.</p>
+<p>d) The shape of a swimming pool with a diving board.</p>
+<p>e) The shape of a triangle.</p>
+<p>f) The shape of a rectangle.</p>
+<p>g) The shape of an octopus.</p>
+<p>h) The shape of a camel.</p>
+<p>i) The shape of a knotted rope.</p>
+<p>k) The shape of a half moon.</p>
+<p>l) The shape of a diamond.</p>
+<p>m) The shape of your state.</p>
+<p>n) The shape of a seashell.</p>
+<p>o) The shape of a fence.</p>
+<p>p) The shape and movement of lightning.</p>
+<p>q) The shape and movement of a volcano erupting.</p>
+<p>r) The shape of eggs in a carton.</p>
+<p>s) The shape of a turtle peeking out of its shell.</p>
+<p>t) The shape and movement of a cobra in a basket.</p>
+<p>u) The shape of a pentagon.</p>
+<p>v) The shape and movements of a bouncing ball.</p>
+<p>w) The shape of a mountain.</p>
+<p>x) The shape of geese flying south for the winter.</p>
+<p>y) The shape of a circle.</p>
+<p>z) The shape and movement of a tornado.</p>
+<p>aa) The shape and movement of a roaring fire.</p>
+<p>bb) The shape of a snowman.</p>
+<p>cc) The shape of a long winding river.</p>
+<p>dd) The shape of a waterfall.</p>
+<p>ee) The shape of a kite.</p>
+<p>ff) The shape of a crescent.</p>
+<p>gg) The shape of a sailboat.</p>
+<p>hh) The shape of a slide.</p>
+<p>ii) The shape of a tree in spring with a bud opening.</p>
+<p>jj) The shape of a square with a circle in the center.</p>
+<p>kk) The shape of a hexagon.</p>
+<p>ll) The shape of an octagon.</p>
+<p>mm) The shape of a flag blowing in the wind.</p>
+<p>oo) The shape of a heptagon.</p>
+<p>pp) The shape of a nonagon.</p>
+<p>qq) The shape of an oval.</p>
+<p>rr) The shape of a tetragon.</p>
+<p>ss) The shape and movement of a flag flying on a flagpole.</p>
+
+ <p>This activity helps increase our attention to detail, improves our ability to
+ transfer a visual image into a kinesthetic or body experience, develops our ability
+ to manage time, and improves non-verbal communication. It is always important
+ to remember that there are many ways to solve a problem.  Just look at how many
+ different ways the groups made the same shape!  How many different mountains
+ did we have in the room?  How many different turtles?  How many different vol
+canoes?  Etc. Etc.  Let’s talk about the different ways that the groups made their
+ shapes.  Then we will hear from people from the various groups about what
+ worked well and what did not work well when their group was working together.
+ What was the easiest shape to make? What was the hardest shape?</p>
+ <p class="side"> Lesson #3 - Silent Simon Says  </p>
+ <p>The teacher or leader will stand in front of the group. Everyone needs to be
+ standing a good distance apart – far enough so nobody will be touching when
+ they have their hands outstretched.  The leader will do a series of actions in
+ silence. Whatever the leader does, the group will try to imitate exactly.  The
+ leader should try to be as creative as possible.  </p>
+ <p>Here are some ideas for actions the leader can choose from: hopping up
+ and down, flapping your hands up and down, bending over and touching your
+ toes, stretching your hands and arms upward while standing on tip toe, stretching
+ one leg out in front of you and then the other, etc. Other more complex actions
+ might include pretending you are running, swimming, flying, leaping like a frog,
+ riding a bike, etc.  Sometimes we can create funny actions such as putting our two
+ hands in front of our face and then removing them. Each time the hands are
+ removed a different facial expression appears. Another fun action is to begin with
+ hands to the sides and then to pretend that one arm starts popping up out straight
+ to the side.  Each time the arm is put back by the other hand, as soon as the ‘hold
+ing’ hand lets go the ‘uncontrollable’ arm pops back out straight. This has quite a
+ comical effect, especially if you repeat it a few times.  Then you can try it on the
+ other side with the opposite arm. You can also do it with the legs.  There are sev
+eral similar comic actions you can do like this.  Be creative and see if you can
+ think up your own!</p>
+ <p> It is helpful if the leader pauses briefly between each kind of action so the
+ group can know when one action is ending and another one is beginning. There
+are no sound effects in this game – it is best to do it in silence.  Even if someone
+ in the group figures out what an action might look like, they shouldn’t holler it
+ out.  Once the teacher demonstrates the way to be the leader for one or two ses
+sions, then others can take turns being the leader.  It is fun to repeat some popular
+ actions that the group enjoys the most.  Each leader will do them in a slightly
+ unique way.   It is also good to be creative and to invent new motions. There is no
+ limit to the motions you can create.</p>
+ <p class="side"> Lesson #4 - The Captain is coming</p>
+ <p>This is an activity to practice creativity and have fun together. It is a good
+ activity for a large group to start the morning with, an activity for indoor recess,
+ or an activity just to do whenever you have some free time.  First, the teacher will
+ demonstrate the actions while giving the commands. Then we will have the group
+ practice each of the actions immediately following the demonstration. Then the
+ game begins. We must decide whether we will designate certain students to do the
+ different actions, or whether we will allow the group to spontaneously find part
+ners or teammates for the actions that require more than one person.  We can try
+ doing it each of these ways.  Either way we will need a certain number of people
+ to do the different activities. In other words, the ‘lighthouse’ requires a team of
+ two, ‘man overboard’ requires a team of three, ‘row ashore’ needs a team of four,
+ and ‘time to eat’ needs five people. </p>
+ <p>1.The Captain is coming! Salute and swab the deck</p>
+<p>2.Look out for the rocks – two-person lighthouse</p>
+<p>3.Man overboard – two-person lifeboat with lookout inside</p>
+<p>4.Row ashore – four-person row boat</p>
+<p>5.Time to eat – five people eating, saying ‘grub, grub, grub, grub’</p>
+ <p> Those who don’t get into the appropriate groups or who choose not to be
+ in one of the groups above can sing, ‘Oh, ee, oh, a pirate’s life for me!’ If there
+ are still people not doing an activity or not in a group, have them begin a conga
+ line and dance like imaginary villagers on the island that will rescue the people on
+ board the ship.</p>
+ <p class="side">Lesson #5 - Imagine a beautiful world</p>
+ <p>For this activity we will close our eyes for a few minutes.  Imagine a world
+ where everyone was using their creativity;  where each person was doing some
+thing unique and  positive with their creativity.  Authors are creating beautiful
+ books of literature and poetry to bring people joy, while other artists are making
+ colorful works of art to brighten our lives. Scientists are building engines or
+ inventing types of fuel that don’t pollute.  Other scientists are in their laboratories
+ discovering cures for AIDS, cancer, Parkinson’s disease, Alzheimer’s and other
+ diseases.  Philosophers are thinking of  beautiful connections between all of the
+ magnificent elements and strands of the universe and are imagining new ways of
+ being and living. Athletes are transcending  themselves and going beyond their
+ previous achievements, and they are inventing new and better ways to do their
+ athletic feats. Engineers are inventing all kinds of machines that help people in
+ new ways. Architects are designing buildings that save energy and recycle
+ resources.  Everybody on the planet is being creative in some positive way. What
+ a great world this would be!</p>
+ <p> Now, after resting for a few moments, discuss what you saw in your
+ mind’s eye when you were doing this lesson. Did you get any special ideas that
+ you want to share?</p>
+ <p class="side"> Lesson #6 - Earth’s Real-Life Challenges</p>
+ <p> Below are some real life problems and challenges on our planet earth right
+ now, which require us to use our creativity to solve.  Choose one of these areas
+ that you want to learn more about.  Use the encyclopedia, other books at your
+ school, or computer research to find out more about the global problem or chal
+lenge you are interested in.  Write down some important facts and statistics that
+ you find about this issue. Then write your ideas for how this situation could be
+ improved or solved.  You might want to try to answer the questions indicated
+ below to help you think of your ideas. You may want to include illustrations  to
+ show the problem and to show your possible solutions.</p>
+ <p> a)   
+World Hunger:  Over three-quarters of the world’s people do not have enough
+ healthy food to eat.  How can we feed all the people of our world so everyone can
+ have a healthy diet?  Where will we get the money to do this? Where can we
+ grow all this food?</p>
+ <p> b) Clean Water: Many of the world’s people cannot get clean water because either
+ they live in a very dry area or the water that is near them is polluted. How can we
+get more water to the people in dry areas? How can we purify more of the water
+ that is polluted?  How can we stop water pollution from happening in the first
+ place?</p>
+ <p>c) Medicine: Millions of people in the world cannot afford basic medicine to help
+ them to stay healthy.  As a result, many people die, including many children, from
+ diseases that could be prevented if they had the right medicine.  How can we pro
+vide basic medicine to all the people of the world?  How can we create medicines
+ that don’t cost as much for people to buy?</p>
+ <p> d) Global Warming: Each year, tons of damaging gases called ‘greenhouse gases’
+ are released into the air from factories across the globe.  According to the world’s
+ best scientists, these gases go up into the earth’s atmosphere and destroy a part of
+ the atmosphere called the ozone layer.  The ozone layer protects the earth from
+ certain kinds of sunrays, called ultraviolet rays. Without the protection of the
+ ozone layer, the ultraviolet rays may cause the earth’s temperature to rise, upset
+ting the delicate ecological balance on earth.  How can we reduce or stop the
+ release of ‘greenhouse gases’ and still have productive factories? </p>
+ <p>e) Toxic Chemicals: Around the world, factories dump toxic chemicals into the
+ earth. The toxic chemicals are dangerous chemicals that can harm humans and
+ animals. They are usually the waste products that remain after the factory has pro
+duced whatever it is making – such as clothing, plastic, paper, carpet or other tex
+tiles, paint, fertilizer, or many other products.  When they are released by facto
+ries, these toxic chemicals can go into the ground water and seep into wells or
+ into rivers.  When people drink water with traces of toxic chemicals they can
+ become very sick.  How can we create worldwide laws to prevent factories from
+ releasing toxic chemicals into the environment?  How can we create new ways of
+ making and then processing products that do not require toxic chemicals at all?</p>
+ <p> f) Waste Dumps: Waste dumps or landfills are a big problem in many parts of the
+ world and even here in the United States.  The problem is simple  - what do we
+ do with all of our trash?  If we bury it. we will end up with mountains of trash.  If
+ we burn it, we will pollute the air.  In some countries the government does not
+ have enough money to bury it or to burn it, and so in those places the trash just
+ piles up and covers acres and acres of land, creating an ugly and unhealthy situa
+tion.  How can we find new ways of getting rid of our trash?  How can we find
+ cleaner ways to burn the trash?  How can we reduce the amount of trash we have
+ in the first place? How can recycling help us to reduce the amount of trash?  Can
+ we turn the trash into some kind of fertilizer or fuel or something else useful?</p>
+ <p>g) Poverty: There are more than six billion people on earth, and most of them live
+ in poverty.  Living in poverty means that people do not have enough money to
+ provide for their families. They don’t have enough money for food, housing, or
+ medicine.  They don’t have enough money to build schools, to get water or to
+ have electricity.  Once you are in poverty, it is very difficult to come out.  First
+ you would need to learn a skill so you could get a job.  Yet it is very difficult to
+ learn new skills if you cannot go to school.  In many places the situation is so bad
+ that even if someone has some skills, there are few if any jobs because the econo
+my of their country is also very poor.  Many of these countries have borrowed
+ money from the richer nations just to survive, and they have to pay all the money
+ back before they can start really making improvements for their own people. How
+ can we get people out of poverty around the world?  How can we build enough
+ schools so all children can become educated? How can we create new kinds of
+ jobs and businesses so people can earn a decent income?  How can we help the
+ poorer countries in the world to reduce their debts to the richer nations so they
+ can improve the economy of their country?</p>
+ <p> h) Violence and Wars: Right now there are over thirty-five wars going on in the
+ world.  Many wars are due to religious disputes as well as political arguments.
+ When people do not know how to solve conflicts peacefully, they use weapons
+ and violence, and as a result many people get hurt or die. Poverty is also a factor
+ because some people are so poor that they see no hope and so they might join an
+ army that is fighting a war because at least in the army they might have some
+ food to eat and a place to sleep.  Yet the longer the war goes on in a certain area
+ the poorer people become.  During a war the government has to spend money on
+ soldiers and the people cannot do their jobs or grow their crops as usual because
+ it might be too dangerous. So wars and poverty are an example of how global
+ problems are often interrelated.  How can we stop people from fighting?  How
+ can we teach conflict resolution skills to people across the world so they learn
+ ways of solving problems that are not violent? How can we create other peaceful
+ and productive tasks for soldiers to do so that armies can help the world instead
+ of fighting with other people?</p>
+ <p class="side"> Discussion Questions:</p>
+ <p> a)  Have a discussion about Ray Bradbury’s quote: “Don’t think. Thinking is the
+ enemy of creativity. It is self-conscious, and anything self-conscious is lousy.
+ You can’t try to do things.  You simply must do things.”  Ray Bradbury seems to
+ be saying that creativity is different from normal thinking.  Do you think this is
+ true?  What is different about creative thinking compared to normal thinking?</p>
+ <p>b)  Discuss Sri Chinmoy’s quotation: “A little ripple wakes the sea. A tiny thought
+ shakes the world.” Creativity means thinking about things in ways that people
+ haven’t thought of before. Ideas that are new have a certain power to them
+ because they reveal something that never existed before.   In what ways have tiny
+ thoughts shaken or changed the world?</p>
+ <p>c) “Creativity is the power to connect the seemingly unconnected.” Discuss what
+ you think William Plomer meant by this quotation.  In what ways are things con
+nected that you might not be able to see.  (There are some examples in this chap
+ter.)  If creativity is the ability to connect invisible things, then part of creativity
+ means seeing things that are not there. What kinds of connections can you think
+ of between things in your world?</p>
+ <p> d) Think about the quotation of Mahatma Gandhi: “Change is possible if we have
+ the desire and commitment to make it happen.” It is true that creativity is some
+thing very spontaneous and in that way we cannot always control it.  Yet we can
+ decide that we are going to practice creativity in our thinking and in our actions.
+ This way we can be open to creativity in our lives. What are some other ways we
+ can have a commitment to creativity in our lives?</p>
+ <p class="side"> Supplemental Activities:</p>
+ <ul>
+    <li><p>For an extension of Lesson #2 above, you can write or print all of the shapes
+ onto cards, so each shape is described on one card. The cards can be laminated or
+ covered on contact paper to preserve them. The cards can be stored in a specially
+ marked box or envelope. Then students can take turns as leaders - reading out the
+ shapes that the teams have to form.</p></li>
+ <li><p> Another extension of Lesson #2 is to create more shapes for the game. Remem
+ber to not make the shapes too difficult to create – unless you want to create dif
+ferent levels of challenge!  When you decide which shapes you want to include in
+ the game, you can put them onto cards with the others and keep them in your
+ storage box or envelope.</p></li>
+ <li><p>Become a problem-solver at your school or at home. Use your imagination and
+ creativity to solve problems or challenges that you see or experience.  You can
+ share your ideas and experiences with the rest of your class.  See how many prob
+lems or challenges you can help to solve in a week, in a month and in the year.</p></li>
+<li> <p>Make a list of problems or challenges in your neighborhood or in your school.
+ Brainstorm a list of possible solutions for these problems and challenges. Then, as
+ a group, decide which problem or problems you want to focus on and how you
+want to try to help to solve it – for example, cleaning up a dirty park, writing a
+ letter to the mayor or to the city council about improving the equipment in a play
+ground, or planting a garden, grass, shrubs, or trees in a barren area.</p></li>
+<li>  <p>Pick out your favorite quotation from the chapter quotations in this chapter.
+ Write the quotation out in your journal or on a piece of paper. Then write about
+ what the quotation means or what you think about it. Ask your teacher if you are
+ not sure what certain words mean.</p></li>
+ </ul>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter11.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter13.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

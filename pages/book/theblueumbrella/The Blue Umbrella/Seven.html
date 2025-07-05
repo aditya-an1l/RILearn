@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seven</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Seven</p>
+    </h1>
+    <p>WELL, now that Ram Bharosa has the blue umbrella—a gift from
+Binya, as he tells everyone—he is sometimes persuaded to go out
+into the sun or the rain, and as a result he looks much healthier.
+Sometimes he uses the umbrella to chase away pigs or goats. It is always
+left open outside the shop, and anyone who wants to borrow it may do so;
+and so in a way it has become everyone’s umbrella. It is faded and patchy,
+but it is still the best umbrella in the village.</p>
+<p>People are visiting Ram Bharosa’s shop again. Whenever Bijju or Binya
+stop for a cup of tea, he gives them a little extra milk or sugar. They like
+their tea sweet and milky.
+</p>
+<p>A few nights ago, a bear visited Ram Bharosa’s shop. There had been
+snow on the higher ranges of the Himalayas, and the bear had been finding
+it difficult to obtain food; so it had come lower down, to see what it could
+pick up near the village. That night it scrambled on to the tin roof of Ram
+Bharosa’s shop, and made off with a huge pumpkin which had been
+ripening on the roof. But in climbing off the roof, the bear had lost a claw.</p>
+<p>Next morning Ram Bharosa found the claw just outside the door of his
+shop. He picked it up and put it in his pocket. A bear’s claw was a lucky
+find.</p>
+<p>A day later, when he went into the market-town, he took the claw with
+him, and left it with a silversmith, giving the craftsman certain instructions.</p>
+<p>The silversmith made a locket for the claw; then he gave it a thin silver
+chain. When Ram Bharosa came again, he paid the silversmith ten rupees
+for his work.
+</p>
+<p>The days were growing shorter, and Binya had to be home a little earlier
+every evening. There was a hungry leopard at large, and she couldn’t leave
+the cows out after dark.
+</p>
+<p>She was hurrying past Ram Bharosa’s shop when the old man called out
+to her.
+</p>
+<p>“Binya, spare a minute! i want to show you something.”</p>
+<p>Binya stepped into the shop.</p>
+<p>“What do you think of it?” asked Ram Bharosa, showing her the silver
+pendant with the claw.
+</p>
+<p>“It’s so beautiful,” said Binya, just touching the claw and the silver
+chain.
+</p>
+<p>“It’s a bear’s claw,” said Ram Bharosa. “That’s even luckier than a
+leopard’s claw. Would you like to have it?”
+</p>
+<p>“I have no money,” said Binya.</p>
+<p>“That doesn’t matter. You gave me the umbrella—i give you the claw!
+Come, let’s see what it looks like on you.”
+</p>
+<p>He placed the pendant on Binya, and indeed it looked very beautiful on
+her.</p>
+<p>Ram Bharosa says he will never forget the smile she gave him when she
+left the shop.
+</p>
+<p>She was halfway home when she realized she had left the cows behind.</p>
+<p>“Neelu, Neelu!” she called. “Oh, Gori!”
+</p>
+<p>There was a faint tinkle of bells as the cows came slowly down the
+mountain path.
+</p>
+<p>In the distance she could hear her mother and Bijju calling for her.
+She began to sing. They heard her singing, and knew she was safe and
+near</p>
+<p>She walked home through the darkening glade, singing of the stars; and
+the trees stood still and listened to her, and the mountains were glad.</p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="Six.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="copyright.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

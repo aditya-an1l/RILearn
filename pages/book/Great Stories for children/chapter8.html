@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter8</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Those Three Bears</p>
+    </h1>
+    <p>Most Himalayan villages lie in the valleys, where there are small streams, some
+farmland, and protection from the biting winds that come through the mountain
+passes in winter. The houses are usually made of large stones and have sloping slate
+roofs so the heavy monsoon rain can run off easily. During the sunny autumn months, the
+roofs are often covered with pumpkins, left there to ripen in the sun.</p>
+<p>One October night, when I was sleeping at a friend’s house in a village in these
+hills, I was awakened by a rumbling and thumping on the roof. I woke my friend and
+asked him what was happening.</p>
+<p>‘It’s only a bear,’ he said.</p>
+<p>‘Is it trying to get in?’
+</p>
+<p>‘No. It’s after the pumpkins.’</p>
+<p>A little later, when we looked out of a window, we saw a black bear making off
+through a field, leaving a trail of half-eaten pumpkins.
+</p>
+<p>In winter, when snow covers the higher ranges, the Himalayan bears come to lower
+altitudes in search of food. Sometimes they forage in fields and because they are
+shortsighted and suspicious of anything that moves, they can be dangerous. But, like
+most wild animals, they avoid humans as much as possible.</p>
+<p>Village folk always advice me to run downhill if chased by a bear. They say bears
+find it easier to run uphill than down. I am yet to be chased by a bear, and will happily
+skip the experience. But I have seen a few of these mountain bears in India, and they are
+always fascinating to watch.
+</p>
+<p>Himalayan bears enjoy pumpkins, corn, plums, and apricots. Once, while I was
+sitting in an oak tree hoping to see a pair of pine martens that lived nearby, I heard the
+whining grumble of a bear, and presently a small bear ambled into the clearing beneath
+the tree.
+</p>
+<p>He was little more than a cub, and I was not alarmed. I sat very still, waiting to see
+what he would do.
+</p>
+<p>He put his nose to the ground and sniffed his way along until he came to a large
+anthill. Here he began huffing and puffing, blowing rapidly in and out of his nostrils, so
+that the dust from the anthill flew in all directions. But the anthill had been deserted,
+and so, grumbling, the bear made his way up a nearby plum tree. Soon he was perched
+high in the branches. It was then that he saw me.
+</p>
+<p>The bear at once scrambled several feet higher up the tree and lay flat on a branch.
+Since it wasn’t a very big branch, there was a lot of bear showing on either side. He
+tucked his head behind another branch. He could no longer see me, so he apparently
+was satisfied that he was hidden, although he couldn’t help grumbling.
+</p>
+<p>Like all bears, this one was full of curiosity. So, slowly, inch by inch, his black
+snout appeared over the edge of the branch. As soon as he saw me, he drew his head
+back and hid his face.
+</p>
+<p>He did this several times. I waited until he wasn’t looking, then moved some way
+down my tree. When the bear looked over and saw that I was missing, he was so
+pleased that he stretched right across to another branch and helped himself to a plum. I
+couldn’t help bursting into laughter.
+</p>
+<p>The startled young bear tumbled out of the tree, dropped through the branches some
+fifteen feet, and landed with a thump in a pile of dried leaves. He was unhurt, but fled
+from the clearing, grunting and squealing all the way.</p>
+<p>Another time, my friend Prem told me, a bear had been active in his cornfield. We
+took up a post at night in an old cattle shed, which gave a clear view of the moonlit
+field</p>
+<p>A little after midnight, a female bear came down to the edge of the field. She seemed
+to sense that we had been about. She was hungry, however. So, after standing on her
+hind legs and peering around to make sure the field was empty, she came cautiously out
+of the forest.
+</p>
+<p>Her attention was soon distracted by some Tibetan prayer flags, which had been
+strung between two trees. She gave a grunt of disapproval and began to back away, but
+the fluttering of the flags was a puzzle that she wanted to solve. So she stopped and
+watched them.</p>
+<p>Soon the bear advanced to within a few feet of the flags, examining them from
+various angles. Then, seeing that they posed no danger, she went right up to the flags
+and pulled them down. Grunting with apparent satisfaction, she moved into the field of
+corn.</p>
+<p>Prem had decided that he didn’t want to lose any more of his crop, so he started
+shouting. His children woke up and soon came running from the house, banging on
+empty kerosene tins.
+</p>
+<p>Deprived of her dinner, the bear made off in a bad temper. She ran downhill at a
+good speed, and I was glad that I was not in her way.</p>
+<p>Uphill or downhill, an angry bear is best given a very wide path.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter7.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter9.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

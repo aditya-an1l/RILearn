@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter18</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+  <style>
+    .side{
+        font-weight: bold;
+        text-align: left;
+        font-size: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>Chapter Eighteen</p>
+      <p>  The Government Is Us:
+ Gaining the Skills of Active Citizenship</p>
+    </h1>
+    <p class="side"> Chapter Inspiration:</p>
+    <p>“Human evolution is now at a crossroads. Stripped to its essentials the central human task is how to organize society to promote the survival of our species and the development of our unique potentials. A partnership society offers us a viable alternative.” –Riane Eisler</p>
+
+<p>“Under a government which imprisons any (people) unjustly, the true place for a just man is in prison.” –Henry David Thoreau</p>
+
+<p>“We must learn to work not just for our own individual self, family or nation, but for the benefit of all mankind.” –The Dalai Lama</p>
+
+<p>“Government is too big and too important to be left to the politicians.” –Chester Bowles</p>
+
+<p>“As Mankind becomes more liberal, they (people) will be more apt to allow that all those who conduct themselves as worthy members of the community are equally entitled to the protections of civil government. I hope ever to see America among the foremost nations of justice and liberality.” –George Washington</p>
+
+<p>“I like to believe that people in the long run are going to do more to promote peace than our governments. Indeed I think that people want peace so much that one of these days governments had better get out of the way and let them have it.” –Dwight D. Eisenhower</p>
+
+<p>“If we can all become good citizens of the world, then the face and fate of the world will change overnight.” –Sri Chinmoy</p>
+
+<p>“The outward freedom that we shall attain will only be in exact proportion to the inward freedom to which we may have grown at a given moment. And if this is a correct view of freedom, our chief energy must be concentrated on achieving reform from within.” –Mahatma Gandhi</p>
+
+<p>“Respect for the rights of others is peace.” –Benito Juarez</p>
+
+<p>“The marvel of all history is the patience with which men and women submit to burdens unnecessarily laid upon them by their governments.” –William H. Borah</p>
+
+<p>“We believe that an informed citizenry will act for life and not for death.” –Albert Einstein, On Atomic Energy</p>
+
+<p class="side"> Chapter Story:
+</p>
+<p> Nelson Mandela was born on June 18, 1918 in Transkei, South Africa.  His
+ father was Chief Henry Mandela of the Tembu Tribe.  Being the son of a chief,
+ Nelson heard his elders tell many stories of the bravery of his ancestors, who
+ fought during the wars of resistance in defense of their fatherland, when South
+ Africa was being attacked and colonized by Europeans in the past. Nelson
+ dreamed of making his own contribution to the freedom struggle of his people.
+ He was living in a country in which blacks did not have the same rights as whites.
+ His country of South Africa had a policy of ‘apartheid’, which meant that blacks
+ and whites by law had to live totally separate from each other.  They couldn’t
+ work, or even go to school, together.  Under this system, whites lived a good life
+ and had many privileges, but many blacks lived in terrible poverty and had to
+ struggle to survive. When blacks tried to protest this unfair situation, they were
+ put in jail and they were often beaten or even killed by soldiers of the white gov
+ernment.
+</p>
+<p>Nelson Mandela was educated at University College of Fort Hare and the
+ University of Witwatersrand and qualified in law in 1942.  During his time at the
+ university Nelson made his first courageous step in his long struggle to free his
+ people.  He organized 60 fellow students, who all belonged to an organization
+ called the African National Congress, which was called the ANC, for short.  Their
+ goal was to make their organization a national movement for peace and justice. In
+ speeches during this period, Nelson would say:  “I detest racialism, because I
+ regard it as a barbaric thing, whether it comes from a black man or a white man.”
+ Nelson and his friends wanted to unite all the black people of South Africa – the
+ working people in the towns, the peasants in the countryside, and the profession
+als, to work together for the attainment of equal rights.  Nelson became an impor
+tant leader of the African National Congress and he started participating in
+ protests and resistance against the ruling National Party’s apartheid policies. The
+ government was not pleased with this and it put Nelson on trial for treason in
+ 1956. This was the first but not the last time Nelson would be put on trial. This
+ time he was acquitted and set free.
+</p>
+<p> Nelson’s movement gradually became stronger, and the government decid
+ed that it had to be stopped, so the government banned the African National
+Congress in 1960. The government said that if people continued to protest that it
+ would use violence to stop them. Nelson decided that in order to continue, the
+ organization had to learn how to defend itself.  The members of the ANC
+ acquired, and learned how to use, weapons, in case government troops were to
+ attack them. This made the government even more upset, and in 1962 Nelson was
+ arrested and sentenced to five years of imprisonment with hard labor. Hard labor
+ meant that every day the prisoners had to do very difficult work, such as break
+ and haul stones and other extremely heavy tasks.</p>
+<p> In 1963, many of Nelson’s fellow leaders of the African National Congress
+ were arrested.  All of them, along with Nelson, were brought to trial and they
+ were accused of plotting to overthrow the government by violence. On June 12,
+ 1964, all of the accused, including Nelson, were sentenced to life imprisonment.
+ Before being sent off to jail, Nelson made a speech. Here is part of what he said:
+ “I have fought against white domination, and I have fought against black domi
+nation. I have cherished the ideal of a democratic and free society in which all
+ persons live together in harmony and with equal opportunities. It is an ideal,
+ which I hope to live for and to achieve. But if needs be, it is an ideal for which I
+ am prepared to die.” This speech soon became very famous.</p>
+<p>From 1964 to 1982, he was incarcerated at Robben Island Prison, a maxi
+mum-security prison on a small island, seven kilometers off the coast of Cape
+ Town, South Africa.  After that, he was transferred to Pollsmoor Prison, nearby to
+ Robben Island, on the mainland.  In December, 1988, he was moved to the Victor
+ Verster Prison, from where he was eventually released. 
+</p>
+<p>During his years at the university, Nelson’s greatest pleasure was watching
+ the sunset while listening to the music of Handel or Tchaikovsky. These had been
+ his happiest moments, the times when he could meditate and reflect on his life
+ and just be content. Now, in prison, he did not ever have the chance to do his
+ favorite thing.  Locked up in jail, he had to live without this and without every
+ other comfort of home for twenty-seven more years!  Whenever possible, Nelson
+ would organize musical concerts with his fellow prisoners, especially at Christ
+mas time, when they would sing.  They didn’t know if things would ever change.
+ They didn’t know if they would ever be released from prison, but they sang any
+way.
+ 
+</p>
+<p> Over the years, more and more people around the world heard about Nel
+son Mandela.  They would read the brave and beautiful speech he made in court
+ before going to jail, and they would make copies and give it to others. Slowly but
+ surely people around the world organized protests to make the government of
+ South Africa set Nelson Mandela free. Citizens of different countries told their
+ governments not to talk to South Africa or do business with its government until
+ things changed. Nelson became not only the most significant black leader in
+ South Africa, but also one of the most important leaders in the world. His courage
+and determination inspired many others.  He became a powerful symbol of resist
+ance around the world, and the anti-apartheid movement continued to gather
+ strength.
+</p>
+<p>As the South African government came under more and more pressure
+ from governments all over the world, it tried to offer Nelson compromises. For
+ example, they told him they would set him free if he would just go into the coun
+tryside and not protest against apartheid any more. Each time he was offered a
+ compromise, Nelson refused, because he felt if he accepted such a proposal he
+ would be betraying his people, who were still living in such bad and unfair condi
+tions. Finally the government gave up, and Nelson was released from prison on
+ February 18, 1990. There were great celebrations in South Africa and around the
+ world.
+ </p>
+<p> After his release, Nelson did not just take a vacation. There was so much
+ work to do!  He started working immediately to take the next steps towards final
+ly stopping apartheid, and achieving equal opportunity and justice for the blacks
+ of South Africa.  These were the same goals he had started striving for almost 40
+ years earlier, and he was not going to rest until they were achieved. In 1991, the
+ ANC was allowed to have a national conference for the first time since1960.
+ Nelson Mandela was elected president of the African National Congress, while
+ his lifelong friend and colleague, Oliver Tambo, became the organization’s
+ National Chairperson. In 1993 Nelson received the Nobel Peace Prize.  When he
+ accepted the prize, Nelson said he was accepting it on behalf of all South
+ Africans, from the ancestors to the present day, who suffered and sacrificed so
+ much to bring peace to their land. He also said the award was a tribute to the peo
+ple of Norway, who stood against apartheid while many in the world were silent.
+ After receiving the Nobel Prize, Nelson was so famous around the world that he
+ and his friends would never again have to worry about being put in jail.
+</p>
+<p> On May 10, 1994, an amazing thing happened! Nelson Mandela became
+ the first democratically-elected President of South Africa. Nelson had become the
+ President of the country that had kept him in prison for 27 years.  He remained
+ President of South Africa until June, 1999. During this time, Nelson worked very
+ hard to create better conditions for blacks and to create equality between blacks
+ and whites. He received many other awards, including honorary degrees from
+ more than 50 universities in many parts of the world. Nelson Mandela retired
+ from public life in June 1999, at the age of 81.  
+</p>
+<p>He currently resides in his birthplace - Qunu, Transkei. Even before being
+ sent to jail, Nelson was a good athlete who practiced regular exercise and a healthy
+ diet.  During his many years in jail, he stayed very physically fit.  Still today Nel
+son Mandela is up by 4:30 AM, no matter how late he has worked the previous
+ evening. By 5:00 AM he has begun his exercise routine, that lasts for an hour.
+ Breakfast is by 6:30. After reading the world’s newspapers, his workday begins.
+</p>
+<p>Nelson Mandela has never wavered in his devotion to democracy, equality
+ and learning. Even though he was treated in the most terrible and unfair way, he
+ never answered racism with racism. His life has been an inspiration, in South
+ Africa and throughout the world, to all who are oppressed and deprived. Nelson
+ Mandela proved that one exceptional person can be more powerful than the gov
+ernment, when that one person is right and the government is wrong. His life
+ shows us that we are the ones who are the government. The government is the
+ people – all of the people. The government cannot exist separate from the people.</p>
+<p class="side">Chapter Overview:</p>
+<p>Government and citizenship are two things that go hand in hand.  There
+ have been many different kinds of governments throughout human history.  In
+ general, governments have evolved and changed, just as human beings have
+ evolved and changed.  Several thousand years ago, when human beings were first
+ forming into organized societies, the head of the government was often a military
+ leader or a king.  The laws were usually enforced by soldiers who obeyed the
+ leader.  Individual citizens had to obey the leader completely or risk severe pun
+ishment.  Sometimes the leaders were good people who were very kind to their
+ subjects, but there was no guarantee of this.</p>
+<p> As governments evolved over the ages, the ideas and opinions of individ
+ual citizens became more and more important.  The ancient Greeks were the first
+ ones to come up with the idea of democracy, as far as historians can tell.  Howev
+er, at this time, you could only vote if you were a citizen. A citizen was defined as
+ a white man who was born in a certain part of Greece, and who owned property.
+ Women, people who did not own land, and individuals born in other places, could
+ not vote. Nevertheless this was the beginning of democracy.</p>
+<p> In the Middle Ages, most governments were still monarchies, dictatorships,
+ or oligarchies. Then a very important event happened in 1689 in England.  That is
+ when all of the important landowners of England, called Lords, gathered together
+ and made an agreement with the King of England, that no laws could be passed
+ without their approval. The document of agreement that they created was called
+ the Magna Carta, and it is one of the most famous documents in the world.  It was
+ the first time in history that a king agreed to share power with another group of
+ leaders in a cooperative way for the benefit of all the people in the society.</p>
+<p> The 1700’s brought many new ideas in science, philosophy and politics.
+ Human beings were now exploring the whole globe and discovering what a vast
+ and diverse place planet earth really was.  Human beings began to realize that
+ there were lots of different cultures in the world and many different ways of
+ thinking. Governments changed again and began to allow citizens to express more
+ of their own ideas. In 1776, the United States was born. This was the first country
+established completely on democratic principles.  The United States had to fight a
+ war to become free from England, but once it did, it created a society in which
+ the President, and the members of the House of Representatives and the Senate,
+ were elected completely by the people.  The American system also included a
+ judicial branch – a system of courts presided over by judges – in order to be a
+ balance to the power of the President and the Congress.</p>
+<p> In the form of democracy started by the United States, the citizens had
+ more power than citizens had had in any other country before. Shortly after the
+ country was founded, the leaders drafted the Bill of Rights, which outlines the
+ rights of the citizens.  However, Americans were allowed to keep slaves until
+ 1865, and the way the Native people of America were treated was very bad.  For
+ over 100 years after America was founded, women did not have the right to vote,
+ and, until the end of the Civil War, black people could not vote. Nevertheless, in
+ spite of these weaknesses, the United States became an important inspiration to
+ people around the world, and over the decades many other countries decided to
+ have democratic governments in which individual citizens had the right to choose
+ their leaders and their laws.  </p>
+<p>On October 24, 1945, the world took another big step forward when the
+ United Nations was formed. The United Nations was established so that countries
+ could cooperate for the benefit of all people on the planet. On December 10,
+ 1948, the United Nations adopted the Universal Declaration of Human Rights 
+an agreement by all member countries about the rights that all people in the world
+ should have, no matter where they live and what government they have.  Today,
+ unfortunately, there are still many, many people in the world who don’t enjoy the
+ rights outlined in this document, so all of us still  have lots of work ahead to
+ make this goal a reality – so all citizens everywhere have the same freedoms and
+ privileges.</p>
+<p> Being a citizen of a democracy and a citizen of the world does not just
+ mean that you get certain rights and privileges. Being a citizen means also that
+ you have responsibilities.  You have the responsibility to pay attention to what is
+ going on in the government, to communicate with the leaders who are elected,
+ and to vote when elections are being held.  Citizens have a very important job in
+ a democracy, because they are the ones who allow the leaders to make the deci
+sions.  If the citizens become lazy and do not pay attention, then the leaders might
+ do things that are not good. And if the citizens do not participate in the elections
+ and exercise their right to vote, then bad leaders will not be replaced and the soci
+ety will not improve and may even come into danger. As human beings and gov
+ernments continue to evolve, the role of the citizen becomes more and more
+ important. As countries across the world work together more and more, the citi
+zens of the countries will get to know each other better and learn to cooperate
+ even more for the benefit of all.</p>
+<p>Chapter Lessons:
+</p>
+<p class="side"> Lesson #1 - Types of government</p>
+<p>Government is the way a group of people or a society organizes itself.  It is
+ the laws they create to keep order and peace in the society.  It means how they
+ choose their leaders and what type of power those leaders will have.  There have
+ been many types of governments throughout the course of human history.  Here
+ are a few of the basic types of government:
+</p>
+<p> Atheocracy is a government that is ruled by religious leaders.  Such a gov
+ernment usually has laws that come directly from a religious book or doctrine.  In
+ a theocracy the individual citizen has limited rights.  As long as the citizen fol
+lows the strict code of religious law, then he or she is fine.  But if a citizen speaks
+ out with an opinion different from the religious law, the citizen could get in trou
+ble. Theocracies were common in the Middle Ages.  Today there are a number of
+ theocracies – such as in places like Algeria, where the laws are based on the reli
+gion of Islam.
+</p>
+<p> Adictatorship is a government ruled by one person.  That person has
+ absolute power, which means he controls all the other parts of the government as
+ well as the laws.  The head of a dictatorship is called a dictator. If a dictator does
+ not like a law he or she can get rid of it or make a new one without anyone else’s
+ consent.  A dictator is not elected by voting.  He/she usually comes into power by
+ use of violence and stays in power by force and threats. If anyone disagrees with
+ the dictator, the dictator can just throw that person in jail.  There are quite a num
+ber of dictatorships still in the world, such as in Myanmar.
+</p>
+<p> An oligarchy is very much like a dictatorship except that instead of just
+ one leader, there is a very small group of leaders who are like a team of dictators.
+ An oligarchy is very difficult to change if you don’t like the leaders.  As in a dic
+tatorship, the oligarchy has control of the army and the police. If anyone tries to
+ organize a protest, the oligarchy can use force to stop, imprison, or even kill the
+ protesters.
+</p>
+<p> Amonarchy is a government ruled by a king or queen.  The king/queen is
+ not elected by voting.  He or she comes into power because they are born into a
+ royal family – a family that included the past king or queen.  The power of the
+ monarchy is passed down from generation to generation.  In a monarchy, the
+ common people do not have any say on who will be their leader. They just have
+ to accept the rule and the decisions of the king or queen. If the king or queen is a
+ good person, then the people might be treated well, but if the king or queen is
+ greedy, they may keep the wealth of the kingdom to themselves and do little to
+ help the common citizens.  In a monarchy the common citizen does not have
+ many rights, though the citizens are usually protected by soldiers of the king or
+queen if the society is attacked.  There have been many monarchies throughout
+ human history.  Today there are still kings and queens in some countries, for
+ example, Great Britain, but usually they are ceremonial leaders. In other words,
+ they are leaders of their country mostly in name only, while their country also has
+ a president or prime minister, who is elected by the people and who has much
+ more real power than they do.</p>
+<p> Communism is the system in which the government owns all the property
+ in the society.  The government, or state, plans and controls the economy – the
+ flow of money. A single person often holds the power, and usually that leader is
+ not elected by the citizens, but rather appointed by a small group of leaders who
+ are already in power. The idea of communism is that there should be no poverty
+ and that all the property and money in the nation should be shared equally by all
+ the citizens. Communism has been tried in quite a few countries but it has not
+ ever been successful in reaching its ideal goal.  Sometimes communist leaders
+ have acted like dictators.  In a communist society the individual citizen has limit
+ed rights, but usually this does not include the right to own lots of property or to
+ become wealthy.  Also, if a communist leader becomes a dictator, then the com
+mon citizen may not be allowed to speak his/her opinions or to disagree with the
+ leader.
+</p>
+<p> Democracy is government by people’s choice. The head of the government
+ is selected by vote of the people.  He/she can be called a president, a prime minis
+ter, or sometimes by other names.  Usually, a democracy has another group of
+ leaders also, who work together  with the head of the government to make the
+ laws and to lead the society.  They are called the congress, the parliament, or
+ sometimes by other names such as the ‘House of Commons’ in England or the
+ ‘Duma’in Russia.  This group of leaders is also elected, and they usually come
+ from all the different states or provinces of the land, so that people in every part
+ of the country have a voice in the government. In a democracy the common peo
+ple have the real power, because they can change the president or the members of
+ congress if they are not pleased with them, provided a majority of citizens vote
+ the same way.  In a democracy, the rights of the individual citizen are very impor
+tant, and so is the idea that every citizen is equal. If a citizen wants to speak his
+ opinion or to protest against the government, he is supposed to be allowed to do
+ it.   
+Today there are many democracies in countries around the world.  Each one
+ is a little different but they all have some of the same basic principles.
+</p>
+<p> In the United States of America the government is a democracy.  Our kind
+ of democracy is called a representative democracy or a republic.  The people
+ elect the President as well the other leaders.  The other leaders come from all
+ fifty states and they are formed into two groups – the House of Representatives
+ and the Senate (which, taken together are called the Congress).  It is the Presi
+dent and the Congress who make the laws for the rest of the people – the citizens.
+The citizens trust that the leaders they elected will make good laws. If the citizens
+ don’t like the laws that their leaders make, they can change to new leaders with
+ the next election.  Occasionally the citizens get to vote directly on a law instead
+ of having the leaders make the law. This is called a referendum, and it only hap
+pens on certain occasions. In the United States the laws are enforced by judges
+ who are not elected but appointed by the other leaders.  The judges make sure the
+ citizens are doing the right thing and following the laws. There are different levels
+ of judges, and the highest level is the Supreme Court.
+</p>
+<p> In a democracy, when there are elections, the decision about who wins is
+ based on the concept of the ‘majority’. The majority means most of the people
+ feel a certain way or want a certain law.  For example let’s say that 100 citizens
+ are voting. If 51 citizens vote for one leader and 49 citizens vote for another
+ leader, then the leader who got 51 votes will win the election.  This is called a
+ ‘simple majority’.  Usually in the United States, leaders are elected and laws are
+ passed using the simple majority system, although the President is elected using a
+ more complicated system.  In other situations, such as when a federal judge is
+ appointed by the president and needs to be approved by the other leaders in the
+ Senate, a different system of voting, called a ‘two-thirds majority’,  is used.  For
+ example, if 100 senators were voting on whether to approve a judge, the judge
+ would have to get two thirds of the senators – or 66 senators, to vote ‘yes’ for
+ approval. Otherwise the judge would not be appointed to the job.</p>
+<p class="side"> Lesson #2 - Let’s practice some democracy
+</p>
+<p>a) We will choose something in our class or school that we want to decide on in a democratic way. Maybe it is what game we want to play at recess; what book we want the teacher to read aloud; where we want to go on a field trip; or some other thing. We can also have an imaginary election or vote instead. We will conduct a vote on what we want to do.</p>
+
+<p>b) We will make a list of choices and write them on the blackboard or post them in front of the room so everyone can see them clearly.</p>
+
+<p>c) We will discuss each choice briefly to make sure everyone knows what the choices mean.</p>
+
+<p>d) Then we will conduct our vote by either raising our hand or writing our choice on a piece of paper and turning it in. Remember you can only vote one time.</p>
+
+<p>e) For this activity we will use a ‘simple majority’, which means only 51% of the votes are needed to decide the election. The votes will need to be tallied (counted) in order to see what the class has decided.</p>
+
+<p>f) Once the tally is complete and double-checked, the winner can be announced. Once the decision has been announced the choice has been made. In a ‘majority rule’ democracy, those who didn’t get their choice agree to follow the decision of the majority in a peaceful and harmonious way. That is one of the most challenging but important parts of democracy.</p>
+
+<p>g) On another day or week, we can have another vote to decide something else. The next time, we can try voting with a two-thirds majority if we wish. It might take longer to decide something with a two-thirds majority, because two-thirds is a lot of votes to get. For this reason, we may have to spend more time discussing the choices than we did with a simple majority.</p>
+
+<p class="side"> Lesson #3 - Peaceful societies on earth </p>
+<p>In order to learn about how we can organize and govern our society in a
+ more peaceful and harmonious world, we can learn from some societies which
+ have already learned ways to do this.  In this lesson we will learn about some dif
+ferent groups of people around the world who have managed to learn how to
+ organize and govern themselves with peace and justice for all.
+</p>
+<p> There are quite a number of societies on planet earth in which the people
+ live quite peacefully and in the spirit of partnership.  They are not perfect, but
+ they generally have found ways of dealing with challenges in very humane and
+ equitable ways.  There is much we can learn from these societies as we try to
+ shape a partnership society for the whole world.</p>
+ <p> Choose one of the societies listed below to research.  You can research
+ your society using books, encyclopedias, or the internet.  The best place to start
+ might be peacefulsocieties.org – a computer website. Write down some relevant
+ information about the society and then share your work with the rest of the class.
+ As a class we can make a world map showing where in the world these various
+ groups of people live.</p>
+ <p>Here is a list of some ‘partnership’ societies:</p>
+ <p>
+ <ul>
+  <li><p>Amish</p></li>
+  <li><p>Batek</p></li>
+  <li><p>Birhor</p></li>
+  <li><p>Buid</p></li>
+  <li><p>Chewong</p></li>
+  <li><p>Fipa</p></li>
+  <li><p>G/wi</p></li>
+  <li><p>Hutterites</p></li>
+  <li><p>Ifaluk</p></li>
+  <li><p>Inuit</p></li>
+  <li><p>Ju/’hoansi</p></li>
+  <li><p>Kadar</p></li>
+  <li><p>Ladakhi</p></li>
+  <li><p>Lepchas</p></li>
+  <li><p>Malapandaram</p></li>
+  <li><p>Mbuti</p></li>
+  <li><p>Nubians</p></li>
+  <li><p>Paliyans</p></li>
+  <li><p>Piaroa</p></li>
+  <li><p>Rural Thai</p></li>
+  <li><p>Semai</p></li>
+  <li><p>Tahitians</p></li>
+  <li><p>Tristan Islanders</p></li>
+  <li><p>Yanadi</p></li>
+  <li><p>Zapotec of La Paz</p></li>
+</ul>
+</p>
+<p> Choose one of the above societies and do your own research:</p>
+<p>a) What is the name of the society or the group of people? (Try to use correct spelling.)</p>
+
+<p>b) Where do these people live? (It is helpful to give landmarks such as neighboring countries or nearby mountains, rivers, oceans, etc.)</p>
+
+<p>c) How do the people in this society support themselves? How do they get their food, shelter, and other material things?</p>
+
+<p>d) What is distinctive about this society that makes them a partnership society? In other words give examples of how they are peaceful.</p>
+
+<p>e) What else is important or interesting about this society and the people that live in it?</p>
+
+<p>f) Give one to three lessons we can learn from this society that would be good for everyone in the world to know about.</p>
+<p class="side"> Lesson #4 - A courtroom lesson</p>
+<p> One of the most important parts of democracy is the judicial system - the
+ court system - in which the judges enforce the laws of the democracy. In this les
+son we will create a dramatic skit to show how a court works. We can add to and
+ embellish the story below if we wish.</p>
+ <p>a) We will need actors to play the roles of the accused person, the judge, the jury, the defense lawyer, the prosecuting lawyer, and a few witnesses.</p>
+
+<p>b) The story is that a man is accused of stealing quite a lot of money, credit cards, jewels, and other valuable things from a wealthy family’s mansion. When the thief did this he was breaking the law. The thief was caught and arrested, and now he will be going to court for a trial. As it turns out, he was not trying to get the money just for himself, but he wanted to get the money to give to his mother who was very poor and had very little money to live on. The thief could not find a job to earn money to support himself and his mother. The trial will decide whether the thief is guilty or innocent, and what his punishment should be.</p>
+
+<p>c) The prosecutor will present the case that the thief is a bad person and that he should be convicted and given the maximum penalty. The prosecutor will say that the thief did a very bad thing, breaking into someone’s home and stealing a family’s valuable things. He will say that if the thief had been willing to work a proper job, he would have had enough money to support himself and his mother, but that instead of getting a job, he chose the path of burglary.</p>
+
+<p>d) The defense attorney will say that the thief was only trying to help his mother who was very poor. He will say that the thief had a good goal in mind - to help his mother - even though he chose an illegal way to do it. The defense attorney will say that if the thief had been able to get a decent job, he would not have had to become a thief, but that there are very few good jobs in his neighborhood. He will say that the thief is not a bad person and does not have a criminal record.</p>
+
+<p>e) The witnesses will include the husband and wife who owned the mansion that was broken into. They will be very upset that their valuable things were stolen. Other witnesses will be the thief’s mother who will talk about her bad situation and the good heart of her son. Other possible witnesses could include a person who saw the thief break into the mansion and a person who knows the thief and can say that he is generally not a bad person. Other witnesses can be added.</p>
+
+<p>f) The judge will preside over the trial. The judge will guide the trial and allow the prosecutor and the defense attorney to take turns, present their cases and call witnesses. The judge may disallow certain questions if she feels they are not appropriate for some reason. The judge will ask extra questions of the witnesses if she feels the jury needs more information. When all the witnesses have been called, then the prosecutor and the defense attorney will make their final statements, in which they will try to convince the jury of the thief’s guilt or innocence. The judge will then instruct the jury to go and meet in private, to appoint a leader, to gather and review all the evidence, and to vote on a decision. (Note: Each of the different characters in the skit – the thief, the judge, the prosecutor, and the defense attorney, can be either a man or a woman.)</p>
+
+<p>g) The jury must listen carefully to all the evidence and to the closing arguments of the prosecutor and the defense attorney. Then the members of the jury, who are called jurors, will meet in private and follow the judge’s instructions as indicated above. Whatever the jury decides, it must be a unanimous decision, which means everyone on the jury must agree. If they cannot agree unanimously, then this is called a mistrial or a hung jury, which means the thief will be found not guilty. Once the juro
+
+ <p> Note:  It will take some time for each of the actors to work on their roles and
+ write down the things they want to say in the skit.  We will have to practice our
+ parts before we do the actual trial!</p>
+ <p class="side"> Lesson #5- Doing without your favorite things</p>
+ <p>Make a list of your five favorite things.  They can be things that you own like
+ your CD player; things you like to do, like play soccer; a place you like to be; an
+ animal that you care for; or a person that you love.   Then imagine what it would
+ be like to do without them for the next 27 years of your life, as Nelson Mandela
+ did when he was in prison. Write about how this would be. What would it be like
+ to be without your favorite things?  How would it feel? What would you do to
+ keep a positive attitude in spite of not having these things?  How old would you
+ be when you got your five things back again?  How would you feel on the day
+ when you got them back? Draw an illustration of yourself on that special day, get
+ting your five favorite things back again!  If you want to, try actually going one
+ week without one of your favorite things.  That means you can’t experience that
+ thing for one week. After one week, you can share with the class what it was like
+ and how it felt to be without that  special thing.  Imagine that Nelson Mandela
+ was without all his favorite things not just for one week, but for 1,404 weeks in a
+ row!</p>
+ <p class="side">Lesson 6 - Becoming an active citizen</p>
+ <p> Write a letter to the mayor, a city or county council member, a congres
+sional representative, or the president.  In your letter, express how you feel about
+ any important issue you feel strongly about – whether it be about a global issue
+ such as pollution, poverty, or war; or whether it be about something going on in
+ your community that you care about. If you prefer, you can just write about what
+ you are doing to help your school, your neighborhood, or your community.  In
+ any case, it is very important to communicate with your political leaders. Getting
+ letters from their constituents is the main way that the leaders know what is going
+ on and what people care about. It also reminds the leaders of the important
+ responsibilities they have, to act on behalf of their fellow citizens, whom they
+ represent. It is also important for us, as citizens, to make the effort to let our lead
+ers know how we feel and what is happening in the community.  We can get the
+ names and addresses of the leaders we want to write to from the phone book, or
+ on the computer under the heading of ‘government’.</p>
+ <p class="side"> Discussion Questions:</p>
+ <p> a) In the following quotation, Nelson Mandela talks about an important choice he
+ made in 1961 - for his organization  to take up arms in order to protect itself from
+ the violence of the government. Read the quotation and then discuss whether the
+ use of violence was justified or not in the case of Nelson Mandela and the African
+National Congress in their struggle against the racist South African government.
+ “At the beginning of June 1961, after long and anxious assessment of the South
+ African situation, I and some colleagues came to the conclusion that as violence
+ in this country was inevitable, it would be wrong and unrealistic for African lead
+ers to continue preaching peace and non-violence at a time when the government
+ met our peaceful demands with force.  It was only when all else had failed, when
+ all channels of peaceful protest had been barred to us, that the decision was made
+ to embark on violent forms of political struggle, and to form Umkhonto we Sizwe
+ (our armed wing of soldiers)...the Government had left us no other choice.</p>
+ <p> b) In the early 1950’s, when Nelson Mandela and his best friend, Oliver Tambo,
+ were starting out in their law practice, they saw first-hand how badly their people
+ were being mistreated. Read and discuss the following description of those times
+ written by Nelson’s friend Oliver Tambo:   “To reach our desks each morning
+ Nelson and I ran the gauntlet of patient queues of people overflowing from the
+ chairs in the waiting room into the corridors... To be landless (in South Africa)
+ can be a crime, and weekly we interviewed the delegations of peasants who came
+ to tell us how many generations their families had worked a little piece of land
+ from which they were now being ejected... To live in the wrong area can be a
+ crime... Our buff office files carried thousands of these stories and if, when we
+ started our law partnership, we had not been rebels against apartheid, our experi
+ences in our offices would have remedied the deficiency. We had risen to profes
+sional status in our community, but every case in court, every visit to the prisons
+ to interview clients, reminded us of the humiliation and suffering burning into our
+ people.”</p>
+ <p> c) Choose a quotation from the chapter quotations. Read it carefully and look up
+ any words you do not understand. Write the quotation in your journal. Add any
+ thoughts or special feelings you have about the meaning of this quotation.</p>
+ <p class="side"> Supplemental Activities:</p>
+ <p>
+    <ul>
+  <li>
+    <p>There are three branches of government in the United States – the Executive Branch (the President), the Legislative Branch (the Congress) and the Judicial Branch (the judges and the courts). Each branch is intended to share power with the other two, so that one branch does not become too powerful. This was the idea of the founders of America. Do some research into these three branches of government in order to better understand how they work. Write down the important facts that you discover. Then prepare a short written or oral report for the class about what you learned. If you prefer, you can choose just one of the three branches to focus on instead of researching all three.</p>
+  </li>
+  <li>
+    <p>There are many important vocabulary words in this chapter. Many, but not all, of them appear in italics or in bold letters. Find some of the most important vocabulary words in the chapter and create a word-find, acrostic, crossword, or other word puzzle that you can copy and give to the rest of the class. Another option is to find ten vocabulary words and write them into your journal along with definitions for the words. You can create a spelling and vocabulary quiz for the rest of the class, using your words.</p>
+  </li>
+  <li>
+    <p>During his early years as an ANC activist and leader, Nelson Mandela had to live apart from his family. To make sure he was not caught by one of the government’s many police spies, he had to move from place to place, and to adopt a number of disguises. Sometimes he dressed as a common laborer, at other times as a chauffeur, and as many other characters. The police could not catch him because his disguises were so good. The police called him the Black Pimpernel. Create a drawing of Nelson Mandela disguised as a different character and hiding from the government police.</p>
+  </li>
+  <li>
+    <p>Find and read the United Nations Universal Declaration of Human Rights. Write some of the most important sentences from it into your journal. Then write down your thoughts and feelings about this important document.</p>
+  </li>
+</ul>
+
+ </p>
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter17.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter19.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

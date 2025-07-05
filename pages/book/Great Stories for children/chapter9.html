@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>chapter9</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css"   />
+  <link rel="stylesheet" href="toggle.css"   />
+
+  <link rel="stylesheet" href="annotation_highlight.css" />
+</head>
+
+<body>
+
+  <!-- Dark Mode Toggle -->
+  <input type="checkbox" id="theme-toggle">
+  <label for="theme-toggle" class="toggle"></label>
+
+
+
+  <div id="topControls">
+    <button id="fontStylesToggle">Font Styles</button>
+    <div id="fontStylesDropdown">
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0;">Serif Fonts</h3>
+
+      <button data-font="Georgia Custom">Georgia </button>
+      <button data-font="Elegant Serif">Elegant Serif</button>
+      <button data-font="Classic Lora">Classic Lora</button>
+      <button data-font="Merriweather Serif">Merriweather Serif</button>
+      <button data-font="Source Serif Pro">Source Serif Pro</button>
+      <button data-font="Crimson Text">Crimson Text</button>
+      <button data-font="PT Serif">PT Serif</button>
+      <button data-font="Libre Baskerville">Libre Baskerville</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Sans-Serif
+        Fonts</h3>
+      <button data-font="Modern Sans">Modern Sans</button>
+      <button data-font="Friendly Round">Friendly Round</button>
+      <button data-font="Clean Design">Clean Design</button>
+      <button data-font="Modern Montserrat">Modern Montserrat</button>
+      <button data-font="Lato Sans">Lato Sans</button>
+      <button data-font="Source Sans Pro">Source Sans Pro</button>
+
+      <h3 style="padding: 10px; margin: 0; border-bottom: 1px solid #e0e0e0; border-top: 1px solid #e0e0e0;">Special
+        Fonts</h3>
+      <button data-font="Technical Mono">Technical Mono</button>
+      <button data-font="Handwritten Casual">Handwritten Casual</button>
+    </div>
+    <button id="speakToggle">Speak</button>
+  </div>
+
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="textContainer">
+    <h1 align="center">
+      <p>The Coral Tree</p>
+    </h1>
+    <p>The night had been hot, the rain frequent, and I had been sleeping on the verandah
+instead of in the house. I was in my twenties, had begun to earn a living and felt I
+had certain responsibilities</p>
+<p>In a short time, a tonga would take me to the railway station, and from there a train
+would take me to Bombay, and then a ship would take me to England. There would be
+work, interviews, a job, a different kind of life, so many things that this small bungalow
+of my grandfather would be remembered fitfully, in rare moments of reflection.
+</p>
+<p>When I awoke on the veranda, I saw a grey morning, smelt the rain on the red earth
+and remembered that I had to go away. A girl was standing on the veranda porch,
+looking at me very seriously. When I saw her, I sat up in bed with a start.
+</p>
+<p>She was a small dark girl, her eyes big and black, her pigtails tied up in a bright red
+ribbon, and she was fresh and clean like the rain and the red earth.</p>
+<p>She stood looking at me and was very serious.</p>
+<p>‘Hullo,’ I said, smiling and trying to put her at ease. But the girl was business-like
+and acknowledged my greeting with a brief nod.
+</p>
+<p>‘Can I do anything for you?’ I asked, stretching my limbs. ‘Do you stay nearby?’</p>
+<p>With great assurance she said, ‘Yes, but I can stay on my own.’
+</p>
+<p>‘You’re like me,’ I said, and for a while, forgot about being an old man of twenty. ‘I
+like to be on my own but I’m going away today.’
+</p>
+<p>‘Oh,’ she said, a little breathlessly.</p>
+<p>‘Would you care to go to England?’</p>
+<p>‘I want to go everywhere,’ she said. ‘To America and Africa and Japan and
+Honolulu.’</p>
+<p>‘Maybe you will,’ I said. ‘I’m going everywhere, and no one can stop me… But
+what is it you want, what did you come for?’</p>
+<p>‘I want some flowers but I can’t reach them.’ She waved her hand towards the
+garden, ‘That tree, see?’</p>
+<p>The coral tree stood in front of the house surrounded by pools of water and broken,
+fallen blossoms. The branches of the tree were thick with scarlet, pea-shaped flowers.</p>
+<p>‘All right, just let me get ready.’</p>
+<p>The tree was easy to climb and I made myself comfortable on one of the lower
+branches, smiling down at the serious upturned face of the girl.
+</p>
+<p>‘I’ll throw them down to you,’ I said.
+I bent a branch but the wood was young and green and I had to twist it several times
+before it snapped.
+</p>
+<p>‘I’m not sure I ought to do this,’ I said as I dropped the flowering branch to the girl.
+</p>
+<p>‘Don’t worry,’ she said.
+</p>
+<p>I felt a sudden nostalgic longing for childhood and an urge to remain behind in my
+grandfather’s house with its tangled memories and ghosts of yesteryear. But I was the
+only one left and what could I do except climb tamarind and jackfruit trees?
+</p>
+<p>‘Have you many friends?’ I asked.</p>
+<p>‘Oh yes.’</p>
+<p>‘And who is the best?’</p>
+<p>‘The cook. He lets me stay in the kitchen which is more interesting than the house.
+And I like to watch him cooking. And he gives me things to eat and tells me stories…’
+</p>
+<p>‘And who is your second best friend?’
+</p>
+<p>She inclined her head to one side and thought very hard.</p>
+<p>‘I’ll make you second best,’ she said.</p>
+<p>I sprinkled coral blossoms on her head. ‘That’s very kind of you. I’m happy to be
+second best.’
+</p>
+<p>A tonga bell sounded at the gate and I looked out from the tree and said, ‘It’s come
+for me. I have to go now.’
+</p>
+<p>I climbed down.</p>
+<p>‘Will you help me with my suitcases?’ I asked, as we walked together towards the
+veranda. ‘There’s no one here to help me. I am the last to go. Not because I want to go
+but because I have to.’</p>
+<p>I sat down on the cot and packed a few last things in my suitcase. All the doors of
+the house were locked. On my way to the station, I would leave the keys with the
+caretaker. I had already given instructions to the agent to try and sell the house. There
+was nothing more to be done. We walked in silence to the waiting tonga, thinking and
+wondering about each other. The girl stood at the side of the path, on the damp earth,
+looking at me.
+</p>
+<p>‘Thank you,’ I said, ‘I hope I shall see you again.’</p>
+<p>‘I’ll see you in London,’ she said. ‘Or America or Japan, I want to go everywhere.’</p>
+<p>‘I’m sure you will,’ I said. ‘And perhaps, I’ll come back and we’ll meet again in this
+garden. That would be nice, wouldn’t it?’
+</p>
+<p>She nodded and smiled. We knew it was an important moment. The tonga driver
+spoke to his pony and the carriage set off down the gravel path, rattling a little. The girl
+and I waved to each other. In the girl’s hand was a spring of coral blossom. As she
+waved, the blossoms fell apart and danced lightly in the breeze.
+</p>
+<p>‘Goodbye!’ I called.
+</p>
+<p>‘Goodbye!’ called the girl.</p>
+<p>The ribbon had come loose from her pigtail and lay on the ground with the coral
+blossoms.</p>
+<p>And she was fresh and clean like the rain and the red earth.</p>
+
+     </div>
+
+
+
+  <div class="navigation">
+    <a href="chapter8.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter10.html" class="nav-button next">Next Chapter →</a>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
+
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
+  <script src="visual_element.js"></script>
+  <script src="progress.js"></script>
+  <script src="toggle_script.js"></script>
+
+</body>
+
+</html>

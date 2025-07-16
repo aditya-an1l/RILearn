@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SUMMARY</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F6F9E6;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      gap: 40px;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #e8f5e8, #f0f8ff, #e6f3ff);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .title-section {
+      text-align: left;
+      flex: 1.2;
+    }
+
+    .title-section h1 {
+      font-size: 40px;
+      color: #2c5aa0;
+      margin-bottom: 15px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .title-section .subtitle {
+      font-size: 18px;
+      color: #5a7a5a;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      flex: 0.8;
+    }
+
+    .image-container img {
+      width: 170px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      border: 3px solid rgba(255,255,255,0.8);
+    }
+    
+    .image-container img:hover{
+       transform: scale(1.08) rotate(1deg);
+       box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+    
+    .image-container .author-info{
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+      padding: 18px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .image-container .author-info p {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: #2c5aa0;
+    }
+
+    .summary-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 40px 0 25px 0;
+      text-align: center;
+      color: #2c5aa0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    
+    .summary-title::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, #3498db, #2c5aa0);
+      border-radius: 2px;
+    }
+
+    .chapter-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .summary {
+      flex: 2;
+    }
+
+    .summary h3 {
+      margin-bottom: 8px;
+      font-size: 24px;
+      color: #2c5aa0;
+    }
+
+    .summary p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .concept {
+      flex: 1;
+      background: #fffce0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      
+    }
+
+    .concept h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .concept p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #3498db, transparent);
+      margin: 20px 0;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .title-section h1 {
+        font-size: 32px;
+      }
+      
+      .chapter-section {
+        flex-direction: column;
+      }
+      
+      .summary, .concept {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="title-section">
+    <h1>The Adventures of Sherlock Holmes and Other Stories</h1>
+    <p class="subtitle">A Classic Collection of Detective Mysteries and Brilliant Deductions</p>
+  </div>
+  
+  <div class="image-container">
+    <img src="sherlock.jpg" alt="Book Cover">
+    <div class="author-info">
+      <p><b>Author: </b><span class="author-name"></span>Arthur Conan Doyle</p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="summary-title">SUMMARY</div>
+
+<!-- Chapter Summary and Concept -->
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 1 – A Scandal in Bohemia</h3>
+    <p>
+      In this thrilling opening story, Sherlock Holmes is visited by the King of Bohemia, who is soon to be married. However, his past affair with an opera singer, Irene Adler, threatens to cause a scandal if a photograph of them together is revealed. The King describes Adler as clever, independent, and cunning — a woman who has outmaneuvered many. Holmes sets out to retrieve the photo using a combination of disguises and observation. Disguising himself as a clergyman, Holmes stages a fake fire to locate the hidden photograph. Just when he prepares to retrieve it, Adler, having suspected Holmes's identity, flees the country with her new husband, leaving a letter behind. In it, she promises not to expose the King, as she no longer desires revenge. Holmes is left impressed by her intelligence, forever referring to her respectfully as “the woman.” This case is significant as one of the few where Holmes is outwitted, not by a criminal but by a clever and principled woman.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+ “True intelligence is knowing when to admit defeat with grace.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 2 – The Red-Headed League</h3>
+    <p>
+      Jabez Wilson, a London pawnbroker with striking red hair, brings an unusual mystery to Holmes. He was offered a well-paying, meaningless job copying out the encyclopedia simply because of his red hair, under the employment of the so-called Red-Headed League. After weeks, the League is suddenly dissolved. Holmes, intrigued, visits Wilson’s shop, noting the behavior of his assistant Vincent Spaulding. Through clever deduction, Holmes realizes the job was a ploy to get Wilson out of his shop while criminals dug a tunnel from the cellar to a neighboring bank. On the night of the planned robbery, Holmes, Watson, and the police catch the thieves in the act, revealing Spaulding to be the infamous criminal John Clay. This story exemplifies how even the most bizarre situations can mask dangerous schemes and highlights Holmes’s unique skill in seeing connections others miss.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Behind the most absurd disguises often lies the darkest intent.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 3 – A Case of Identity</h3>
+    <p>
+      Miss Mary Sutherland, a wealthy young woman, is devastated when her fiancé, Hosmer Angel, vanishes on their wedding day. She comes to Holmes for help, describing how Angel was secretive — meeting her only in shadows, refusing to be seen by others, and communicating solely by typewritten letters. Holmes quickly senses deceit and suspects someone close to Mary is behind the incident. Investigating, he concludes that Hosmer Angel was, in fact, Mary’s stepfather, James Windibank, in disguise. Windibank intended to prevent her marriage and maintain access to her inheritance. Holmes exposes the cruel manipulation but, bound by legal limitations and concern for Mary’s fragile state, chooses not to confront her with the truth. This story illustrates Holmes’s sharp insight into human psychology and the lengths to which greed can corrupt.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“People sometimes wear the cruelest masks for selfish love.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 4 – The Boscombe Valley Mystery</h3>
+    <p>
+      Holmes is called to Boscombe Valley to assist in a murder investigation where young James McCarthy stands accused of killing his father, Charles McCarthy, following a public quarrel. Witnesses report heated arguments and suspicious behavior. Holmes carefully examines the scene, noting clues others overlook, such as footprints and a dying man’s cryptic utterance: "a rat." Through these details and clever deduction, Holmes uncovers the past connection between Charles McCarthy and John Turner, a local landowner with a criminal history in Australia. Turner, desperate to prevent McCarthy from forcing his daughter into marriage, murdered him. Turner confesses privately to Holmes, who, in an act of compassion, keeps the confession secret, knowing Turner’s health is failing. This story delves into themes of justice, moral dilemmas, and past sins resurfacing.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“The past, no matter how deeply buried, eventually rises to the surface.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 5 –The Five Orange Pips </h3>
+    <p>
+      John Openshaw seeks Holmes’s help after his uncle and father die under mysterious circumstances following the receipt of envelopes containing five orange pips — symbols of death from an American secret society, the Ku Klux Klan. Now Openshaw receives the same ominous warning. Holmes, connecting the cases and using ship registries, identifies the likely murderers aboard a vessel heading back to America. Tragically, before he can act, Openshaw is found drowned. Holmes vows revenge and sends a warning to the culprits, but fate intervenes as the ship and its crew perish at sea. This grim tale highlights Holmes’s relentless pursuit of justice and the chilling reach of vengeance and secret societies.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+ “A message of doom is powerless before a mind of reason.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 6 – The Man with the Twisted Lip</h3>
+    <p>
+      Neville St. Clair, a respected businessman, vanishes mysteriously, last seen at a seedy opium den in London’s East End. His wife, certain she glimpsed him through a window, finds no trace after the police raid the building. A beggar known as Hugh Boone is arrested. Holmes, examining clues and inconsistencies, suspects Boone’s identity. In a dramatic moment, Holmes washes away Boone’s disguise to reveal Neville St. Clair. St. Clair confesses he led a double life, finding begging far more profitable than his business. The disappearance was an accident when his wife unexpectedly arrived at the den. Holmes agrees to keep the secret for the family’s sake. This case explores themes of duality, deception, and society’s blindness to appearances.
+
+
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Not all who disappear are lost; sometimes they simply choose a different life.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 7 – The Adventure of the Blue Carbuncle</h3>
+    <p>
+      During Christmas, a priceless gem, the Blue Carbuncle, is stolen from a hotel suite. Meanwhile, a man loses a goose and a hat during a street scuffle. Holmes traces the goose’s origin and, upon inspecting it, discovers the missing jewel inside. The trail leads to James Ryder, a hotel attendant who, terrified, confesses to stealing the gem and hiding it in the goose intended for his sister’s dinner. Mistakenly sent to a market, the bird ends up with an innocent man. Given Ryder’s terror and the season of goodwill, Holmes chooses leniency, letting him go to start anew. This heartwarming mystery contrasts human frailty with compassion and celebrates Holmes’s occasional humanity.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Kindness and mercy matter more than cold justice.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 8 – The Adventure of the Speckled Band</h3>
+    <p>
+      Helen Stoner fears for her life after her sister Julia dies mysteriously in a locked room, whispering, “The speckled band.” Their violent stepfather, Dr. Roylott, known for keeping exotic pets, pressures Helen to move into Julia’s old room. Holmes investigates and finds clues suggesting foul play, including a fake bell pull and a ventilator connecting to Roylott’s room. That night, Holmes and Watson stake out Helen’s room. Holmes identifies the murder weapon: a venomous swamp adder trained by Roylott to kill. When he redirects the snake back, it bites and kills Roylott. Holmes reveals the motive was inheritance money and lauds Helen’s bravery. This chilling story highlights greed’s extremes and Holmes’s methodical brilliance.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+ “Greed breeds monsters in human form.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 9 – The Adventure of the Engineer’s Thumb</h3>
+    <p>
+      Victor Hatherley, a young engineer, survives a harrowing experience after being hired to inspect a hydraulic press at night in a secluded house. Realizing the press is used for counterfeiting coins, he attempts escape, only to have his thumb severed. Fleeing through a window, he reaches safety. Holmes investigates, but the criminals escape and destroy the house to erase evidence. The case remains unsolved, though Holmes secures Victor’s safety. This story underscores the dangers faced by the unsuspecting and Holmes’s courage in confronting criminal enterprises.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Courage is standing tall, even when evil threatens to crush you.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 10 – The Adventure of the Noble Bachelor</h3>
+    <p>
+      Lord St. Simon, a nobleman, seeks Holmes’s help when his American bride, Hatty Doran, vanishes on their wedding day. Holmes gathers details and interviews witnesses, learning of a mysterious man seen near the church. His investigation reveals Hatty’s former husband, Frank Moulton, presumed dead in America, had returned. Reunited, Hatty fled with him. Holmes confronts St. Simon with the facts. Though embarrassed, St. Simon gracefully accepts the truth. This case explores love’s defiance against social expectations and Holmes’s skill in disentangling human emotion from logic.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Love cannot be shackled by wealth or titles.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 11 – The Adventure of the Beryl Coronet</h3>
+    <p>
+      Alexander Holder, a banker, entrusts Holmes with a case involving a damaged royal coronet and missing jewels. Holder suspects his son Arthur, found holding the coronet. Holmes investigates, noting behavior and footprints at the scene. He deduces that Mary Holder, Alexander’s niece, conspired with the rogue Sir George Burnwell. Arthur, discovering them, tried to protect his cousin’s honor. Holmes retrieves the missing jewels from Burnwell and restores the family’s reputation, affirming Arthur’s innocence. This story addresses themes of trust, sacrifice, and hidden betrayal.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Trust can be a jewel more precious than any treasure.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 12 –The Adventure of the Copper Beeches </h3>
+    <p>
+      Violet Hunter seeks Holmes’s advice before accepting a job as a governess at Copper Beeches estate, where her employers impose strange conditions — cutting her hair, wearing specific clothes, and sitting by a window. Growing suspicious, Violet discovers a locked room and unsettling behavior. Holmes investigates and uncovers that the family is imprisoning their daughter, Alice, to force her into giving up her inheritance. The family’s plot is exposed, Alice is freed, and Violet escapes safely. This case highlights Holmes’s defense of the vulnerable and his disdain for cruelty disguised as propriety.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+ “Appearances deceive; courage reveals the truth.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+</div>
+</body>
+</html>

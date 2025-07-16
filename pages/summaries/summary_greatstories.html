@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SUMMARY</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F6F9E6;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      gap: 40px;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #e8f5e8, #f0f8ff, #e6f3ff);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .title-section {
+      text-align: left;
+      flex: 1.2;
+    }
+
+    .title-section h1 {
+      font-size: 40px;
+      color: #2c5aa0;
+      margin-bottom: 15px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .title-section .subtitle {
+      font-size: 18px;
+      color: #5a7a5a;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      flex: 0.8;
+    }
+
+    .image-container img {
+      width: 170px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      border: 3px solid rgba(255,255,255,0.8);
+    }
+    
+    .image-container img:hover{
+       transform: scale(1.08) rotate(1deg);
+       box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+    
+    .image-container .author-info{
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+      padding: 18px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .image-container .author-info p {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: #2c5aa0;
+    }
+
+    .summary-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 40px 0 25px 0;
+      text-align: center;
+      color: #2c5aa0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    
+    .summary-title::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, #3498db, #2c5aa0);
+      border-radius: 2px;
+    }
+
+    .chapter-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .summary {
+      flex: 2;
+    }
+
+    .summary h3 {
+      margin-bottom: 8px;
+      font-size: 24px;
+      color: #2c5aa0;
+    }
+
+    .summary p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .concept {
+      flex: 1;
+      background: #fffce0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      
+    }
+
+    .concept h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .concept p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #3498db, transparent);
+      margin: 20px 0;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .title-section h1 {
+        font-size: 32px;
+      }
+      
+      .chapter-section {
+        flex-direction: column;
+      }
+      
+      .summary, .concept {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="title-section">
+    <h1>Great Stories
+for Children</h1>
+    <p class="subtitle">Timeless Tales of Adventure, Friendship, and Wonder from the Hills of India</p>
+  </div>
+  
+  <div class="image-container">
+    <img src="greatstories.jpg" alt="Book Cover">
+    <div class="author-info">
+      <p><b>Authors: </b><span class="author-name">Ruskin Bond</span></p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="summary-title">SUMMARY</div>
+
+<!-- Chapter Summary and Concept -->
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 1 – A Special Tree</h3>
+    <p>"The Cherry Tree"
+Six-year-old Rakesh plants a cherry seed in his grandfather's garden in Mussoorie after eating cherries from Kashmir. Despite facing multiple setbacks - a goat eating its leaves and a woman accidentally cutting it down - the cherry tree persists and grows. Over the years, as Rakesh grows from a small boy to a nine-year-old, the tree also flourishes, eventually producing blossoms and fruit. The story concludes with Rakesh and his grandfather sitting under the mature tree, reflecting on its specialness because they planted it themselves. The tale explores themes of patience, perseverance, and the deep connection between humans and nature.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>“From one small act of care can grow a lifetime of beauty. What you nurture with love and patience, even when forgotten, will one day blossom in ways you never imagined.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 2 – The School Among the Pines</h3>
+    <p>The story follows three children on their journey to a new school in Nauti village. Bina and her younger brother Sonu are making this trek for the first time, guided by their experienced neighbor Prakash, who carries an old watch that loses time but serves as his pride and joy. The children sing traditional songs as they walk through the mountain paths, crossing streams and climbing hills to reach their destination.
+Upon arriving at school, they discover that their teacher Mr. Mani has mysteriously disappeared during his morning walk. Panic spreads through the village with rumors of a leopard attack, but Mr. Mani eventually returns, sheepishly admitting he simply got lost. The children meet Miss Ramola, a young and kind teacher fresh from college, who takes charge of the sixth class while the absent-minded Mr. Mani continues with the fifth grade.
+The story unfolds through the changing seasons, beginning with their early school days in spring. The children encounter real signs of a leopard in the area when they discover the remains of a killed sheep, creating both fear and fascination. Their adventures include a school trip to Tehri to see the massive dam being constructed, which raises questions about the displacement of entire communities and the impact on local wildlife.
+As the monsoon arrives, the children face new challenges. Heavy rains cause landslides that block their usual path to school, forcing them to find alternative routes through the mountains. During one of these detours, they have a heart-stopping encounter with the leopard itself - a magnificent creature that stands in their path before gracefully leaping away into the forest. Later, they discover the leopard is actually a mother with two cubs, trying to survive after being displaced by the dam construction.
+Meanwhile, Mr. Mani battles porcupines that are destroying his potato crop, leading to an elaborate plan by Prakash and his classmates to dig a protective moat around the garden. Though the plan initially floods the area, it successfully keeps the porcupines away. Mr. Mani eventually replaces his potatoes with dahlia bulbs, which bloom magnificently by the end of the season, bringing joy to the entire village.
+The story concludes as the school term ends and the children reflect on their future dreams. Bina wants to become a teacher to educate others about nature, Sonu dreams of becoming a pilot, and Prakash considers becoming a flute player. As they walk home singing their favorite song, the leopard watches them from a distance, representing the possibility of peaceful coexistence between humans and wildlife in the changing mountain landscape. The tale beautifully captures the innocence of childhood, the rhythms of rural life, and the delicate balance between progress and preservation of the natural world.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Even the longest paths become lighter when walked with friends. And though the road may twist through rain, snow, and shadows, every journey teaches us where we belong.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 3 – The Wind on Haunted Hill</h3>
+    <p>Eleven-year-old Usha sets out alone to the bazaar, taking a path through ruins on Haunted Hill that are said to be haunted by the ghosts of two British children who died in a lightning strike over a century ago. After shopping and visiting her aunt, Usha gets caught in a fierce storm and takes shelter in the ruins. During a lightning flash, she sees two small figures by the fireplace and believes they are the ghosts. Terrified, she tries to flee but collides with the figures - only to discover they are her brother Suresh and friend Binya, who had come looking for her. The three children spend the night together in the ruins, no longer afraid. As they leave at dawn, they hear voices saying "goodbye," though it might just be the wind. The story explores themes of fear, friendship, and the power of imagination.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Fear fades when friends are near. Even the darkest nights and loneliest storms feel lighter when hearts hold each other close
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 4 – Romi and the Wildfire</h3>
+    <p>Romi, a high school student, rides his bicycle through a forest to reach his home village, carrying medicine tablets for his sick father. Despite warnings from his friend Prem about a spreading forest fire, Romi decides to take the shortcut through the forest. As he rides, he encounters numerous wild animals fleeing the fire - hares, monkeys, pheasants, deer, and even an elephant blocking the road. Along the way, he picks up young Teju, who was delivering milk and got stranded by the fire. The boys race against time as flames close in around them. When they reach the river that marks safety, they discover the wooden bridge is on fire. Without hesitation, Romi rides the bicycle straight into the river, and they wade across to safety. The story ends with them watching the fire from the safe side of the river, having formed a strong friendship through their shared adventure. The tale showcases courage, quick thinking, and the bond forged through facing danger together.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+        True courage is not the absence of fear, but the will to keep moving — through fire, fear, and flood — when you have someone to walk beside you
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 5 –Tiger My Friend </h3>
+    <p>This is a story about the last tiger in a forest near the Ganges River in India. The tiger, once the king of a jungle that housed 30-40 tigers, now lives alone after hunters killed all the others.
+Two village boys, Nandu and Chottu, tend buffalo herds near the tiger's territory. The tiger initially coexists peacefully with the villagers, but when a forest fire destroys his hunting grounds and drives away his prey, hunger forces him to kill village buffaloes.
+The villagers, led by Kundan Singh (whose buffalo was killed), organize a hunt to drive the tiger away. They beat drums and make noise to force the tiger toward a bridge across the river. During the chase, the tiger falls from the suspension bridge into the river and is swept away.
+The villagers initially feel relieved but then realize something vital has been lost from their forest. However, the tiger survives, washes ashore downstream, and discovers the scent of a tigress. The story ends hopefully as the tigers call to each other across the river, suggesting new life and the continuation of tigers in the land. Young Chottu, hearing the familiar roar, whispers "Let there be tigers forever."</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Even when the world turns against you, if your spirit endures, you will rise again. Where life finds a way, hope roars back to life
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 6 – Monkey Trouble</h3>
+    <p>This is a humorous story about Tutu, a mischievous pet monkey that Grandfather buys from a street entertainer for ten rupees. Despite Grandmother's initial objections, Tutu joins their household and causes constant chaos with her quick fingers and clever antics - she insists on shaking hands with visitors, tries on Aunt Ruby's clothes, uses Uncle Benji's hairbrush, and takes human-like baths. The main adventure occurs during Aunt Ruby's engagement to Rocky, when Tutu steals a pearl necklace from a jewelry shop and leads everyone on a wild chase through the bazaar before throwing it into a canal. She later "helps" prepare the wedding cake by secretly adding chili sauce and eggshells. Though locked up during the wedding ceremony, Tutu escapes and guards the cake from animals, but when Aunt Ruby attacks her in anger, she retreats to a jackfruit tree and pelts the guests with pieces of wedding cake and confetti. The story ends with Tutu secretly hitching a ride on the honeymoon car's rear bumper, still showering confetti, while the family realizes she's unknowingly joined the newlyweds' trip to Mussoorie.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Life’s wildest moments often come from the most unexpected companions — embrace the chaos, for it makes the best memories.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 7 – Snake Trouble</h3>
+    <p>This is a humorous story about a grandfather who buys a python from a snake-charmer in Dehra, much to his family's dismay. The grandmother refuses to keep the snake in the house, especially with Aunt Ruby coming to visit. When they try to return it, the python escapes from the bathroom.
+The python keeps reappearing around the house in unexpected places, particularly frightening Aunt Ruby, who cuts her visit short. The narrator (grandson) learns to handle the snake and accidentally delivers it along with guavas to Major Malik as a birthday surprise, causing quite a shock.
+When the family travels to Lucknow by train, they discover the python has somehow ended up in their food hamper (possibly switched by Major Malik as revenge). The snake escapes on the train, wraps around the engine driver, and grandfather ends up driving the locomotive himself while the narrator shovels coal.
+Upon arrival in Lucknow, Aunt Ruby insists on carrying the hamper, only to faint when she opens it and finds the python inside. The story ends with the snake being placed in the garden, and the family never seeing it again.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Life may throw unexpected surprises your way — whether it’s a python in your picnic basket or a detour in your plans. Meet them with good humour, courage, and a little mischief.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 8 – Those Three Bears</h3>
+    <p>This story recounts the author's encounters with Himalayan bears in mountain villages. These bears descend from higher altitudes in winter to forage for food, often raiding villages for pumpkins, corn, and fruit. The author describes three memorable encounters: first, being awakened by a bear stealing pumpkins from a roof where they were drying; second, observing a curious young bear cub who tried to hide by lying flat on a tree branch and playing an amusing game of peek-a-boo before tumbling from the tree when startled; and third, watching a female bear cautiously approach a cornfield at night, initially suspicious of prayer flags but eventually pulling them down before being scared away by his friend Prem and his children banging on kerosene tins. The story emphasizes that while these shortsighted bears can be dangerous when surprised, they generally avoid humans, and includes the local wisdom of running downhill if chased since bears find it easier to run uphill.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Nature is full of wonders — and while its creatures may be wild, they live by their instincts, not malice. Watch them with respect, meet them with wisdom, and always leave them the freedom they deserve.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 9 – The Coral Tree</h3>
+    <p>This poignant story captures a brief but meaningful encounter on the morning of the narrator's departure from India. The narrator, a young man in his twenties, is leaving his grandfather's bungalow to travel to England for work, representing a significant life transition. On his final morning, while sleeping on the veranda after a hot, rainy night, he meets a small, serious girl with black eyes and pigtails tied with a bright red ribbon. She asks him to help her pick flowers from a coral tree that she cannot reach. As he climbs the tree and drops the scarlet blossoms to her, they engage in a touching conversation about travel and friendship, with the girl expressing her desire to visit everywhere - America, Africa, Japan, and Honolulu. She makes him her "second best friend" after the cook. When the tonga arrives to take him to the railway station, they part with promises to meet again, perhaps in London or back in the same garden. The story ends with the girl waving goodbye, the coral blossoms falling from her hand and dancing in the breeze, her ribbon loose on the ground, symbolizing the fleeting nature of their encounter and the bittersweet moment of departure from childhood innocence and familiar places.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Some people pass through our lives like rain on thirsty earth — leaving behind memories that bloom long after they’re gone
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 10 –The Thief’s Story </h3>
+    <p>This is a touching story about redemption and the power of trust and education. The narrator, a 15-year-old experienced thief who goes by the false name Hari Singh, targets Romi, a 25-year-old struggling writer who seems kind and trusting. Initially planning to rob him, the boy instead finds himself working as Romi's cook and assistant, despite being terrible at cooking. Romi doesn't pay him a salary but teaches him to read, write, and do arithmetic, recognizing the transformative power of education.
+When Romi receives 700 rupees for selling a book, the temptation becomes too great for the boy, who steals the money and heads to the railway station to catch a train to Lucknow. However, he hesitates and misses the train, spending a cold, rainy night on the platform reflecting on his actions. He realizes that Romi's reaction to the theft would show not anger but sadness over the loss of trust, and that learning to read and write could bring him far more than any amount of stolen money.
+The boy returns before dawn and carefully replaces the money under Romi's mattress. The next morning, Romi gives him a 50-rupee note as his first regular salary, and the boy notices it's still damp from the rain, indicating that Romi knows what happened but chooses not to confront him. Instead, Romi simply says they'll start writing sentences that day. The story ends with the boy's genuine smile, suggesting his transformation from thief to someone genuinely grateful for the opportunity to learn and grow.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Some people steal hearts instead of wealth — and in their quiet kindness, offer us a chance to become better than we were.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 11 – When the Trees Walked</h3>
+    <p>This is a heartwarming story about the narrator's grandfather, a retired forest officer who lived in Dehradun and was passionate about planting trees. The story begins with a tender scene where the narrator notices a vine tendril slowly moving toward his grandfather as they sit on the veranda, suggesting the natural world's affinity for this tree-loving man.
+Grandfather had built a bungalow surrounded by various trees - lime, mango, orange, guava, eucalyptus, jacaranda, and Persian lilacs. He refused to cut down an old peepul tree that had grown through an abandoned outhouse, saying they could always build another outhouse instead. While grandmother preferred flowers, grandfather helped her garden mainly to attract butterflies for his enjoyment.
+Beyond his own compound, grandfather would venture into the jungle during monsoons to plant saplings and cuttings, explaining to his grandson that they weren't planting for human appreciation but for the forest ecosystem - to provide food and shelter for animals and birds, and to prevent desertification. He taught the boy that trees are essential for attracting rain, preventing erosion, and sustaining life, warning that without replacing cut trees, the world would become a great desert.
+Together, they discovered a small rocky island in a dry riverbed where a lone mango tree grew. They planted tamarind, laburnum, and coral tree saplings there, turning it into their special project. Grandfather would tell stories about how trees once walked like people before being rooted by a spell, and how they still try to move by reaching out with their branches.
+The war separated the family - the narrator went to boarding school, then to Delhi, while his grandparents sold the house and moved to England. Years later, when the narrator returned to Dehradun as an adult, he revisited the riverbed island and found it transformed into a small green paradise filled with red coral blossoms. The original trees had thrived and multiplied, creating habitat for squirrels and birds, with wild plants and grasses growing under their protection. The trees seemed to recognize him, and he realized that grandfather's dream had come true - the trees were "walking again," spreading and creating new life in their corner of the world.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>A man doesn’t plant a tree for himself. He plants it for posterity
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 12 – Goodbye, Miss Mackenzie</h3>
+    <p>This is a touching story about Miss Mackenzie, an elderly British woman living alone in an Indian hill station cottage. She befriends a young Indian schoolboy named Anil who shares her love of flowers and botany. Over several weeks, she mentors him, teaching him about local flora and eventually giving him her precious botanical book, "Flora Himaliensis," as a parting gift when school closes.
+During the harsh winter that follows, Miss Mackenzie grows increasingly frail and cold in her cottage. After her hot-water bottle bursts and a storm blows her window open, she becomes too weak to care for herself. She dies peacefully in her bed, with only her cat for company. The story ends poetically, suggesting she has gone to the high mountain where the rare flowers she always wanted to see actually grow.
+It's a gentle tale about loneliness, intergenerational friendship, and finding meaning through shared passions, set against the backdrop of colonial India.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Some people, like flowers, leave their fragrance behind long after they're gone
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 13 – Pret in the House</h3>
+    <p>This is a humorous story about a mischievous ghost (pret) that forces a family to move houses. The ghost originally lived peacefully in a peepul tree, causing minor trouble for passersby - frightening ponies, breaking down vehicles, and knocking off hats. However, when the Public Works Department cuts down the tree to widen the road, the displaced ghost moves into the family's bungalow.
+The ghost begins tormenting the household with escalating pranks: hiding Grandmother's spectacles, cutting Grandfather's sweet-peas, pulling Uncle Ken's bedclothes off at night, and causing various mishaps like falling vases and pictures. When Aunt Minnie visits, the ghost particularly targets her, switching her toothpaste with shaving cream and hurling a grapefruit at her nose.
+Fed up with the chaos, Grandmother decides they must move to a new house. The family packs up and leaves, thinking they've escaped their supernatural tormentor. However, as they drive away, they hear the ghost chuckling on the car roof, excitedly talking about the new house and all the fun it plans to have there.
+The story ends with the realization that the ghost has followed them, suggesting their troubles are far from over. It's a delightful tale that combines Indian folklore with family comedy.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>"Let’s go, let’s go! A new house. I can’t wait to see it. What fun we’re going to have!"
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 14 – The Overcoat</h3>
+    <p>This is a haunting ghost story set in an Indian hill station during winter. The narrator reluctantly walks to a Christmas party and encounters a beautiful young woman named Julie on the moonlit road. She's dressed in an old-fashioned sequined dress and accompanies him to the party, where she dances and mingles though no one knows her.
+When leaving near midnight, the narrator gives Julie his overcoat to protect her from the cold as she takes a shortcut home to "Wolfsburn." The next day, he finds Wolfsburn is just a roofless ruin. Mrs. Taylor tells him a girl named Julie Mackinnon lived there but died of consumption over forty years ago, and the house was abandoned after her death.
+At the cemetery, the narrator finds Julie's grave (1923-39) and discovers his overcoat neatly folded behind the headstone. As he prepares to leave, he feels something soft brush his cheek - Julie's way of thanking him for his kindness to a lonely spirit who just wanted to enjoy one more party and human companionship.
+It's a gentle, melancholy tale about a brief encounter with a ghost seeking connection and warmth.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Some people leave so quietly, yet their presence lingers in the kindness we remember, and in the warmth they leave behind.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 15 – The Tunnel</h3>
+    <p>This is a story about a young boy named Suraj who becomes fascinated with watching trains emerge from a jungle tunnel. He befriends Sunder Singh, an elderly railway watchman who lives in a hut near the tunnel and considers both the tunnel and a local leopard as "his own."
+When Suraj returns one evening to watch the night train, they discover the leopard has wandered into the tunnel just before the train is due to arrive. Despite the danger, Sunder Singh and Suraj bravely enter the tunnel with a lamp and successfully scare the leopard away, saving its life.
+The story ends a week later when Suraj is traveling on that same night train with his father, and he spots Sunder Singh's lamp glowing in the darkness as they pass through the tunnel - a small light that serves as a beacon for both trains and the creatures of the jungle.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Even in the deepest darkness, there is always someone holding up a light—for trains, for leopards, and for us.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 16 – Wild Fruit</h3>
+    <p>This is a poignant story about a poor village boy named Vijay who walks four miles to school each day through the hills near Mussoorie. Coming from a family that barely grows enough food to survive, Vijay often goes hungry during the long school days and sustains himself by foraging wild fruits along his route - berries, strawberries, cherries, and rhododendron flowers.
+The story focuses on a November day when no wild fruit is available. As Vijay walks through the bazaar, he's tormented by the sight and smell of fruit stalls and sweet shops he can't afford. A well-dressed boy appears, taunting him by eating sweets and seemingly offering to share, but always pulling away. Eventually, the boy leaves a bag of sweets on a bench and walks away with an inviting smile.
+Vijay takes the bag and hurries home, only to discover that the colorful wrappers contain stones instead of sweets - a cruel trick by the wealthy boy. The story ends with Vijay angrily throwing the stones down the hillside and continuing his lonely walk home, emphasizing the harsh reality that "there is no wild fruit in November" for those who have so little.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Life’s sweetest moments are found not in grand things, but in the wild fruits we gather along quiet paths.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 17 – The Night the Roof Blew Off</h3>
+    <p>This is a vivid account of a fierce storm that struck the narrator's century-old home in the Himalayas near Mussoorie. The narrator, living on the upper floor with his three grandchildren and their parents, describes how their traditional corrugated tin roof finally gave way after withstanding many storms over the years.
+The story unfolds dramatically as the wind builds to an "eerie wail" and eventually rips off sections of the roof and ceiling. When icy water begins pouring onto the narrator's typewriter and bed, the family springs into action with young Dolly's rallying cry: "Save the books!"
+The family works together through the night, moving books, papers, and belongings to safety while dealing with flooding, electrical hazards, and even a field rat seeking shelter. They huddle together in the children's room as the storm continues, with water cascading through their floor to the neighbors below.
+The story concludes beautifully as morning brings snow drifting through the damaged ceiling, creating an almost magical scene where ordinary objects become beautiful under their white coating. The family successfully saves their books and possessions, and by evening they've rebuilt an improved roof. The narrator ends on an optimistic note, looking forward to facing future storms with confidence.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Even when the storm tears through your world, it leaves behind stories worth laughing about.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 18 –A Traveller’s Tale </h3>
+    <p>This is a captivating ghost story about the author's visit to Gopalpur-on-sea, a seaside resort in Orissa that he had dreamed of visiting since boyhood. At 76, he finally gets the chance to stay at an old PWD rest house that was once the residence of a British port commissioner named Mr. Robbins.
+During his first night there, the author is awakened by tapping on his window. When he opens the door, he encounters a tall, dignified man in white uniform who silently enters, tidies his room, arranges his clothes, and brings him water before disappearing into the night without a word.
+The next morning, the caretaker and gardener explain that this was the ghost of Hazoor Ali, the devoted personal servant of the former British resident. Ali had died years ago but occasionally returns to care for guests, particularly those who remind him of his old master. He's benevolent, appearing only to help - even warning of approaching cyclones.
+The story takes an intriguing turn when the author returns home to the hills and discovers his passport is missing. During another cold, windy night, Hazoor Ali appears again at his home, tidying his room and organizing his belongings. When the ghost leaves his travel bag on the floor rather than putting it away, the author discovers his passport has fallen from the bag's front pocket - suggesting Ali had traveled hundreds of miles to return what was lost.
+The tale beautifully blends supernatural elements with themes of devotion, service, and the lingering connections between people across time and death.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Some strangers cross our path for a brief moment, leaving footprints on our hearts we can’t explain, only remember.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 19 – And Now We are Twelve</h3>
+    <p>This is a deeply personal and charming memoir chapter where Ruskin Bond reflects on his nearly 40 years living in Mussoorie and how he transformed from a solitary bachelor writer into the beloved patriarch of an extended family of twelve.
+The story begins in 1970 when Prem came to work with Bond, soon followed by his wife and first child, Rakesh. Bond describes the immediate connection he felt with baby Rakesh and their idyllic early years at Maplewood cottage, surrounded by friendly squirrels and the natural beauty of the hills. However, tragedy struck when Prem's second son, Suresh, died of tetanus at just over a year old, devastating the family.
+Bond also faced his own crisis during this period - a criminal trial in Bombay over a controversial story he'd written. The ordeal lasted over a year before he was acquitted, but it taught him to avoid provocative writing and focus on meaningful storytelling.
+The family moved several times - from Maplewood (destroyed by road construction) to upper Landour (among eccentric neighbors including retired military officers constantly seeking his help with their memoirs), and finally to Ivy Cottage in 1980, where they've remained happily ever since.
+Bond describes watching the family grow through marriages and births, now including three generations. He reflects on how this domestic chaos, far from hindering his writing, has actually enhanced his creativity. The memoir ends with a delightful scene of him trying to write while surrounded by energetic grandchildren, concluding with planting a chestnut with young Gautam - symbolizing the continuity of life and family bonds across generations.
+The piece beautifully captures Bond's contentment with his unconventional family life and his philosophy that a writer needs engagement with life's messiness, not perfect peace and quiet.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>Growing up isn't marked by birthdays alone, but by the quiet, unnoticed ways we begin to carry our own weight in the world.
+</p>
+  </div>
+</div>
+
+
+
+<hr class="divider">
+
+
+
+
+</div>
+
+</body>
+</html>

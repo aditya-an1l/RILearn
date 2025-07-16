@@ -7,7 +7,7 @@
 
 <div align="center"> <h3> ✨ Reinventing Learning through Interactive Learning ✨</h3> </div>
 
-**RILEARN** is an innovative online platform and app designed to transform the way we read e-books. By making the reading process more interactive and immersive, we aim to enhance user engagement and learning efficiency.
+**RILEARN** is an innovative online applications designed to transform the way we read e-books. By making the reading process more interactive and immersive, we aim to enhance user engagement and learning efficiency.
 
 ## 🎯 Mission
 
@@ -100,7 +100,8 @@ Our team is a powerhouse of talent, each member contributing uniquely to build a
       🔗 <a href="https://github.com/aditya-an1l" target="_blank">GitHub
 
 🧑‍💼 <a href="https://www.linkedin.com/in/aditya-an1l/" target="_blank">LinkedIn</a>
-    </td>
+</td>
+
   </tr>
   <tr>
     <td align="center" valign="middle" width="120">
@@ -115,6 +116,7 @@ Our team is a powerhouse of talent, each member contributing uniquely to build a
       🔗 <a href="https://github.com/asritha-chikkala" target="_blank">GitHub</a>
 
 👩‍💼 <a href="https://www.linkedin.com/in/asritha-chikkala-300397336/" target="_blank">LinkedIn</a>
+
 </td>
 
   </tr>
@@ -130,6 +132,7 @@ Our team is a powerhouse of talent, each member contributing uniquely to build a
       🔗 <a href="https://github.com/hasini-1" target="_blank">GitHub</a>
 
 👩‍💼 <a href="https://www.linkedin.com/in/bala-sri-hasini-koppuravuri-483327338/" target="_blank">LinkedIn</a>
+
 </td>
 
   </tr>
@@ -146,6 +149,7 @@ Our team is a powerhouse of talent, each member contributing uniquely to build a
       🔗 <a href="https://github.com/StrikerSam-Ai" target="_blank">GitHub</a>
 
 🧑‍💼 <a href="https://www.linkedin.com/in/sam140706/" target="_blank">LinkedIn</a>
+
 </td>
 
   </tr>

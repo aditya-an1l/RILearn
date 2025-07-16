@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SUMMARY</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F6F9E6;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      gap: 40px;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #e8f5e8, #f0f8ff, #e6f3ff);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .title-section {
+      text-align: left;
+      flex: 1.2;
+    }
+
+    .title-section h1 {
+      font-size: 40px;
+      color: #2c5aa0;
+      margin-bottom: 15px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .title-section .subtitle {
+      font-size: 18px;
+      color: #5a7a5a;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      flex: 0.8;
+    }
+
+    .image-container img {
+      width: 170px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      border: 3px solid rgba(255,255,255,0.8);
+    }
+    
+    .image-container img:hover{
+       transform: scale(1.08) rotate(1deg);
+       box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+    
+    .image-container .author-info{
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+      padding: 18px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .image-container .author-info p {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: #2c5aa0;
+    }
+
+    .summary-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 40px 0 25px 0;
+      text-align: center;
+      color: #2c5aa0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    
+    .summary-title::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, #3498db, #2c5aa0);
+      border-radius: 2px;
+    }
+
+    .chapter-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .summary {
+      flex: 2;
+    }
+
+    .summary h3 {
+      margin-bottom: 8px;
+      font-size: 24px;
+      color: #2c5aa0;
+    }
+
+    .summary p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .concept {
+      flex: 1;
+      background: #fffce0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      
+    }
+
+    .concept h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .concept p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #3498db, transparent);
+      margin: 20px 0;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .title-section h1 {
+        font-size: 32px;
+      }
+      
+      .chapter-section {
+        flex-direction: column;
+      }
+      
+      .summary, .concept {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="title-section">
+    <h1>THE BLUE UMBRELLA</h1>
+    <p class="subtitle">A Heartwarming Tale of Innocence and Generosity</p>
+  </div>
+  
+  <div class="image-container">
+    <img src="TheBlueUmbrella.jpg" alt="Book Cover">
+    <div class="author-info">
+      <p><b>Author: </b><span class="author-name">Ruskin Bond</span></p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="summary-title">SUMMARY</div>
+
+<!-- Chapter Summary and Concept -->
+<div class="chapter-section">
+  <div class="summary">
+    <h3>One</h3>
+    <p>This story follows Binya, a sturdy mountain girl of about ten who lives in the Garhwal region of the Himalayas with her mother and older brother Bijju. She makes her living tending to two cows named Neelu (Blue) and Gori (Fair One) on their small terraced farm.
+While searching for her wandering cows in the forest, Binya comes across a group of tourists from the plains having a picnic. She becomes enchanted by a beautiful, small blue umbrella belonging to one of the women - unlike anything she's ever seen before. The umbrella captivates her completely.
+The tourists notice Binya and, seeing her worn clothes, offer her food. However, they become interested in her necklace, which has a leopard's claw pendant (a lucky charm). The man's wife desperately wants the necklace and her husband offers Binya money for it, but Binya refuses.
+When asked what she wants in exchange, Binya points to the blue umbrella. After some argument between the couple, the woman impulsively offers to trade her umbrella for Binya's precious necklace. Binya accepts the trade, giving up her lucky charm for the beautiful blue umbrella, which fits her perfectly. She then disappears back into the forest with her new treasure.
+The story captures themes of desire, cultural differences between rural and urban India, and a young girl's innocent fascination with something beautiful and new.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+"It's not the riches you possess, but the simple things that make your heart flutter, that hold the true magic of life."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Two</h3>
+    <p>Binya becomes obsessed with her blue umbrella, keeping it open constantly and carrying it everywhere, making her a local sensation. Ram Bharosa, the tea shop owner, tries to buy it from her for up to twelve rupees, but she refuses.
+One day while napping under a tree, a playful wind catches her umbrella and carries it in a dangerous game of chase down a steep hillside. The umbrella finally blows over a cliff edge and gets stuck in a wild cherry tree growing from the cliff face, suspended over a deep ravine.
+Without hesitation, Binya climbs down the treacherous cliff and crawls along the horizontal tree trunk to retrieve her umbrella, despite being eighty feet above jagged rocks. She successfully recovers it, though it's now torn, and emerges from the nettle-filled ravine below, triumphant despite being covered in stings. Her determination to save her beloved umbrella overcomes all dangers. </p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p> "When your heart truly desires something, even the fiercest winds and deepest valleys cannot hold you back." </p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Three</h3>
+    <p>The story reveals that Bijju had been stung by bees years ago and is now immune to bee stings. On his way home from school, he stops at Ram Bharosa's tea shop but refuses credit, knowing the shopkeeper tricks children into debt to acquire their possessions - Ram Bharosa particularly wants Binya's umbrella.
+Bijju meets Binya with the cows and shares wild berries with her. In return, she lets him carry the umbrella home. The villagers are envious of Binya's unique umbrella - the schoolmaster's wife feels it's unfair that a poor girl has such a fine umbrella while she has only a plain black one. Adults criticize the umbrella, claiming it's impractical, while secretly admiring it. Children openly praise it and hope Binya will let them hold it briefly.
+When the monsoon arrives, Binya eagerly waits for rain to test her umbrella. During a heavy cloudburst, while everyone else runs for shelter, Binya stands alone on the hillside under her umbrella, finally experiencing what she'd been waiting for. Though it's not designed for heavy rain, the umbrella holds up well. Bijju joins her from a cave where he was protecting his school books, and they share the umbrella walking home through the downpour, with their mother calling for them to hurry and bring in the cows.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p> "Happiness isn't about having what others admire — it's about treasuring what makes your own heart dance in the rain."</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Four </h3>
+    <p>During the monsoon season, the hills become lush and green but filled with leeches, displaced animals, and snakes. When Binya encounters a venomous black snake that rears up to strike her, she uses her umbrella as a shield - the snake's head strikes the silk twice before retreating. This incident saves her life and proves the umbrella's unexpected usefulness.
+The constant sun and rain are causing the umbrella to fade from bright blue to light blue, but it remains tough and beautiful. Ram Bharosa's obsession with owning the umbrella intensifies - he sees it daily and his desire grows stronger, though he acknowledges it's no longer worth what he originally offered.
+Ram Bharosa employs Rajaram, a boy from another village, to help in his shop during the school holidays (Bijju is too busy with farm work and milk deliveries). When Rajaram notices his employer's distress over the umbrella, Ram Bharosa explains his deep longing for its beauty, comparing it to wanting a poppy or rainbow - he desires to possess its beauty for his soul's sake.
+Rajaram, recognizing an opportunity, offers to steal the umbrella for Ram Bharosa. After some haggling and moral hand-wringing, Ram Bharosa agrees to pay three rupees for the theft, though he worries about how he'll be able to display it publicly once it's stolen. Rajaram suggests he could have it dyed red to disguise it. The conspiracy between the shopkeeper and his employee is set in motion.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>"The heart often longs not for what it needs — but for what beauty alone awakens in the soul."</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Five</h3>
+    <p>Binya is searching for porcupine quills in the forest glade where she first saw the umbrella. The quills are valuable - Ram Bharosa buys them for a tenth of a rupee each and sells them to traders from southern India for a full rupee. While absorbed in her search, Binya sets her umbrella aside.
+Rajaram, who has been secretly following and watching her, seizes his chance. He grabs the umbrella and runs, but his heavy footsteps alert Binya, who sees him escaping and gives chase. Though Rajaram has longer legs, Binya is swift and gains ground by taking shortcuts down the steep hillside while he sticks to the path.
+Bijju appears on the scene carrying firewood and sees his sister in frantic pursuit. When Binya explains someone stole her umbrella, Bijju drops his bundle and joins the chase. Being fresh and strong, he quickly overtakes both Binya and the thief.
+At the stream, Bijju tackles Rajaram, bringing him down in the water. During their fierce struggle, the umbrella falls and begins floating away on the current. Binya arrives and dashes into the stream to rescue it while the boys continue fighting violently in the shallows, disturbing all the local birds with their splashing and thrashing.
+After five minutes of intense combat, Bijju emerges victorious, pinning the exhausted Rajaram to the sand. Under interrogation, Rajaram reveals the truth - Ram Bharosa ordered him to steal the umbrella and threatened to fire him if he didn't comply. The conspiracy between the shopkeeper and his employee is exposed.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>"When you chase what isn't yours, you lose more than you gain — but courage and loyalty always run faster than greed."</p>
+</div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Six</h3>
+    <p>By October, the monsoon ends and the umbrella has faded to pale milky blue with several patches, but remains the village's prettiest. However, Ram Bharosa's life has become miserable - since his theft attempt became known, villagers have boycotted his shop, calling him "Trusty Umbrella Thief" instead of "Ram the Trustworthy." His business is ruined, he's alone, and he's dismissed Rajaram to save money.
+While Bijju whistles carelessly past the shop, Binya feels guilty and closes her umbrella when passing, sensing she's somehow responsible for the old man's misery. She questions whether she loved the umbrella too much, caring more about it than people.
+One day, Binya buys a toffee from Ram Bharosa - his first customer in two weeks. She accidentally leaves her umbrella on the counter and walks away. Ram Bharosa finds it and realizes he finally has the umbrella he's always wanted within his grasp. He could easily keep it and claim she forgot it.
+He opens the umbrella and stands under it in his dark shop, but realizes the futility: "Of what use is an umbrella to me?" - he's never in sun or rain. In a moment of redemption, he runs after Binya to return it.
+But Binya surprises him by refusing to take it back, saying "you keep it. I don't need it any more." When he protests that it's the prettiest umbrella in the village, she responds, "I know. But an umbrella isn't everything."
+The story ends with Binya walking away free under the bright blue sky, having learned that relationships matter more than possessions, while Ram Bharosa is left holding the umbrella he had so desperately wanted.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+ "When you let go of what you clung to, you make room for peace — because no treasure shines brighter than a clear, open heart."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Seven</h3>
+    <p>Ram Bharosa now proudly displays the blue umbrella as a gift from Binya, using it when he ventures outside, which has improved his health. The umbrella sits open outside his shop for anyone to borrow, making it "everyone's umbrella." His business has recovered and he treats Bijju and Binya kindly when they visit.
+A hungry bear from the snow-covered mountains raids his shop for a pumpkin and leaves behind a claw. Ram Bharosa takes the claw to a silversmith who creates a beautiful silver pendant with a chain for ten rupees.
+When Binya passes his shop one evening (she must return home earlier now due to a dangerous leopard), Ram Bharosa shows her the bear claw pendant. Explaining that a bear's claw is even luckier than a leopard's claw, he gives it to her as a gift in return for the umbrella she gave him.
+The pendant looks beautiful on Binya, and Ram Bharosa treasures the grateful smile she gives him. As she walks home, calling for her cows Neelu and Gori, she begins singing. Her family hears her voice and knows she's safe. The story ends poetically with Binya singing of the stars as she walks through the darkening forest, with the trees listening and the mountains rejoicing.
+The story concludes with themes of generosity, community, and the restoration of harmony between people and nature.</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p> "When hearts forgive and hands give, life weaves little miracles in its own quiet way."</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SUMMARY</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F6F9E6;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      gap: 40px;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #e8f5e8, #f0f8ff, #e6f3ff);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .title-section {
+      text-align: left;
+      flex: 1.2;
+    }
+
+    .title-section h1 {
+      font-size: 40px;
+      color: #2c5aa0;
+      margin-bottom: 15px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .title-section .subtitle {
+      font-size: 18px;
+      color: #5a7a5a;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      flex: 0.8;
+    }
+
+    .image-container img {
+      width: 170px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      border: 3px solid rgba(255,255,255,0.8);
+    }
+    
+    .image-container img:hover{
+       transform: scale(1.08) rotate(1deg);
+       box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+    
+    .image-container .author-info{
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+      padding: 18px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .image-container .author-info p {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: #2c5aa0;
+    }
+
+    .summary-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 40px 0 25px 0;
+      text-align: center;
+      color: #2c5aa0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    
+    .summary-title::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, #3498db, #2c5aa0);
+      border-radius: 2px;
+    }
+
+    .chapter-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .summary {
+      flex: 2;
+    }
+
+    .summary h3 {
+      margin-bottom: 8px;
+      font-size: 24px;
+      color: #2c5aa0;
+    }
+
+    .summary p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .concept {
+      flex: 1;
+      background: #fffce0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      
+    }
+
+    .concept h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .concept p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #3498db, transparent);
+      margin: 20px 0;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .title-section h1 {
+        font-size: 32px;
+      }
+      
+      .chapter-section {
+        flex-direction: column;
+      }
+      
+      .summary, .concept {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="title-section">
+    <h1>ANIMAL FARM</h1>
+    <p class="subtitle">A Fable of Power, Corruption, and the Betrayal of Ideals</p>
+  </div>
+  
+  <div class="image-container">
+    <img src="animalfarm.jpg" alt="Book Cover">
+    <div class="author-info">
+      <p><b>Author: </b><span class="author-name">George Orwell</span></p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="summary-title">SUMMARY</div>
+
+<!-- Chapter Summary and Concept -->
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 1  </h3>
+    <p>This is the opening chapter of George Orwell's "Animal Farm," which establishes the foundation for the animals' rebellion against their human oppressors. The story begins on Manor Farm where the drunken farmer Mr. Jones goes to bed, allowing the farm animals to gather secretly in the barn to hear a speech from Old Major, a wise and respected prize boar. Major delivers a passionate address to the assembled animals—including horses Boxer and Clover, dogs, pigs, sheep, and others—declaring that their lives are miserable and short because humans exploit their labor while giving them only the bare minimum to survive. He argues that Man is their only true enemy, consuming without producing, and calls for rebellion against human tyranny. Major outlines principles for the animals to follow: that all creatures who walk on two legs are enemies, those on four legs or with wings are friends, and that animals must never adopt human vices like living in houses, wearing clothes, or drinking alcohol. He concludes by teaching them an inspirational song called "Beasts of England" that envisions a future where animals are free from human oppression, and the animals sing it with such enthusiasm that they wake Mr. Jones, who fires his gun and disperses the meeting.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>"Dreams of freedom are born when voices dare to rise in the dark."
+
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 2 </h3>
+    <p>This chapter depicts the successful animal rebellion and the immediate establishment of Animal Farm's new order. After Old Major's death, three intelligent pigs—Napoleon, Snowball, and Squealer—develop his teachings into a philosophy called Animalism and secretly educate the other animals, despite resistance from some like Mollie (who worries about sugar and ribbons) and Moses the raven (who preaches about a mythical afterlife called Sugarcandy Mountain). The rebellion happens spontaneously when the neglectful, alcoholic Mr. Jones fails to feed the animals for a day, prompting them to break into the food store, which leads to a confrontation where the hungry animals drive Jones and his men off the farm. In their euphoria, the animals destroy all symbols of human oppression—whips, chains, ribbons—and rename the property Animal Farm, with the pigs writing the Seven Commandments of Animalism on the barn wall (prohibiting human behaviors like wearing clothes, sleeping in beds, drinking alcohol, and declaring all animals equal). However, the chapter ends with an ominous sign of future corruption when Napoleon secretly appropriates all the milk for the pigs while the other animals are working in the hayfield, foreshadowing the gradual betrayal of the revolution's egalitarian ideals.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+"Revolutions begin with unity, but only endure through wisdom."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 3  </h3>
+    <p>This chapter from George Orwell's "Animal Farm" depicts the animals' first harvest season after their rebellion against the human farmer Jones. The animals work together with remarkable success, completing the harvest two days faster than Jones and his men ever managed, with the pigs providing supervision while the other animals do the physical labor. Boxer the horse emerges as the farm's most dedicated worker, adopting the motto "I will work harder!" and volunteering for extra duties. The animals establish new routines including Sunday meetings where they debate resolutions (though Snowball and Napoleon always oppose each other), and they attempt various educational initiatives with mixed results - while most animals achieve basic literacy, many struggle beyond learning a few letters. The passage concludes with the pigs beginning to claim special privileges, taking all the milk and apples for themselves under the justification that as "brainworkers," they need these foods to maintain their health and prevent Jones from returning. This early scene establishes the patterns of inequality and manipulation that will define the pigs' gradual corruption of the revolution's ideals.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+"A society is only as strong as the honesty of those who lead it."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 4  </h3>
+    <p>This chapter from "Animal Farm" depicts the spread of revolutionary fervor and the first counterattack against the animals' rebellion. News of Animal Farm's success spreads throughout the countryside via pigeons sent by Snowball and Napoleon, inspiring unrest among animals on other farms who begin singing "Beasts of England" and acting rebelliously against their human masters. Meanwhile, the displaced Mr. Jones spends his time drinking and complaining at the local pub, while neighboring farmers Mr. Pilkington of Foxwood and Mr. Frederick of Pinchfield initially dismiss the rebellion as doomed to failure, then spread malicious rumors about cannibalism and torture when the farm continues to thrive. In October, Jones leads an armed group of men from both neighboring farms in an attempt to recapture his property, but Snowball, having studied military tactics from Julius Caesar's campaigns, orchestrates a brilliant defensive strategy that lures the humans into the farmyard where they are ambushed and routed in what becomes known as the Battle of the Cowshed. The victory comes at a cost - a sheep is killed and Boxer accidentally strikes down a stable boy (though the boy survives), causing the gentle horse great distress despite Snowball's callous dismissal of human life. The animals celebrate by creating military decorations, establishing annual commemorations, and positioning Jones's captured gun as a monument to their triumph.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+"Courage is not in strength alone, but in standing together when it matters most."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 5  </h3>
+    <p>This excerpt from George Orwell's "Animal Farm" depicts the escalating power struggle between Napoleon and Snowball following the animals' revolution. The chapter begins with Mollie's defection from the farm after being caught consorting with humans and accepting luxuries like sugar and ribbons, symbolizing those who abandon revolutionary ideals for personal comfort. The central conflict emerges over Snowball's proposed windmill project, which would bring electricity and modernization to the farm. While Snowball passionately advocates for the windmill with detailed plans and promises of a three-day work week, Napoleon quietly opposes it, favoring increased food production instead. The tension culminates when Napoleon uses nine attack dogs—puppies he had secretly trained—to violently expel Snowball from the farm just as the windmill vote is about to succeed. With his rival eliminated, Napoleon abolishes democratic meetings and establishes himself as dictator, ironically announcing shortly after that the windmill will be built after all. Through his propagandist Squealer, Napoleon claims the windmill was always his idea and that opposing it was merely "tactics" to remove the dangerous Snowball. The chapter powerfully illustrates how authoritarian leaders manipulate democratic processes, eliminate opposition through violence, and rewrite history to consolidate power.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+"True leadership listens; it does not silence."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 6  </h3>
+    <p>This chapter from "Animal Farm" chronicles the animals' exhausting year of labor building the windmill while Napoleon systematically consolidates power and betrays the revolution's founding principles. Despite working like slaves with sixty-hour weeks and mandatory Sunday labor, the animals maintain their enthusiasm, believing their sacrifices serve their collective future rather than human exploitation. The windmill construction proves monumentally difficult, requiring the animals to ingeniously use gravity to break limestone boulders, with Boxer's extraordinary strength and unwavering dedication ("I will work harder" and "Napoleon is always right") proving essential to the project's progress. As the farm faces shortages of materials impossible to produce internally, Napoleon announces a controversial new policy of trading with neighboring farms, directly violating the revolution's original principles against commerce with humans. When animals express unease about this betrayal, Squealer gaslights them into believing no such resolution ever existed, employing his characteristic manipulation to rewrite history. The pigs' gradual assumption of human privileges accelerates as they move into the farmhouse and sleep in beds, with Squealer cleverly reinterpreting the commandments to justify their actions by claiming the rule only prohibits sheets, not beds themselves. The chapter climaxes with a devastating storm that destroys the nearly completed windmill, prompting Napoleon to immediately scapegoat the exiled Snowball for sabotage despite the obvious natural cause, demonstrating how totalitarian leaders exploit disasters to deflect blame and rally support while demanding the animals rebuild immediately regardless of the harsh winter conditions ahead.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+"The price of freedom is vigilance, for even friends can become oppressors."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 7  </h3>
+    <p>
+      This passage from George Orwell's "Animal Farm" depicts a harsh winter period when the animals face severe food shortages while rebuilding their windmill. Napoleon, the pig leader, maintains power through deception and propaganda, using Mr. Whymper to spread false reports about the farm's prosperity while secretly forcing the hens to surrender their eggs for trade. The situation escalates when Napoleon launches a campaign of terror, claiming that the exiled Snowball is secretly sabotaging the farm and has been a traitor since the beginning. Through forced confessions and public executions orchestrated by his guard dogs, Napoleon eliminates perceived enemies, including the four pigs who had opposed him and various other animals who confess to fabricated crimes. The chapter culminates in the animals' profound disillusionment as they witness the brutal killings, with Clover reflecting on how far they've strayed from their original revolutionary ideals. The abolition of "Beasts of England," their inspirational song of rebellion, symbolizes the complete corruption of their original vision, as Napoleon consolidates his authoritarian rule through fear and manipulation.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+      "Hope survives where hearts refuse to forget kindness."
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 8  </h3>
+    <p>This excerpt from George Orwell's "Animal Farm" depicts Napoleon's consolidation of power and the devastating consequences of his deceptions. After executing supposed traitors, Napoleon becomes increasingly dictatorial, living in luxury while the other animals work harder than ever under Jones's rule, though Squealer's propaganda convinces them their conditions have improved. Napoleon manipulates diplomatic relations with neighboring farms, first appearing to negotiate with Pilkington while secretly dealing with Frederick, then reversing course entirely. When Frederick pays for timber with forged banknotes, Napoleon realizes he's been cheated just as Frederick attacks the farm with armed men. Despite the animals' fierce resistance, Frederick's forces destroy the windmill with explosives, though the animals eventually drive them off. Squealer declares this pyrrhic victory a triumph, even as the animals mourn their dead and face rebuilding from scratch. The chapter concludes with Napoleon's drunken episode after discovering whisky, during which he nearly dies from alcohol poisoning, leading to another commandment being secretly altered—this time changing "No animal shall drink alcohol" to "No animal shall drink alcohol to excess," demonstrating how the pigs continuously rewrite the rules to justify their increasingly corrupt behavior..
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>"Power is tested not in battle, but in how it treats the powerless."
+
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 9  </h3>
+    <p>This chapter from George Orwell's "Animal Farm" depicts the tragic fate of Boxer, the loyal workhorse who embodies the exploited working class. Despite suffering from a split hoof, Boxer continues working tirelessly on the windmill reconstruction, driven by his desire to see it completed before his retirement at age twelve. The chapter reveals the growing inequality on the farm as the pigs enjoy privileges like beer rations and comfortable living while other animals face reduced food rations and harsh conditions. Squealer manipulates the animals with propaganda, convincing them their lives are better than under the previous human owner Jones, while Napoleon consolidates power through "Spontaneous Demonstrations" and becomes the farm's president. The climax occurs when Boxer collapses from overwork and lung failure. Although promised medical treatment at a hospital, Benjamin discovers that Boxer is actually being taken to a horse slaughterer. The animals' desperate attempts to save him fail as Boxer lacks the strength to break free from the van. Squealer later fabricates a story about Boxer's peaceful death in the hospital, claiming the van's lettering was simply outdated, while the pigs hypocritically use the money from Boxer's sale to buy whisky for themselves, highlighting the complete corruption of the revolution's original ideals.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>"Even in grief, loyalty and love leave a mark no tyranny can erase."
+
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 10  </h3>
+    <p>This passage from George Orwell's "Animal Farm" depicts the final corruption of the revolutionary ideals that once drove the rebellion against human oppression. Years have passed since the original uprising, and most of the animals who remember the early days are dead or aging. The farm has become more prosperous under Napoleon's leadership, but this wealth benefits only the pigs and dogs, while the other animals remain as poor and overworked as ever. The climactic moment occurs when the pigs begin walking on two legs and Napoleon appears carrying a whip, directly violating the fundamental principles of Animalism. The sheep, having been secretly trained by Squealer, chant "Four legs good, two legs BETTER!" to drown out any protest. The Seven Commandments are replaced by a single, contradictory rule: "All animals are equal, but some animals are more equal than others." The transformation is complete when Napoleon entertains neighboring farmers, renaming the farm back to "The Manor Farm" and emphasizing their shared interests in controlling "lower" beings. The story ends with the animals watching through the window as the pigs and humans play cards together, unable to distinguish between pig and man, symbolizing how the oppressed have become indistinguishable from their former oppressors.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>"When oppressors and the oppressed become indistinguishable, only memory can tell the difference."
+
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+</div>
+</body>
+</html>

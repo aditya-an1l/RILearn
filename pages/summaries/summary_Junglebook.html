@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SUMMARY</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #F6F9E6;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; 
+      gap: 40px;
+      margin-bottom: 40px;
+      background: linear-gradient(135deg, #e8f5e8, #f0f8ff, #e6f3ff);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .title-section {
+      text-align: left;
+      flex: 1.2;
+    }
+
+    .title-section h1 {
+      font-size: 40px;
+      color: #2c5aa0;
+      margin-bottom: 15px;
+      text-shadow: 3px 3px 6px rgba(0,0,0,0.1);
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .title-section .subtitle {
+      font-size: 18px;
+      color: #5a7a5a;
+      font-style: italic;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      flex: 0.8;
+    }
+
+    .image-container img {
+      width: 170px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      transition: all 0.3s ease;
+      border: 3px solid rgba(255,255,255,0.8);
+    }
+    
+    .image-container img:hover{
+       transform: scale(1.08) rotate(1deg);
+       box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    }
+    
+    .image-container .author-info{
+      text-align: center;
+      background: rgba(255,255,255,0.95);
+      padding: 18px 25px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .image-container .author-info p {
+      font-size: 18px;
+      margin: 5px 0;
+      color: #333;
+    }
+
+    .author-name {
+      font-weight: bold;
+      color: #2c5aa0;
+    }
+
+    .summary-title {
+      font-size: 36px;
+      font-weight: bold;
+      margin: 40px 0 25px 0;
+      text-align: center;
+      color: #2c5aa0;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      position: relative;
+    }
+    
+    .summary-title::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(to right, #3498db, #2c5aa0);
+      border-radius: 2px;
+    }
+
+    .chapter-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .summary {
+      flex: 2;
+    }
+
+    .summary h3 {
+      margin-bottom: 8px;
+      font-size: 24px;
+      color: #2c5aa0;
+    }
+
+    .summary p {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      font-size: 17px;
+    }
+
+    .concept {
+      flex: 1;
+      background: #fffce0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      
+    }
+
+    .concept h4 {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .concept p {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .divider {
+      height: 2px;
+      background: linear-gradient(to right, transparent, #3498db, transparent);
+      margin: 20px 0;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .title-section h1 {
+        font-size: 32px;
+      }
+      
+      .chapter-section {
+        flex-direction: column;
+      }
+      
+      .summary, .concept {
+        flex: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="header">
+  <div class="title-section">
+    <h1>The Jungle book</h1>
+    <p class="subtitle">Tales of Courage, Wilderness, and the Laws of Nature</p>
+  </div>
+  
+  <div class="image-container">
+    <img src="Junglebook.jpg" alt="Book Cover">
+    <div class="author-info">
+      <p><b>Author: </b><span class="author-name">Rudyard Kipling</span></p>
+      
+    </div>
+  </div>
+</div>
+
+<div class="summary-title">SUMMARY</div>
+
+<!-- Chapter Summary and Concept -->
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 1 – Mowgli’s Brothers</h3>
+    <p>
+      In the dense Seeonee Hills of India, a human baby wanders into the jungle, escaping the claws of the fearsome tiger, Shere Khan, who has been stalking the nearby villages. The child is discovered by Father Wolf and Mother Wolf, who bring him into their den. Shere Khan claims the boy as his prey, but the wolves refuse to hand him over.
+At the wolves’ council meeting at Council Rock, presided over by Akela, the old leader, Shere Khan demands the boy, but Bagheera the panther intervenes. Knowing jungle law requires a price for adopting an outsider, Bagheera offers a freshly killed bull, and Mowgli is allowed to stay.
+Raised among the wolves, Mowgli learns the Laws of the Jungle from Baloo the bear, who teaches him discipline and the jungle’s ways, and Bagheera, who mentors him in stealth and survival. Yet, tensions brew as Shere Khan vows to kill him, and some wolves begin to question Mowgli’s presence.
+As Mowgli matures, he senses his alienation, neither entirely man nor beast, and prepares for a final confrontation with his sworn enemy. The chapter foreshadows Mowgli’s journey of identity, belonging, and courage, and highlights loyalty, law, and defiance against tyranny.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“The strength of the pack is the wolf, and the strength of the wolf is the pack.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 2 – Hunting-Song of the Seeonee Pack</h3>
+    <p>
+      This poem is sung by the wolf pack as they prepare for a hunt under the moonlit jungle skies. It celebrates their unity, the code of brotherhood, and the pride they take in moving together silently and with deadly purpose. The wolves respect the Laws of the Jungle — kill only what is needed, protect the pack, and hunt with honor.
+This song captures the spirit of the jungle animals, their discipline, and how survival depends on order and respect. It also hints at Mowgli’s inclusion in their society, his acceptance as one of them through this ancient ritual of the hunt.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“United we hunt, divided we starve.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 3 –Kaa’s Hunting </h3>
+    <p>
+      Mowgli’s mischievous curiosity and the arrogance of youth lead him into trouble when he crosses paths with the Bandar-Log, a tribe of lawless monkeys hated by all jungle creatures for their mindless chatter and disrespect for jungle law. They kidnap Mowgli, hoping to make him their leader to give their meaningless lives importance.
+Baloo and Bagheera, unable to combat the monkeys alone, seek the aid of Kaa, the enormous and wise python feared by even the bravest animals. Together, they trace Mowgli to the ruins of the Cold Lairs, an ancient, crumbling human city overtaken by the Bandar-Log.
+A dramatic battle unfolds. Baloo and Bagheera fight fiercely, and Kaa uses his hypnotic stare and immense strength to trap the monkeys. Mowgli, fearless and quick-thinking, plays his part in the fight.
+Afterward, Mowgli learns the importance of obeying those who truly care for him and respecting the jungle’s rules. The chapter emphasizes teamwork, trust in real friends, and the consequences of ignoring wisdom.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Trust is earned in the darkest hours.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 4 –Road-Song of the Bandar-Log </h3>
+    <p>
+      This chaotic, boastful song belongs to the Bandar-Log monkeys. It’s filled with nonsensical, self-important claims about their greatness, freedom, and disregard for jungle rules. In truth, they’re directionless, without discipline or respect, causing only mischief and trouble.
+The poem serves as a satirical reflection on those who make empty claims of superiority while offering nothing of substance to their community. It contrasts the structured, law-abiding animals with the anarchic Bandar-Log.
+
+
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+ “Those who chatter without wisdom are lost in their own noise.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 5 – “Tiger! Tiger!”</h3>
+    <p>
+      After tensions with the wolf pack and driven by Akela’s declining power, Mowgli leaves the jungle and joins a nearby human village. There, a kind woman named Messua believes him to be her long-lost son. Mowgli tries to adapt but is disturbed by human customs, cruelty toward animals, and suspicion from the villagers.
+Meanwhile, Shere Khan begins lurking near the village, waiting for his chance to strike. Mowgli devises a clever plan. He enlists the help of jungle allies, including buffaloes, to create a stampede. Cornering Shere Khan in a ravine, Mowgli unleashes the stampede, crushing the tiger under the hooves of the buffalo herd.
+Though victorious, Mowgli finds no place among humans. They see him as unnatural and drive him away. He realizes that he belongs to the jungle but will always walk alone, neither fully man nor wolf. It’s a story of courage, cleverness, and the eternal search for one’s true home
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Courage is not the absence of fear, but standing firm in the face of it.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 6 – Mowgli’s Song</h3>
+    <p>
+      This is Mowgli’s personal chant after defeating Shere Khan. It is both a song of triumph and a lamentation of loneliness. He boasts of his strength, cleverness, and independence, but also mourns his isolation from both man and beast.
+The song captures Mowgli’s struggle with identity, belonging neither to the humans who fear him nor the animals who see him as different. It’s a meditation on what it means to be truly free, even at the cost of companionship.
+
+
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“I am of the jungle, yet not bound by it.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 7 –The White Seal </h3>
+    <p>
+      Far in the northern seas, a white-furred seal named Kotick is born. Unlike the others, Kotick questions the custom of seals being hunted by men each year. Horrified by witnessing the slaughter of his kind, Kotick decides to search for a safe haven where no hunters will follow.
+His journey is long and treacherous. He travels vast oceans, surviving sharks, hostile beaches, and unwelcoming seal colonies. Finally, Kotick discovers a hidden, untouched beach. He returns to his colony and challenges the older seals to follow him to safety.
+Though met with doubt and resistance, Kotick’s bravery and persistence persuade them. The tale highlights courage, visionary leadership, and the value of standing up against destructive traditions for the good of the community.
+
+
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“The bravest heart dares to dream of freedom for all.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 8 – Lukannon</h3>
+    <p>
+      A heartfelt poem that celebrates Kotick, the white seal, and his mission to lead his people to safety. The seals sing of their hopes, freedom, and the heroism of one who risked everything for their future. The poem reflects on leadership, sacrifice, and the dreams of a better world for future generations.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“The ocean’s cry is a call to the fearless.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 9 – “Rikki-Tikki-Tavi”</h3>
+    <p>
+      A courageous mongoose named Rikki-Tikki-Tavi is rescued by a British family after a flood. Settling into their home and garden, Rikki discovers two deadly cobras, Nag and Nagaina, plotting to kill the family and reclaim the garden.
+Rikki’s loyalty and quick wit make him a fierce defender. He battles Nag in the bathroom, killing him to protect the family. Then, with cunning, Rikki tricks Nagaina and destroys her nest of eggs to prevent future danger. In a final dramatic confrontation, he follows Nagaina into her burrow and emerges victorious.
+This thrilling story underscores that courage isn’t about size but about heart, and even the smallest heroes can protect against great evil.
+
+
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“A small heart filled with great courage can defeat any danger.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 10 – Darzee’s Chant</h3>
+    <p>
+      Darzee, the tailorbird, sings a jubilant, lively chant in praise of Rikki-Tikki-Tavi’s bravery. It celebrates the defeat of Nag and Nagaina and honors Rikki as a true hero. The poem reflects the value of recognizing courage and the role of community gratitude
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Celebrate the victory of the brave, for it lights the path of the timid.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 11 – Toomai of the Elephants</h3>
+    <p>
+      Little Toomai, the son of an elephant handler, dreams of becoming a respected mahout like his father. His special bond with Kala Nag, an old and wise elephant, sets him apart. During a grand elephant round-up, the mahouts joke that Toomai will only be accepted when he witnesses the mythical "elephant dance," an event no man has ever seen.
+One night, Kala Nag carries Toomai deep into the jungle, where hundreds of elephants gather in a secret clearing. Toomai witnesses them performing a majestic and mystical dance. When the head mahout hears of this, he honors Toomai, naming him Toomai of the Elephants, forever respected for seeing what no other man had.
+The story celebrates innocence, courage, and the bond between humans and animals.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“The eyes of the young often see what the old have long forgotten.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 12 – Shiv and the Grasshopper</h3>
+    <p>
+      A reflective poem praising Lord Shiva, the Hindu god of destruction and creation. It acknowledges Shiva’s power over all beings, both great and small. The poem teaches that every creature, no matter how insignificant, has a place and value in the grand design of life.
+
+
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“Even the smallest voices are heard by the gods.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 13 –Her Majesty’s Servants </h3>
+    <p>
+      Set in a British military camp in India, this story follows a group of working animals — camels, horses, elephants, and mules — who converse about their roles in the army. They discuss the burdens of discipline, war, and service, sharing their thoughts and fears.
+The tale highlights the loyalty and sense of duty among animals, offering a thoughtful commentary on discipline, the hierarchy of service, and camaraderie in tough conditions.
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+“In every heart beats the same silent wish — to be understood.”
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+<div class="chapter-section">
+  <div class="summary">
+    <h3>Chapter 14 – Parade Song of the Camp Animals
+</h3>
+    <p>
+      A rhythmic poem sung by the military animals, each boasting about their strengths, duties, and importance. It celebrates the diversity of roles, unity in service, and the dignity of labor, whether in peace or war. The poem reminds readers that everyone has a part to play in the larger system, and all roles deserve respect.
+
+
+</p>
+  </div>
+  <div class="concept">
+    <h4>Quote:</h4>
+    <p>
+ “Each has its place in the grand parade of life.”
+
+
+</p>
+  </div>
+</div>
+
+<hr class="divider">
+
+
+
+</div>
+</body>
+</html>

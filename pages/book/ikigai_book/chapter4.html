@@ -9,16 +9,18 @@
     href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Nunito:wght@400;700&family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&family=Lora:wght@400;700&family=Merriweather:wght@400;700&family=Source+Serif+Pro:wght@400;700&family=Crimson+Text:wght@400;700&family=PT+Serif:wght@400;700&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&family=Lato:wght@400;700&family=Source+Sans+Pro:wght@400;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="style.css"   />
-  <link rel="stylesheet" href="toggle.css" />
+  <link rel="stylesheet" href="toggle.css"   />
+
   <link rel="stylesheet" href="annotation_highlight.css" />
-
-
 </head>
 
 <body>
+
   <!-- Dark Mode Toggle -->
   <input type="checkbox" id="theme-toggle">
   <label for="theme-toggle" class="toggle"></label>
+
+
 
   <div id="topControls">
     <button id="fontStylesToggle">Font Styles</button>
@@ -51,11 +53,55 @@
     <button id="speakToggle">Speak</button>
   </div>
 
+
+  <div class="speech-functionality container">
+
+    <div id="liveSettings">
+      <h3>Adjust Speech Settings</h3>
+      <label>Speed:
+        <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
+        <span id="rateValue">1</span>
+      </label>
+      <label>Pitch:
+        <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
+        <span id="pitchValue">1</span>
+      </label>
+    </div>
+
+    <div id="speechControls">
+      <button id="pauseButton">Pause</button>
+      <button id="resumeButton">Resume</button>
+      <button id="stopButton">Stop</button>
+      <button id="restartButton">Restart</button>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+
+    <div id="settingsModal">
+      <div class="modal-content">
+        <h2>Select Voice Settings</h2>
+        <label>Speed:
+          <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialRateValue">1</span>
+        </label>
+        <label>Pitch:
+          <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
+          <span id="initialPitchValue">1</span>
+        </label>
+        <p>You can adjust these settings while the speech is playing too.</p>
+        <div style="text-align: center; margin-top: 20px;">
+          <button id="confirmSettings">Start Speaking</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div id="textContainer">
     <h1 align="center">
-      <p> FIND FLOW IN EVERYTHING YOU DO</p>
+      <p>FIND FLOW IN EVERYTHING YOU DO</p>
     </h1>
-    <h1 align=" center">
+     <h1 align=" center">
       <p> How to turn work and free time
         into spaces for growth</p>
     </h1>
@@ -1055,48 +1101,11 @@
 
   </div>
 
-  <div class="chapter-navigation">
-    <a href="chapter3.html" class="nav-button prev">← Previous: Chapter 3</a>
-    <a href="chapter5.html" class="nav-button next">Next: Chapter 5 →</a>
-  </div>
 
-  <div id="liveSettings">
-    <h3>Adjust Speech Settings</h3>
-    <label>Speed:
-      <input type="range" id="rate" min="0.5" max="2" value="1" step="0.1">
-      <span id="rateValue">1</span>
-    </label>
-    <label>Pitch:
-      <input type="range" id="pitch" min="0.5" max="2" value="1" step="0.1">
-      <span id="pitchValue">1</span>
-    </label>
-  </div>
 
-  <div id="speechControls">
-    <button id="pauseButton">Pause</button>
-    <button id="resumeButton">Resume</button>
-    <button id="stopButton">Stop</button>
-    <button id="restartButton">Restart</button>
-  </div>
-
-  <div class="status" id="statusMessage"></div>
-
-  <div id="settingsModal">
-    <div class="modal-content">
-      <h2>Select Voice Settings</h2>
-      <label>Speed:
-        <input type="range" id="initialRate" min="0.5" max="2" value="1" step="0.1">
-        <span id="initialRateValue">1</span>
-      </label>
-      <label>Pitch:
-        <input type="range" id="initialPitch" min="0.5" max="2" value="1" step="0.1">
-        <span id="initialPitchValue">1</span>
-      </label>
-      <p>You can adjust these settings while the speech is playing too.</p>
-      <div style="text-align: center; margin-top: 20px;">
-        <button id="confirmSettings">Start Speaking</button>
-      </div>
-    </div>
+  <div class="navigation">
+    <a href="chapter3.html" class="nav-button prev">← Previous Chapter</a>
+    <a href="chapter5.html" class="nav-button next">Next Chapter →</a>
   </div>
 
   <!-- Progress Bar -->
@@ -1109,10 +1118,52 @@
     🎉 Chapter Finished! Great Job 🎉
   </div>
 
+  <script>
+    window.onscroll = function () {
+      updateProgressBar();
+      checkEndOfPage();
+    };
 
+    function updateProgressBar() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      let scrollPercent = (scrollTop / scrollHeight) * 100;
+      document.getElementById("progressBar").style.width =
+        scrollPercent + "%";
+    }
+
+    function checkEndOfPage() {
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop;
+      let scrollHeight =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (scrollTop >= scrollHeight - 10) {
+        // When user reaches the bottom
+        document.getElementById("endMessage").classList.add("show");
+      } else {
+        document.getElementById("endMessage").classList.remove("show");
+      }
+    }
+  </script>
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- End Message Animation -->
+  <div class="end-message" id="endMessage">
+    🎉 Chapter Finished! Great Job 🎉
+  </div>
   <script src="visual_element.js"></script>
   <script src="progress.js"></script>
   <script src="toggle_script.js"></script>
+
 </body>
 
 </html>

@@ -138,15 +138,15 @@ Our team is a powerhouse of talent, each member contributing uniquely to build a
   </tr>
   <tr>
     <td align="center" valign="middle" width="120">
-      <a href="https://github.com/StrikerSam-Ai" target="_blank">
-        <img src="https://github.com/StrikerSam-Ai.png" alt="Shashwat Mishra" width="80" style="border-radius:50%;" />
+      <a href="https://github.com/Shashwat-1420" target="_blank">
+        <img src="https://github.com/Shashwat-1420.png" alt="Shashwat Mishra" width="80" style="border-radius:50%;" />
       </a>
     </td>
     <td valign="middle">
       <strong>Shashwat Mishra</strong> – <em>Content Architect & Strategist</em><br />
       🏗️ Structures intuitive, coherent educational content with pedagogical precision.<br />
       📘 Designs reading frameworks that enrich comprehension and interaction.<br />
-      🔗 <a href="https://github.com/StrikerSam-Ai" target="_blank">GitHub</a>
+      🔗 <a href="https://github.com/Shashwat-1420" target="_blank">GitHub</a>
 
 🧑‍💼 <a href="https://www.linkedin.com/in/sam140706/" target="_blank">LinkedIn</a>
 
